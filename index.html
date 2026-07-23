@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal Júnior Arrais — Seu lugar de informação</title>
+  <meta name="description" content="Portal Júnior Arrais: notícias gerais atualizadas, vídeos e conteúdo para você ficar bem informado todos os dias.">
+  <link rel="canonical" href="https://portaljuniorarrais.com.br/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Portal Júnior Arrais — Seu lugar de informação">
+  <meta property="og:description" content="Notícias gerais atualizadas, vídeos e conteúdo para você ficar bem informado todos os dias.">
+  <meta property="og:url" content="https://portaljuniorarrais.com.br/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Portal Júnior Arrais",
+    "url": "https://portaljuniorarrais.com.br/"
+  }
+  </script>
+  <!-- ADSENSE: quando aprovado, cole aqui o script principal do Google AdSense -->
+</head>
+<body>
+
+  <header>
+    <div class="container header-inner">
+      <a class="logo" href="index.html">
+        <span class="play-badge"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+        <span>Portal <em>Júnior Arrais</em></span>
+      </a>
+      <nav>
+        <a href="index.html" class="active">Início</a>
+        <a href="#noticias">Notícias</a>
+        <a href="#videos">Vídeos</a>
+        <a href="emprestimo.html">Empréstimo</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+      <a class="btn-whatsapp" href="https://juniorarrais.com" target="_blank" rel="noopener">Simular empréstimo</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <a class="hero-card" href="noticias/bem-vindo-ao-portal-junior-arrais.html">
+          <div class="hero-media"><img src="https://picsum.photos/seed/canal1/1200/675" alt="Portal Júnior Arrais"></div>
+          <div class="hero-body">
+            <span class="chip">Portal</span>
+            <h1>Bem-vindo ao Portal Júnior Arrais: notícias e vídeos em um só lugar</h1>
+            <p>Este é o novo portal onde você encontra as principais notícias do dia, vídeos e conteúdo atualizado todos os dias.</p>
+            <span class="meta">23 de jul. de 2026</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="section" id="noticias">
+      <div class="container">
+        <div class="section-head">
+          <h2>Últimas notícias</h2>
+        </div>
+        <div class="grid">
+          <!-- INÍCIO DOS CARDS DE NOTÍCIA (os mais novos ficam primeiro) -->
+          <a class="card" href="noticias/modelo-de-noticia-do-portal.html">
+            <div class="card-thumb"><img src="https://picsum.photos/seed/canal2/800/450" alt="" loading="lazy"></div>
+            <div class="card-body">
+              <span class="chip">Notícias</span>
+              <h3>Exemplo de notícia: este é o modelo de uma matéria do portal</h3>
+              <p>Esta é uma notícia de exemplo para mostrar como os cards aparecem na página inicial. Substitua pelo conteúdo real.</p>
+              <span class="meta">22 de jul. de 2026</span>
+            </div>
+          </a>
+          <a class="card" href="noticias/exemplo-de-noticia-com-video.html">
+            <div class="card-thumb"><img src="https://picsum.photos/seed/canal3/800/450" alt="" loading="lazy"></div>
+            <div class="card-body">
+              <span class="chip">Vídeos</span>
+              <h3>Exemplo de notícia com vídeo incorporado na matéria</h3>
+              <p>Quando uma notícia tem vídeo, ele aparece dentro da própria matéria, aumentando o tempo de leitura.</p>
+              <span class="meta">21 de jul. de 2026</span>
+            </div>
+          </a>
+          <!-- FIM DOS CARDS DE NOTÍCIA -->
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="banner-emprestimo">
+        <div>
+          <span class="chip-verde">Serviço</span>
+          <h2>Precisando de empréstimo?</h2>
+          <p>Bolsa Família, CLT, antecipação do FGTS, consignado INSS e garantia veicular. Simule sem compromisso pelo WhatsApp.</p>
+        </div>
+        <a class="btn-whatsapp" href="https://juniorarrais.com" target="_blank" rel="noopener">Simular agora</a>
+      </div>
+    </section>
+
+    <!-- ADSENSE: espaço de anúncio entre seções -->
+    <div class="ad-slot container"><!-- Cole aqui o bloco de anúncio do AdSense --></div>
+
+    <section class="section" id="videos">
+      <div class="container">
+        <div class="section-head">
+          <h2>Vídeos em destaque</h2>
+          <a href="https://www.youtube.com/@juniorarrais.advogado" target="_blank" rel="noopener">Ver todos &rarr;</a>
+        </div>
+        <div class="video-grid" id="grid-videos"><!-- vídeos carregados via JS --></div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="canal-banner">
+        <div>
+          <h2>Me acompanhe nas redes sociais</h2>
+          <p>Siga o Portal Júnior Arrais para receber notícias e vídeos novos todos os dias.</p>
+        </div>
+        <div class="social">
+          <a href="https://www.youtube.com/@juniorarrais.advogado" target="_blank" rel="noopener" title="YouTube">YT</a>
+          <a href="https://www.instagram.com/juniorarraisadvogado/" target="_blank" rel="noopener" title="Instagram">IG</a>
+          <a href="https://www.tiktok.com/@juniorarrais.advogado" target="_blank" rel="noopener" title="TikTok">TT</a>
+          <a href="https://www.kwai.com/@juniorarraisadvogado" target="_blank" rel="noopener" title="Kwai">KW</a>
+          <a href="https://www.facebook.com/advogadojuniorarrais/" target="_blank" rel="noopener" title="Facebook">FB</a>
+          <a href="https://www.threads.com/@juniorarraisadvogado" target="_blank" rel="noopener" title="Threads">TH</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <p>&copy; 2026 Portal Júnior Arrais. Todos os direitos reservados. &middot; <a href="sobre.html">Sobre</a> &middot; <a href="contato.html">Contato</a> &middot; <a href="politica-de-privacidade.html">Política de Privacidade</a></p>
+      <div class="social">
+        <a href="https://www.youtube.com/@juniorarrais.advogado" target="_blank" rel="noopener" title="YouTube">YT</a>
+        <a href="https://www.instagram.com/juniorarraisadvogado/" target="_blank" rel="noopener" title="Instagram">IG</a>
+        <a href="https://www.tiktok.com/@juniorarrais.advogado" target="_blank" rel="noopener" title="TikTok">TT</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="site.js"></script>
+</body>
+</html>
