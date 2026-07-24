@@ -497,8 +497,20 @@ footer {
 .social a:hover { transform: translateY(-2px); filter: brightness(1.08); }
 
 /* ---------- Foto do Júnior ---------- */
-.canal-banner { overflow: visible; }
-.banner-foto { height: 240px; width: auto; margin: -50px 8px -40px 0; filter: drop-shadow(0 10px 24px rgba(20, 60, 120, 0.25)); }
+.canal-banner { position: relative; overflow: hidden; padding-right: 300px; min-height: 230px; }
+.banner-foto {
+  position: absolute;
+  right: 36px;
+  bottom: 0;
+  height: 90%;
+  max-height: 280px;
+  width: auto;
+  filter: drop-shadow(0 8px 20px rgba(20, 60, 120, 0.22));
+}
 .foto-sobre { float: right; width: 300px; max-width: 45%; margin: 0 0 16px 24px; border-radius: 14px; border: 1px solid var(--border); }
 .autor-foto { width: 30px; height: 30px; border-radius: 50%; border: 2px solid #fff; box-shadow: 0 1px 4px rgba(0,0,0,0.15); }
-@media (max-width: 700px) { .banner-foto { height: 180px; margin: -30px auto -30px; } .foto-sobre { float: none; width: 100%; max-width: 100%; margin: 0 0 18px; } }
+@media (max-width: 760px) {
+  .canal-banner { padding-right: 32px; padding-bottom: 0; }
+  .banner-foto { position: static; display: block; height: auto; max-height: 220px; margin: 10px auto -1px; filter: none; }
+  .foto-sobre { float: none; width: 100%; max-width: 100%; margin: 0 0 18px; }
+}
