@@ -495,3 +495,10 @@ footer {
 .social a.s-fb { background: #1877F2; }
 .social a.s-th { background: #000; }
 .social a:hover { transform: translateY(-2px); filter: brightness(1.08); }
+
+/* ---------- Foto do Júnior ---------- */
+.canal-banner { overflow: visible; }
+.banner-foto { height: 240px; width: auto; margin: -50px 8px -40px 0; filter: drop-shadow(0 10px 24px rgba(20, 60, 120, 0.25)); }
+.foto-sobre { float: right; width: 300px; max-width: 45%; margin: 0 0 16px 24px; border-radius: 14px; border: 1px solid var(--border); }
+.autor-foto { width: 30px; height: 30px; border-radius: 50%; border: 2px solid #fff; box-shadow: 0 1px 4px rgba(0,0,0,0.15); }
+@media (max-width: 700px) { .banner-foto { height: 180px; margin: -30px auto -30px; } .foto-sobre { float: none; width: 100%; max-width: 100%; margin: 0 0 18px; } }
