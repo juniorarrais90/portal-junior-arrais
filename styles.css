@@ -513,3 +513,17 @@ footer {
   .banner-foto { position: static; display: block; height: auto; max-height: 220px; margin: 10px auto -1px; filter: none; }
   .foto-sobre { float: none; width: 100%; max-width: 100%; margin: 0 0 18px; }
 }
+
+/* ---------- Botão Veja mais notícias ---------- */
+.ver-mais-wrap { text-align: center; margin-top: 28px; }
+.btn-vermais {
+  display: inline-block;
+  background: var(--gradient);
+  color: #fff;
+  font-weight: 700;
+  padding: 13px 32px;
+  border-radius: 999px;
+  transition: 0.2s;
+  box-shadow: 0 4px 14px rgba(44,137,231,0.35);
+}
+.btn-vermais:hover { filter: brightness(1.08); transform: translateY(-2px); }
