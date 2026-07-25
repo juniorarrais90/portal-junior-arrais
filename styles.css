@@ -527,3 +527,62 @@ footer {
   box-shadow: 0 4px 14px rgba(44,137,231,0.35);
 }
 .btn-vermais:hover { filter: brightness(1.08); transform: translateY(-2px); }
+
+/* ================= REFORMA (ref. portal profissional) ================= */
+.topo-central { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding: 16px 0 12px; }
+.topo-central .logo { grid-column: 2; justify-self: center; }
+.busca { grid-column: 3; justify-self: end; display: flex; align-items: center; background: #eef4fa; border: 1px solid var(--border); border-radius: 999px; padding: 4px 6px 4px 16px; }
+.busca input { border: 0; background: transparent; outline: none; font: inherit; font-size: 0.92rem; width: 160px; color: var(--text); }
+.busca button { border: 0; background: var(--gradient); color: #fff; width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; }
+.faixa-categorias { background: var(--gradient); }
+.faixa-inner { display: flex; gap: 4px; overflow-x: auto; }
+.faixa-inner a { color: #fff; font-weight: 800; font-size: 0.86rem; text-transform: uppercase; letter-spacing: 0.04em; padding: 12px 14px; white-space: nowrap; }
+.faixa-inner a:hover { background: rgba(255,255,255,0.16); }
+header nav.faixa-categorias { display: block; }
+
+.ad-topo { text-align: center; margin: 18px auto 6px; }
+.ad-label { display: block; font-size: 0.62rem; letter-spacing: 0.18em; color: #9aa9ba; margin-bottom: 4px; }
+.ad-slot-topo { min-height: 0; border: 0; }
+
+.destaque-3col { display: grid; grid-template-columns: 1fr 1.7fr 1fr; gap: 22px; margin-top: 14px; align-items: start; }
+.mini-card { display: block; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; margin-bottom: 18px; transition: 0.2s; }
+.mini-card:hover { transform: translateY(-3px); border-color: #b9d2ec; }
+.mini-thumb { aspect-ratio: 16/9; overflow: hidden; }
+.mini-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.mini-card h3 { font-size: 0.98rem; font-weight: 700; line-height: 1.35; padding: 12px 14px 4px; }
+.mini-card .meta { display: block; padding: 0 14px 12px; }
+.col-video { text-align: center; }
+.video-principal { aspect-ratio: 16/9; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); background: #000; }
+.video-principal iframe { width: 100%; height: 100%; border: 0; }
+.video-principal-titulo { font-size: 1.15rem; font-weight: 800; line-height: 1.35; margin: 14px 0 12px; text-align: left; }
+.btn-canal { background: #E23B3B; box-shadow: 0 4px 14px rgba(226,59,59,0.35); }
+.lateral-item { display: grid; grid-template-columns: 104px 1fr; gap: 12px; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--border); }
+.lateral-item:first-child { padding-top: 0; }
+.lateral-item img { width: 104px; aspect-ratio: 16/9; object-fit: cover; border-radius: 10px; }
+.lateral-item span { font-size: 0.9rem; font-weight: 700; line-height: 1.35; }
+.lateral-item:hover span { color: var(--accent); }
+
+.shorts-section { padding-top: 10px; }
+.shorts-row { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(170px, 1fr); gap: 16px; overflow-x: auto; padding-bottom: 6px; }
+.short-card { position: relative; aspect-ratio: 9/16; border-radius: 14px; overflow: hidden; background: #10202f; }
+.short-card img { width: 100%; height: 100%; object-fit: cover; transition: 0.3s; }
+.short-card:hover img { transform: scale(1.05); }
+.short-play { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 52px; height: 52px; background: rgba(226,59,59,0.92); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+.short-titulo { position: absolute; left: 0; right: 0; bottom: 0; padding: 26px 12px 12px; color: #fff; font-size: 0.82rem; font-weight: 700; line-height: 1.3; background: linear-gradient(transparent, rgba(0,0,0,0.85)); }
+
+.cookie-bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 999; background: #142130; color: #dbe6f2; display: flex; gap: 18px; align-items: center; justify-content: center; flex-wrap: wrap; padding: 14px 20px; box-shadow: 0 -6px 24px rgba(0,0,0,0.25); }
+.cookie-bar p { margin: 0; font-size: 0.88rem; max-width: 760px; }
+.cookie-bar a { color: var(--cyan, #2BDAFD); text-decoration: underline; }
+.cookie-bar button { border: 0; background: var(--gradient); color: #fff; font-weight: 700; padding: 10px 22px; border-radius: 999px; cursor: pointer; }
+
+@media (max-width: 980px) {
+  .destaque-3col { grid-template-columns: 1fr; }
+  .col-esq { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .busca input { width: 110px; }
+}
+@media (max-width: 640px) {
+  .topo-central { grid-template-columns: 1fr; justify-items: center; gap: 10px; }
+  .topo-central .logo, .busca { grid-column: 1; justify-self: center; }
+  .col-esq { grid-template-columns: 1fr; }
+  .shorts-row { grid-auto-columns: 46%; }
+}
