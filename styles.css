@@ -586,3 +586,12 @@ header nav.faixa-categorias { display: block; }
   .col-esq { grid-template-columns: 1fr; }
   .shorts-row { grid-auto-columns: 46%; }
 }
+
+/* ---------- Ajustes desktop (não afetam o celular) ---------- */
+@media (min-width: 1100px) {
+  #ultimas .grid { grid-template-columns: repeat(4, 1fr); }
+  #ultimas .card-body h3 { font-size: 0.95rem; }
+  .mini-card h3 { font-size: 0.94rem; }
+  .destaque-3col { align-items: stretch; }
+  .col-dir { display: flex; flex-direction: column; justify-content: space-between; }
+}
