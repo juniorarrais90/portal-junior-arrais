@@ -36,16 +36,48 @@ document.addEventListener('DOMContentLoaded', iniciarVideos);
 
 /* ---------- Aviso de cookies (LGPD) ---------- */
 (function(){
-  try {
-    if (localStorage.getItem('pja-cookies') === 'ok') return;
-  } catch(e) { return; }
+  var CHAVE = 'pja-cookies';
+
+  function liberar(){
+    if (typeof window.gtag !== 'function') return;
+    window.gtag('consent', 'update', {
+      'ad_storage': 'granted',
+      'ad_user_data': 'granted',
+      'ad_personalization': 'granted',
+      'analytics_storage': 'granted'
+    });
+  }
+
+  var escolha = null;
+  try { escolha = localStorage.getItem(CHAVE); } catch(e) { return; }
+
+  if (escolha === 'ok') { liberar(); return; }   // ja aceitou antes
+  if (escolha === 'nao') return;                  // ja recusou antes
+
+  var prefixo = location.pathname.indexOf('/noticias/') > -1 ? '../' : '';
   var bar = document.createElement('div');
   bar.className = 'cookie-bar';
-  bar.innerHTML = '<p>Usamos cookies para melhorar sua experiência e exibir conteúdo e anúncios personalizados. Ao continuar navegando, você concorda com a nossa <a href="' + (location.pathname.indexOf('/noticias/')>-1 ? '../' : '') + 'politica-de-privacidade.html">Política de Privacidade</a>.</p><button type="button">Aceitar e fechar</button>';
-  bar.querySelector('button').addEventListener('click', function(){
-    try { localStorage.setItem('pja-cookies','ok'); } catch(e){}
+  bar.innerHTML = '<p>Usamos cookies para medir quantas pessoas visitam o portal e melhorar o conteúdo. ' +
+    'Você decide: nada é medido enquanto não autorizar. Veja a nossa ' +
+    '<a href="' + prefixo + 'politica-de-privacidade.html">Política de Privacidade</a>.</p>' +
+    '<div class="cookie-botoes">' +
+    '<button type="button" class="cookie-recusar">Agora não</button>' +
+    '<button type="button" class="cookie-aceitar">Aceitar</button>' +
+    '</div>';
+
+  function guardar(valor){
+    try { localStorage.setItem(CHAVE, valor); } catch(e){}
     bar.remove();
+  }
+
+  bar.querySelector('.cookie-aceitar').addEventListener('click', function(){
+    guardar('ok');
+    liberar();
   });
+  bar.querySelector('.cookie-recusar').addEventListener('click', function(){
+    guardar('nao');
+  });
+
   document.body.appendChild(bar);
 })();
 

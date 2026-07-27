@@ -574,6 +574,8 @@ header nav.faixa-categorias { display: block; }
 .cookie-bar p { margin: 0; font-size: 0.88rem; max-width: 760px; }
 .cookie-bar a { color: var(--cyan, #2BDAFD); text-decoration: underline; }
 .cookie-bar button { border: 0; background: var(--gradient); color: #fff; font-weight: 700; padding: 10px 22px; border-radius: 999px; cursor: pointer; }
+.cookie-botoes { display: flex; gap: 10px; align-items: center; }
+.cookie-bar .cookie-recusar { background: transparent; border: 1px solid rgba(219,230,242,0.45); color: #dbe6f2; font-weight: 600; }
 
 @media (max-width: 980px) {
   .destaque-3col { grid-template-columns: 1fr; }
