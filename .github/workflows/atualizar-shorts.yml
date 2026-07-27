@@ -1,0 +1,35 @@
+name: Atualizar Shorts do portal
+
+on:
+  schedule:
+    # 08h, 14h e 20h no horario de Brasilia
+    - cron: '0 11,17,23 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Buscar os shorts mais recentes
+        run: python3 scripts/atualizar_shorts.py
+
+      - name: Publicar se algo mudou
+        run: |
+          if [ -n "$(git status --porcelain index.html)" ]; then
+            git config user.name "Portal Junior Arrais"
+            git config user.email "juniorarrais90@gmail.com"
+            git add index.html
+            git commit -m "Atualiza os Shorts da home"
+            git push
+          else
+            echo "Nada mudou."
+          fi
