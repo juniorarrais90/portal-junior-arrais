@@ -15,7 +15,7 @@ mediante citação do crédito. Nunca substituir por foto de agência comercial
 
 | Arquivo | O que mostra | Crédito |
 |---|---|---|
-| `cadunico-atendimento-social.jpg` | Plantão de atendimento da assistência social, com colete "ASSISTÊNCIA SOCIAL" visível | Foto: Tânia Rêgo/Agência Brasil |
+_(sem foto no banco — ver seção de reprovadas)_
 
 ## Bolsa Família / Caixa
 
@@ -27,7 +27,7 @@ mediante citação do crédito. Nunca substituir por foto de agência comercial
 
 | Arquivo | O que mostra | Crédito |
 |---|---|---|
-| `bpc-pessoa-idosa.jpg` | Pessoa idosa trabalhando em feira (pauta de renda na terceira idade) | Foto: Marcelo Camargo/Agência Brasil |
+_(sem foto no banco — usar `idosa-sorrindo-retrato.jpg` ou `idosa-negra-retrato.jpg` da Parte 2)_
 
 ## INSS / Previdência
 
@@ -86,7 +86,10 @@ aqui para ninguém tentar de novo:
 
 - fila em agência da Caixa — na verdade é bilhete da Mega da Virada, remete a loteria;
 - interior de agência do INSS — a imagem mostra comércio fechado, com grade e pichação;
-- notas de real em foco suave — desfocada demais para servir de fundo.
+- notas de real em foco suave — desfocada demais para servir de fundo;
+- plantão da assistência social — o atendimento acontecia **dentro de uma paróquia**, e
+  aparecem pessoas em vestes religiosas. Numa capa de CadÚnico, parece missa;
+- idoso em balcão de comércio — parece atendimento de loja, não tem nada de benefício.
 
 **Lição:** toda foto nova entra no banco só depois de olhada. Descrição de acervo engana.
 
