@@ -97,6 +97,86 @@ atendimento do CadÚnico, botijão do Gás do Povo com a marca do programa, nem 
 agência do INSS pelo lado de fora. Quando aparecer alguma, ou quando Júnior fotografar,
 é só acrescentar aqui.
 
+
+---
+
+# Parte 2 — Pexels e Unsplash
+
+Licença livre para uso comercial, **sem exigência de crédito**. Registro o autor aqui
+por respeito ao fotógrafo, mas não é obrigatório gravar na capa. Use `--credito` só
+quando quiser.
+
+São fotos genéricas de situação: servem para pautas de regra, dúvida e explicação.
+Para pauta factual e institucional, prefira sempre o acervo da Agência Brasil.
+
+## Atendimento / CadÚnico / CRAS
+
+| Arquivo | O que mostra | Autor | Fonte |
+|---|---|---|---|
+| `atendimento-mesa-documentos.jpg` | Casal negro sendo atendido por funcionária, com papéis e computador | Kindel Media | Pexels |
+
+## Família e casa simples
+
+| Arquivo | O que mostra | Autor | Fonte |
+|---|---|---|---|
+| `familia-cozinha-casa-simples.jpg` | Família brasileira na cozinha de tijolo aparente | Kawê Rodrigues | Unsplash |
+| `familia-quintal-casa-tijolo.jpg` | Mulheres e crianças no quintal, com sacos de arroz e roupa no varal | Carlos Magno | Unsplash |
+
+## Celular, banco e aplicativo
+
+| Arquivo | O que mostra | Autor | Fonte |
+|---|---|---|---|
+| `celular-cartao-app-financeiro.jpg` | Homem negro com cartão do banco numa mão e o celular na outra | Tima Miroshnichenko | Pexels |
+
+## Pessoa idosa (BPC, aposentadoria)
+
+| Arquivo | O que mostra | Autor | Fonte |
+|---|---|---|---|
+| `idosa-negra-retrato.jpg` | Retrato de idosa negra diante de porta amarela, luz quente | Mehmet Turgut Kirkgoz | Pexels |
+| `idosa-sorrindo-retrato.jpg` | Idosa latina sorrindo, close no rosto | Mehmet Turgut Kirkgoz | Pexels |
+
+## Orçamento apertado
+
+| Arquivo | O que mostra | Autor | Fonte |
+|---|---|---|---|
+| `contas-calculadora-mesa.jpg` | Mão marcando planilha de números ao lado de calculadora | RDNE Stock project | Pexels |
+| `dinheiro-cedulas-reais-moedas.jpg` | Leque de cédulas de real, de R$ 2 a R$ 200 | Ivo Brasil | Pexels |
+
+## Mulher preocupada (perfil do público)
+
+| Arquivo | O que mostra | Autor | Fonte |
+|---|---|---|---|
+| `mulher-preocupada-celular.jpg` | Mulher negra de tranças, testa franzida, olhando o celular | Alex Green | Pexels |
+| `mulher-negra-telefone-preocupada.jpg` | Mulher negra ao telefone, expressão séria | Wundef Media | Pexels |
+
+## Cozinha e gás
+
+| Arquivo | O que mostra | Autor | Fonte |
+|---|---|---|---|
+| `cozinha-simples-fogao.jpg` | Cozinha modesta de azulejo verde, com pia e fogão de mesa | Matheus Bertelli | Pexels |
+| `fogao-panela-cozinha-humilde.jpg` | Fogão de mesa a gás com panela de pressão, em casa humilde | Alexey Demidov | Pexels |
+
+## Estudante (Pé-de-Meia)
+
+| Arquivo | O que mostra | Autor | Fonte |
+|---|---|---|---|
+| `estudante-menina-sala-aula.jpg` | Adolescente negra sorrindo com mochila e cadernos, em sala de aula | Max Fischer | Pexels |
+| `estudante-adolescente-livros.jpg` | Estudante latina carregando pilha de livros em corredor de escola | Lucero Estrella | Pexels |
+
+## Reprovadas nesta rodada
+
+- foto de atendimento em balcão — cenário de cafeteria, não passa ideia de repartição;
+- mão com aplicativo de banco — o saldo na tela aparece **em euro**, impróprio para o Brasil.
+
+## Bancos pagos: não usar
+
+Shutterstock, Getty, Adobe Stock, iStock, Reuters, AFP e Folha **não podem** ser usados
+sem assinatura. "Livre de direitos" (royalty-free) nesses sites significa que, depois de
+**comprar** a licença, você reutiliza sem pagar de novo — não significa gratuito. Essas
+agências rastreiam uso indevido e cobram retroativamente.
+
+---
+
 ## Como usar
 
 ```
