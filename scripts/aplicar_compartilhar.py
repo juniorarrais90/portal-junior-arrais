@@ -16,9 +16,9 @@ MODELO = """      %s
         <span class="share-titulo">Gostou? Compartilhe esta not&iacute;cia:</span>
         <div class="share-botoes">
           <a class="share-btn share-wa" target="_blank" rel="noopener" href="https://api.whatsapp.com/send?text={WA}">WhatsApp</a>
-          <a class="share-btn share-fb" target="_blank" rel="noopener" href="https://www.facebook.com/sharer/sharer.php?u={URL}">Facebook</a>
+          <a class="share-btn share-fb" target="_blank" rel="noopener" href="https://www.facebook.com/sharer/sharer.php?u={URLFB}">Facebook</a>
           <a class="share-btn share-tg" target="_blank" rel="noopener" href="https://t.me/share/url?url={URL}&text={TIT}">Telegram</a>
-          <button class="share-btn share-ig" type="button" onclick="pjaStories(this)">Instagram / Stories</button>
+          <button class="share-btn share-ig share-arte" type="button" onclick="pjaBaixarArte(this)">Baixar arte 9:16</button>
           <button class="share-btn share-copiar" type="button" onclick="pjaCopiarLink(this)">Copiar link</button>
         </div>
       </div>
@@ -30,8 +30,8 @@ def processa(caminho):
     tit = re.search(r'<meta property="og:title" content="([^"]*)"', h)
     url = re.search(r'<link rel="canonical" href="([^"]*)"', h)
     if not (tit and url): return False
-    t = urllib.parse.quote(tit.group(1)); u = urllib.parse.quote(url.group(1))
-    bloco = MODELO.replace('{URL}', u).replace('{TIT}', t).replace('{WA}', t + '%0A%0A' + u)
+    t = urllib.parse.quote(tit.group(1)); u = urllib.parse.quote(url.group(1)); ufb = urllib.parse.quote(url.group(1), safe='')
+    bloco = MODELO.replace('{URLFB}', ufb).replace('{URL}', u).replace('{TIT}', t).replace('{WA}', t + '%0A%0A' + u)
     # remove versão antiga, se houver
     h = re.sub(re.escape(INICIO) + r'.*?' + re.escape(FIM) + r'\n?', '', h, flags=re.S)
     alvo = '      <!-- ADSENSE: espaço de anúncio dentro da matéria -->'

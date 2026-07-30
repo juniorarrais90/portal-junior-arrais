@@ -610,3 +610,6 @@ header nav.faixa-categorias { display: block; }
 .share-ig{background:linear-gradient(45deg,#f9ce34,#ee2a7b 55%,#6228d7)}
 .share-copiar{background:#1e2a38}
 .share-btn svg{width:15px;height:15px;fill:#fff}
+
+.share-arte{display:none}
+.pja-admin .share-arte{display:inline-flex}

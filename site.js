@@ -117,23 +117,25 @@ function pjaCopiarLink(btn){
     setTimeout(function(){ btn.textContent = o; }, 2000);
   }).catch(function(){ prompt('Copie o link:', d.url); });
 }
-function pjaStories(btn){
+
+function pjaBaixarArte(btn){
   var d = pjaDadosNoticia();
-  // tenta a arte 9:16 (img/stories/slug.png); se não existir, usa a capa
   var slug = d.url.split('/').pop().replace('.html','');
-  var candidata = d.img.replace('/img/' + slug + '.png', '/img/stories/' + slug + '.png');
-  function compartilharImagem(url, fallback){
+  var arte = d.img.replace('/img/' + slug + '.png', '/img/stories/' + slug + '.png');
+  function baixar(url, fallback){
     fetch(url).then(function(r){ if(!r.ok) throw 0; return r.blob(); }).then(function(b){
-      var f = new File([b], slug + '.png', {type:'image/png'});
-      if (navigator.canShare && navigator.canShare({files:[f]})) {
-        return navigator.share({files:[f], title:d.titulo, text:d.titulo + '\n' + d.url});
-      }
-      throw 0;
-    }).catch(function(){
-      if (fallback) return compartilharImagem(fallback, null);
-      if (navigator.share) { navigator.share({title:d.titulo, text:d.titulo, url:d.url}); }
-      else { pjaCopiarLink(btn); }
-    });
+      var a = document.createElement('a');
+      a.href = URL.createObjectURL(b);
+      a.download = 'story-' + slug + '.png';
+      document.body.appendChild(a); a.click(); a.remove();
+    }).catch(function(){ if (fallback) baixar(fallback, null); });
   }
-  compartilharImagem(candidata, d.img);
+  baixar(arte, d.img);
 }
+/* modo arte: aparece só para quem abriu uma vez com ?arte=1 */
+(function(){
+  try {
+    if (/[?&]arte=1/.test(location.search)) localStorage.setItem('pja-arte','1');
+    if (localStorage.getItem('pja-arte') === '1') document.documentElement.classList.add('pja-admin');
+  } catch(e){}
+})();
