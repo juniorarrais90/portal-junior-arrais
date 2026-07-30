@@ -142,7 +142,20 @@ function pjaBaixarArte(btn){
 
 function pjaFacebook(btn){
   var d = pjaDadosNoticia();
+  var sharer = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(d.url);
   var ehCelular = /Android|iPhone|iPad/i.test(navigator.userAgent);
-  if (ehCelular && navigator.share) { navigator.share({title:d.titulo, url:d.url}); return; }
-  window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(d.url), '_blank', 'noopener,width=640,height=580');
+  if (!ehCelular) {
+    window.open(sharer, '_blank', 'noopener,width=640,height=580');
+    return;
+  }
+  // celular: abre o compositor DENTRO do app do Facebook (porta semioficial)
+  var inicio = Date.now();
+  try { location.href = 'fb://faceweb/f?href=' + encodeURIComponent(sharer); } catch(e){}
+  setTimeout(function(){
+    // se o app não abriu (página continua visível), plano B: folha do sistema
+    if (!document.hidden && Date.now() - inicio < 2500) {
+      if (navigator.share) { navigator.share({title:d.titulo, url:d.url}); }
+      else { location.href = sharer; }
+    }
+  }, 1400);
 }
