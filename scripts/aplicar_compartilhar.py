@@ -16,7 +16,7 @@ MODELO = """      %s
         <span class="share-titulo">Gostou? Compartilhe esta not&iacute;cia:</span>
         <div class="share-botoes">
           <a class="share-btn share-wa" target="_blank" rel="noopener" href="https://api.whatsapp.com/send?text={WA}">WhatsApp</a>
-          <a class="share-btn share-fb" target="_blank" rel="noopener" href="https://www.facebook.com/sharer/sharer.php?u={URLFB}">Facebook</a>
+          <button class="share-btn share-fb" type="button" onclick="pjaFacebook(this)">Facebook</button>
           <a class="share-btn share-tg" target="_blank" rel="noopener" href="https://t.me/share/url?url={URL}&text={TIT}">Telegram</a>
           <button class="share-btn share-ig share-arte" type="button" onclick="pjaBaixarArte(this)">Baixar arte 9:16</button>
           <button class="share-btn share-copiar" type="button" onclick="pjaCopiarLink(this)">Copiar link</button>

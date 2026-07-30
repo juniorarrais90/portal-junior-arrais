@@ -139,3 +139,10 @@ function pjaBaixarArte(btn){
     if (localStorage.getItem('pja-arte') === '1') document.documentElement.classList.add('pja-admin');
   } catch(e){}
 })();
+
+function pjaFacebook(btn){
+  var d = pjaDadosNoticia();
+  var ehCelular = /Android|iPhone|iPad/i.test(navigator.userAgent);
+  if (ehCelular && navigator.share) { navigator.share({title:d.titulo, url:d.url}); return; }
+  window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(d.url), '_blank', 'noopener,width=640,height=580');
+}
