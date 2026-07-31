@@ -114,16 +114,19 @@ function pjaCopiarLink(btn){
   var d = pjaDadosNoticia();
   var original = btn.getAttribute('data-rotulo') || btn.textContent;
   btn.setAttribute('data-rotulo', original);
-  var respondeu = false;
 
   function feedback(txt){
     btn.textContent = txt;
     setTimeout(function(){ btn.textContent = original; }, 2200);
   }
 
-  // Plano B: textarea + execCommand. Nao depende de permissao nem de foco,
-  // e funciona nas WebViews do Instagram e do Facebook.
-  function copiarLegado(){
+  // CAMINHO PRINCIPAL: textarea + execCommand('copy').
+  // E sincrono, nao pede permissao, nao depende do foco da janela e funciona
+  // nas WebViews do Instagram e do Facebook, de onde vem boa parte do trafego.
+  // A Clipboard API (navigator.clipboard.writeText) NAO serve como caminho
+  // principal aqui: quando a aba esta sem foco ou a permissao esta pendente,
+  // ela CONGELA a pagina em vez de rejeitar. Ela fica so como plano B.
+  function copiarSincrono(){
     try {
       var ta = document.createElement('textarea');
       ta.value = d.url;
@@ -137,8 +140,8 @@ function pjaCopiarLink(btn){
     } catch(e){ return false; }
   }
 
-  // Plano C: campo visivel com o link ja selecionado, dentro da propria barra.
-  // Nunca usar prompt() ou alert(): sao modais, travam a pagina e varios
+  // PLANO C: campo visivel com o link ja selecionado, dentro da propria barra.
+  // Nunca usar prompt() nem alert(): sao modais, travam a pagina e varios
   // navegadores de celular simplesmente ignoram.
   function mostrarCampo(){
     var barra = btn.closest('.share-bar') || btn.parentNode;
@@ -160,29 +163,28 @@ function pjaCopiarLink(btn){
     feedback('Copie o link abaixo');
   }
 
-  function planoB(){
-    if (copiarLegado()) feedback('Link copiado!'); else mostrarCampo();
-  }
+  if (copiarSincrono()) { feedback('Link copiado!'); return; }
 
+  // Plano B: Clipboard API, agora sem travar a interface. Se nao responder
+  // em 700ms, cai para o campo manual.
   if (navigator.clipboard && navigator.clipboard.writeText) {
-    // A Clipboard API pode ficar PENDENTE para sempre (aba sem foco, WebView de
-    // app, politica de permissao) — sem esse timeout o botao nao faz nada.
+    var respondeu = false;
     var timer = setTimeout(function(){
-      if (respondeu) return;
-      respondeu = true; planoB();
+      if (respondeu) return; respondeu = true; mostrarCampo();
     }, 700);
-
-    navigator.clipboard.writeText(d.url).then(function(){
-      if (respondeu) return;
-      respondeu = true; clearTimeout(timer); feedback('Link copiado!');
-    })['catch'](function(){
-      if (respondeu) return;
-      respondeu = true; clearTimeout(timer); planoB();
-    });
-    return;
+    try {
+      navigator.clipboard.writeText(d.url).then(function(){
+        if (respondeu) return;
+        respondeu = true; clearTimeout(timer); feedback('Link copiado!');
+      })['catch'](function(){
+        if (respondeu) return;
+        respondeu = true; clearTimeout(timer); mostrarCampo();
+      });
+      return;
+    } catch(e){ clearTimeout(timer); }
   }
 
-  planoB();
+  mostrarCampo();
 }
 
 function pjaBaixarArte(btn){
