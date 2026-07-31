@@ -114,56 +114,75 @@ function pjaCopiarLink(btn){
   var d = pjaDadosNoticia();
   var original = btn.getAttribute('data-rotulo') || btn.textContent;
   btn.setAttribute('data-rotulo', original);
+  var respondeu = false;
 
-  function okVisual(){
-    btn.textContent = 'Link copiado!';
-    setTimeout(function(){ btn.textContent = original; }, 2000);
+  function feedback(txt){
+    btn.textContent = txt;
+    setTimeout(function(){ btn.textContent = original; }, 2200);
   }
 
-  // Plano B: textarea + execCommand. Funciona sem permissao e sem foco,
-  // inclusive em WebView do Instagram/Facebook, onde a Clipboard API falha.
+  // Plano B: textarea + execCommand. Nao depende de permissao nem de foco,
+  // e funciona nas WebViews do Instagram e do Facebook.
   function copiarLegado(){
     try {
       var ta = document.createElement('textarea');
       ta.value = d.url;
       ta.setAttribute('readonly', '');
-      ta.style.cssText = 'position:fixed;top:0;left:0;opacity:0;pointer-events:none';
+      ta.style.cssText = 'position:fixed;top:0;left:0;width:1px;height:1px;opacity:0';
       document.body.appendChild(ta);
-      ta.select();
-      ta.setSelectionRange(0, ta.value.length); // iOS
+      ta.focus(); ta.select(); ta.setSelectionRange(0, ta.value.length); // iOS
       var deu = document.execCommand('copy');
       document.body.removeChild(ta);
       return deu;
     } catch(e){ return false; }
   }
 
-  // Plano C: mostra o link para o usuario copiar na mao.
-  function pedirManual(){
-    window.prompt('Copie o link:', d.url);
+  // Plano C: campo visivel com o link ja selecionado, dentro da propria barra.
+  // Nunca usar prompt() ou alert(): sao modais, travam a pagina e varios
+  // navegadores de celular simplesmente ignoram.
+  function mostrarCampo(){
+    var barra = btn.closest('.share-bar') || btn.parentNode;
+    var antigo = barra.querySelector('.share-link-manual');
+    if (antigo) antigo.remove();
+    var box = document.createElement('div');
+    box.className = 'share-link-manual';
+    box.style.cssText = 'width:100%;margin-top:10px;display:flex;gap:8px;align-items:center';
+    var inp = document.createElement('input');
+    inp.type = 'text'; inp.value = d.url; inp.readOnly = true;
+    inp.style.cssText = 'flex:1;min-width:0;padding:9px 11px;border:1px solid #cbd6e2;' +
+      'border-radius:8px;font-size:14px;color:#1E2A38;background:#fff';
+    var dica = document.createElement('span');
+    dica.textContent = 'Toque e segure para copiar';
+    dica.style.cssText = 'font-size:12px;color:#5a6b7f;white-space:nowrap';
+    box.appendChild(inp); box.appendChild(dica);
+    barra.appendChild(box);
+    inp.focus(); inp.select(); inp.setSelectionRange(0, inp.value.length);
+    feedback('Copie o link abaixo');
+  }
+
+  function planoB(){
+    if (copiarLegado()) feedback('Link copiado!'); else mostrarCampo();
   }
 
   if (navigator.clipboard && navigator.clipboard.writeText) {
-    // A Clipboard API pode ficar PENDENTE para sempre (aba sem foco, WebView,
-    // politica de permissao). Sem esse timeout o botao nao faz nada.
-    var respondeu = false;
+    // A Clipboard API pode ficar PENDENTE para sempre (aba sem foco, WebView de
+    // app, politica de permissao) — sem esse timeout o botao nao faz nada.
     var timer = setTimeout(function(){
       if (respondeu) return;
-      respondeu = true;
-      if (copiarLegado()) okVisual(); else pedirManual();
+      respondeu = true; planoB();
     }, 700);
 
     navigator.clipboard.writeText(d.url).then(function(){
       if (respondeu) return;
-      respondeu = true; clearTimeout(timer); okVisual();
-    }).catch(function(){
+      respondeu = true; clearTimeout(timer); feedback('Link copiado!');
+    })['catch'](function(){
       if (respondeu) return;
-      respondeu = true; clearTimeout(timer);
-      if (copiarLegado()) okVisual(); else pedirManual();
+      respondeu = true; clearTimeout(timer); planoB();
     });
     return;
   }
 
-  if (copiarLegado()) okVisual(); else pedirManual();
+  planoB();
 }
 
 function pjaBaixarArte(btn){
