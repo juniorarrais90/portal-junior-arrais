@@ -190,3 +190,11 @@ python3 scripts/gerar_capa.py \
   --foto-fundo img/banco/<arquivo>.jpg \
   --credito "Foto: Fulano/Agência Brasil"
 ```
+
+---
+
+## Gestação / maternidade
+
+| Arquivo | O que mostra | Crédito |
+|---|---|---|
+| `gestante-barriga-alerta.jpg` | Barriga de gestante com sinal de alerta (triângulo vermelho e exclamação) desenhado | Imagem enviada pelo Júnior — conferir a origem antes de reutilizar |
