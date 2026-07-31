@@ -112,10 +112,58 @@ function pjaDadosNoticia(){
 }
 function pjaCopiarLink(btn){
   var d = pjaDadosNoticia();
-  (navigator.clipboard ? navigator.clipboard.writeText(d.url) : Promise.reject()).then(function(){
-    var o = btn.textContent; btn.textContent = 'Link copiado!';
-    setTimeout(function(){ btn.textContent = o; }, 2000);
-  }).catch(function(){ prompt('Copie o link:', d.url); });
+  var original = btn.getAttribute('data-rotulo') || btn.textContent;
+  btn.setAttribute('data-rotulo', original);
+
+  function okVisual(){
+    btn.textContent = 'Link copiado!';
+    setTimeout(function(){ btn.textContent = original; }, 2000);
+  }
+
+  // Plano B: textarea + execCommand. Funciona sem permissao e sem foco,
+  // inclusive em WebView do Instagram/Facebook, onde a Clipboard API falha.
+  function copiarLegado(){
+    try {
+      var ta = document.createElement('textarea');
+      ta.value = d.url;
+      ta.setAttribute('readonly', '');
+      ta.style.cssText = 'position:fixed;top:0;left:0;opacity:0;pointer-events:none';
+      document.body.appendChild(ta);
+      ta.select();
+      ta.setSelectionRange(0, ta.value.length); // iOS
+      var deu = document.execCommand('copy');
+      document.body.removeChild(ta);
+      return deu;
+    } catch(e){ return false; }
+  }
+
+  // Plano C: mostra o link para o usuario copiar na mao.
+  function pedirManual(){
+    window.prompt('Copie o link:', d.url);
+  }
+
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    // A Clipboard API pode ficar PENDENTE para sempre (aba sem foco, WebView,
+    // politica de permissao). Sem esse timeout o botao nao faz nada.
+    var respondeu = false;
+    var timer = setTimeout(function(){
+      if (respondeu) return;
+      respondeu = true;
+      if (copiarLegado()) okVisual(); else pedirManual();
+    }, 700);
+
+    navigator.clipboard.writeText(d.url).then(function(){
+      if (respondeu) return;
+      respondeu = true; clearTimeout(timer); okVisual();
+    }).catch(function(){
+      if (respondeu) return;
+      respondeu = true; clearTimeout(timer);
+      if (copiarLegado()) okVisual(); else pedirManual();
+    });
+    return;
+  }
+
+  if (copiarLegado()) okVisual(); else pedirManual();
 }
 
 function pjaBaixarArte(btn){
