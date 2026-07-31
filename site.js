@@ -120,13 +120,14 @@ function pjaCopiarLink(btn){
     setTimeout(function(){ btn.textContent = original; }, 2200);
   }
 
-  // CAMINHO PRINCIPAL: textarea + execCommand('copy').
-  // E sincrono, nao pede permissao, nao depende do foco da janela e funciona
-  // nas WebViews do Instagram e do Facebook, de onde vem boa parte do trafego.
-  // A Clipboard API (navigator.clipboard.writeText) NAO serve como caminho
-  // principal aqui: quando a aba esta sem foco ou a permissao esta pendente,
-  // ela CONGELA a pagina em vez de rejeitar. Ela fica so como plano B.
-  function copiarSincrono(){
+  // Copia com textarea + execCommand('copy'). E SINCRONO: aproveita o gesto do
+  // usuario, nao pede permissao, nao depende do foco da janela e funciona nas
+  // WebViews do Instagram e do Facebook, de onde vem boa parte do trafego.
+  //
+  // NAO usar navigator.clipboard.writeText aqui. Ela e assincrona e, quando a
+  // aba esta sem foco ou a permissao fica pendente, NAO rejeita: fica pendente
+  // para sempre e CONGELA a pagina. Foi o que quebrou este botao antes.
+  function copiar(){
     try {
       var ta = document.createElement('textarea');
       ta.value = d.url;
@@ -140,7 +141,7 @@ function pjaCopiarLink(btn){
     } catch(e){ return false; }
   }
 
-  // PLANO C: campo visivel com o link ja selecionado, dentro da propria barra.
+  // Se nao copiar, mostra o link num campo ja selecionado, dentro da barra.
   // Nunca usar prompt() nem alert(): sao modais, travam a pagina e varios
   // navegadores de celular simplesmente ignoram.
   function mostrarCampo(){
@@ -163,28 +164,7 @@ function pjaCopiarLink(btn){
     feedback('Copie o link abaixo');
   }
 
-  if (copiarSincrono()) { feedback('Link copiado!'); return; }
-
-  // Plano B: Clipboard API, agora sem travar a interface. Se nao responder
-  // em 700ms, cai para o campo manual.
-  if (navigator.clipboard && navigator.clipboard.writeText) {
-    var respondeu = false;
-    var timer = setTimeout(function(){
-      if (respondeu) return; respondeu = true; mostrarCampo();
-    }, 700);
-    try {
-      navigator.clipboard.writeText(d.url).then(function(){
-        if (respondeu) return;
-        respondeu = true; clearTimeout(timer); feedback('Link copiado!');
-      })['catch'](function(){
-        if (respondeu) return;
-        respondeu = true; clearTimeout(timer); mostrarCampo();
-      });
-      return;
-    } catch(e){ clearTimeout(timer); }
-  }
-
-  mostrarCampo();
+  if (copiar()) feedback('Link copiado!'); else mostrarCampo();
 }
 
 function pjaBaixarArte(btn){
