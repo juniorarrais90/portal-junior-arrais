@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Gera a arte de FEED do Portal Júnior Arrais (1080x1080, Instagram/Facebook).
+Gera a arte de FEED do Portal Júnior Arrais (1080x1440, Instagram/Facebook).
 
 Terceiro formato do portal, ao lado da capa 16:9 (gerar_capa.py) e do story 9:16
-(gerar_story.py). Replica o modelo do Canva "MODELO Portal Junior Arrais":
+(gerar_story.py). Sai em 3:4 porque desde 2025 a grade do perfil do Instagram é
+3:4 — post quadrado perde as laterais na grade. Replica o modelo do Canva "MODELO Portal Junior Arrais":
 foto real em cima, faixa azul com chapéu + manchete embaixo, recorte do Júnior à
 esquerda, rodapé com o endereço do portal e o selo "LINK NOS STORIES" no topo.
 
@@ -17,7 +18,7 @@ Uso típico:
       --credito "Foto: Marcelo Camargo/Agência Brasil"
 
 Argumentos:
-  --saida       caminho do PNG de saída (usar o slug da notícia)
+  --saida       caminho do PNG de saída (usar o slug da notícia). Sai 1080x1440.
   --titulo      manchete em uma string; o script quebra em linhas e ajusta o corpo
                 sozinho (2 a 3 linhas). Sai sempre em CAIXA ALTA.
   --chapeu      texto da tarja vermelha acima da manchete (tema: BOLSA FAMÍLIA,
@@ -49,11 +50,14 @@ ESCURO       = (11, 26, 44)      # #0b1a2c  rodapé
 AZUL_MARCA   = (44, 137, 231)    # #2c89e7  fallback sem foto
 BRANCO       = (255, 255, 255)
 
-W = H = 1080
-FOTO_H   = 760          # a foto ocupa de 0 a 760
-FAIXA_B  = 996          # faixa azul de 760 a 996
+W, H     = 1080, 1440   # 3:4 — proporção da grade do perfil do Instagram desde 2025.
+                        # Em 1:1 o Instagram corta as laterais na grade, comendo o
+                        # recorte do Júnior e o selo de stories. Em 3:4 não corta nada.
+FOTO_H   = 1120         # a foto ocupa de 0 a 1120 (todo o ganho de altura foi para ela)
+FAIXA_B  = 1356         # faixa azul de 1120 a 1356 (236px, igual à do formato antigo)
 MARGEM_X = 380          # coluna onde começam chapéu e manchete
 COL_W    = 656          # largura útil da coluna de texto
+CHAPEU_H = 56           # altura da tarja de tema
 SS       = 4            # supersampling para as formas curvas
 
 
@@ -129,7 +133,7 @@ def fundo_marca():
 
 
 def cortar_foto(caminho):
-    """Corte centralizado da foto para 1080x760."""
+    """Corte centralizado da foto para a área da imagem (1080 x FOTO_H)."""
     base = Image.open(caminho).convert("RGB")
     alvo = W / FOTO_H
     bw, bh = base.size
@@ -225,11 +229,11 @@ def gerar(saida, titulo, chapeu, foto_fundo=None, foto=None, credito=None,
     # 3. recorte do Júnior à esquerda, sangrando no rodapé
     if foto and os.path.exists(foto):
         ft = Image.open(foto).convert("RGBA")
-        alt = 712
+        alt = 900
         ft = ft.resize((int(ft.width * alt / ft.height), alt), Image.LANCZOS)
         im.alpha_composite(ft, (-108, FAIXA_B - alt))
 
-    im.alpha_composite(desenhar_selo_portal(logo), (214, 820))
+    im.alpha_composite(desenhar_selo_portal(logo), (214, FOTO_H + 60))
     if selo:
         im.alpha_composite(desenhar_selo_stories(texto_selo), (48, 48))
 
@@ -238,7 +242,7 @@ def gerar(saida, titulo, chapeu, foto_fundo=None, foto=None, credito=None,
     bold, reg = achar_fonte("Bold"), achar_fonte("Regular")
 
     # 4. linha vertical branca separando o recorte da coluna de texto
-    d.rectangle([352, 778, 357, 982], fill=BRANCO)
+    d.rectangle([352, FOTO_H + 18, 357, FAIXA_B - 14], fill=BRANCO)
 
     # 5. chapéu: tarja vermelha encostada no topo da faixa azul
     if chapeu:
@@ -249,9 +253,10 @@ def gerar(saida, titulo, chapeu, foto_fundo=None, foto=None, credito=None,
                 break
             tam_ch -= 1
         f_ch = ImageFont.truetype(bold, tam_ch)
-        d.rectangle([MARGEM_X, 702, MARGEM_X + 340, 758], fill=VERMELHO)
+        topo_ch = FOTO_H - CHAPEU_H          # tarja encostada no topo da faixa azul
+        d.rectangle([MARGEM_X, topo_ch, MARGEM_X + 340, topo_ch + CHAPEU_H], fill=VERMELHO)
         tw = d.textlength(chapeu.upper(), font=f_ch)
-        d.text((MARGEM_X + (340 - tw) / 2, 702 + (56 - tam_ch * 1.25) / 2),
+        d.text((MARGEM_X + (340 - tw) / 2, topo_ch + (CHAPEU_H - tam_ch * 1.25) / 2),
                chapeu.upper(), font=f_ch, fill=BRANCO)
 
     # 6. manchete com autoajuste, centralizada na faixa
