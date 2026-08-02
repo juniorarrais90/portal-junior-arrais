@@ -198,3 +198,27 @@ python3 scripts/gerar_capa.py \
 | Arquivo | O que mostra | Crédito |
 |---|---|---|
 | `gestante-barriga-alerta.jpg` | Barriga de gestante com sinal de alerta (triângulo vermelho e exclamação) desenhado | Imagem enviada pelo Júnior — conferir a origem antes de reutilizar |
+
+
+---
+
+# Parte 3 — Acervo próprio do Júnior (Google Drive)
+
+Fotos vindas da pasta `Imagens - Portal Junior Arrais` do Drive, triadas por
+resolução (mínimo 1200 px de largura) e por não terem texto sobreposto.
+**Origem não documentada** — foram reunidas a partir de busca na web. Antes de
+reutilizar, considerar o risco: se aparecer marca d'água ou for identificada
+como de agência comercial, substituir.
+
+| Arquivo | O que mostra |
+|---|---|
+| `idoso-sentado-cama-quarto.jpg` | Homem idoso negro sentado na beira da cama, de pijama, em quarto simples |
+| `fila-agencia-caixa-rua.jpg` | Fila de pessoas na calçada em frente a uma agência da Caixa |
+| `carteira-trabalho-digital-celular.jpg` | Celulares mostrando o aplicativo da Carteira de Trabalho Digital |
+| `inss-celular-dinheiro-cofrinho.jpg` | Celular com a marca do INSS ao lado de notas de real e cofrinho |
+| `inss-cartao-e-notas-maos.jpg` | Mãos segurando notas de real e um cartão com a marca do INSS |
+| `bpc-cartao-mulher-segurando.jpg` | Mulher segurando o cartão do BPC, fundo claro desfocado |
+| `bpc-cartao-mulher-sorrindo.jpg` | Mulher sorridente segurando o cartão do BPC |
+| `bolsa-familia-cartao-e-dinheiro-agencia.jpg` | Mão segurando cartão do Bolsa Família e notas dentro de agência bancária |
+| `bolsa-familia-cartao-na-mao.jpg` | Mão segurando o cartão do Bolsa Família |
+| `bolsa-familia-cartao-fundo-azul.jpg` | Mão segurando o cartão do Bolsa Família sobre fundo azul |
