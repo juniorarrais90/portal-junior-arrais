@@ -212,7 +212,7 @@ como de agência comercial, substituir.
 
 | Arquivo | O que mostra |
 |---|---|
-| `idoso-sentado-cama-quarto.jpg` | Homem idoso negro sentado na beira da cama, de pijama, em quarto simples |
+| `idoso-sentado-cama-quarto.jpg` | **NÃO USAR FORA DE PAUTA DE BPC** — a imagem tem o **logo do BPC estampado** no canto superior esquerdo. É quadro de vídeo, não foto limpa. Numa capa de outro assunto, o logo cai em cima do chip da categoria. |
 | `fila-agencia-caixa-rua.jpg` | Fila de pessoas na calçada em frente a uma agência da Caixa |
 | `carteira-trabalho-digital-celular.jpg` | Celulares mostrando o aplicativo da Carteira de Trabalho Digital |
 | `inss-celular-dinheiro-cofrinho.jpg` | Celular com a marca do INSS ao lado de notas de real e cofrinho |
@@ -222,3 +222,23 @@ como de agência comercial, substituir.
 | `bolsa-familia-cartao-e-dinheiro-agencia.jpg` | Mão segurando cartão do Bolsa Família e notas dentro de agência bancária |
 | `bolsa-familia-cartao-na-mao.jpg` | Mão segurando o cartão do Bolsa Família |
 | `bolsa-familia-cartao-fundo-azul.jpg` | Mão segurando o cartão do Bolsa Família sobre fundo azul |
+
+
+---
+
+## Lacunas confirmadas na rodada de 3/8/2026
+
+Ao publicar oito matérias de uma vez, quatro temas ficaram sem foto própria e uma
+precisou sair no formato arte azul da marca. **O que falta no banco, por ordem de
+urgência:**
+
+- **transporte / pessoa idosa viajando** — rodoviária, embarque, ônibus interestadual.
+  Sem isso, toda pauta de passagem gratuita sai como arte azul;
+- **saúde e farmácia** — balcão de farmácia, caixa de genérico, fralda geriátrica,
+  aferição de pressão. Não há nada de saúde no banco;
+- **atendimento e documentos** — a única (`atendimento-mesa-documentos.jpg`) já está
+  em duas matérias;
+- **pessoa idosa em outras situações** — as duas existentes já estão usadas em BPC.
+
+Fonte recomendada: Agência Brasil (uso livre com crédito e arquivos grandes).
+Só vale salvar imagem com **1600 px ou mais de largura**.
