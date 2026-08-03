@@ -33,7 +33,7 @@ _(sem foto no banco — usar `idosa-sorrindo-retrato.jpg` ou `idosa-negra-retrat
 
 | Arquivo | O que mostra | Crédito |
 |---|---|---|
-| `farmacia-popular-balcao-credenciado.jpg` | Balcão de farmácia credenciada ao Programa Farmácia Popular, com atendentes e prateleira de medicamentos ao fundo | Foto: Agência Brasil |
+| `farmacia-popular-balcao-credenciado.jpg` | Balcão de farmácia credenciada ao Programa Farmácia Popular, com atendentes de jaleco e prateleira de medicamentos ao fundo. Foto de arquivo de 07/06/2023, em Brasília | Foto: Elza Fiuza/Agência Brasil |
 
 > **Duas observações de uso.** (1) O arquivo tem **1170x700**, abaixo do padrão 1600x800
 > do banco — serve bem na capa e no feed; no story o recorte vertical amplia bastante.
@@ -42,8 +42,9 @@ _(sem foto no banco — usar `idosa-sorrindo-retrato.jpg` ou `idosa-negra-retrat
 > na capa. **Para a capa, cortar a foto em 60% da altura** antes de passar ao gerador;
 > para story e feed, usar o arquivo inteiro. Foi assim que a capa de 3/8/2026 foi feita.
 >
-> **Crédito a completar:** confirmado como Agência Brasil, mas sem o nome do fotógrafo.
-> Quando localizar a legenda original, trocar para "Foto: Nome/Agência Brasil".
+> **Crédito confirmado** na legenda original da Agência Brasil, em duas matérias que usam
+> o mesmo arquivo (`farmaci-popular-1.jpg`): "Farmácia Popular em Brasília.
+> Foto: Elza Fiuza/Agência Brasil".
 
 ## INSS / Previdência
 
