@@ -29,6 +29,22 @@ _(sem foto no banco — ver seção de reprovadas)_
 |---|---|---|
 _(sem foto no banco — usar `idosa-sorrindo-retrato.jpg` ou `idosa-negra-retrato.jpg` da Parte 2)_
 
+## Saúde / Farmácia Popular
+
+| Arquivo | O que mostra | Crédito |
+|---|---|---|
+| `farmacia-popular-balcao-credenciado.jpg` | Balcão de farmácia credenciada ao Programa Farmácia Popular, com atendentes e prateleira de medicamentos ao fundo | Foto: Agência Brasil |
+
+> **Duas observações de uso.** (1) O arquivo tem **1170x700**, abaixo do padrão 1600x800
+> do banco — serve bem na capa e no feed; no story o recorte vertical amplia bastante.
+> Se aparecer o original em tamanho maior na Agência Brasil, substituir.
+> (2) A tarja vermelha do balcão ocupa o terço de baixo, que é onde a manchete é escrita
+> na capa. **Para a capa, cortar a foto em 60% da altura** antes de passar ao gerador;
+> para story e feed, usar o arquivo inteiro. Foi assim que a capa de 3/8/2026 foi feita.
+>
+> **Crédito a completar:** confirmado como Agência Brasil, mas sem o nome do fotógrafo.
+> Quando localizar a legenda original, trocar para "Foto: Nome/Agência Brasil".
+
 ## INSS / Previdência
 
 | Arquivo | O que mostra | Crédito |
@@ -234,8 +250,9 @@ urgência:**
 
 - **transporte / pessoa idosa viajando** — rodoviária, embarque, ônibus interestadual.
   Sem isso, toda pauta de passagem gratuita sai como arte azul;
-- **saúde e farmácia** — balcão de farmácia, caixa de genérico, fralda geriátrica,
-  aferição de pressão. Não há nada de saúde no banco;
+- ~~saúde e farmácia~~ — **parcialmente resolvido em 3/8/2026** com
+  `farmacia-popular-balcao-credenciado.jpg`. Ainda falta caixa de genérico,
+  fralda geriátrica e aferição de pressão;
 - **atendimento e documentos** — a única (`atendimento-mesa-documentos.jpg`) já está
   em duas matérias;
 - **pessoa idosa em outras situações** — as duas existentes já estão usadas em BPC.
