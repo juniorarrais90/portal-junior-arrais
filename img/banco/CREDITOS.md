@@ -260,3 +260,35 @@ urgência:**
 
 Fonte recomendada: Agência Brasil (uso livre com crédito e arquivos grandes).
 Só vale salvar imagem com **1600 px ou mais de largura**.
+
+---
+
+## Rodada de 4/8/2026 — o que a publicação de oito matérias revelou
+
+**O banco está esgotado.** São 39 fotos para 59 matérias. As oito capas desta
+rodada colidiram, todas, com capas antigas na checagem de repetição. A saída foi
+**recortar cada foto num enquadramento diferente** antes de gerar as artes — funciona,
+mas é remendo: a foto continua sendo a mesma.
+
+**Foto reprovada em uso:** `contas-calculadora-mesa.jpg` é uma **tabela de imposto de
+renda dos Estados Unidos** (colunas "Single or Married Filing Separately" e "Head of
+Household", valores em dólar). Ilegível na capa 16:9, mas perfeitamente legível na arte
+3:4 do Canva. **Não usar em pauta de dinheiro, juros ou imposto** — desmoraliza a
+matéria. Substituída por `dinheiro-cedulas-reais-moedas.jpg` na matéria da Selic.
+
+**Ressalva:** `fila-agencia-caixa-rua.jpg` mostra pessoas **de máscara** — é foto do
+período da pandemia e data a matéria. Serve para fila e atendimento, mas não para pauta
+que precise parecer de hoje.
+
+**O que falta, por ordem de urgência:**
+
+- **pescador artesanal / pesca e defeso** — a matéria do seguro-defeso saiu com foto de
+  fila de banco por falta de opção. A Agência Brasil tem acervo bom do tema;
+- **ambiente de trabalho** — chefe e empregado, reunião, chão de fábrica, escritório.
+  Toda pauta trabalhista hoje cai nas duas fotos de Carteira de Trabalho Digital;
+- **perícia médica e consultório** — nada no banco;
+- **dinheiro e juros** — sobrou só `dinheiro-cedulas-reais.jpg` e a de moedas, e as duas
+  já rodaram.
+
+Fonte recomendada: Agência Brasil (uso livre com crédito e arquivos grandes).
+Só vale salvar imagem com **1600 px ou mais de largura**.
