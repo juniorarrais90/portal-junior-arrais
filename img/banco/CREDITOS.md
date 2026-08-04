@@ -292,3 +292,27 @@ que precise parecer de hoje.
 
 Fonte recomendada: Agência Brasil (uso livre com crédito e arquivos grandes).
 Só vale salvar imagem com **1600 px ou mais de largura**.
+
+---
+
+# Parte 4 — Imagens trazidas pelo Júnior em 4/8/2026
+
+Seis imagens usadas para refazer as capas da rodada de 4/8/2026, depois que ele
+melhorou as artes de feed no Canva. **Origem não documentada** e **resolução baixa**
+(entre 429 e 522 px de largura, contra o mínimo de 1200 px da régua do portal).
+Foram ampliadas para caber na capa. Antes de reutilizar, considerar o risco de
+origem e procurar uma versão maior.
+
+| Arquivo | O que mostra | Observação |
+|---|---|---|
+| `arte-assedio-eleitoral.png` | Banner "ASSÉDIO ELEITORAL — proteja sua liberdade de escolha" | Arte com texto: usar só com `--encaixe conter` |
+| `arte-consignado-inss-biometria.png` | Arte "CONSIGNADO INSS" com digital e logo | Arte com texto: `--encaixe conter` |
+| `arte-pente-fino-inss.png` | Arte "Pente fino do INSS" com idoso, lupa e notas | Arte com texto: `--encaixe conter` |
+| `arte-meu-inss-logo.png` | Logo "MEU INSS" sobre fundo azul-marinho chapado | Arte com texto: `--encaixe conter` |
+| `pescador-artesanal-rede-canoa.jpg` | Pescador lançando tarrafa de uma canoa, contraluz de fim de tarde | Foto. Ampliada 2,5x — fica macia no cabeçalho da matéria. A cena parece asiática, não brasileira |
+| `bolsa-familia-cartao-maos.jpg` | Mãos segurando o cartão do Programa Bolsa Família | Foto. Tem o texto do cartão, mas pequeno e centralizado |
+
+**Layout novo das capas:** desde esta rodada existe `scripts/gerar_capa_faixa.py`,
+que põe a manchete numa faixa azul ABAIXO da foto, em vez de escrever por cima. É o
+que permite usar arte que já tem texto. As 51 capas anteriores continuam no layout
+antigo — o site está com dois padrões convivendo até que elas sejam refeitas.

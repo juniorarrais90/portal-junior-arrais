@@ -32,17 +32,35 @@ ap=argparse.ArgumentParser()
 ap.add_argument("--saida",required=True); ap.add_argument("--categoria",required=True)
 ap.add_argument("--linhas",required=True); ap.add_argument("--foto-fundo",dest="foto",required=True)
 ap.add_argument("--credito",default="")
+ap.add_argument("--encaixe",default="cobrir",choices=["cobrir","conter"])
 a=ap.parse_args()
 
-im=cover(Image.open(a.foto).convert("RGB"),W,H)
-# degradê escuro embaixo e leve no topo
-ov=Image.new("L",(W,H),0); d=ImageDraw.Draw(ov)
-for y in range(H):
-    v=0
-    if y>H*0.45: v=int(230*((y-H*0.45)/(H*0.55))**1.3)
-    if y<H*0.14: v=max(v,int(120*(1-y/(H*0.14))))
-    d.line([(0,y),(W,y)],fill=v)
-im=Image.composite(Image.new("RGB",(W,H),(10,18,28)),im,ov)
+base=Image.open(a.foto).convert("RGB")
+if a.encaixe=="conter":
+    # ARTE COM TEXTO: nada de recorte nem de manchete por cima. A arte entra
+    # inteira, encostada na largura, e o texto do story fica embaixo, no fundo
+    # chapado da marca. Em 9:16 o recorte "cobrir" comeria as laterais da arte.
+    TOPO,BASE=(13,30,50),(24,48,74)
+    col=Image.new("RGB",(1,H))
+    for y in range(H):
+        k=y/H
+        col.putpixel((0,y),tuple(int(TOPO[i]+(BASE[i]-TOPO[i])*k) for i in range(3)))
+    im=col.resize((W,H))
+    k=min(W/base.width,(H*0.52)/base.height)
+    art=base.resize((int(base.width*k),int(base.height*k)),Image.LANCZOS)
+    x0,y0=(W-art.width)//2,int(H*0.30)-art.height//2
+    im.paste(Image.new("RGB",(art.width+24,art.height+24),(6,16,28)),(x0-12,y0-12))
+    im.paste(art,(x0,y0))
+else:
+    im=cover(base,W,H)
+    # degradê escuro embaixo e leve no topo
+    ov=Image.new("L",(W,H),0); d=ImageDraw.Draw(ov)
+    for y in range(H):
+        v=0
+        if y>H*0.45: v=int(230*((y-H*0.45)/(H*0.55))**1.3)
+        if y<H*0.14: v=max(v,int(120*(1-y/(H*0.14))))
+        d.line([(0,y),(W,y)],fill=v)
+    im=Image.composite(Image.new("RGB",(W,H),(10,18,28)),im,ov)
 dr=ImageDraw.Draw(im)
 
 # chip vermelho
