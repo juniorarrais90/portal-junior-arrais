@@ -316,3 +316,37 @@ origem e procurar uma versão maior.
 que põe a manchete numa faixa azul ABAIXO da foto, em vez de escrever por cima. É o
 que permite usar arte que já tem texto. As 51 capas anteriores continuam no layout
 antigo — o site está com dois padrões convivendo até que elas sejam refeitas.
+
+## Parte 4 — entradas de 5 de agosto de 2026 (acervo local do Júnior)
+
+Duas fotos vieram da pasta `Imagens - Portal Junior Arrais`, no Google Drive do Júnior,
+e foram convertidas de WebP para JPG.
+
+- **`atestmed-atestado-medico-notebook.jpg`** (1536x1024) — mesa com notebook exibindo a tela
+  do Meu INSS, atestado médico em branco e estetoscópio. Usada em
+  `atestmed-90-dias-sem-pericia`.
+  **Origem não documentada e provável geração por IA:** o texto do menu na tela e as palavras
+  no papel estão ilegíveis/deformados ("Nome Pacienet", "Assinatura do Medico"). Foi
+  **aprovada expressamente pelo Júnior** apesar da ressalva. Não usar em enquadramento que
+  amplie o texto da tela. Sem crédito a terceiro — não passar `--credito`.
+
+- **`carne-gps-inss-guia.jpg`** (1280x720) — carnês GPS (Guia da Previdência Social) laranja
+  sobre fundo cinza claro. Usada em `inss-5-por-cento-dona-de-casa-codigo-1929`.
+  Origem não documentada. Fotografia de objeto real, fundo limpo na metade superior e canto
+  superior direito livre — boa para manchete. Sem crédito a terceiro.
+
+### Fila de incorporação — Agência Brasil (aprovadas pelo Júnior, ainda não baixadas)
+
+Reprodução autorizada mediante crédito. Baixar e registrar quando forem usadas:
+
+| Arquivo sugerido | Assunto | Crédito obrigatório |
+|---|---|---|
+| `receita-federal-placa-superintendencia.jpg` | Placa da Receita Federal, céu ao fundo (atemporal) | Marcelo Camargo/Agência Brasil |
+| `dinheiro-real-calculadora.jpg` | Cédulas de real e calculadora (atemporal) | Marcello Casal Jr/Agência Brasil |
+| `farmacia-popular-balcao-atendimento.jpg` | Balcão do Programa Farmácia Popular | Elza Fiuza/Agência Brasil |
+| `id-jovem-carteirinha-jovem.jpg` | Jovem exibindo a carteirinha do ID Jovem | Marcello Casal Jr/Agência Brasil |
+| `inss-agencia-fachada-previdencia.jpg` | Fachada de agência do INSS com público | Marcelo Camargo/Agência Brasil |
+| `motorista-volante-carro.jpg` | Motorista ao volante (para CNH/trânsito) | Rovena Rosa/Agência Brasil |
+
+**Descartada em 05/08/2026:** a foto de IR com a tela escrita "Imposto de Renda 2025" —
+foto que estampa o ano envelhece e obriga a trocar a capa todo janeiro. Preferir atemporais.
