@@ -350,3 +350,33 @@ Reprodução autorizada mediante crédito. Baixar e registrar quando forem usada
 
 **Descartada em 05/08/2026:** a foto de IR com a tela escrita "Imposto de Renda 2025" —
 foto que estampa o ano envelhece e obriga a trocar a capa todo janeiro. Preferir atemporais.
+
+## Parte 5 — seis fotos da Agência Brasil incorporadas em 5 de agosto de 2026
+
+Reprodução autorizada mediante crédito. Todas em **1600x800**, salvas pelo Júnior a partir do
+CDN da EBC e convertidas para JPG. O crédito vai na capa (`--credito`) e no `<span
+class="credito-foto">` da matéria. **Ao trocar a foto de uma dessas matérias, corrigir os dois.**
+
+| Arquivo | O que mostra | Crédito obrigatório | Estreou em |
+|---|---|---|---|
+| `receita-federal-placa-superintendencia.jpg` | Placa da Superintendência da Receita Federal em contra-plongée, céu azul ao fundo | Marcelo Camargo/Agência Brasil | isencao-ir-ate-5-mil-quanto-sobra-no-salario |
+| `dinheiro-real-calculadora.jpg` | Cédulas de real, moeda e calculadora | Marcello Casal Jr/Agência Brasil | teto-do-inss-2026-quem-realmente-recebe |
+| `farmacia-popular-balcao-atendimento.jpg` | Balcão de farmácia credenciada, com atendente e cliente ao fundo | Elza Fiuza/Agência Brasil | dignidade-menstrual-absorvente-farmacia-popular |
+| `id-jovem-carteirinha-jovem.jpg` | Jovem em contraluz exibindo a carteirinha do ID Jovem | Marcello Casal Jr/Agência Brasil | id-jovem-passagem-gratis-e-meia-entrada |
+| `inss-agencia-fachada-previdencia.jpg` | Fachada azul de agência do INSS, com pessoas na porta | Marcelo Camargo/Agência Brasil | bpc-e-bolsa-familia-desligamento-voluntario |
+| `motorista-volante-carro.jpg` | Motorista ao volante, vista de dentro do carro | Rovena Rosa/Agência Brasil | cnh-social-nao-e-programa-federal-e-tem-site-falso |
+
+**Observações de uso:**
+
+- `receita-federal-placa-superintendencia.jpg` e `dinheiro-real-calculadora.jpg` são **atemporais**
+  e servem de coringa para qualquer matéria de imposto, salário mínimo ou reajuste. Preferir
+  sempre estas a foto que estampe o ano — foto com ano na imagem obriga a trocar a capa todo janeiro.
+- `farmacia-popular-balcao-atendimento.jpg` tem o letreiro "Programa Farmácia Popular" ocupando a
+  metade inferior. Funciona porque a manchete cai na faixa azul, mas não usar recorte que jogue
+  texto sobre texto.
+- `motorista-volante-carro.jpg` é a mais fraca do conjunto: não é autoescola, é motorista de
+  aplicativo. **Substituir quando aparecer foto de autoescola ou de exame de direção.**
+
+**Lacunas que continuam abertas:** autoescola e exame prático de direção; perícia médica e
+consultório; rodoviária e embarque em ônibus interestadual; sala de aula do ensino médio;
+CRAS e atendimento social.
