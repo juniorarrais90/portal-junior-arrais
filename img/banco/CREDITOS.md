@@ -380,3 +380,28 @@ class="credito-foto">` da matéria. **Ao trocar a foto de uma dessas matérias, 
 **Lacunas que continuam abertas:** autoescola e exame prático de direção; perícia médica e
 consultório; rodoviária e embarque em ônibus interestadual; sala de aula do ensino médio;
 CRAS e atendimento social.
+
+---
+
+## Parte 6 — entradas de 7 de agosto de 2026
+
+Duas fotos baixadas da Agência Brasil, ambas em **1600x800**. Reprodução autorizada mediante
+crédito, que vai na capa (`--credito`) e no `<span class="credito-foto">` da matéria.
+
+| Arquivo | O que mostra | Crédito obrigatório | Estreou em |
+|---|---|---|---|
+| `prouni-portal-celular.jpg` | Mão segurando celular com a página do Prouni aberta, tela de computador com o Portal Único de Acesso ao Ensino Superior ao fundo | Foto: Rafa Neddermeyer/Agência Brasil | prouni-2026-comprovacao-ate-14-de-agosto |
+| `dinheiro-caixa-notas.jpg` | Cédulas de real em ambiente de agência da Caixa | Foto: Marcello Casal Jr/Agência Brasil | ainda não usada — reserva para pauta de FGTS, saque e pagamento |
+
+**Observação:** `prouni-portal-celular.jpg` resolve a lacuna de "estudante e ensino superior",
+mas é foto de arquivo de 27/06/2023 e mostra o layout antigo do portal. Serve enquanto o MEC
+não mudar a identidade visual da página.
+
+### Ressalva sobre `receita-federal-imposto-de-renda.jpg`
+
+Essa foto (1600x900) já estava no repositório desde antes desta rodada, **sem registro de origem
+neste arquivo**. Mostra um celular com a tela "Receita Federal — Meu Imposto de Renda" sobre um
+teclado. Foi usada em `ir-2026-ultimo-lote-prazo-10-de-agosto` **sem `--credito`**, por não haver
+autoria conhecida. Antes de reutilizar, vale procurar uma substituta de origem documentada —
+`receita-federal-placa-superintendencia.jpg` (Marcelo Camargo/Agência Brasil) é a alternativa
+segura, mas já está em uso na matéria da isenção do IR.
