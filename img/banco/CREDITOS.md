@@ -405,3 +405,10 @@ teclado. Foi usada em `ir-2026-ultimo-lote-prazo-10-de-agosto` **sem `--credito`
 autoria conhecida. Antes de reutilizar, vale procurar uma substituta de origem documentada —
 `receita-federal-placa-superintendencia.jpg` (Marcelo Camargo/Agência Brasil) é a alternativa
 segura, mas já está em uso na matéria da isenção do IR.
+
+### Parte 7 — usos de 7 de agosto de 2026 (segundo lote)
+
+| Arquivo | Autor | Fonte | Matéria |
+|---|---|---|---|
+| `bolsa-familia-cartao-e-dinheiro-agencia.jpg` | origem não documentada | busca na web | bolsa-familia-datas-de-bloqueio-revisao-cadastral |
+| `idosa-negra-retrato.jpg` | Mehmet Turgut Kirkgoz | Pexels | revisao-da-vida-toda-fim-definitivo-stf |
