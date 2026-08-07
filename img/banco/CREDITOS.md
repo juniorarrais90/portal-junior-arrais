@@ -412,3 +412,12 @@ segura, mas já está em uso na matéria da isenção do IR.
 |---|---|---|---|
 | `bolsa-familia-cartao-e-dinheiro-agencia.jpg` | origem não documentada | busca na web | bolsa-familia-datas-de-bloqueio-revisao-cadastral |
 | `idosa-negra-retrato.jpg` | Mehmet Turgut Kirkgoz | Pexels | revisao-da-vida-toda-fim-definitivo-stf |
+
+### Parte 8 — entradas de 7 de agosto de 2026 (Agência Brasil)
+
+| Arquivo | O que mostra | Autor | Fonte |
+|---|---|---|---|
+| `apostas-online-celular.jpg` | Celular com aplicativo de apostas esportivas aberto, fundo escuro | Antônio Cruz | Agência Brasil |
+| `biometria-urna-eletronica.jpg` | Mãos de eleitora e de mesária no leitor biométrico da urna | Rovena Rosa | Agência Brasil |
+
+**Ressalva de uso — `apostas-online-celular.jpg`:** a foto traz a **marca de uma casa de apostas legível** na tela e nomes de clubes de futebol. Uso aprovado pelo Júnior em 07/08/2026 para a matéria do teleatendimento do SUS. Em pautas futuras, avaliar recorte da metade inferior da tela (só odds, sem marca) ou foto alternativa.
