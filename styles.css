@@ -693,3 +693,18 @@ header nav.faixa-categorias { display: block; }
   .lt-thumb { width: 92px; height: 52px; flex: 0 0 92px; }
   .lt-titulo { font-size: .93rem; }
 }
+
+/* Link contextual dentro do texto da matéria */
+.artigo-conteudo a.link-interno {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: rgba(44, 137, 231, .35);
+  text-underline-offset: 3px;
+  transition: .18s;
+}
+
+.artigo-conteudo a.link-interno:hover {
+  text-decoration-color: var(--accent);
+  background: rgba(44, 137, 231, .07);
+}

@@ -1,0 +1,345 @@
+{
+  "_leia_me": [
+    "Mapa de links contextuais internos do Portal Júnior Arrais.",
+    "Cada entrada diz: quando o termo (ancora) aparecer no CORPO de uma matéria, virar link para a matéria de destino.",
+    "Usado por scripts/aplicar_links_contextuais.py. Rodar o script depois de qualquer alteracao aqui.",
+    "REGRA: o destino deve ser a materia mais EXPLICATIVA do tema, nunca a de calendario do mes.",
+    "Quando existirem paginas-pilar permanentes (item 5 do plano de SEO), trocar o slug de destino aqui e rodar o script.",
+    "Campo opcional 'nao_em': lista de slugs de ORIGEM onde aquele destino nao deve ser aplicado. Use quando o termo tem sentido diferente naquela materia (ex.: 'biometria' eleitoral nao e a biometria de beneficios)."
+  ],
+  "destinos": [
+    {
+      "slug": "como-saber-se-esta-no-cadunico",
+      "ancoras": [
+        "cadastro no CadÚnico",
+        "cadastro único",
+        "CadÚnico"
+      ]
+    },
+    {
+      "slug": "cadunico-sem-visita-em-casa",
+      "ancoras": [
+        "visita em casa",
+        "entrevista do CadÚnico"
+      ]
+    },
+    {
+      "slug": "bolsa-familia-regra-de-protecao",
+      "ancoras": [
+        "Regra de Proteção",
+        "regra de proteção"
+      ]
+    },
+    {
+      "slug": "bolsa-familia-datas-de-bloqueio-revisao-cadastral",
+      "ancoras": [
+        "Revisão Cadastral",
+        "revisão cadastral"
+      ]
+    },
+    {
+      "slug": "bolsa-familia-bloqueio-cadastro-desatualizado",
+      "ancoras": [
+        "cadastro desatualizado",
+        "bloqueio do Bolsa Família"
+      ]
+    },
+    {
+      "slug": "bolsa-familia-calendario-de-agosto",
+      "ancoras": [
+        "calendário do Bolsa Família",
+        "calendário de pagamento do Bolsa Família"
+      ]
+    },
+    {
+      "slug": "bpc-loas-regras-2026-renda-e-revisao",
+      "ancoras": [
+        "BPC/LOAS",
+        "benefício assistencial",
+        "BPC"
+      ]
+    },
+    {
+      "slug": "auxilio-inclusao-bpc-trabalho",
+      "ancoras": [
+        "auxílio-inclusão"
+      ]
+    },
+    {
+      "slug": "bpc-e-bolsa-familia-desligamento-voluntario",
+      "ancoras": [
+        "desligamento voluntário"
+      ]
+    },
+    {
+      "slug": "conta-de-luz-gratis-tarifa-social",
+      "ancoras": [
+        "Tarifa Social de Energia Elétrica",
+        "Tarifa Social"
+      ]
+    },
+    {
+      "slug": "desconto-social-conta-de-luz-12-por-cento",
+      "ancoras": [
+        "desconto na conta de luz"
+      ]
+    },
+    {
+      "slug": "biometria-obrigatoria-beneficios-prazo",
+      "ancoras": [
+        "biometria obrigatória",
+        "cadastro biométrico",
+        "biometria"
+      ],
+      "nao_em": [
+        "biometria-nas-eleicoes-2026-quem-nao-cadastrou",
+        "eleicoes-2026-beneficios-defeso-eleitoral",
+        "consignado-inss-2026-margem-e-juros"
+      ]
+    },
+    {
+      "slug": "farmacia-popular-sem-copagamento-e-sem-cadastro",
+      "ancoras": [
+        "Programa Farmácia Popular",
+        "Farmácia Popular"
+      ]
+    },
+    {
+      "slug": "golpe-do-falso-beneficio",
+      "ancoras": [
+        "golpe do falso benefício",
+        "golpes mais comuns",
+        "golpistas"
+      ]
+    },
+    {
+      "slug": "gas-do-povo-nova-recarga-10-de-agosto",
+      "ancoras": [
+        "Gás do Povo"
+      ]
+    },
+    {
+      "slug": "pe-de-meia-contas-paradas",
+      "ancoras": [
+        "Pé-de-Meia"
+      ]
+    },
+    {
+      "slug": "fgts-saque-aniversario-de-agosto",
+      "ancoras": [
+        "saque-aniversário do FGTS",
+        "saque-aniversário"
+      ]
+    },
+    {
+      "slug": "fgts-prazo-31-de-agosto-e-fim-das-cinco-antecipacoes",
+      "ancoras": [
+        "antecipação do saque-aniversário",
+        "antecipação do FGTS"
+      ]
+    },
+    {
+      "slug": "abono-salarial-ultimo-lote-agosto",
+      "ancoras": [
+        "abono salarial",
+        "PIS/Pasep"
+      ]
+    },
+    {
+      "slug": "seguro-desemprego-2026-valores-e-quem-tem-direito",
+      "ancoras": [
+        "seguro-desemprego"
+      ]
+    },
+    {
+      "slug": "salario-familia-2026-valor-e-quem-tem-direito",
+      "ancoras": [
+        "salário-família"
+      ]
+    },
+    {
+      "slug": "salario-maternidade-contribuicao-antes-do-parto",
+      "ancoras": [
+        "salário-maternidade"
+      ]
+    },
+    {
+      "slug": "atestmed-90-dias-sem-pericia",
+      "ancoras": [
+        "Atestmed",
+        "auxílio-doença"
+      ]
+    },
+    {
+      "slug": "pente-fino-inss-auxilio-doenca",
+      "ancoras": [
+        "pente-fino",
+        "perícia médica"
+      ]
+    },
+    {
+      "slug": "aposentadoria-2026-regra-de-pontos",
+      "ancoras": [
+        "regra de pontos",
+        "aposentadoria por tempo de contribuição"
+      ]
+    },
+    {
+      "slug": "consignado-inss-2026-margem-e-juros",
+      "ancoras": [
+        "consignado do INSS",
+        "empréstimo consignado"
+      ]
+    },
+    {
+      "slug": "teto-do-inss-2026-quem-realmente-recebe",
+      "ancoras": [
+        "teto do INSS"
+      ]
+    },
+    {
+      "slug": "inss-calendario-de-agosto",
+      "ancoras": [
+        "calendário do INSS",
+        "calendário de pagamento do INSS"
+      ]
+    },
+    {
+      "slug": "salario-minimo-2027-previsao-1717-reais",
+      "ancoras": [
+        "salário mínimo de 2027",
+        "reajuste do salário mínimo"
+      ]
+    },
+    {
+      "slug": "desconto-associativo-inss-proibido-lei-15327",
+      "ancoras": [
+        "desconto associativo",
+        "descontos indevidos",
+        "desconto de associação"
+      ]
+    },
+    {
+      "slug": "inss-5-por-cento-dona-de-casa-codigo-1929",
+      "ancoras": [
+        "dona de casa",
+        "facultativo de baixa renda"
+      ]
+    },
+    {
+      "slug": "inss-fila-nacional-analise-de-beneficios",
+      "ancoras": [
+        "fila do INSS",
+        "fila nacional"
+      ]
+    },
+    {
+      "slug": "revisao-da-vida-toda-fim-definitivo-stf",
+      "ancoras": [
+        "Revisão da Vida Toda"
+      ]
+    },
+    {
+      "slug": "auxilio-reclusao-quanto-custa-de-verdade",
+      "ancoras": [
+        "auxílio-reclusão"
+      ]
+    },
+    {
+      "slug": "minha-casa-minha-vida-novos-limites-de-renda",
+      "ancoras": [
+        "Minha Casa Minha Vida"
+      ]
+    },
+    {
+      "slug": "desenrola-prorrogado-ate-31-de-agosto",
+      "ancoras": [
+        "Desenrola Brasil",
+        "Desenrola"
+      ]
+    },
+    {
+      "slug": "isencao-ir-ate-5-mil-quanto-sobra-no-salario",
+      "ancoras": [
+        "isenção do Imposto de Renda",
+        "isenção do IR"
+      ]
+    },
+    {
+      "slug": "restituicao-ir-chave-pix-nao-caiu",
+      "ancoras": [
+        "restituição do Imposto de Renda",
+        "restituição do IR"
+      ]
+    },
+    {
+      "slug": "seguro-defeso-pescadores-lote-atrasado",
+      "ancoras": [
+        "seguro-defeso"
+      ]
+    },
+    {
+      "slug": "id-jovem-passagem-gratis-e-meia-entrada",
+      "ancoras": [
+        "ID Jovem"
+      ]
+    },
+    {
+      "slug": "passagem-interestadual-pessoa-idosa-sem-carteira",
+      "ancoras": [
+        "Carteira da Pessoa Idosa"
+      ]
+    },
+    {
+      "slug": "dignidade-menstrual-absorvente-farmacia-popular",
+      "ancoras": [
+        "Dignidade Menstrual"
+      ]
+    },
+    {
+      "slug": "prouni-2026-comprovacao-ate-14-de-agosto",
+      "ancoras": [
+        "Prouni"
+      ]
+    },
+    {
+      "slug": "encceja-2026-cartao-de-inscricao-prova-23-de-agosto",
+      "ancoras": [
+        "Encceja"
+      ]
+    },
+    {
+      "slug": "cnh-social-nao-e-programa-federal-e-tem-site-falso",
+      "ancoras": [
+        "CNH Social"
+      ]
+    },
+    {
+      "slug": "copom-selic-agosto-juros-no-bolso",
+      "ancoras": [
+        "taxa Selic",
+        "Selic"
+      ]
+    },
+    {
+      "slug": "endividamento-82-por-cento-das-familias",
+      "ancoras": [
+        "endividamento das famílias",
+        "famílias endividadas"
+      ]
+    },
+    {
+      "slug": "assedio-eleitoral-no-trabalho",
+      "ancoras": [
+        "assédio eleitoral"
+      ]
+    },
+    {
+      "slug": "eleicoes-2026-beneficios-defeso-eleitoral",
+      "ancoras": [
+        "defeso eleitoral",
+        "período eleitoral"
+      ]
+    }
+  ]
+}
