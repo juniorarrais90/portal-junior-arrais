@@ -421,3 +421,32 @@ segura, mas já está em uso na matéria da isenção do IR.
 | `biometria-urna-eletronica.jpg` | Mãos de eleitora e de mesária no leitor biométrico da urna | Rovena Rosa | Agência Brasil |
 
 **Ressalva de uso — `apostas-online-celular.jpg`:** a foto traz a **marca de uma casa de apostas legível** na tela e nomes de clubes de futebol. Uso aprovado pelo Júnior em 07/08/2026 para a matéria do teleatendimento do SUS. Em pautas futuras, avaliar recorte da metade inferior da tela (só odds, sem marca) ou foto alternativa.
+
+### Parte 9 — entradas e usos de 8 de agosto de 2026
+
+Três fotos novas baixadas da Agência Brasil, todas em **1600x800** pela URL do `og:image`
+(o CDN assina a URL por tamanho: trocar `1600x800` por outro valor na mesma URL devolve
+arquivo vazio — baixar exatamente a URL do `og:image`).
+
+| Arquivo | O que mostra | Crédito obrigatório | Estreou em |
+|---|---|---|---|
+| `idoso-celular-rodoviaria.jpg` | Homem idoso mexendo no celular na rodoviária de Brasília | Foto: Fabio Rodrigues-Pozzebom/Agência Brasil | bets-62-bilhoes-perdidos-familias |
+| `estudantes-portao-prova-enem.jpg` | Fila de candidatas na calçada, aguardando a abertura dos portões de prova | Foto: Tomaz Silva/Agência Brasil | encceja-2026-cartao-de-inscricao-prova-23-de-agosto |
+| `caminhoes-rodovia-carga.jpg` | Caminhão de carga trafegando em rodovia, muito céu livre à direita | Foto: Marcelo Camargo/Agência Brasil | lei-do-frete-sancionada-o-que-muda |
+
+Usos de fotos que já estavam no banco:
+
+| Arquivo | Crédito | Matéria |
+|---|---|---|
+| `celular-cartao-app-financeiro.jpg` | Tima Miroshnichenko/Pexels | endividamento-82-por-cento-das-familias |
+| `minha-casa-moradia-popular.jpg` | Rovena Rosa/Agência Brasil | minha-casa-minha-vida-mp-1382-fghab |
+| `dinheiro-caixa-notas.jpg` | Marcello Casal Jr/Agência Brasil | poupanca-saques-superam-depositos-julho (saiu da reserva) |
+
+**Observação:** `idoso-celular-rodoviaria.jpg` e `estudantes-portao-prova-enem.jpg` cobrem duas
+lacunas antigas — "pessoa idosa em outra situação que não BPC" e "estudante adulto / dia de prova".
+`caminhoes-rodovia-carga.jpg` abre a frente de transporte, que não tinha nenhuma foto: a única
+opção anterior era `motorista-volante-carro.jpg`, já usada na matéria da CNH Social.
+
+**Lacunas que continuam abertas:** perícia médica e consultório, ambiente de trabalho (chão de
+fábrica, escritório, reunião), pessoa com deficiência, CRAS e atendimento presencial, e dinheiro
+em contexto de juros (o banco tem cédulas soltas, mas nada que ilustre dívida e parcela).
