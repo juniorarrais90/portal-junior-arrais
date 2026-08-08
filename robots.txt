@@ -1,4 +1,10 @@
 User-agent: *
 Allow: /
 
+# URLs de filtro e busca sao geradas por JavaScript e servem o mesmo HTML de
+# noticias.html (o canonical ja aponta para la). Bloquear evita gastar
+# orcamento de rastreamento com paginas que nao trazem conteudo novo.
+Disallow: /*?cat=
+Disallow: /*?q=
+
 Sitemap: https://portaljuniorarrais.com.br/sitemap.xml
