@@ -450,3 +450,29 @@ opção anterior era `motorista-volante-carro.jpg`, já usada na matéria da CNH
 **Lacunas que continuam abertas:** perícia médica e consultório, ambiente de trabalho (chão de
 fábrica, escritório, reunião), pessoa com deficiência, CRAS e atendimento presencial, e dinheiro
 em contexto de juros (o banco tem cédulas soltas, mas nada que ilustre dívida e parcela).
+
+### Parte 10 — entrada e usos de 8 de agosto de 2026 (segundo lote)
+
+Uma foto nova baixada da Agência Brasil em **1600x800** pela URL do `og:image`.
+
+| Arquivo | O que mostra | Crédito obrigatório | Estreou em |
+|---|---|---|---|
+| `salao-beleza-cabeleireiro-pequeno-negocio.jpg` | Salão de beleza em funcionamento, com profissional atendendo cliente na cadeira e bancada de espelhos | Foto: Fernando Frazão/Agência Brasil | mei-inss-complementacao-tema-384-tnu |
+
+Usos de fotos que já estavam no banco:
+
+| Arquivo | Crédito | Matéria |
+|---|---|---|
+| `fila-agencia-caixa-rua.jpg` | origem não documentada (Parte 3) | cartao-consignado-inss-projeto-fim-das-margens |
+
+**Observação:** `salao-beleza-cabeleireiro-pequeno-negocio.jpg` abre a frente de **trabalhador por conta
+própria / MEI / pequeno negócio**, que não tinha nenhuma foto no banco. Serve para pautas de MEI,
+contribuição do autônomo, formalização e microempreendedorismo.
+
+**Correção de registro:** `inss-celular-dinheiro-cofrinho.jpg` estava listada na Parte 3 sem registro
+de uso, mas **já era a capa de `aposentadoria-2026-regra-de-pontos`**. A checagem de repetição do
+passo 4a pegou a colisão antes da publicação. Considerar essa foto **em uso**.
+
+**Lição de método:** simular o recorte com `ImageOps.fit` NÃO reproduz o enquadramento do
+`gerar_capa_faixa.py` e dá falso "livre". A checagem confiável é **gerar a capa de verdade** (ou
+capas de teste em `/tmp`) e comparar os hashes.
