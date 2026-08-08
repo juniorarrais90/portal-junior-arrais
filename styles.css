@@ -613,3 +613,83 @@ header nav.faixa-categorias { display: block; }
 
 .share-arte{display:none}
 .pja-admin .share-arte{display:inline-flex}
+
+/* ---------- Leia também (links internos entre matérias) ---------- */
+.leia-tambem {
+  margin: 34px 0 8px;
+  padding: 22px 22px 18px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.leia-tambem > h2 {
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+  color: var(--accent);
+  padding-bottom: 12px;
+  margin-bottom: 6px;
+  border-bottom: 2px solid var(--border);
+}
+
+.lt-lista { list-style: none; display: flex; flex-direction: column; }
+
+.lt-item + .lt-item { border-top: 1px solid var(--border); }
+
+.lt-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 13px 8px;
+  border-radius: 10px;
+  transition: .2s;
+}
+
+.lt-link:hover { background: var(--bg-card-hover); }
+
+.lt-thumb {
+  width: 120px;
+  height: 68px;
+  flex: 0 0 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: var(--border);
+}
+
+.lt-texto { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+
+.lt-chip {
+  align-self: flex-start;
+  font-size: .68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: var(--accent);
+}
+
+.lt-titulo {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--text);
+}
+
+.lt-link:hover .lt-titulo { color: var(--accent); }
+
+.lt-data { font-size: .8rem; color: var(--text-muted); }
+
+.lt-mais { margin-top: 14px; font-size: .9rem; }
+
+.lt-mais a { color: var(--accent); font-weight: 700; }
+
+.lt-mais a:hover { text-decoration: underline; }
+
+@media (max-width: 600px) {
+  .leia-tambem { padding: 18px 14px 14px; }
+  .lt-link { gap: 11px; padding: 11px 4px; align-items: flex-start; }
+  .lt-thumb { margin-top: 3px; }
+  .lt-thumb { width: 92px; height: 52px; flex: 0 0 92px; }
+  .lt-titulo { font-size: .93rem; }
+}
