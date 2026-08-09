@@ -297,6 +297,18 @@ if __name__ == "__main__":
     ap.add_argument("--sem-selo", dest="sem_selo", action="store_true")
     ap.add_argument("--texto-selo", dest="texto_selo", default="LINK NOS STORIES")
     ap.add_argument("--logo", default=None, help="logo circular do portal (PNG); sem ele, desenha o fallback")
+    ap.add_argument("--formato", default="3x4", choices=["3x4", "4x5"],
+                    help="3x4 (1080x1440, padrao do perfil) ou 4x5 (1080x1350, exigido pela API do Instagram)")
     a = ap.parse_args()
+
+    # Formato 4:5 (1080x1350) para publicacao via API do Instagram. A doc da Meta
+    # aceita de 4:5 a 1.91:1; o 3:4 fica FORA da faixa e a imagem sai recortada.
+    # Encurtamos so a area da FOTO: faixa azul (236px) e rodape (84px) ficam
+    # intactos, entao chapeu, manchete, selo e CTA nao perdem nada.
+    if a.formato == "4x5":
+        globals()["H"] = 1350
+        globals()["FAIXA_B"] = 1350 - 84          # 1266
+        globals()["FOTO_H"] = 1350 - 84 - 236     # 1030
+
     gerar(a.saida, a.titulo, a.chapeu, a.foto_fundo, a.foto, a.credito,
           selo=not a.sem_selo, texto_selo=a.texto_selo, logo=a.logo)
