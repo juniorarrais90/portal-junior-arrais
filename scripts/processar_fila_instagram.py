@@ -100,6 +100,16 @@ def main():
         item["link"] = link
     json.dump(dados, open(FILA, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
     print(f"OK. Marcado como publicado. {link}")
+
+    # aviso no Telegram com a arte de story. Falha aqui NÃO invalida a publicação:
+    # o post já saiu, e o aviso é só o lembrete do story manual.
+    try:
+        sys.path.insert(0, os.path.join(RAIZ, "scripts"))
+        from avisar_telegram import avisar
+        avisar(item["slug"], item.get("titulo", item["slug"]), link)
+    except Exception as e:
+        print(f"Aviso do Telegram falhou (post já publicado, sem prejuízo): {e}")
+
     return 0
 
 
