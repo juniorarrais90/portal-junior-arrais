@@ -169,10 +169,19 @@ def desenhar_selo_stories(texto="LINK NOS STORIES"):
 
 
 def desenhar_selo_portal(logo=None):
-    """Selo circular do portal. Usa o logo real se informado; senão desenha o fallback."""
+    """Selo do portal. Usa o logo real se informado; senão desenha o fallback.
+
+    O logo real (img/logo-portal.png) NÃO é quadrado: é o círculo com o play mais
+    as duas linhas de texto embaixo, 142x250 no modelo do Canva. Por isso ele é
+    redimensionado pela ALTURA, preservando a proporção — forçar um quadrado
+    achatava a marca.
+    """
     lado = 118
     if logo and os.path.exists(logo):
-        return Image.open(logo).convert("RGBA").resize((lado, lado), Image.LANCZOS)
+        lg = Image.open(logo).convert("RGBA")
+        alt = 250
+        larg = int(lg.width * alt / lg.height)
+        return lg.resize((larg, alt), Image.LANCZOS)
 
     im = Image.new("RGBA", (lado * SS, lado * SS), (0, 0, 0, 0))
     d = ImageDraw.Draw(im)
@@ -226,14 +235,15 @@ def gerar(saida, titulo, chapeu, foto_fundo=None, foto=None, credito=None,
     im = im.convert("RGBA")
     im.alpha_composite(listras_rodape(), (0, FAIXA_B))
 
-    # 3. recorte do Júnior à esquerda, sangrando no rodapé
+    # 3. recorte do Júnior à esquerda, encostado na base (mesma medida do modelo do Canva)
     if foto and os.path.exists(foto):
         ft = Image.open(foto).convert("RGBA")
-        alt = 900
-        ft = ft.resize((int(ft.width * alt / ft.height), alt), Image.LANCZOS)
-        im.alpha_composite(ft, (-108, FAIXA_B - alt))
+        alt = 693
+        larg = int(ft.width * alt / ft.height)
+        ft = ft.resize((larg, alt), Image.LANCZOS)
+        im.alpha_composite(ft, (0, H - alt))
 
-    im.alpha_composite(desenhar_selo_portal(logo), (214, FOTO_H + 60))
+    im.alpha_composite(desenhar_selo_portal(logo), (215, FAIXA_B - 250))
     if selo:
         im.alpha_composite(desenhar_selo_stories(texto_selo), (48, 48))
 
