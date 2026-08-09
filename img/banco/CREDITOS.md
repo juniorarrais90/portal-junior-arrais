@@ -476,3 +476,26 @@ passo 4a pegou a colisão antes da publicação. Considerar essa foto **em uso**
 **Lição de método:** simular o recorte com `ImageOps.fit` NÃO reproduz o enquadramento do
 `gerar_capa_faixa.py` e dá falso "livre". A checagem confiável é **gerar a capa de verdade** (ou
 capas de teste em `/tmp`) e comparar os hashes.
+
+---
+
+## Parte 4 — incorporadas em 9 de agosto de 2026
+
+Seis fotos baixadas para o lote de 9/8/2026, todas em 1600x800, cobrindo lacunas
+que o banco não tinha (paternidade, agente de saúde, exame preventivo, autismo,
+comércio e jornada de trabalho).
+
+| Arquivo | O que mostra | Crédito |
+|---|---|---|
+| `pai-bebe-colo-recem-nascido.jpg` | Pai de perfil segurando bebê no colo, rostos em close | Foto: Kingofkings_LJ/Pixabay |
+| `unidade-saude-sus-atendimento.jpg` | Corredor de unidade de saúde com a logomarca do SUS na parede e atendimento ao fundo | Foto: Marcello Casal Jr./Agência Brasil |
+| `mamografia-exame-preventivo.jpg` | Tela de equipamento exibindo imagem de mamografia, com profissional ao fundo | Foto: José Cruz/Agência Brasil |
+| `crianca-terapia-brinquedo.jpg` | Criança de costas manuseando brinquedo em sessão de terapia | Foto: Unicef/ONU |
+| `comercio-mercado-central-fortaleza.jpg` | Vista interna do Mercado Central de Fortaleza, com lojas nos dois lados | Foto: Rafa Neddermeyer/Agência Brasil |
+| `jornada-votacao-camara-plenario.jpg` | Mesa do plenário da Câmara na aprovação da PEC que acaba com a escala 6x1 | Foto: Bruno Spada/Agência Câmara |
+
+> **Observação de uso.** A foto do Mercado Central tem lojas coloridas em toda a
+> extensão; na capa 16:9 o recorte central funciona bem, mas no story o corte
+> vertical fecha muito no corredor — conferir antes de reaproveitar.
+> A foto do plenário é datada (aprovação de 27/05/2026): serve para matéria sobre
+> a tramitação da PEC, não como imagem genérica de trabalho.
