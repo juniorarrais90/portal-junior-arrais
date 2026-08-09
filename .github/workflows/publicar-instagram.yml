@@ -1,0 +1,48 @@
+name: Publicar no Instagram
+
+# Roda a cada 15 minutos e publica no máximo UM item vencido da fila.
+# O cron do GitHub Actions não é pontual: pode atrasar de 5 a 15 minutos em
+# horários de pico. Por isso o intervalo de checagem é curto e quem manda de
+# verdade é o horário gravado em instagram/fila.json.
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:        # permite disparar à mão pelo painel do GitHub
+
+permissions:
+  contents: write           # necessário para gravar a fila atualizada
+
+concurrency:
+  group: instagram-fila     # nunca duas execuções ao mesmo tempo
+  cancel-in-progress: false
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Instalar dependências
+        run: pip install --quiet pillow
+
+      - name: Processar a fila
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+        run: python scripts/processar_fila_instagram.py
+
+      - name: Gravar a fila atualizada
+        run: |
+          if [ -n "$(git status --porcelain instagram/fila.json)" ]; then
+            git config user.name "Portal Júnior Arrais"
+            git config user.email "juniorarrais90@gmail.com"
+            git add instagram/fila.json
+            git commit -m "Instagram: marca item como publicado [skip ci]"
+            git push
+          else
+            echo "Nada mudou na fila."
+          fi
