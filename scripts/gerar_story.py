@@ -76,6 +76,25 @@ while tam>40:
     if max(dr.textlength(l,font=f_t) for l in linhas) <= W-180: break
     tam-=4
 lh=int(tam*1.2); y0=H-330-lh*len(linhas)
+
+# faixa do endereço, acima da manchete: bloco azul com globo + tarja amarela.
+# Serve para quem vê o story sem tocar em nada — o endereço fica visível sempre,
+# independente da figurinha de link (que a API não publica).
+AMARELO=(255,200,0); AZUL_FAIXA=(11,58,138)
+f_site=fonte("Bold",40)
+site="PORTALJUNIORARRAIS.COM.BR"
+sw=dr.textlength(site,font=f_site)
+fx0,fy0=100,y0-108
+alt_f=68
+dr.rectangle([fx0,fy0,fx0+alt_f,fy0+alt_f],fill=AZUL_FAIXA)
+# globo simplificado
+cx,cy,r=fx0+alt_f/2,fy0+alt_f/2,alt_f*0.30
+dr.ellipse([cx-r,cy-r,cx+r,cy+r],outline=AMARELO,width=4)
+dr.line([(cx-r,cy),(cx+r,cy)],fill=AMARELO,width=4)
+dr.ellipse([cx-r*0.5,cy-r,cx+r*0.5,cy+r],outline=AMARELO,width=4)
+dr.rectangle([fx0+alt_f,fy0,fx0+alt_f+sw+48,fy0+alt_f],fill=AMARELO)
+dr.text((fx0+alt_f+24,fy0+13),site,font=f_site,fill=AZUL_FAIXA)
+
 dr.rectangle([60,y0+8,74,y0+lh*len(linhas)-6],fill=CIANO)
 for i,l in enumerate(linhas):
     dr.text((100,y0+i*lh),l,font=f_t,fill=(255,255,255),stroke_width=2,stroke_fill=(0,0,0))
