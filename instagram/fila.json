@@ -1,6 +1,4 @@
 {
-  "pausado": true,
-  "pausa_motivo": "10/08/2026 17:0x UTC — a API da Meta respondeu 'API access blocked' (OAuthException 200) ao publicar 'isencao-de-imposto-de-renda-para-aposentado-com-doenca-grave'. Verificar o app em developers.facebook.com e a conta @portaljuniorarrais. Remover esta chave e reagendar os pendentes depois de resolver.",
   "fila": [
     {
       "slug": "escala-6x1-senado-o-que-falta-para-valer",
@@ -105,24 +103,24 @@
     {
       "slug": "isencao-de-imposto-de-renda-para-aposentado-com-doenca-grave",
       "titulo": "Isenção de Imposto de Renda: aposentado com doença grave não paga; veja a lista completa",
-      "publicar_em": "2026-08-10T17:00:00Z",
-      "horario_brasilia": "10/08 14:00",
+      "publicar_em": "2026-08-10T17:45:00Z",
+      "horario_brasilia": "10/08 14:45",
       "alt_text": "Isenção de Imposto de Renda: aposentado com doença grave não paga; veja a lista completa",
       "status": "pendente"
     },
     {
       "slug": "trabalhadora-domestica-direitos-fgts-e-seguro-desemprego",
       "titulo": "Trabalhadora doméstica: FGTS, seguro-desemprego e o que a lei garante desde 2015",
-      "publicar_em": "2026-08-10T18:30:00Z",
-      "horario_brasilia": "10/08 15:30",
+      "publicar_em": "2026-08-10T19:00:00Z",
+      "horario_brasilia": "10/08 16:00",
       "alt_text": "Trabalhadora doméstica: FGTS, seguro-desemprego e o que a lei garante desde 2015",
       "status": "pendente"
     },
     {
       "slug": "pensao-por-morte-quem-tem-direito-quanto-dura-e-quanto-vale",
       "titulo": "Pensão por morte: quem tem direito, quanto tempo dura e quanto vale em 2026",
-      "publicar_em": "2026-08-10T20:00:00Z",
-      "horario_brasilia": "10/08 17:00",
+      "publicar_em": "2026-08-10T20:15:00Z",
+      "horario_brasilia": "10/08 17:15",
       "alt_text": "Pensão por morte: quem tem direito, quanto tempo dura e quanto vale em 2026",
       "status": "pendente"
     },
@@ -137,16 +135,16 @@
     {
       "slug": "auxilio-acidente-o-beneficio-que-se-recebe-junto-com-o-salario",
       "titulo": "Auxílio-acidente: o benefício que se recebe junto com o salário e quase ninguém pede",
-      "publicar_em": "2026-08-10T23:00:00Z",
-      "horario_brasilia": "10/08 20:00",
+      "publicar_em": "2026-08-10T22:45:00Z",
+      "horario_brasilia": "10/08 19:45",
       "alt_text": "Auxílio-acidente: o benefício que se recebe junto com o salário e quase ninguém pede",
       "status": "pendente"
     },
     {
       "slug": "aposentadoria-da-pessoa-com-deficiencia-nao-e-o-mesmo-que-bpc",
       "titulo": "Aposentadoria da pessoa com deficiência: o direito que muita gente confunde com o BPC",
-      "publicar_em": "2026-08-11T00:30:00Z",
-      "horario_brasilia": "10/08 21:30",
+      "publicar_em": "2026-08-11T00:00:00Z",
+      "horario_brasilia": "10/08 21:00",
       "alt_text": "Aposentadoria da pessoa com deficiência: o direito que muita gente confunde com o BPC",
       "status": "pendente"
     }
