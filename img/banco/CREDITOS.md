@@ -524,3 +524,10 @@ Para pautas futuras de B94, foto de sequela (tipoia, bengala, fisioterapia) é m
 **Lacuna que continua aberta: pessoa com deficiência em foto real.** A ilustração vetorial
 enviada em 10/08/2026 foi recusada — o portal usa foto, e vetor com fundo branco quebra o padrão
 da capa, que precisa de imagem sangrando até a borda.
+
+**Complemento da Parte 11.** `cadeira-de-rodas-simbolo-acessibilidade.jpg` (1200x900), enviada
+pelo Júnior em 10/08/2026, origem não documentada: cadeira de rodas em movimento sobre o símbolo
+internacional de acessibilidade pintado no piso. Estreou em
+`aposentadoria-da-pessoa-com-deficiencia-nao-e-o-mesmo-que-bpc`. **Fecha a lacuna de pessoa com
+deficiência**, que estava aberta desde agosto. Enquadramento sem rosto, o que evita problema de
+imagem de pessoa identificável.
