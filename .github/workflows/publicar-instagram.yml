@@ -4,10 +4,20 @@ name: Publicar no Instagram
 # O cron do GitHub Actions não é pontual: pode atrasar de 5 a 15 minutos em
 # horários de pico. Por isso o intervalo de checagem é curto e quem manda de
 # verdade é o horário gravado em instagram/fila.json.
+# Gatilhos redundantes. O cron do GitHub é "melhor esforço": em 09/08/2026 ele
+# degradou de 15 para ~35 min de intervalo e parou de disparar às 21:03, deixando
+# um post preso na fila a noite inteira. Por isso agora há três camadas:
+#   1. cron a cada 10 min (o normal do dia);
+#   2. crons fixos de reforço em horários redondos, que costumam ter menos fila;
+#   3. repository_dispatch, para um serviço externo cutucar de fora do GitHub.
 on:
   schedule:
-    - cron: "*/15 * * * *"
-  workflow_dispatch:        # permite disparar à mão pelo painel do GitHub
+    - cron: "*/10 * * * *"
+    - cron: "5,35 * * * *"          # reforço deslocado dos minutos redondos
+    - cron: "50 2 * * *"            # varredura noturna: 23:50 em Brasília
+  workflow_dispatch:
+  repository_dispatch:
+    types: [publicar-instagram]
 
 permissions:
   contents: write           # necessário para gravar a fila atualizada
