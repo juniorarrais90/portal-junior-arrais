@@ -499,3 +499,28 @@ comércio e jornada de trabalho).
 > vertical fecha muito no corredor — conferir antes de reaproveitar.
 > A foto do plenário é datada (aprovação de 27/05/2026): serve para matéria sobre
 > a tramitação da PEC, não como imagem genérica de trabalho.
+
+### Parte 11 — entradas de 10 de agosto de 2026 (enviadas pelo Júnior)
+
+Três fotos enviadas por ele no chat para cobrir lacunas antigas do banco: trabalho rural,
+acidente de trabalho e luto/funeral. **Origem não documentada** — chegaram sem indicação de
+fonte, então nenhuma delas leva `--credito` na arte. Se a origem for identificada depois,
+registrar aqui e acrescentar o crédito na capa e na legenda da matéria.
+
+| Arquivo | O que mostra | Tamanho | Estreou em |
+|---|---|---|---|
+| `agricultor-idoso-enxada-milharal.jpg` | Senhor de chapéu capinando milharal com enxada, segunda pessoa ao fundo | 1280x908 | aposentadoria-rural-como-comprovar-o-tempo-de-roca |
+| `acidente-trabalho-operario-caido-fabrica.jpg` | Operário caído segurando a perna e colega pedindo socorro pelo rádio, dentro de fábrica | 2121x1414 | auxilio-acidente-o-beneficio-que-se-recebe-junto-com-o-salario |
+| `luto-maos-caixao-flores.jpg` | Mãos de pessoas de preto sobre caixão escuro, com buquê de flores brancas | 968x506 | pensao-por-morte-quem-tem-direito-quanto-dura-e-quanto-vale |
+
+**Ressalvas de uso.** (1) `luto-maos-caixao-flores.jpg` tem **968 px de largura**, abaixo do
+mínimo de 1200 do banco. Foi aprovada mesmo assim porque a proporção original (1.91) é quase a
+da capa, então o esticamento é pequeno e não aparece; **não usar no story**, onde o corte
+vertical amplia demais. (2) `agricultor-idoso-enxada-milharal.jpg` tem 1280 px — serve na capa,
+no feed e no story, mas está no limite. (3) A foto do acidente mostra o **momento do acidente**,
+e o auxílio-acidente trata da **sequela que ficou**; escolha do Júnior em 10/08/2026, mantida.
+Para pautas futuras de B94, foto de sequela (tipoia, bengala, fisioterapia) é mais precisa.
+
+**Lacuna que continua aberta: pessoa com deficiência em foto real.** A ilustração vetorial
+enviada em 10/08/2026 foi recusada — o portal usa foto, e vetor com fundo branco quebra o padrão
+da capa, que precisa de imagem sangrando até a borda.
