@@ -1,4 +1,6 @@
 {
+  "pausado": true,
+  "pausa_motivo": "10/08/2026 17:0x UTC — a API da Meta respondeu 'API access blocked' (OAuthException 200) ao publicar 'isencao-de-imposto-de-renda-para-aposentado-com-doenca-grave'. Verificar o app em developers.facebook.com e a conta @portaljuniorarrais. Remover esta chave e reagendar os pendentes depois de resolver.",
   "fila": [
     {
       "slug": "escala-6x1-senado-o-que-falta-para-valer",

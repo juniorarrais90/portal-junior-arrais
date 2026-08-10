@@ -74,7 +74,11 @@ jobs:
       # o post já publicado. Agora tenta de novo e, se a fila mudou dos dois
       # lados, remonta a marcação por cima da fila remota: nunca sobrescreve um
       # registro que já existe lá nem apaga item novo acrescentado à fila.
+      # if: always() porque quando a publicação FALHA o script grava na fila o
+      # contador de falhas e a pausa automática — e sem isso o GitHub pulava
+      # este passo, a marcação se perdia e o robô repetia o mesmo erro.
       - name: Gravar a fila atualizada
+        if: always()
         run: |
           if [ -z "$(git status --porcelain instagram/fila.json)" ]; then
             echo "Nada mudou na fila."

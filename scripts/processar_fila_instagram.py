@@ -11,7 +11,12 @@ Regras de segurança embutidas:
     Assim uma falha de agendamento não vira enxurrada de posts;
   - respeita o intervalo mínimo entre publicações (INTERVALO_MIN);
   - se o item já estiver publicado, nunca republica;
-  - sem itens vencidos, encerra em silêncio e não altera nada.
+  - sem itens vencidos, encerra em silêncio e não altera nada;
+  - respeita a chave "pausado": true no topo do arquivo, que congela a fila
+    inteira sem precisar mexer nos horários de cada item;
+  - falha de publicação avisa no Telegram e, na terceira seguida no mesmo item,
+    pausa a fila sozinha — antes disso o robô tentava de 10 em 10 minutos, o que
+    virava enxurrada de e-mail de falha sem ninguém ser avisado de verdade.
 
 Variáveis de ambiente: IG_TOKEN e IG_USER_ID.
 Saída: código 0 sempre que não houver erro real, para não poluir o painel do
@@ -33,6 +38,7 @@ INTERVALO_MIN = 60           # minutos mínimos entre duas publicações
 ATRASO_GRAVE = 45            # atraso a partir do qual se assume falha do agendador
 INTERVALO_RECUPERACAO = 20   # intervalo usado para drenar a fila atrasada
 ATRASO_CRITICO = 120         # atraso a partir do qual avisa no Telegram
+FALHAS_PARA_PAUSAR = 3       # falhas seguidas no mesmo item que congelam a fila
 
 
 def agora():
@@ -54,6 +60,16 @@ def alertar_travamento(vencidos, atraso):
            f"{len(vencidos)} post(s) esperando:\n{nomes}\n\n"
            f"O agendador do GitHub pode ter falhado. Dá para destravar entrando em "
            f"Actions e clicando em Run workflow.")
+    if _telegram(txt):
+        print("Alerta de travamento enviado no Telegram.")
+
+
+def _telegram(txt):
+    """Envia texto simples no Telegram. Nunca derruba o fluxo se falhar."""
+    token = os.environ.get("TG_TOKEN")
+    chat = os.environ.get("TG_CHAT_ID")
+    if not token or not chat:
+        return False
     dados = urllib.parse.urlencode(
         {"chat_id": chat, "text": txt, "disable_web_page_preview": "true"}).encode()
     try:
@@ -61,9 +77,29 @@ def alertar_travamento(vencidos, atraso):
             urllib.request.Request(
                 f"https://api.telegram.org/bot{token}/sendMessage", data=dados),
             timeout=30)
-        print("Alerta de travamento enviado no Telegram.")
+        return True
     except Exception as e:
-        print(f"Não consegui alertar no Telegram: {e}")
+        print(f"Não consegui avisar no Telegram: {e}")
+        return False
+
+
+def alertar_falha(item, saida, falhas, pausou):
+    """Avisa que a publicação falhou. Sem isso, só o e-mail do GitHub avisava."""
+    motivo = ""
+    for linha in saida.splitlines():
+        if "error" in linha.lower() or "Erro da API" in linha:
+            motivo = linha.strip()[:300]
+            break
+    txt = (f"❌ Falha ao publicar no Instagram (tentativa {falhas}).\n\n"
+           f"{item.get('titulo', item['slug'])}\n\n"
+           f"{motivo or 'Sem mensagem de erro legível — ver o log do Actions.'}")
+    if pausou:
+        txt += ("\n\nA fila foi PAUSADA sozinha para não insistir no erro. "
+                "Depois de resolver, tirar \"pausado\" de instagram/fila.json.")
+    else:
+        txt += "\n\nO item continua pendente e será tentado de novo."
+    if _telegram(txt):
+        print("Aviso de falha enviado no Telegram.")
 
 
 def main():
@@ -73,6 +109,11 @@ def main():
 
     dados = json.load(open(FILA, encoding="utf-8"))
     fila = dados.get("fila", [])
+
+    if dados.get("pausado"):
+        print(f"Fila PAUSADA. Motivo: {dados.get('pausa_motivo', 'não informado')}")
+        print("Para retomar, remover \"pausado\" de instagram/fila.json.")
+        return 0
 
     vencidos = [f for f in fila
                 if f.get("status") == "pendente" and ler(f["publicar_em"]) <= agora()]
@@ -130,7 +171,20 @@ def main():
     print(saida)
 
     if r.returncode != 0:
-        print("Falhou. O item continua pendente e será tentado na próxima rodada.")
+        falhas = item.get("falhas", 0) + 1
+        item["falhas"] = falhas
+        item["ultima_falha"] = agora().strftime("%Y-%m-%dT%H:%M:%SZ")
+        pausou = falhas >= FALHAS_PARA_PAUSAR
+        if pausou:
+            dados["pausado"] = True
+            dados["pausa_motivo"] = (
+                f"{falhas} falhas seguidas em {item['slug']} "
+                f"({item['ultima_falha']}). Resolver e remover esta chave.")
+            print("Terceira falha seguida. Fila PAUSADA para não insistir no erro.")
+        json.dump(dados, open(FILA, "w", encoding="utf-8"),
+                  ensure_ascii=False, indent=2)
+        alertar_falha(item, saida, falhas, pausou)
+        print("Falhou. O item continua pendente.")
         return 1
 
     link = ""
@@ -140,6 +194,8 @@ def main():
 
     item["status"] = "publicado"
     item["publicado_em"] = agora().strftime("%Y-%m-%dT%H:%M:%SZ")
+    item.pop("falhas", None)
+    item.pop("ultima_falha", None)
     if link:
         item["link"] = link
     json.dump(dados, open(FILA, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
