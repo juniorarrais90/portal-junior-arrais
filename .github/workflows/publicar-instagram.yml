@@ -1,20 +1,30 @@
 name: Publicar no Instagram
 
-# Roda a cada 15 minutos e publica no máximo UM item vencido da fila.
+# Roda periodicamente e publica no máximo UM item vencido de instagram/fila.json.
 # O cron do GitHub Actions não é pontual: pode atrasar de 5 a 15 minutos em
 # horários de pico. Por isso o intervalo de checagem é curto e quem manda de
-# verdade é o horário gravado em instagram/fila.json.
+# verdade é o horário gravado na fila.
+#
 # Gatilhos redundantes. O cron do GitHub é "melhor esforço": em 09/08/2026 ele
 # degradou de 15 para ~35 min de intervalo e parou de disparar às 21:03, deixando
-# um post preso na fila a noite inteira. Por isso agora há três camadas:
-#   1. cron a cada 10 min (o normal do dia);
-#   2. crons fixos de reforço em horários redondos, que costumam ter menos fila;
-#   3. repository_dispatch, para um serviço externo cutucar de fora do GitHub.
+# um post preso na fila a noite inteira. Por isso há duas camadas:
+#   1. cron interno do GitHub;
+#   2. repository_dispatch, de um serviço externo que cutuca a cada 15 minutos
+#      (nos minutos 00, 15, 30 e 45).
+#
+# ATENÇÃO AO HORÁRIO DO CRON — incidente de 10/08/2026 (run #78):
+# o cron rodava em "*/10", ou seja, caía em :00 e :30, os mesmos minutos do
+# serviço externo. Quando os dois disparam juntos, o segundo run fica na fila e o
+# actions/checkout traz o commit CONGELADO no instante em que o run foi criado,
+# não o mais recente. Ele então lê uma fila.json velha, republica o post que o
+# primeiro run acabou de publicar (post DUPLICADO no Instagram) e ainda falha no
+# push com "! [rejected] (fetch first)". Daí as três defesas abaixo: minutos
+# deslocados, checkout no topo de main e push com nova tentativa.
 on:
   schedule:
-    - cron: "*/10 * * * *"
-    - cron: "5,35 * * * *"          # reforço deslocado dos minutos redondos
-    - cron: "50 2 * * *"            # varredura noturna: 23:50 em Brasília
+    - cron: "3,13,23,33,43,53 * * * *"   # nunca coincide com o serviço externo
+    - cron: "8,38 * * * *"               # reforço deslocado
+    - cron: "52 2 * * *"                 # varredura noturna: 23:52 em Brasília
   workflow_dispatch:
   repository_dispatch:
     types: [publicar-instagram]
@@ -30,7 +40,19 @@ jobs:
   publicar:
     runs-on: ubuntu-latest
     steps:
+      # ref: main (em vez do SHA do gatilho) para o run que ficou na fila NÃO
+      # trabalhar em cima de um estado velho do repositório.
       - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      # Cinto e suspensório: mesmo com ref: main, entre o checkout e a leitura da
+      # fila outro run pode ter empurrado. Sincroniza com o topo real de main.
+      - name: Sincronizar com o topo de main
+        run: |
+          git fetch origin main
+          git reset --hard origin/main
+          echo "Estado atual: $(git rev-parse --short HEAD)"
 
       - uses: actions/setup-python@v5
         with:
@@ -47,14 +69,53 @@ jobs:
           TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
         run: python scripts/processar_fila_instagram.py
 
+      # O push antes falhava quando outro run — ou uma publicação do portal —
+      # tinha empurrado no meio do caminho, e o e-mail de falha chegava mesmo com
+      # o post já publicado. Agora tenta de novo e, se a fila mudou dos dois
+      # lados, remonta a marcação por cima da fila remota: nunca sobrescreve um
+      # registro que já existe lá nem apaga item novo acrescentado à fila.
       - name: Gravar a fila atualizada
         run: |
-          if [ -n "$(git status --porcelain instagram/fila.json)" ]; then
-            git config user.name "Portal Júnior Arrais"
-            git config user.email "juniorarrais90@gmail.com"
-            git add instagram/fila.json
-            git commit -m "Instagram: marca item como publicado [skip ci]"
-            git push
-          else
+          if [ -z "$(git status --porcelain instagram/fila.json)" ]; then
             echo "Nada mudou na fila."
+            exit 0
           fi
+          cp instagram/fila.json /tmp/fila-local.json
+          git config user.name "Portal Júnior Arrais"
+          git config user.email "juniorarrais90@gmail.com"
+          for tentativa in 1 2 3 4 5; do
+            git add instagram/fila.json
+            git diff --cached --quiet || \
+              git commit -m "Instagram: marca item como publicado [skip ci]"
+            if git push; then
+              echo "Fila gravada na tentativa $tentativa."
+              exit 0
+            fi
+            echo "Push recusado (tentativa $tentativa). Remontando sobre o topo de main..."
+            git fetch origin main
+            git reset --hard origin/main
+            python3 - <<'PY'
+          import json
+          remota = json.load(open("instagram/fila.json", encoding="utf-8"))
+          local = json.load(open("/tmp/fila-local.json", encoding="utf-8"))
+          marcados = {i["slug"]: i for i in local["fila"] if i.get("status") == "publicado"}
+          mudou = False
+          for item in remota["fila"]:
+              m = marcados.get(item["slug"])
+              if m and item.get("status") != "publicado":
+                  item["status"] = "publicado"
+                  item["publicado_em"] = m.get("publicado_em")
+                  if m.get("link"):
+                      item["link"] = m["link"]
+                  mudou = True
+                  print("Remarcado como publicado:", item["slug"])
+          if mudou:
+              json.dump(remota, open("instagram/fila.json", "w", encoding="utf-8"),
+                        ensure_ascii=False, indent=2)
+          else:
+              print("A fila remota já está correta.")
+          PY
+            sleep $((tentativa * 5))
+          done
+          echo "::error::Não consegui gravar a fila após 5 tentativas."
+          exit 1
