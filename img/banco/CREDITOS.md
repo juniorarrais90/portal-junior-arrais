@@ -531,3 +531,37 @@ internacional de acessibilidade pintado no piso. Estreou em
 `aposentadoria-da-pessoa-com-deficiencia-nao-e-o-mesmo-que-bpc`. **Fecha a lacuna de pessoa com
 deficiência**, que estava aberta desde agosto. Enquadramento sem rosto, o que evita problema de
 imagem de pessoa identificável.
+
+
+## Parte 12 — incorporadas em 11/08/2026 (varredura do dia)
+
+Cinco fotos novas da Agência Brasil (uso livre mediante crédito) e uma da fila de lotérica.
+Todas entraram porque o banco estava esgotado para os temas de trabalho, crédito e golpe —
+a checagem visual de 11/08 mostrou que 5 das 6 primeiras escolhas repetiam capa já publicada.
+
+| Arquivo | O que mostra | Crédito | Estreia |
+|---|---|---|---|
+| `operario-construcao-civil-laje.jpg` (1170x700) | Operário de capacete e cinto de segurança na laje de obra em Brasília | Foto: Marcello Casal Jr/Agência Brasil | fgts-atrasado-11-milhoes-como-conferir |
+| `camelos-barracas-centro-sp.jpg` (1170x700) | Barracas de camelôs com roupas e bijuterias na calçada do centro de São Paulo | Foto: Arquivo/Agência Brasil | desenrola-adimplentes-comeca-a-funcionar |
+| `golpe-sms-celular-maos.jpg` (1170x700) | Close das mãos segurando celular com a caixa de SMS aberta | Foto: Tânia Rêgo/Agência Brasil | anuncios-falsos-renegociacao-de-divida |
+| `idosa-atendimento-balcao-servidora.jpg` (1170x700) | Idosa de costas sendo atendida no balcão por servidora ao computador | Foto: Marcelo Camargo/Agência Brasil | reavaliacao-do-bpc-quem-esta-dispensado |
+| `trabalhador-rural-capinando-semiarido.jpg` (1170x700) | Produtor rural de chapéu capinando canteiro de palma no Semiárido | Foto: Arquivo/Agência Brasil | trabalhador-rural-pausa-de-10-minutos-a-cada-90 |
+| `fila-loterica-caixa-calcada.jpg` (1170x700) | Fila de pessoas na calçada em frente a lotérica da Caixa, centro de SP | Foto: Rovena Rosa/Agência Brasil | bolsa-familia-agosto-antecipacao-calamidade |
+
+**Ressalva de resolução:** as seis têm 1170 px de largura, abaixo do mínimo de 1200 px da régua.
+Na capa 16:9 a diferença é imperceptível; no story e no feed vertical há ampliação. Aceitas por
+falta de alternativa — a Agência Brasil está em defeso eleitoral 2026 e as matérias de programas
+sociais e o banco de fotos dela estão temporariamente indisponíveis.
+
+**LIÇÃO IMPORTANTE — a checagem de repetição por hash falha.** O recorte (640,0,1200,260) do
+passo 4a só funciona entre capas do layout NOVO. Contra as capas de layout antigo (faixa azul,
+foto só na metade superior) ele dá "livre" para fotos que já estão publicadas. Em 11/08 isso
+deixou passar cinco repetições, pegas só na conferência visual. **Sempre montar a prancha
+comparativa contra o vizinho mais próximo e olhar antes de fechar a arte.** E este arquivo
+também estava incompleto: fotos usadas apareciam sem registro de uso.
+
+**Fotos reprovadas nesta rodada:** `contas-calculadora-mesa.jpg` (tabela de imposto de renda
+dos EUA, já sinalizada antes), `apostas-online-celular.jpg` (repete sus-teleatendimento),
+`crianca-terapia-brinquedo.jpg` (repete plano-de-saude-autismo),
+`atendimento-mesa-documentos.jpg` (repete biometria-obrigatoria),
+`mulher-preocupada-celular.jpg` (repete golpe-do-falso-beneficio).
