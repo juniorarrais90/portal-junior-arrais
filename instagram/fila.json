@@ -266,7 +266,9 @@
       "publicar_em": "2026-08-12T19:00:00Z",
       "horario_brasilia": "12/08 16:00",
       "alt_text": "Pé-de-Meia volta a pagar de 24 a 31 de agosto; veja o calendário e quem recebe",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-08-12T19:01:01Z",
+      "link": "https://www.instagram.com/p/Db83ZQBGFZ9/"
     },
     {
       "slug": "passagem-interestadual-pessoa-idosa-sem-carteira",
