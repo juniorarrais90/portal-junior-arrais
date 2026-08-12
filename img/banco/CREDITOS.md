@@ -604,3 +604,37 @@ Usar esta só quando o assunto FOR o aplicativo em si.
 promocional com texto, não fotografia. A manchete ficaria escrita sobre outro texto, e a largura
 está abaixo do mínimo. Para esse tema o banco já tem `desenrola-brasil-logo.jpg` e
 `camelos-barracas-centro-sp.jpg`.
+
+---
+
+## Adendo à Parte 4 — imagem gerada por IA (12/08/2026)
+
+| Arquivo | O que mostra | Crédito | Estreia |
+|---|---|---|---|
+| `prova-de-vida-idosa-celular-sala.jpg` (1222x886) | Senhora de cabelo grisalho e óculos, sorrindo, mexendo no celular na poltrona da sala de casa | **Imagem gerada por IA — acervo próprio do Portal Júnior Arrais** | — |
+
+**NÃO é foto da Agência Brasil.** Foi gerada no Gemini pelo Júnior e não pode, em hipótese alguma,
+ser creditada a agência ou fotógrafo. Se um dia entrar em matéria, o `--credito` correto é
+"Imagem: Portal Júnior Arrais" ou nenhum crédito — nunca "Agência Brasil".
+
+**O que foi cortado e por quê.** A geração original (1024x572) trazia, no canto inferior esquerdo,
+um celular gigante exibindo uma **tela falsa do gov.br/INSS** com a mensagem "PROVA DE VIDA REALIZADA
+COM SUCESSO — validação automática por cruzamento de dados". Duas razões para remover:
+
+1. a manchete da capa 16:9 cai exatamente em cima do celular, e o texto da tela vira borrão atrás dela;
+2. mais grave, é interface simulada de órgão público. Um portal que vive de alertar contra golpe não
+   publica print inventado do gov.br — o leitor pode tomar por real, procurar a mensagem, ou alguém
+   pode recortar e usar de isca. **Regra que fica: nada de simular tela, e-mail, SMS ou app de órgão
+   público em imagem de matéria.**
+
+Cortados os 23% da esquerda e ampliada 1,55x, sobrou a cena limpa. Testada nos três formatos: capa
+16:9, story 9:16 e feed 3:4 — todas legíveis. No feed o recorte central do script já descartaria o
+celular sozinho.
+
+**Ressalva de resolução:** a origem tinha 1024 px de largura, abaixo da régua; o arquivo do banco
+está ampliado. Se for regerar, pedir 1920x1080 e sem interface de governo na cena.
+
+**Duas gerações anteriores foram reprovadas** e não entraram no banco: uma com o texto corrompido
+("_ALLADDO..." no lugar de "VALIDADO"), defeito clássico de IA que denuncia a imagem; e outra que
+mostrava o idoso fazendo reconhecimento facial — o procedimento ANTIGO, ou seja, ilustrava o oposto
+da notícia de que a prova de vida virou automática.
