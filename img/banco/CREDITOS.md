@@ -565,3 +565,42 @@ dos EUA, já sinalizada antes), `apostas-online-celular.jpg` (repete sus-teleate
 `crianca-terapia-brinquedo.jpg` (repete plano-de-saude-autismo),
 `atendimento-mesa-documentos.jpg` (repete biometria-obrigatoria),
 `mulher-preocupada-celular.jpg` (repete golpe-do-falso-beneficio).
+
+---
+
+# Parte 4 — Entradas de 12/08/2026
+
+Seis fotos trazidas pelo Júnior da Agência Brasil, triadas antes de entrar: medidas com PIL,
+testadas em capa 16:9 REAL com manchete por cima (é o único teste que revela colisão de texto)
+e conferidas na prancha comparativa contra o vizinho mais próximo do banco. Nenhuma repete foto
+já existente — a menor distância de hash foi 29, contra limite de alerta de 12.
+
+Abrem quatro frentes que o banco não cobria: **Judiciário/STF**, **perícia médica do INSS**,
+**violência doméstica** e **Pé-de-Meia com o cartão**.
+
+| Arquivo | O que mostra | Crédito | Estreia |
+|---|---|---|---|
+| `stf-fachada-sede-brasilia.jpg` (1170x700) | Fachada da sede do STF em Brasília sob céu azul limpo, com a bandeira à direita | Foto: Agência Brasil | — |
+| `patrulha-maria-da-penha-viatura.jpg` (1170x700) | Policial militar de costas ao lado de viatura rosa da Patrulha Maria da Penha | Foto: Agência Brasil | — |
+| `inss-sala-espera-pericia-medica.jpg` (1170x700) | Sala de espera lotada de agência do INSS sob a placa "Perícia Médica", com painel de senhas | Foto: Agência Brasil | — |
+| `pe-de-meia-cartao-estudante.jpg` (1170x700) | Estudante desfocado ao fundo segurando o cartão do Pé-de-Meia em primeiro plano | Foto: Agência Brasil | — |
+| `minha-casa-conjunto-aereo.jpg` (1170x700) | Vista aérea de conjunto habitacional do Minha Casa Minha Vida em obras | Foto: Agência Brasil | — |
+| `meu-inss-app-celular-cartao.jpg` (1170x700) | Celular com a tela de login do Meu INSS sobre teclado, ao lado de cartão da Previdência | Foto: Agência Brasil | — |
+
+**Crédito genérico por decisão do Júnior (12/08).** As seis entraram sem o nome do fotógrafo,
+creditadas só como "Agência Brasil". Se algum dia os links de origem aparecerem, vale completar
+o crédito nesta tabela e no `<span class="credito-foto">` das matérias que já as usarem.
+
+**Ressalva de resolução:** 1170 px de largura, abaixo do mínimo de 1200 px da régua — mesma
+situação da Parte 3. Na capa 16:9 é imperceptível; o story 9:16 foi testado e também aguentou.
+
+**Ressalva editorial de `meu-inss-app-celular-cartao.jpg`:** é a mais poluída do lote, porque o
+logo grande do aplicativo disputa espaço com a manchete. Pior que isso, ela empurra a matéria na
+direção do autoatendimento, que é justamente o que o portal não faz. Para pauta de prova de vida
+ou de acesso a benefício, preferir `idoso-celular-rodoviaria.jpg` ou `idosa-atendimento-balcao-servidora.jpg`.
+Usar esta só quando o assunto FOR o aplicativo em si.
+
+**Foto reprovada nesta rodada:** a arte do "Desenrola dos Adimplentes" (1024x576) — é peça
+promocional com texto, não fotografia. A manchete ficaria escrita sobre outro texto, e a largura
+está abaixo do mínimo. Para esse tema o banco já tem `desenrola-brasil-logo.jpg` e
+`camelos-barracas-centro-sp.jpg`.
