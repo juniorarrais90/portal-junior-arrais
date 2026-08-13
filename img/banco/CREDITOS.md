@@ -638,3 +638,29 @@ está ampliado. Se for regerar, pedir 1920x1080 e sem interface de governo na ce
 ("_ALLADDO..." no lugar de "VALIDADO"), defeito clássico de IA que denuncia a imagem; e outra que
 mostrava o idoso fazendo reconhecimento facial — o procedimento ANTIGO, ou seja, ilustrava o oposto
 da notícia de que a prova de vida virou automática.
+
+---
+
+# Parte 4 — Imagens geradas por IA (13/08/2026)
+
+Oito imagens geradas no Gemini a partir do **prompt padrão do portal** (master 3:4,
+sem texto na imagem, revezando o tipo de cena). São **acervo próprio do Portal Júnior
+Arrais**: não exigem crédito de terceiros e não devem receber `--credito` nas artes.
+
+Todas em **1632x2176 (3:4 exato)**, já com o selo do Gemini removido no corte
+(160 px da direita e 180 px da base, reenquadrado em 3:4).
+
+| Arquivo | O que mostra | Tipo de cena | Usada em |
+|---|---|---|---|
+| `inss-sms-falso-maos-celular-mesa.jpg` | Close a prumo de mãos idosas segurando celular simples sobre mesa de madeira gasta, óculos ao lado; tela acesa e ilegível | Detalhe de objeto | inss-sms-falso-corte-prova-de-vida |
+| `dinheiro-carteira-envelope-cozinha.jpg` | Maço de cédulas dobrado em pé, carteira de couro e envelope pardo sobre mesa de cozinha popular com azulejo | Detalhe de objeto | decimo-terceiro-inss-novembro-quem-recebe |
+| `agencia-bancaria-fachada-rua.jpg` | Fachada de agência bancária de rua ao amanhecer, porta de vidro e caixa eletrônico ao fundo, sem letreiro ou marca | Instituição | valores-a-receber-5-bilhoes-esquecidos-bancos |
+| `canteiro-obra-operario-de-costas.jpg` | Canteiro de obra ao fim da tarde, operário de capacete branco liso visto de costas, andaimes e betoneira | Ambiente de trabalho | fgts-saque-demissao-justica-do-trabalho-tst |
+| `conjunto-habitacional-rua-casas.jpg` | Rua de conjunto habitacional popular, fileira de casas geminadas com telha cerâmica e muro baixo | Rua e moradia | fgts-casa-propria-intervalo-12-meses-projeto |
+| `farmacia-prateleira-caixa-generica.jpg` | Balcão de farmácia de bairro, atendente de jaleco branco liso (só ombro e mão) e prateleiras com caixas brancas sem rótulo | Balcão e atendimento | farmacia-popular-novas-regras-fiscalizacao-biometria |
+| `estoque-loja-jovem-aprendiz.jpg` | Estoque de loja de bairro, jovem de uniforme liso de costas organizando caixas de papelão em prateleira de aço | Ambiente de trabalho | estatuto-do-aprendiz-retirado-de-pauta-senado |
+| `rede-eletrica-poste-rua-nordeste.jpg` | Poste de concreto com transformador e emaranhado de fios, casas de alvenaria coloridas ao fim da tarde | Infraestrutura | aneel-548-bilhoes-conta-de-luz-norte-nordeste |
+
+> **Regra de reuso:** antes de reaproveitar qualquer uma destas em matéria nova, rodar a
+> checagem de repetição do passo 4a da skill. Elas são fortes e temáticas — repetir cedo
+> demais entrega a origem.
