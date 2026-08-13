@@ -296,7 +296,9 @@
       "publicar_em": "2026-08-13T12:00:00Z",
       "horario_brasilia": "13/08 09:00",
       "alt_text": "INSS avisa que SMS sobre corte de benefício por prova de vida é golpe",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-08-13T12:00:58Z",
+      "link": "https://www.instagram.com/p/Db-sHrHoD6V/"
     },
     {
       "slug": "valores-a-receber-5-bilhoes-esquecidos-bancos",
