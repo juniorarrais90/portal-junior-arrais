@@ -376,7 +376,9 @@
       "publicar_em": "2026-08-14T12:00:00Z",
       "horario_brasilia": "14/08 09:00",
       "alt_text": "Aluguel descontado direto do salário: Câmara aprova e aposentado também entra",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-08-14T12:01:00Z",
+      "link": "https://www.instagram.com/p/DcBQ6eJoLXF/"
     },
     {
       "slug": "mercado-livre-energia-escolher-fornecedor-decreto",
