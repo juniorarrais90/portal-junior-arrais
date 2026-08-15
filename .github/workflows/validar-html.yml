@@ -1,0 +1,27 @@
+name: Validar HTML
+
+# Rede de segurança das publicações: se algum commit deixar a home ou uma
+# matéria com tag aberta sem fechar (foi o que espremeu a home em 15/08/2026),
+# esta checagem falha e o GitHub avisa por e-mail antes de alguém notar no site.
+
+on:
+  push:
+    paths:
+      - "**.html"
+      - "scripts/validar_home.py"
+      - ".github/workflows/validar-html.yml"
+  pull_request:
+    paths:
+      - "**.html"
+  workflow_dispatch:
+
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Validar estrutura das páginas
+        run: python3 scripts/validar_home.py
