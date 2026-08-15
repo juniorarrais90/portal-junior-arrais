@@ -664,3 +664,19 @@ Todas em **1632x2176 (3:4 exato)**, já com o selo do Gemini removido no corte
 > **Regra de reuso:** antes de reaproveitar qualquer uma destas em matéria nova, rodar a
 > checagem de repetição do passo 4a da skill. Elas são fortes e temáticas — repetir cedo
 > demais entrega a origem.
+
+## Parte 5 — entrada e usos de 15/08/2026 (varredura do dia)
+
+Uma foto nova baixada da Agência Brasil (og:image em 1600x800) e quatro fotos que já
+estavam no banco estrearam nas matérias do dia:
+
+| Arquivo | O que mostra | Crédito | Usada em |
+|---|---|---|---|
+| `mulher-enfermeira-trabalho-hospital.jpg` (1600x800) **NOVA** | Profissionais de enfermagem paramentadas trabalhando em hospital | Foto: Ingrid Anne/Prefeitura de Manaus (via Agência Brasil) | mulheres-emprego-carteira-assinada-46-por-cento |
+| `bolsa-familia-cartao-fundo-azul.jpg` | Mão segurando o cartão do Bolsa Família sobre fundo azul | origem não documentada (Parte 3) — sem `--credito` | bets-bloqueadas-bolsa-familia-bpc-3-milhoes |
+| `minha-casa-conjunto-habitacional.jpg` | Vista aérea de conjunto do Minha Casa Minha Vida, em Fortaleza | Foto: Ricardo Stuckert/PR | reforma-de-casa-e-mei-governo-libera-3-5-bilhoes |
+| `estudante-adolescente-livros.jpg` | Estudante carregando livros em corredor de escola | Lucero Estrella/Pexels — crédito facultativo | bolsa-de-estudo-licenca-maternidade-projeto-senado |
+| `bolsa-familia-predio-caixa.jpg` | Prédio da Caixa Econômica Federal | Foto: Rafa Neddermeyer/Agência Brasil | bolsa-familia-agosto-comeca-terca-18-quem-recebe-primeiro |
+
+Checagem de repetição da rodada: hash da faixa superior direita sem colisão nova
+(menor distância 13, contra capa de layout antigo, conferida no olho na prancha).
