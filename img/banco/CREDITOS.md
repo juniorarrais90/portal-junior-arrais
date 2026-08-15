@@ -680,3 +680,12 @@ estavam no banco estrearam nas matérias do dia:
 
 Checagem de repetição da rodada: hash da faixa superior direita sem colisão nova
 (menor distância 13, contra capa de layout antigo, conferida no olho na prancha).
+
+## Adendo — imagem gerada por IA (15/08/2026, tarde)
+
+| Arquivo | O que mostra | Crédito | Usada em |
+|---|---|---|---|
+| `bets-cartao-bolsa-familia-cadeado-dados.jpg` (1792x2400, master 3:4) | Cartão do Bolsa Família em pé com as logos oficiais (Bolsa Família + BPC), cadeado de metal atrás e dois dados vermelhos nítidos em primeiro plano | **Imagem gerada por IA (Gemini, com logos oficiais anexadas) — acervo próprio do Portal Júnior Arrais**, sem `--credito` | bets-bloqueadas-bolsa-familia-bpc-3-milhoes (substituiu a foto genérica do cartão em 15/08) |
+
+Logos conferidas em zoom: letras corretas, sem deformação. Primeira aplicação da
+regra da logo anexada (ver passo 4c da skill).
