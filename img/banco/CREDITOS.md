@@ -689,3 +689,20 @@ Checagem de repetição da rodada: hash da faixa superior direita sem colisão n
 
 Logos conferidas em zoom: letras corretas, sem deformação. Primeira aplicação da
 regra da logo anexada (ver passo 4c da skill).
+
+## Adendo 2 — imagens geradas por IA (15/08/2026, tarde)
+
+Quatro imagens geradas pelo Júnior no Gemini (master 3:4, 1792x2400), no estilo novo
+"coisa real, atual e viva" e com a regra da logo/documento anexado. Todas são
+**acervo próprio do Portal Júnior Arrais** — sem `--credito` nas artes.
+
+| Arquivo | O que mostra | Usada em |
+|---|---|---|
+| `carteira-trabalho-ctps-maos-ia.jpg` | Mãos segurando a CTPS azul fechada, capa fiel, ambiente de trabalho claro ao fundo | mulheres-emprego-carteira-assinada-46-por-cento (trocou foto de enfermagem) |
+| `bolsa-estudo-capelo-livros-sapatinho-bebe.jpg` | Capelo de formatura, livros coloridos e sapatinhos de bebê sobre mesa clara | bolsa-de-estudo-licenca-maternidade-projeto-senado (trocou estudante Pexels) |
+| `reforma-casa-capacete-tijolos-cedulas.jpg` | Capacete amarelo, colher de pedreiro e cédulas sobre tijolos, casa em reforma ao fundo | reforma-de-casa-e-mei-governo-libera-3-5-bilhoes (trocou vista aérea Stuckert) |
+| `bolsa-familia-cartao-mao-fila-rua.jpg` | Mão erguendo cartão do Bolsa Família com logo fiel, fila de rua desfocada ao fundo. **Retocada em 15/08**: o selo "Governo Federal" saiu com letra corrompida e foi apagado (bloco verde liso) | bolsa-familia-agosto-comeca-terca-18-quem-recebe-primeiro (trocou prédio da Caixa) |
+
+Letras conferidas em zoom nas quatro (CTPS e logo do Bolsa Família corretas). Os
+créditos antigos (`credito-foto`) foram removidos das três matérias que tinham foto
+creditada.
