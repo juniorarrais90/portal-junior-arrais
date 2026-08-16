@@ -469,6 +469,30 @@
       "status": "publicado",
       "publicado_em": "2026-08-15T19:00:55Z",
       "link": "https://www.instagram.com/p/DcElxf0FIqq/"
+    },
+    {
+      "slug": "campanha-eleitoral-2026-o-que-muda-para-quem-recebe-beneficio",
+      "titulo": "Campanha eleitoral começou: o que muda para quem recebe Bolsa Família e BPC",
+      "publicar_em": "2026-08-16T20:00:00Z",
+      "horario_brasilia": "16/08 17:00",
+      "alt_text": "Campanha eleitoral começou: o que muda para quem recebe Bolsa Família e BPC",
+      "status": "pendente"
+    },
+    {
+      "slug": "pe-de-meia-agosto-calendario-mes-de-nascimento",
+      "titulo": "Pé-de-Meia começa dia 24: veja o dia do pagamento pelo seu mês de nascimento",
+      "publicar_em": "2026-08-16T21:30:00Z",
+      "horario_brasilia": "16/08 18:30",
+      "alt_text": "Pé-de-Meia começa dia 24: veja o dia do pagamento pelo seu mês de nascimento",
+      "status": "pendente"
+    },
+    {
+      "slug": "custas-judiciais-isencao-ate-5-mil-justica-federal",
+      "titulo": "Câmara aprova isenção de custas na Justiça Federal para quem ganha até R$ 5 mil",
+      "publicar_em": "2026-08-16T23:00:00Z",
+      "horario_brasilia": "16/08 20:00",
+      "alt_text": "Câmara aprova isenção de custas na Justiça Federal para quem ganha até R$ 5 mil",
+      "status": "pendente"
     }
   ]
 }

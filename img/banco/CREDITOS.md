@@ -706,3 +706,25 @@ Quatro imagens geradas pelo Júnior no Gemini (master 3:4, 1792x2400), no estilo
 Letras conferidas em zoom nas quatro (CTPS e logo do Bolsa Família corretas). Os
 créditos antigos (`credito-foto`) foram removidos das três matérias que tinham foto
 creditada.
+
+## Parte 6 — imagens geradas por IA em 16/08/2026 (varredura do dia)
+
+Três imagens geradas pelo Júnior no Gemini (master 3:4, 1792x2400), no padrão novo
+de **objeto-símbolo em primeiro plano com enquadramento fechado**. Todas são
+**acervo próprio do Portal Júnior Arrais** — sem `--credito` nas artes.
+
+| Arquivo | O que mostra | Tipo de cena | Usada em |
+|---|---|---|---|
+| `urna-eletronica-cabine-mao-eleitora.jpg` | Urna eletrônica em cabine de papelão sobre carteira de escola pública, mão de eleitora pressionando o teclado. Teclas BRANCO/CORRIGE/CONFIRMA legíveis e corretas (foto de urna real anexada como referência) | Detalhe de objeto | campanha-eleitoral-2026-o-que-muda-para-quem-recebe-beneficio |
+| `justica-malhete-balanca-autos.jpg` | Malhete de madeira escura sobre mesa maciça, balança dourada e estante de autos ao fundo, luz lateral quente com sombra longa | Detalhe de objeto | custas-judiciais-isencao-ate-5-mil-justica-federal |
+| `pe-de-meia-placa-carteira-escolar.jpg` | Placa de mesa com a logo oficial do Pé-de-Meia sobre carteira escolar, mochila jeans desgastada e caderno espiral aberto, sala de aula vazia ao fundo (logo anexada como referência) | Detalhe de objeto | pe-de-meia-agosto-calendario-mes-de-nascimento |
+
+**Lição do dia (custou duas rodadas de geração):** cena de contexto sem objeto-símbolo
+não identifica o assunto. O primeiro lote saiu com palanque de comício vazio e fachada
+de prédio modernista — o Júnior leu como "festa de bairro" e "Universidade de Buenos
+Aires". A regra de "nada de texto, placa ou logo" vale para LETRA, não para SÍMBOLO:
+urna, malhete, balança, cartão e logo de programa identificam sem escrever nada.
+
+**Segunda lição:** conferir a resolução de CADA arquivo. No mesmo lote o gem entregou
+duas em 1792x2400 e uma em 896x1200 — abaixo do mínimo, e no story precisaria de 1,6x
+de ampliação. Foi preciso regerar pedindo tamanho máximo explicitamente.
