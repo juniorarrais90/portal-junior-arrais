@@ -486,7 +486,9 @@
       "publicar_em": "2026-08-16T21:30:00Z",
       "horario_brasilia": "16/08 18:30",
       "alt_text": "Pé-de-Meia começa dia 24: veja o dia do pagamento pelo seu mês de nascimento",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-08-16T21:31:00Z",
+      "link": "https://www.instagram.com/p/DcHbvTzj5ys/"
     },
     {
       "slug": "custas-judiciais-isencao-ate-5-mil-justica-federal",
