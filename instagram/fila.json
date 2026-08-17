@@ -546,7 +546,9 @@
       "publicar_em": "2026-08-17T19:00:00Z",
       "horario_brasilia": "17/08 16:00",
       "alt_text": "Brasil avança em 71% dos indicadores sociais, mas a desigualdade de renda e de raça piorou",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-08-17T19:01:42Z",
+      "link": "https://www.instagram.com/p/DcJvceeG__U/"
     },
     {
       "slug": "simples-nacional-fim-do-regime-de-caixa-o-que-muda",
