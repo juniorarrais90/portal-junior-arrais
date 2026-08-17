@@ -728,3 +728,27 @@ urna, malhete, balança, cartão e logo de programa identificam sem escrever nad
 **Segunda lição:** conferir a resolução de CADA arquivo. No mesmo lote o gem entregou
 duas em 1792x2400 e uma em 896x1200 — abaixo do mínimo, e no story precisaria de 1,6x
 de ampliação. Foi preciso regerar pedindo tamanho máximo explicitamente.
+
+## Parte 4 — Imagens geradas por IA (lote de 17/08/2026)
+
+Todas geradas no gem do Júnior a partir do prompt padrão do passo 4c, master 3:4
+1792x2400. **Imagem gerada por IA — acervo próprio do Portal Júnior Arrais.** Não
+exigem crédito de terceiros e não levam `--credito` nas artes.
+
+Neste lote o texto de cena foi liberado (cartaz/placa curta, sempre na metade
+superior do quadro) e a logo oficial foi anexada ao gem como referência fiel — foi
+assim que o selo do INSS saiu com as letras corretas.
+
+| Arquivo | O que mostra | Tipo de cena | Usada em |
+|---|---|---|---|
+| `agencia-trabalhador-fila-cartaz-contratando.jpg` | Fachada de posto de atendimento ao trabalhador com fila na calçada e cartaz ESTAMOS CONTRATANDO na porta | Instituição | desemprego-5-4-por-cento-mulher-e-trabalhador-negro |
+| `inss-sala-espera-atendimento-mutirao.jpg` | Sala de espera de agência do INSS com cadeiras azuis ocupadas e placa INSS ATENDIMENTO | Interior institucional | mutirao-de-pericia-do-inss-como-funciona-a-convocacao |
+| `bairro-popular-aluga-se-predios-ao-fundo.jpg` | Rua de bairro popular com placa ALUGA-SE e silhueta de prédios altos ao fundo | Rua e moradia | relatorio-desigualdade-2026-o-que-melhorou-e-o-que-piorou |
+| `oficina-conserto-senhor-trabalhando.jpg` | Homem grisalho trabalhando em oficina de bairro sob placa CONSERTOS | Ambiente de trabalho | trabalho-com-carteira-apos-os-65-anos-cresce-73-por-cento |
+| `aeroporto-desembarque-mala-carrinho.jpg` | Homem de costas empurrando carrinho com malas antigas sob placa DESEMBARQUE | Transporte | aposentadoria-quem-trabalhou-em-portugal-mocambique-cabo-verde |
+| `mercearia-caixa-calculadora-pix.jpg` | Comerciante no caixa de mercearia com calculadora e cartaz ACEITAMOS PIX | Balcão e atendimento | simples-nacional-fim-do-regime-de-caixa-o-que-muda |
+| `sala-noite-tv-ligada-latas.jpg` | Sala de casa popular à noite, vazia, com TV ligada e latas na mesa de centro | Ambiente doméstico | agressao-contra-mulher-em-casa-cresce-em-dia-de-jogo |
+
+Observação sobre a última: a cena é deliberadamente vazia. Pauta de violência
+doméstica não leva foto de vítima, mão erguida nem vulto ameaçador — revitimiza e
+afasta quem está vivendo aquilo.
