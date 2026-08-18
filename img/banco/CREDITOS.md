@@ -752,3 +752,22 @@ assim que o selo do INSS saiu com as letras corretas.
 Observação sobre a última: a cena é deliberadamente vazia. Pauta de violência
 doméstica não leva foto de vítima, mão erguida nem vulto ameaçador — revitimiza e
 afasta quem está vivendo aquilo.
+
+# Parte 13 — Imagens geradas por IA (18/08/2026)
+
+Cinco imagens do gem do Júnior, master 3:4 em 1792x2400, conferidas uma a uma.
+**Imagem gerada por IA (Gemini) — acervo próprio do Portal Júnior Arrais**, sem
+`--credito` nas artes. Revezamento de cena do lote: um retrato, uma rua, um detalhe
+de objeto, um ambiente de trabalho e uma cena de moradia — nenhum retrato repetido.
+
+| Arquivo | O que mostra | Tipo de cena | Usada em |
+|---|---|---|---|
+| `cuidadora-uniforme-idosa-poltrona-andador.jpg` | Cuidadora de uniforme azul e crachá ao lado de idosa sentada em poltrona, andador encostado e porta-retratos na estante | Retrato | cuidador-de-idoso-certidao-de-antecedentes-criminais |
+| `bets-celular-roleta-mesa-contas.jpg` | Mãos segurando celular com roleta de cassino online sobre mesa de cozinha com toalha plástica, contas e caneca | Detalhe de objeto | bets-42-por-cento-das-mulheres-ja-apostaram |
+| `entregador-moto-bag-rua-consertos.jpg` | Entregador de capacete conferindo o celular ao lado de moto com bag vermelha, em rua de bairro sob placa CONSERTOS RÁPIDOS | Rua e trabalho | credito-moto-entregador-aplicativo-mp-1366 |
+| `obra-marmitas-cavalete-refeitorio.jpg` | Marmitas de alumínio e garrafa térmica sobre tábua em cavaletes, operários de capacete comendo ao fundo, cartaz REFEITÓRIO no tapume | Ambiente de trabalho | refeicao-obrigatoria-na-obra-construcao-civil |
+| `alojamento-rural-barraco-varal-botas.jpg` | Barraco de madeira com telhado de zinco enferrujado, varal com roupas de trabalho, botas de borracha e galão de água, em manhã nublada | Rua e moradia | trabalho-escravo-minas-gerais-5-6-mil-resgatados |
+
+Texto de cena aprovado nas duas que levam placa (CONSERTOS RÁPIDOS e REFEITÓRIO), sempre
+na metade superior do quadro e com ortografia correta. Nenhuma logo foi anexada neste
+lote — nenhuma das cinco pautas é de programa social nomeado.
