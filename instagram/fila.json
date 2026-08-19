@@ -619,6 +619,62 @@
       "status": "publicado",
       "publicado_em": "2026-08-18T21:00:49Z",
       "link": "https://www.instagram.com/p/DcMh4CEm7oo/"
+    },
+    {
+      "slug": "inss-18-doencas-sem-carencia-lista-completa",
+      "titulo": "INSS: as 18 doenças que dão direito ao benefício sem carência",
+      "publicar_em": "2026-08-19T13:00:00Z",
+      "horario_brasilia": "19/08 10:00",
+      "alt_text": "INSS: as 18 doenças que dão direito ao benefício sem carência",
+      "status": "pendente"
+    },
+    {
+      "slug": "doenca-renal-cronica-fissura-labiopalatina-deficiencia",
+      "titulo": "Doença renal crônica e fissura labiopalatina podem passar a contar como deficiência",
+      "publicar_em": "2026-08-19T14:30:00Z",
+      "horario_brasilia": "19/08 11:30",
+      "alt_text": "Doença renal crônica e fissura labiopalatina podem passar a contar como deficiência",
+      "status": "pendente"
+    },
+    {
+      "slug": "habitacao-adaptada-60-mais-reforma-casa-do-idoso",
+      "titulo": "Projeto cria subsídio para adaptar a casa de quem tem 60 anos ou mais",
+      "publicar_em": "2026-08-19T16:00:00Z",
+      "horario_brasilia": "19/08 13:00",
+      "alt_text": "Projeto cria subsídio para adaptar a casa de quem tem 60 anos ou mais",
+      "status": "pendente"
+    },
+    {
+      "slug": "autismo-atendimento-em-crise-diretrizes-agentes-publicos",
+      "titulo": "Projeto define como agentes públicos devem atender pessoa com autismo em crise",
+      "publicar_em": "2026-08-19T17:30:00Z",
+      "horario_brasilia": "19/08 14:30",
+      "alt_text": "Projeto define como agentes públicos devem atender pessoa com autismo em crise",
+      "status": "pendente"
+    },
+    {
+      "slug": "desapropriacao-comunidade-vulneravel-regras-antes-da-remocao",
+      "titulo": "Projeto exige processo e plano de mitigação antes de desapropriar terreno de comunidade",
+      "publicar_em": "2026-08-19T19:00:00Z",
+      "horario_brasilia": "19/08 16:00",
+      "alt_text": "Projeto exige processo e plano de mitigação antes de desapropriar terreno de comunidade",
+      "status": "pendente"
+    },
+    {
+      "slug": "concurso-publico-adaptacao-de-prova-pessoa-com-deficiencia",
+      "titulo": "Candidato com deficiência poderá indicar a adaptação de que precisa na prova do concurso",
+      "publicar_em": "2026-08-19T20:30:00Z",
+      "horario_brasilia": "19/08 17:30",
+      "alt_text": "Candidato com deficiência poderá indicar a adaptação de que precisa na prova do concurso",
+      "status": "pendente"
+    },
+    {
+      "slug": "cnh-remarcacao-de-exame-sem-taxa-por-motivo-de-saude",
+      "titulo": "Projeto libera remarcar exame da CNH sem pagar taxa quando a falta for por doença",
+      "publicar_em": "2026-08-19T22:00:00Z",
+      "horario_brasilia": "19/08 19:00",
+      "alt_text": "Projeto libera remarcar exame da CNH sem pagar taxa quando a falta for por doença",
+      "status": "pendente"
     }
   ]
 }

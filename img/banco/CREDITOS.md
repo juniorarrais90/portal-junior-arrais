@@ -771,3 +771,25 @@ de objeto, um ambiente de trabalho e uma cena de moradia — nenhum retrato repe
 Texto de cena aprovado nas duas que levam placa (CONSERTOS RÁPIDOS e REFEITÓRIO), sempre
 na metade superior do quadro e com ortografia correta. Nenhuma logo foi anexada neste
 lote — nenhuma das cinco pautas é de programa social nomeado.
+
+# Parte 14 — Imagens geradas por IA (19/08/2026)
+
+Sete imagens do gem do Júnior, master 3:4 em 1792x2400, conferidas uma a uma em prancha
+de contato. **Imagem gerada por IA (Gemini) — acervo próprio do Portal Júnior Arrais**,
+sem `--credito` nas artes. Revezamento de cena do lote: balcão de atendimento,
+instituição de saúde, detalhe doméstico, detalhe de objeto, rua e moradia, ambiente
+institucional e infraestrutura — **nenhum retrato no lote inteiro**.
+
+| Arquivo | O que mostra | Tipo de cena | Usada em |
+|---|---|---|---|
+| `inss-recepcao-totem-senha-balcao.jpg` | Recepção de agência da Previdência com totem de senha, balcão de fórmica, selo do INSS e cartaz RECEPÇÃO na parede; ao fundo duas pessoas de costas nas cadeiras de espera | Balcão e atendimento | inss-18-doencas-sem-carencia-lista-completa |
+| `hemodialise-maquina-poltrona-hospital.jpg` | Sala de hemodiálise de hospital público, com máquina de diálise, suporte de soro e poltrona reclinável azul; técnico de jaleco ao fundo, de costas | Instituição de saúde | doenca-renal-cronica-fissura-labiopalatina-deficiencia |
+| `banheiro-barra-apoio-instalacao-idoso.jpg` | Banheiro de casa simples durante a instalação de barra de apoio em aço inox, com furadeira e nível sobre a pia e banco plástico no boxe | Detalhe de objeto | habitacao-adaptada-60-mais-reforma-casa-do-idoso |
+| `cordao-girassol-fones-balcao-upa.jpg` | Cordão de girassóis (identificação de deficiência oculta) e fones abafadores de ruído infantis sobre balcão de pronto atendimento | Detalhe de objeto | autismo-atendimento-em-crise-diretrizes-agentes-publicos |
+| `comunidade-estacas-topografia-fita-remocao.jpg` | Rua de terra de comunidade de periferia com estacas de topografia, fita zebrada e cartaz REMOÇÃO no poste; moradora observa da porta | Rua e moradia | desapropriacao-comunidade-vulneravel-regras-antes-da-remocao |
+| `sala-prova-mesa-adaptada-acessivel.jpg` | Sala de aula preparada para prova de concurso, com mesa alta sem cadeira e vão livre para cadeira de rodas e cartaz ACESSÍVEL na parede | Ambiente institucional | concurso-publico-adaptacao-de-prova-pessoa-com-deficiencia |
+| `autoescola-patio-carro-aprendizagem-cones.jpg` | Pátio de autoescola com carro popular branco de aprendizagem, placa AUTO ESCOLA no teto e cones alinhados na baliza | Infraestrutura e rua | cnh-remarcacao-de-exame-sem-taxa-por-motivo-de-saude |
+
+Texto de cena aprovado em quatro das sete (RECEPÇÃO, REMOÇÃO, ACESSÍVEL e AUTO ESCOLA),
+sempre na metade superior e com ortografia correta. Logo anexada apenas no prompt do
+INSS, reproduzida fielmente pelo gem.
