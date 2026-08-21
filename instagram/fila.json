@@ -726,7 +726,9 @@
       "publicar_em": "2026-08-21T16:30:00Z",
       "horario_brasilia": "21/08 13:30",
       "alt_text": "Encceja 2026: prova é neste domingo, 23 de agosto, em todo o país",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-08-21T16:31:10Z",
+      "link": "https://www.instagram.com/p/DcTxZvQHIsf/"
     },
     {
       "slug": "inss-metade-dos-pedidos-negados-primeiro-semestre",
