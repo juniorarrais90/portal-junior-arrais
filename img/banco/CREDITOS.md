@@ -584,7 +584,7 @@ Abrem quatro frentes que o banco não cobria: **Judiciário/STF**, **perícia m�
 | `patrulha-maria-da-penha-viatura.jpg` (1170x700) | Policial militar de costas ao lado de viatura rosa da Patrulha Maria da Penha | Foto: Agência Brasil | — |
 | `inss-sala-espera-pericia-medica.jpg` (1170x700) | Sala de espera lotada de agência do INSS sob a placa "Perícia Médica", com painel de senhas | Foto: Agência Brasil | — |
 | `pe-de-meia-cartao-estudante.jpg` (1170x700) | Estudante desfocado ao fundo segurando o cartão do Pé-de-Meia em primeiro plano | Foto: Agência Brasil | — |
-| `minha-casa-conjunto-aereo.jpg` (1170x700) | Vista aérea de conjunto habitacional do Minha Casa Minha Vida em obras | Foto: Agência Brasil | — |
+| `minha-casa-conjunto-aereo.jpg` (1170x700) | Vista aérea de conjunto habitacional do Minha Casa Minha Vida em obras | Foto: Agência Brasil | aluguel-consignado-desconto-em-folha-camara (detectado por hash em 21/08/2026 — a coluna estava vazia por engano) |
 | `meu-inss-app-celular-cartao.jpg` (1170x700) | Celular com a tela de login do Meu INSS sobre teclado, ao lado de cartão da Previdência | Foto: Agência Brasil | — |
 
 **Crédito genérico por decisão do Júnior (12/08).** As seis entraram sem o nome do fotógrafo,
@@ -793,3 +793,46 @@ institucional e infraestrutura — **nenhum retrato no lote inteiro**.
 Texto de cena aprovado em quatro das sete (RECEPÇÃO, REMOÇÃO, ACESSÍVEL e AUTO ESCOLA),
 sempre na metade superior e com ortografia correta. Logo anexada apenas no prompt do
 INSS, reproduzida fielmente pelo gem.
+
+---
+
+## Parte 6 — lote de 21/08/2026 (Agência Brasil, arquivo original)
+
+Sete frentes que o banco não cobria: **agência da Previdência**, **edifício-sede do INSS**,
+**Tribunal Superior do Trabalho**, **Congresso Nacional** e **dia de prova**.
+
+Baixadas do acervo Foto Agência da EBC em resolução original (4500 a 6000 px de largura) e
+reduzidas para 3000 px — bem acima do mínimo de 1200 px da régua, o que resolve a ressalva de
+resolução das Partes 3 e 4. Reprodução autorizada mediante citação do crédito, que aqui vem
+com o nome do fotógrafo.
+
+| Arquivo | O que mostra | Crédito | Tipo de cena | Usada em |
+|---|---|---|---|---|
+| `previdencia-agencia-entrada-segurados.jpg` (3000x2000) | Entrada de agência da Previdência Social com o letreiro azul no alto e segurados na calçada | Foto: José Cruz/Agência Brasil | Balcão e atendimento | inss-recurso-ganho-implantacao-automatica |
+| `inss-edificio-sede-letras-vidro-azul.jpg` (3000x1938) | Aresta do edifício-sede do INSS em vidro azul, com as letras metálicas INSS no topo do quadro | Foto: Rafa Neddermeyer/Agência Brasil | Instituição | inss-metade-dos-pedidos-negados-primeiro-semestre |
+| `inss-agencia-rua-fechada-grade.jpg` (3000x1996) | Agência da Previdência Social de rua com grade fechada, avisos no vidro e calçada de pedra portuguesa | Foto: Tomaz Silva/Agência Brasil | Instituição | fila-do-inss-cai-mas-317-mil-esperam-mais-de-45-dias |
+| `tst-placa-sede-brasilia.jpg` (3000x1688) | Placa de sinalização "Tribunal Superior do Trabalho" em primeiro plano, com o prédio da corte ao fundo | Foto: Rafa Neddermeyer/Agência Brasil | Instituição | tst-reducao-de-salario-apos-acao-trabalhista |
+| `congresso-nacional-cupula-esplanada.jpg` (3000x1688) | Cúpula do Congresso Nacional ao entardecer, com os prédios da Esplanada dos Ministérios | Foto: Rafa Neddermeyer/Agência Brasil | Instituição | pessoa-com-deficiencia-idosa-aos-50-anos-projeto-parado |
+| `estudantes-fila-portao-prova.jpg` (3000x1999) | Estudantes aguardando a abertura dos portões em dia de prova, com guarda-chuva aberto | Foto: Tomaz Silva/Agência Brasil | Retrato coletivo | encceja-2026-prova-neste-domingo-23-de-agosto |
+
+**Como foram obtidas, para repetir depois.** O arquivo original fica em
+`agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/<caminho>.jpg` e responde 403
+sem cabeçalho; com `-A` de navegador e `-e https://agenciabrasil.ebc.com.br/` no `curl`, entrega
+a foto inteira. Os caminhos e os créditos saem das páginas de tag (`/tags/inss`, `/tags/senado`,
+`/tags/encceja`), nos atributos `alt` e `title` das miniaturas. É bem melhor que o caminho de
+screenshot pelo Chrome descrito na skill, que rende no máximo a largura do viewport.
+
+**Reprovada na conferência visual:** `inss-edificio-sede-fachada-vidro.jpg`, a primeira escolha
+para a matéria do indeferimento. O letreiro "PREVIDÊNCIA SOCIAL" da foto caía exatamente sobre a
+faixa do chip e do crédito da capa, e virava texto sobre texto. Substituída pela aresta com as
+letras INSS no alto e a metade de baixo limpa — que é o que o layout do portal pede.
+| `conjunto-habitacional-predio-entregue.jpg` (3000x2000) | Prédio recém-entregue de conjunto habitacional de interesse social, com moradores na entrada | Foto: Marcelo Camargo/Agência Brasil | Rua e moradia | minha-casa-minha-vida-juros-faixa-3-em-estudo |
+
+**Entrou por colisão detectada na checagem de hash.** A primeira escolha para a matéria do
+Minha Casa Minha Vida foi `minha-casa-conjunto-aereo.jpg`, que o CREDITOS trazia como livre —
+e o hash mostrou distância 0 contra a capa de `aluguel-consignado-desconto-em-folha-camara`.
+A coluna "Usada em" daquela linha estava vazia por engano e foi corrigida. Lição: aqui o hash
+pegou o que o CREDITOS não pegou, então os dois passos valem, e nenhum substitui o outro.
+
+**Reprovada por resolução na conferência do lote:** nenhuma. Todas as sete entraram acima de
+3000 px de largura, contra o mínimo de 1200 px da régua.
