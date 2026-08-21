@@ -756,7 +756,9 @@
       "publicar_em": "2026-08-21T21:00:00Z",
       "horario_brasilia": "21/08 18:00",
       "alt_text": "Fila do INSS cai para 1,44 milhão, mas 317 mil pedidos passam de 45 dias",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-08-21T21:01:00Z",
+      "link": "https://www.instagram.com/p/DcUQRvYEzDw/"
     },
     {
       "slug": "pessoa-com-deficiencia-idosa-aos-50-anos-projeto-parado",
