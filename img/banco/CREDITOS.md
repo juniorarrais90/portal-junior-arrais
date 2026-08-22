@@ -836,3 +836,23 @@ pegou o que o CREDITOS não pegou, então os dois passos valem, e nenhum substit
 
 **Reprovada por resolução na conferência do lote:** nenhuma. Todas as sete entraram acima de
 3000 px de largura, contra o mínimo de 1200 px da régua.
+
+---
+
+## Parte 7 — lote de 22/08/2026 (4 imagens de IA + 2 da Agência Brasil)
+
+Quatro cenas geradas no gem do Gemini com o prompt padrão (master 3:4, 1792x2400),
+registradas como **Imagem gerada por IA — acervo próprio do Portal Júnior Arrais**,
+sem crédito de terceiros. Duas fotos da Agência Brasil baixadas no arquivo original
+e reduzidas para 3000 px. Revezamento do lote: sala de espera institucional, detalhe
+de objeto, detalhe doméstico, balcão de atendimento, infraestrutura e fachada de
+instituição — nenhum retrato.
+
+| Arquivo | O que mostra | Crédito | Tipo de cena | Usada em |
+|---|---|---|---|---|
+| `bpc-sala-espera-placa-agencia.jpg` (1792x2400) | Sala de espera de agência com cadeiras azuis, painel de senhas e placa "BPC — Benefício de Prestação Continuada da Assistência Social" | IA — acervo próprio | Instituição | bpc-mutirao-avaliacao-social-fim-de-semana-3-mil-vagas |
+| `dinheiro-calculadora-caderno-mesa.jpg` (1792x2400) | Cédulas de real, calculadora preta e caderno de contas sobre mesa de madeira | IA — acervo próprio | Detalhe de objeto | salario-minimo-2027-projecao-sobe-para-r-1741 |
+| `bolsa-familia-cartao-celular-cozinha.jpg` (1792x2400) | Mãos segurando cartão do Bolsa Família diante de celular, cozinha simples ao fundo | IA — acervo próprio | Detalhe de objeto | 13-do-bolsa-familia-nao-existe-projeto-parado-cuidado-com-golpes |
+| `cadastro-unico-balcao-atendimento.jpg` (1792x2400) | Balcão de atendimento com atendente conferindo documentos de mãe com criança no colo, cartaz do Cadastro Único na parede | IA — acervo próprio | Balcão e atendimento | cadunico-revisao-convoca-11-milhoes-bloqueios-novembro |
+| `linhas-transmissao-torres-itaipu.jpg` (3000x2000) | Torres e linhas de transmissão de energia da usina de Itaipu sob céu azul | Foto: Tânia Rêgo/Agência Brasil | Infraestrutura | tarifa-social-luz-do-povo-ou-desconto-social-qual-e-o-seu |
+| `ministerio-trabalho-previdencia-fachada.jpg` (3000x2000) | Fachada com os letreiros "Ministério do Trabalho e Emprego" e "Ministério da Previdência Social", pedestre passando | Foto: Marcelo Camargo/Agência Brasil | Instituição | consignado-clt-desconto-35-por-cento-divida-nao-acaba-na-demissao |
