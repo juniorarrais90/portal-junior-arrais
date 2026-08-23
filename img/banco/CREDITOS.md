@@ -21,7 +21,7 @@ _(sem foto no banco — ver seção de reprovadas)_
 
 | Arquivo | O que mostra | Crédito |
 |---|---|---|
-| `bolsa-familia-predio-caixa.jpg` | Prédio da Caixa Econômica Federal | Foto: Rafa Neddermeyer/Agência Brasil |
+| `bolsa-familia-predio-caixa.jpg` | Prédio da Caixa Econômica Federal | Foto: Rafa Neddermeyer/Agência Brasil | Usada em fgts-saque-aniversario-de-setembro |
 
 ## BPC / LOAS
 
@@ -231,7 +231,7 @@ como de agência comercial, substituir.
 |---|---|
 | `idoso-sentado-cama-quarto.jpg` | **NÃO USAR FORA DE PAUTA DE BPC** — a imagem tem o **logo do BPC estampado** no canto superior esquerdo. É quadro de vídeo, não foto limpa. Numa capa de outro assunto, o logo cai em cima do chip da categoria. |
 | `fila-agencia-caixa-rua.jpg` | Fila de pessoas na calçada em frente a uma agência da Caixa |
-| `carteira-trabalho-digital-celular.jpg` | Celulares mostrando o aplicativo da Carteira de Trabalho Digital |
+| `carteira-trabalho-digital-celular.jpg` | Celulares mostrando o aplicativo da Carteira de Trabalho Digital | Usada em pediu-demissao-o-que-tem-direito-a-receber |
 | `inss-celular-dinheiro-cofrinho.jpg` | Celular com a marca do INSS ao lado de notas de real e cofrinho |
 | `inss-cartao-e-notas-maos.jpg` | Mãos segurando notas de real e um cartão com a marca do INSS |
 | `bpc-cartao-mulher-segurando.jpg` | Mulher segurando o cartão do BPC, fundo claro desfocado |
@@ -676,7 +676,7 @@ estavam no banco estrearam nas matérias do dia:
 | `bolsa-familia-cartao-fundo-azul.jpg` | Mão segurando o cartão do Bolsa Família sobre fundo azul | origem não documentada (Parte 3) — sem `--credito` | bets-bloqueadas-bolsa-familia-bpc-3-milhoes |
 | `minha-casa-conjunto-habitacional.jpg` | Vista aérea de conjunto do Minha Casa Minha Vida, em Fortaleza | Foto: Ricardo Stuckert/PR | reforma-de-casa-e-mei-governo-libera-3-5-bilhoes |
 | `estudante-adolescente-livros.jpg` | Estudante carregando livros em corredor de escola | Lucero Estrella/Pexels — crédito facultativo | bolsa-de-estudo-licenca-maternidade-projeto-senado |
-| `bolsa-familia-predio-caixa.jpg` | Prédio da Caixa Econômica Federal | Foto: Rafa Neddermeyer/Agência Brasil | bolsa-familia-agosto-comeca-terca-18-quem-recebe-primeiro |
+| `bolsa-familia-predio-caixa.jpg` | Prédio da Caixa Econômica Federal | Foto: Rafa Neddermeyer/Agência Brasil | Usada em fgts-saque-aniversario-de-setembro | bolsa-familia-agosto-comeca-terca-18-quem-recebe-primeiro |
 
 Checagem de repetição da rodada: hash da faixa superior direita sem colisão nova
 (menor distância 13, contra capa de layout antigo, conferida no olho na prancha).
@@ -856,3 +856,6 @@ instituição — nenhum retrato.
 | `cadastro-unico-balcao-atendimento.jpg` (1792x2400) | Balcão de atendimento com atendente conferindo documentos de mãe com criança no colo, cartaz do Cadastro Único na parede | IA — acervo próprio | Balcão e atendimento | cadunico-revisao-convoca-11-milhoes-bloqueios-novembro |
 | `linhas-transmissao-torres-itaipu.jpg` (3000x2000) | Torres e linhas de transmissão de energia da usina de Itaipu sob céu azul | Foto: Tânia Rêgo/Agência Brasil | Infraestrutura | tarifa-social-luz-do-povo-ou-desconto-social-qual-e-o-seu |
 | `ministerio-trabalho-previdencia-fachada.jpg` (3000x2000) | Fachada com os letreiros "Ministério do Trabalho e Emprego" e "Ministério da Previdência Social", pedestre passando | Foto: Marcelo Camargo/Agência Brasil | Instituição | consignado-clt-desconto-35-por-cento-divida-nao-acaba-na-demissao |
+| `inss-agencia-idoso-celular.jpg` (1792x2400) | Sala de espera de agência do INSS com placa oficial e idoso mexendo no celular | IA — acervo próprio | Instituição | consignado-inss-novas-regras-portabilidade-20-dias |
+| `bolsa-familia-cartao-calendario-mesa.jpg` (1792x2400) | Mão segurando cartão do Bolsa Família com calendário de mesa desfocado, cozinha simples (texto do calendário desfocado de propósito — o original saiu com letras inventadas) | IA — acervo próprio | Detalhe de objeto | bolsa-familia-calendario-de-setembro |
+| `fachada-banco-mulher-pasta.jpg` (1792x2400) | Mulher com pasta de documentos parada diante de fachada de agência bancária, tom sóbrio | IA — acervo próprio | Rua e moradia | morreu-sem-receber-inss-fgts-quem-pode-sacar |
