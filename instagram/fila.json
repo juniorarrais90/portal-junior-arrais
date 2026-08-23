@@ -856,7 +856,9 @@
       "publicar_em": "2026-08-23T18:00:00Z",
       "horario_brasilia": "23/08 15:00",
       "alt_text": "Pediu demissão: veja o que você ainda recebe — e o que perde ao sair por conta própria",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-08-23T18:01:02Z",
+      "link": "https://www.instagram.com/p/DcZFRcBIA4L/"
     },
     {
       "slug": "morreu-sem-receber-inss-fgts-quem-pode-sacar",
