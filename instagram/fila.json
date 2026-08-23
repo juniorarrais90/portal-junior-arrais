@@ -866,7 +866,9 @@
       "publicar_em": "2026-08-23T19:30:00Z",
       "horario_brasilia": "23/08 16:30",
       "alt_text": "Morreu sem receber do INSS ou do FGTS: veja quem pode sacar os valores que ficaram",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-08-23T19:30:59Z",
+      "link": "https://www.instagram.com/p/DcZPkbAmwPR/"
     },
     {
       "slug": "fgts-saque-aniversario-de-setembro",
