@@ -916,7 +916,9 @@
       "publicar_em": "2026-08-24T17:00:00Z",
       "horario_brasilia": "24/08 14:00",
       "alt_text": "Encceja 2026: fez a prova e agora? O certificado não vem sozinho",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-08-24T17:02:08Z",
+      "link": "https://www.instagram.com/p/DcbjVI0m00v/"
     },
     {
       "slug": "bolsa-familia-regra-de-protecao-agora-e-de-18-meses",
