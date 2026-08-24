@@ -901,17 +901,49 @@
     {
       "slug": "13-do-inss-quem-entrou-depois-de-maio-recebe-em-novembro",
       "titulo": "13º do INSS: quem começou a receber depois de maio só recebe em novembro",
-      "publicar_em": "2026-08-24T14:30:00Z",
-      "horario_brasilia": "24/08 11:30",
+      "publicar_em": "2026-08-24T14:05:00Z",
+      "horario_brasilia": "24/08 11:05",
       "alt_text": "13º do INSS: quem começou a receber depois de maio só recebe em novembro",
       "status": "pendente"
     },
     {
       "slug": "encceja-2026-gabarito-resultado-e-o-certificado-que-voce-precisa-pedir",
       "titulo": "Encceja 2026: fez a prova e agora? O certificado não vem sozinho",
-      "publicar_em": "2026-08-24T16:00:00Z",
-      "horario_brasilia": "24/08 13:00",
+      "publicar_em": "2026-08-24T15:10:00Z",
+      "horario_brasilia": "24/08 12:10",
       "alt_text": "Encceja 2026: fez a prova e agora? O certificado não vem sozinho",
+      "status": "pendente"
+    },
+    {
+      "slug": "bolsa-familia-regra-de-protecao-agora-e-de-18-meses",
+      "titulo": "Arrumou emprego, perde o Bolsa Família? A regra de proteção subiu para 18 meses",
+      "publicar_em": "2026-08-24T16:15:00Z",
+      "horario_brasilia": "24/08 13:15",
+      "alt_text": "Arrumou emprego, perde o Bolsa Família? A regra de proteção subiu para 18 meses",
+      "status": "pendente"
+    },
+    {
+      "slug": "prova-de-vida-do-inss-o-que-conta-sozinho-e-quando-bloqueia",
+      "titulo": "Prova de vida do INSS: o que já conta sozinho e quando o benefício pode ser bloqueado",
+      "publicar_em": "2026-08-24T17:20:00Z",
+      "horario_brasilia": "24/08 14:20",
+      "alt_text": "Prova de vida do INSS: o que já conta sozinho e quando o benefício pode ser bloqueado",
+      "status": "pendente"
+    },
+    {
+      "slug": "passe-livre-interestadual-novas-regras-2026-credencial-digital",
+      "titulo": "Passe Livre interestadual muda: acaba o laudo do SUS e a credencial vira digital",
+      "publicar_em": "2026-08-24T18:25:00Z",
+      "horario_brasilia": "24/08 15:25",
+      "alt_text": "Passe Livre interestadual muda: acaba o laudo do SUS e a credencial vira digital",
+      "status": "pendente"
+    },
+    {
+      "slug": "dpvat-e-spvat-acabaram-vitima-de-transito-sem-seguro-obrigatorio",
+      "titulo": "DPVAT e SPVAT acabaram: hoje não existe seguro obrigatório para vítima de trânsito",
+      "publicar_em": "2026-08-24T19:30:00Z",
+      "horario_brasilia": "24/08 16:30",
+      "alt_text": "DPVAT e SPVAT acabaram: hoje não existe seguro obrigatório para vítima de trânsito",
       "status": "pendente"
     }
   ]
