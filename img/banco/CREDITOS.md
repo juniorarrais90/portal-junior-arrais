@@ -868,3 +868,21 @@ instituição — nenhum retrato.
 | `transito-cruzamento-placa-pare-bairro.jpeg` (1792x2400) | Cruzamento de rua de bairro com faixa de pedestre, semáforo e placa PARE, moto e carro popular aguardando o sinal | IA — acervo próprio | Infraestrutura | dpvat-e-spvat-acabaram-vitima-de-transito-sem-seguro-obrigatorio |
 | `maos-idosa-celular-mesa-cozinha.jpeg` (1792x2400) | Mãos de pessoa idosa segurando celular moderno de tela apagada sobre toalha de mesa clara, em cozinha simples e limpa; sem mostrar o rosto | IA — acervo próprio | Detalhe de objeto | prova-de-vida-do-inss-o-que-conta-sozinho-e-quando-bloqueia |
 | `bolsa-familia-loja-cracha-avental.jpeg` (1792x2400) | Balcão de pequena loja de bairro com crachá e avental de trabalho novos, prateleiras arrumadas ao fundo e a logo do Programa Bolsa Família na parede | IA — acervo próprio | Ambiente de trabalho | bolsa-familia-regra-de-protecao-agora-e-de-18-meses |
+
+## Adendo — imagens geradas por IA (25/08/2026)
+
+Oito imagens novas, todas em master 3:4 (1792x2400, exceto a última), sem crédito de
+terceiros, geradas com o prompt padrão do portal (metade inferior limpa, texto de cena
+só na metade superior, revezando o tipo de cena). São **acervo próprio do Portal Júnior
+Arrais** — não usar `--credito` nas artes.
+
+| Arquivo | O que mostra | Crédito | Tipo de cena | Usada em |
+|---|---|---|---|---|
+| `rh-recepcao-balcao-atendente.jpeg` (1792x2400) | Recepção de RH de empresa, balcão claro, atendente de perfil digitando e placa "RECURSOS HUMANOS" na parede | IA — acervo próprio | Balcão e atendimento | igualdade-salarial-relatorio-transparencia-prazo-31-de-agosto |
+| `call-center-baias-saude-seguranca.jpeg` (1792x2400) | Central de telemarketing com baias azuis, operadores de headset e placa "SAÚDE E SEGURANÇA" na parede | IA — acervo próprio | Ambiente de trabalho | saude-mental-no-trabalho-nr-1-stf-suspende-multas |
+| `inss-fachada-agencia-entrada.jpeg` (1792x2400) | Fachada de agência do INSS com a logo oficial no letreiro, porta de vidro, piso tátil e quatro pessoas de costas | IA — acervo próprio | Instituição | inss-calendario-de-setembro |
+| `jovem-uniforme-estoque-loja.jpeg` (1792x2400) | Jovem negro de polo azul-marinho e crachá em branco, no corredor do estoque entre prateleiras de caixas | IA — acervo próprio | Retrato | jovem-carteira-assinada-desigualdade-de-cor-pesquisa |
+| `mercadinho-balcao-maquininha-pix.jpeg` (1792x2400) | Balcão de mercadinho com caderno, caneta, maquininha de cartão e calculadora, e cartaz "ACEITAMOS PIX" na coluna | IA — acervo próprio | Detalhe de objeto | simples-nacional-2027-opcao-antecipada-para-setembro |
+| `sitio-galpao-caixa-dagua-trator.jpeg` (1792x2400) | Sítio de agricultura familiar ao pôr do sol, galpão branco, caixa d'água azul sobre torre, trator vermelho e canteiros de hortaliças; sem pessoas | IA — acervo próprio | Infraestrutura | divida-rural-renegociacao-cmn-agricultura-familiar |
+| `escola-patio-quadra-mochilas.jpeg` (1792x2400) | Pátio de escola pública vazio, quadra com gol e alambrado, banco de concreto com duas mochilas; sem pessoas e sem rostos | IA — acervo próprio | Rua e moradia | violencia-contra-criancas-unicef-cobra-candidatos |
+| `justica-malhete-bandeira-mesa.jpg` (1800x2400) | Malhete de juiz sobre base circular em mesa de madeira polida, pasta de processo fechada e bandeira do Brasil desfocada ao fundo | IA — acervo próprio (gerada no ChatGPT, ampliada de 1086x1448) | Detalhe de objeto | maria-da-penha-20-anos-militar-justica-comum |
