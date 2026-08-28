@@ -26,6 +26,8 @@ import argparse
 import json
 import os
 import sys
+import time
+import urllib.parse
 import urllib.request
 import uuid
 
@@ -61,31 +63,52 @@ def avisar(slug, titulo, link_post=None, arte=None):
         partes += ["", f"Post no feed: {link_post}"]
     legenda = "\n".join(partes)
 
-    b = uuid.uuid4().hex
-    corpo = []
-    for k, v in (("chat_id", chat), ("parse_mode", "HTML"), ("caption", legenda)):
+    # Estratégia (28/08/2026, após timeout perder o aviso das 10h): primeiro
+    # manda a arte pela URL PÚBLICA (o Telegram baixa do site — requisição leve,
+    # quase imune a timeout de upload); só se falhar, sobe o arquivo. Três
+    # tentativas no total, com pausa crescente. O aviso continua acessório:
+    # nunca derruba a publicação.
+    url_arte = f"https://portaljuniorarrais.com.br/img/stories/{slug}.png"
+
+    def _tenta_url():
+        dados = urllib.parse.urlencode({
+            "chat_id": chat, "parse_mode": "HTML",
+            "caption": legenda, "photo": url_arte}).encode()
+        req = urllib.request.Request(
+            f"https://api.telegram.org/bot{token}/sendPhoto", data=dados)
+        return json.load(urllib.request.urlopen(req, timeout=60))
+
+    def _tenta_upload():
+        b = uuid.uuid4().hex
+        corpo = []
+        for k, v in (("chat_id", chat), ("parse_mode", "HTML"), ("caption", legenda)):
+            corpo.append(
+                f'--{b}\r\nContent-Disposition: form-data; name="{k}"\r\n\r\n{v}\r\n'.encode())
         corpo.append(
-            f'--{b}\r\nContent-Disposition: form-data; name="{k}"\r\n\r\n{v}\r\n'.encode())
-    corpo.append(
-        f'--{b}\r\nContent-Disposition: form-data; name="photo"; '
-        f'filename="{slug}.png"\r\nContent-Type: image/png\r\n\r\n'.encode())
-    corpo.append(open(arte, "rb").read())
-    corpo.append(f"\r\n--{b}--\r\n".encode())
+            f'--{b}\r\nContent-Disposition: form-data; name="photo"; '
+            f'filename="{slug}.png"\r\nContent-Type: image/png\r\n\r\n'.encode())
+        corpo.append(open(arte, "rb").read())
+        corpo.append(f"\r\n--{b}--\r\n".encode())
+        req = urllib.request.Request(
+            f"https://api.telegram.org/bot{token}/sendPhoto",
+            data=b"".join(corpo),
+            headers={"Content-Type": f"multipart/form-data; boundary={b}"})
+        return json.load(urllib.request.urlopen(req, timeout=90))
 
-    req = urllib.request.Request(
-        f"https://api.telegram.org/bot{token}/sendPhoto",
-        data=b"".join(corpo),
-        headers={"Content-Type": f"multipart/form-data; boundary={b}"})
-    try:
-        d = json.load(urllib.request.urlopen(req, timeout=90))
-    except Exception as e:
-        print(f"Falha ao avisar no Telegram: {e}")
-        return False
-
-    if d.get("ok"):
-        print("Aviso enviado no Telegram com a arte de story.")
-        return True
-    print(f"Telegram recusou: {d}")
+    tentativas = (("URL", _tenta_url), ("URL", _tenta_url), ("upload", _tenta_upload))
+    for n, (modo, fn) in enumerate(tentativas, 1):
+        try:
+            d = fn()
+        except Exception as e:
+            print(f"Aviso Telegram: tentativa {n} ({modo}) falhou: {e}")
+            time.sleep(5 * n)
+            continue
+        if d.get("ok"):
+            print(f"Aviso enviado no Telegram com a arte de story (via {modo}).")
+            return True
+        print(f"Telegram recusou na tentativa {n} ({modo}): {d}")
+        time.sleep(5 * n)
+    print("Falha ao avisar no Telegram após 3 tentativas.")
     return False
 
 
