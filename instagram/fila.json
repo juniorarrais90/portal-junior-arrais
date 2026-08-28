@@ -1126,7 +1126,9 @@
       "publicar_em": "2026-08-28T17:30:00Z",
       "horario_brasilia": "28/08 14:30",
       "alt_text": "Gás do Povo: vale de agosto vence dia 9 e nova recarga sai em 10 de setembro",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-08-28T17:31:29Z",
+      "link": "https://www.instagram.com/p/Dcl53iiCdnp/"
     },
     {
       "slug": "stf-adia-julgamento-uberizacao-vinculo-motorista-de-aplicativo",
