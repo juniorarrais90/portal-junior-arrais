@@ -1276,7 +1276,9 @@
       "publicar_em": "2026-09-01T20:30:00Z",
       "horario_brasilia": "01/09 17:30",
       "alt_text": "Pé-de-Meia: parcela de setembro cai de 21 a 28, e o prazo do CadÚnico já fechou",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-09-01T20:31:58Z",
+      "link": "https://www.instagram.com/p/Dcwhs_PgbwY/"
     },
     {
       "slug": "transporte-escolar-rural-professores-vagas-que-sobram",
