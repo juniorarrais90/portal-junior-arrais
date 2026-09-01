@@ -1226,7 +1226,9 @@
       "publicar_em": "2026-09-01T13:00:00Z",
       "horario_brasilia": "01/09 10:00",
       "alt_text": "Orçamento de 2027 vai ao Congresso com mínimo de R$ 1.741: veja o que sobe junto",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-09-01T13:01:57Z",
+      "link": "https://www.instagram.com/p/DcvuM-OG0Gd/"
     },
     {
       "slug": "fies-social-metade-das-vagas-cadunico-100-por-cento-da-mensalidade",
