@@ -1316,7 +1316,9 @@
       "publicar_em": "2026-09-02T19:00:00Z",
       "horario_brasilia": "02/09 16:00",
       "alt_text": "Pedido negado pelo INSS: o que a carta diz e o que dá para fazer",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-09-02T19:02:18Z",
+      "link": "https://www.instagram.com/p/Dcy8OVmCn09/"
     },
     {
       "slug": "golpe-do-falso-servidor-do-inss-como-a-abordagem-funciona",
