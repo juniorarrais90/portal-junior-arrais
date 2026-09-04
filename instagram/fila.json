@@ -1396,7 +1396,9 @@
       "publicar_em": "2026-09-04T19:00:00Z",
       "horario_brasilia": "04/09 16:00",
       "alt_text": "BPC: os documentos que o INSS pede e onde o pedido costuma travar",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-09-04T19:01:06Z",
+      "link": "https://www.instagram.com/p/Dc4FsWnFJPE/"
     },
     {
       "slug": "seguro-desemprego-negado-os-motivos-mais-comuns",
