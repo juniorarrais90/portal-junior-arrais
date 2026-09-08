@@ -1476,7 +1476,9 @@
       "publicar_em": "2026-09-08T18:00:00Z",
       "horario_brasilia": "08/09 15:00",
       "alt_text": "Só 1 em cada 5 motociclistas de aplicativo tem INSS, mostra o IBGE",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-09-08T18:01:26Z",
+      "link": "https://www.instagram.com/p/DdCSCx2lKJP/"
     },
     {
       "slug": "pix-parcelado-da-caixa-e-emprestimo-entenda-os-juros-antes-de-usar",
