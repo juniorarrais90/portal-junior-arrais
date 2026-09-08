@@ -1489,6 +1489,14 @@
       "horario_brasilia": "08/09 19:30",
       "alt_text": "Auxílio-alimentação para idosos do CadÚnico: por enquanto é só projeto, sem valor e sem data",
       "status": "pendente"
+    },
+    {
+      "slug": "eleicoes-2026-o-que-pode-e-o-que-nao-pode-no-dia-da-votacao",
+      "titulo": "Eleições 2026: o que pode e o que não pode no dia da votação, em 4 de outubro",
+      "publicar_em": "2026-09-09T00:00:00Z",
+      "horario_brasilia": "08/09 21:00",
+      "alt_text": "Eleições 2026: o que pode e o que não pode no dia da votação, em 4 de outubro",
+      "status": "pendente"
     }
   ]
 }
