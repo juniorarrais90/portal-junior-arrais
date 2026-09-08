@@ -708,3 +708,21 @@ header nav.faixa-categorias { display: block; }
   text-decoration-color: var(--accent);
   background: rgba(44, 137, 231, .07);
 }
+
+/* ---------- Caixa de autor (E-E-A-T) ---------- */
+.autor-box { display: flex; gap: 16px; align-items: flex-start; margin: 30px 0 8px; padding: 18px 20px; background: #f6f9fc; border: 1px solid var(--border); border-radius: 14px; }
+.autor-box-foto { width: 72px; height: 72px; border-radius: 50%; flex: 0 0 72px; border: 2px solid #fff; box-shadow: 0 1px 4px rgba(0,0,0,0.15); object-fit: cover; }
+.autor-box-texto p { margin: 0 0 6px; font-size: 0.95rem; line-height: 1.5; color: #33404f; }
+.autor-box-nome { font-weight: 800; font-size: 1.02rem !important; color: #1e2a38 !important; }
+.autor-box-nome a { color: #1e2a38; text-decoration: none; }
+.autor-box-nome a:hover { text-decoration: underline; }
+.autor-box-cargo { font-weight: 600; color: #5b6b7d; font-size: 0.9rem; }
+.autor-box-bio a, .autor-box-links a { color: #2c89e7; text-decoration: underline; }
+.autor-box-links { font-size: 0.88rem !important; }
+.artigo .meta a.autor-link { color: inherit; text-decoration: underline; text-decoration-color: #b9d2ec; }
+@media (max-width: 600px) { .autor-box { flex-direction: column; gap: 10px; } }
+
+/* ---------- Guias ---------- */
+.guias-intro { max-width: 820px; margin: -6px 0 22px; color: #33404f; font-size: 1.02rem; line-height: 1.55; }
+#guias .grid { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+@media (min-width: 900px) { #guias-home .guias-grid { grid-template-columns: repeat(4, 1fr); } }

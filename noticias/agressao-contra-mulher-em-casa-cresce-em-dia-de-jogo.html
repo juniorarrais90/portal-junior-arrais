@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="../favicon.png">
-  <link rel="stylesheet" href="../styles.css?v=5">
+  <link rel="stylesheet" href="../styles.css?v=6">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -28,13 +28,24 @@
   "dateModified": "2026-08-17",
   "author": {
     "@type": "Person",
-    "name": "Júnior Arrais"
+    "@id": "https://portaljuniorarrais.com.br/sobre.html#autor",
+    "name": "Júnior Arrais",
+    "url": "https://portaljuniorarrais.com.br/sobre.html",
+    "jobTitle": "Editor responsável"
   },
   "publisher": {
-    "@type": "Organization",
-    "name": "Portal Júnior Arrais"
+    "@type": "NewsMediaOrganization",
+    "@id": "https://portaljuniorarrais.com.br/#organizacao",
+    "name": "Portal Júnior Arrais",
+    "url": "https://portaljuniorarrais.com.br/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://portaljuniorarrais.com.br/img/logo-header.png"
+    }
   },
-  "mainEntityOfPage": "https://portaljuniorarrais.com.br/noticias/agressao-contra-mulher-em-casa-cresce-em-dia-de-jogo.html"
+  "mainEntityOfPage": "https://portaljuniorarrais.com.br/noticias/agressao-contra-mulher-em-casa-cresce-em-dia-de-jogo.html",
+  "inLanguage": "pt-BR",
+  "isAccessibleForFree": true
 }
   </script>
   <!-- ADSENSE -->
@@ -75,6 +86,7 @@
       <nav>
         <a href="../">Início</a>
         <a href="../noticias.html">Notícias</a>
+        <a href="../guias.html">Guias</a>
         <a href="../#videos">Vídeos</a>
         <a href="../emprestimo.html">Empréstimo</a>
         <a href="../sobre.html">Sobre</a>
@@ -89,7 +101,7 @@
       <a class="voltar" href="../">&larr; Voltar para o início</a>
       <div><span class="chip">Direitos</span></div>
       <h1>Agressão contra mulher dentro de casa cresce 28,9% em dia de jogo de futebol, aponta estudo</h1>
-      <div class="meta"><img src="../img/junior-avatar.png" alt="Júnior Arrais" class="autor-foto"> Por Júnior Arrais &middot; 17 de ago. de 2026</div>
+      <div class="meta"><img src="../img/junior-avatar.png" alt="Júnior Arrais" class="autor-foto"> Por <a href="../sobre.html#autor" class="autor-link">Júnior Arrais</a> &middot; 17 de ago. de 2026</div>
       <div class="artigo-capa"><img src="../img/agressao-contra-mulher-em-casa-cresce-em-dia-de-jogo.png" alt="Agressão contra mulher dentro de casa cresce 28,9% em dia de jogo de futebol, aponta estudo"></div>
       <div class="artigo-conteudo">
 <p>Os casos de lesão corporal dolosa contra mulheres <strong>crescem 28,9% em dias de jogo de futebol</strong>, e as ameaças aumentam 27,4%. O dado é de um estudo do Fórum Brasileiro de Segurança Pública divulgado em 11 de agosto, no mês em que a Lei Maria da Penha completa 20 anos.</p>
@@ -121,13 +133,23 @@
 <p><em>Conteúdo informativo — não substitui orientação individualizada sobre o seu caso.</em></p>
       </div>
 
+      <!-- AUTOR (Portal Junior Arrais) -->
+      <div class="autor-box" id="autor">
+        <img class="autor-box-foto" src="../img/junior-avatar.png" alt="Júnior Arrais" width="72" height="72" loading="lazy">
+        <div class="autor-box-texto">
+          <p class="autor-box-nome"><a href="../sobre.html#autor">Júnior Arrais</a> <span class="autor-box-cargo">· Editor do Portal Júnior Arrais</span></p>
+          <p class="autor-box-bio">Comunicador de Ubá (MG). Escreve todos os dias sobre benefícios sociais, INSS, trabalho e economia do dia a dia, a partir do Diário Oficial, de portarias e de fontes oficiais, em linguagem simples. Conheça a <a href="../sobre.html#linha-editorial">linha editorial</a> e a <a href="../sobre.html#correcoes">política de correções</a> do portal.</p>
+          <p class="autor-box-links"><a href="mailto:contato@portaljuniorarrais.com.br?subject=Correcao: agressao-contra-mulher-em-casa-cresce-em-dia-de-jogo">Encontrou um erro? Avise a redação</a></p>
+        </div>
+      </div>
+      <!-- FIM AUTOR -->
+
 <!-- LEIA TAMBEM (gerado por scripts/gerar_relacionadas.py) -->
       <aside class="leia-tambem" aria-label="Outras notícias do portal">
         <h2>Leia também</h2>
         <ul class="lt-lista">
           <li class="lt-item">
             <a class="lt-link" href="porte-de-arma-mulher-medida-protetiva-csp-vota.html">
-              <img class="lt-thumb" src="../img/porte-de-arma-mulher-medida-protetiva-csp-vota.png" alt="" loading="lazy" width="120" height="68">
               <span class="lt-texto">
                 <span class="lt-chip">Direitos</span>
                 <span class="lt-titulo">Porte de arma para mulher com medida protetiva vai a voto nesta terça no Senado</span>
@@ -153,12 +175,12 @@
             </a>
           </li>
           <li class="lt-item">
-            <a class="lt-link" href="golpe-do-falso-servidor-do-inss-como-a-abordagem-funciona.html">
-              <img class="lt-thumb" src="../img/golpe-do-falso-servidor-do-inss-como-a-abordagem-funciona.png" alt="" loading="lazy" width="120" height="68">
+            <a class="lt-link" href="guia-golpes-contra-quem-recebe-beneficio-como-reconhecer.html">
+              <img class="lt-thumb" src="../img/guia-golpes-contra-quem-recebe-beneficio-como-reconhecer.png" alt="" loading="lazy" width="120" height="68">
               <span class="lt-texto">
-                <span class="lt-chip">Direitos</span>
-                <span class="lt-titulo">Golpe do falso servidor do INSS: como a abordagem funciona</span>
-                <span class="lt-data">2 de set. de 2026</span>
+                <span class="lt-chip">Guia · Direitos</span>
+                <span class="lt-titulo">Golpes contra quem recebe benefício: os 10 roteiros mais usados, como reconhecer e o que fazer se você caiu</span>
+                <span class="lt-data">8 de set. de 2026</span>
               </span>
             </a>
           </li>
@@ -195,7 +217,7 @@
 
   <footer>
     <div class="container footer-inner">
-      <p>&copy; 2026 Portal Júnior Arrais. Todos os direitos reservados. &middot; <a href="../sobre.html">Sobre</a> &middot; <a href="../contato.html">Contato</a> &middot; <a href="../politica-de-privacidade.html">Política de Privacidade</a></p>
+      <p>&copy; 2026 Portal Júnior Arrais. Todos os direitos reservados. &middot; <a href="../sobre.html">Sobre</a> &middot; <a href="../contato.html">Contato</a> &middot; <a href="../politica-de-privacidade.html">Política de Privacidade</a> &middot; <a href="../termos-de-uso.html">Termos de Uso</a></p>
     </div>
   </footer>
 

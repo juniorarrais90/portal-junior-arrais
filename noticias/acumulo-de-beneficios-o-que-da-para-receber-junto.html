@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="../favicon.png">
-  <link rel="stylesheet" href="../styles.css?v=5">
+  <link rel="stylesheet" href="../styles.css?v=6">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -28,13 +28,24 @@
   "dateModified": "2026-09-01",
   "author": {
     "@type": "Person",
-    "name": "Júnior Arrais"
+    "@id": "https://portaljuniorarrais.com.br/sobre.html#autor",
+    "name": "Júnior Arrais",
+    "url": "https://portaljuniorarrais.com.br/sobre.html",
+    "jobTitle": "Editor responsável"
   },
   "publisher": {
-    "@type": "Organization",
-    "name": "Portal Júnior Arrais"
+    "@type": "NewsMediaOrganization",
+    "@id": "https://portaljuniorarrais.com.br/#organizacao",
+    "name": "Portal Júnior Arrais",
+    "url": "https://portaljuniorarrais.com.br/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://portaljuniorarrais.com.br/img/logo-header.png"
+    }
   },
-  "mainEntityOfPage": "https://portaljuniorarrais.com.br/noticias/acumulo-de-beneficios-o-que-da-para-receber-junto.html"
+  "mainEntityOfPage": "https://portaljuniorarrais.com.br/noticias/acumulo-de-beneficios-o-que-da-para-receber-junto.html",
+  "inLanguage": "pt-BR",
+  "isAccessibleForFree": true
 }
   </script>
   <!-- ADSENSE -->
@@ -75,6 +86,7 @@
       <nav>
         <a href="../">In&iacute;cio</a>
         <a href="../noticias.html">Not&iacute;cias</a>
+        <a href="../guias.html">Guias</a>
         <a href="../#videos">V&iacute;deos</a>
         <a href="../emprestimo.html">Empr&eacute;stimo</a>
         <a href="../sobre.html">Sobre</a>
@@ -89,7 +101,7 @@
       <a class="voltar" href="../">&larr; Voltar para o in&iacute;cio</a>
       <div><span class="chip">INSS</span></div>
       <h1>Ac&uacute;mulo de benef&iacute;cios: o que d&aacute; para receber junto e o que n&atilde;o d&aacute;</h1>
-      <div class="meta"><img src="../img/junior-avatar.png" alt="J&uacute;nior Arrais" class="autor-foto"> Por J&uacute;nior Arrais &middot; 1&ordm; de set. de 2026</div>
+      <div class="meta"><img src="../img/junior-avatar.png" alt="J&uacute;nior Arrais" class="autor-foto"> Por <a href="../sobre.html#autor" class="autor-link">J&uacute;nior Arrais</a> &middot; 1&ordm; de set. de 2026</div>
       <div class="artigo-capa"><img src="../img/acumulo-de-beneficios-o-que-da-para-receber-junto.png" alt="Acúmulo de benefícios: o que dá para receber junto e o que não dá"></div>
       <div class="artigo-conteudo">
 <p>&quot;Posso receber os dois juntos?&quot; &eacute; uma das perguntas mais frequentes sobre o INSS. A resposta n&atilde;o &eacute; sim nem n&atilde;o: <strong>depende de quais benef&iacute;cios</strong>, e existe uma terceira possibilidade que pouca gente conhece &mdash; acumular com redu&ccedil;&atilde;o.</p>
@@ -105,7 +117,7 @@
   <li><strong>BPC e qualquer outro benef&iacute;cio</strong> da Previd&ecirc;ncia ou de outro regime, ressalvada a assist&ecirc;ncia m&eacute;dica e a pens&atilde;o especial de natureza indenizat&oacute;ria.</li>
 </ul>
 
-<p>O caso do BPC merece aten&ccedil;&atilde;o especial: por ser benef&iacute;cio assistencial destinado a quem n&atilde;o tem meios de sustento, ele n&atilde;o convive com aposentadoria nem com pens&atilde;o.</p>
+<p>O caso do <a class="link-interno" href="guia-bpc-loas-quem-tem-direito-renda-e-avaliacao.html">BPC</a> merece aten&ccedil;&atilde;o especial: por ser benef&iacute;cio assistencial destinado a quem n&atilde;o tem meios de sustento, ele n&atilde;o convive com aposentadoria nem com pens&atilde;o.</p>
 
 <h2>O que se acumula, mas com redu&ccedil;&atilde;o</h2>
 
@@ -127,28 +139,21 @@
 
 <p><em>Conte&uacute;do informativo &mdash; n&atilde;o substitui orienta&ccedil;&atilde;o individualizada sobre o seu caso.</em></p>
       </div>
+      <!-- AUTOR (Portal Junior Arrais) -->
+      <div class="autor-box" id="autor">
+        <img class="autor-box-foto" src="../img/junior-avatar.png" alt="Júnior Arrais" width="72" height="72" loading="lazy">
+        <div class="autor-box-texto">
+          <p class="autor-box-nome"><a href="../sobre.html#autor">Júnior Arrais</a> <span class="autor-box-cargo">· Editor do Portal Júnior Arrais</span></p>
+          <p class="autor-box-bio">Comunicador de Ubá (MG). Escreve todos os dias sobre benefícios sociais, INSS, trabalho e economia do dia a dia, a partir do Diário Oficial, de portarias e de fontes oficiais, em linguagem simples. Conheça a <a href="../sobre.html#linha-editorial">linha editorial</a> e a <a href="../sobre.html#correcoes">política de correções</a> do portal.</p>
+          <p class="autor-box-links"><a href="mailto:contato@portaljuniorarrais.com.br?subject=Correcao: acumulo-de-beneficios-o-que-da-para-receber-junto">Encontrou um erro? Avise a redação</a></p>
+        </div>
+      </div>
+      <!-- FIM AUTOR -->
+
 <!-- LEIA TAMBEM (gerado por scripts/gerar_relacionadas.py) -->
       <aside class="leia-tambem" aria-label="Outras notícias do portal">
         <h2>Leia também</h2>
         <ul class="lt-lista">
-          <li class="lt-item">
-            <a class="lt-link" href="mei-inss-complementacao-tema-384-tnu.html">
-              <span class="lt-texto">
-                <span class="lt-chip">INSS</span>
-                <span class="lt-titulo">MEI que paga 5% e complementa depois pode receber desde o pedido, decide a TNU</span>
-                <span class="lt-data">8 de ago. de 2026</span>
-              </span>
-            </a>
-          </li>
-          <li class="lt-item">
-            <a class="lt-link" href="acrescimo-de-25-por-cento-na-aposentadoria-por-incapacidade.html">
-              <span class="lt-texto">
-                <span class="lt-chip">INSS</span>
-                <span class="lt-titulo">Acréscimo de 25%: quem se aposentou por incapacidade e precisa de ajuda pode receber a mais</span>
-                <span class="lt-data">10 de ago. de 2026</span>
-              </span>
-            </a>
-          </li>
           <li class="lt-item">
             <a class="lt-link" href="auxilio-acidente-o-beneficio-que-se-recebe-junto-com-o-salario.html">
               <span class="lt-texto">
@@ -159,11 +164,29 @@
             </a>
           </li>
           <li class="lt-item">
-            <a class="lt-link" href="decimo-terceiro-inss-novembro-quem-recebe.html">
+            <a class="lt-link" href="13-do-inss-quem-entrou-depois-de-maio-recebe-em-novembro.html">
               <span class="lt-texto">
                 <span class="lt-chip">INSS</span>
                 <span class="lt-titulo">13º do INSS: quem começou a receber depois de maio só recebe em novembro</span>
-                <span class="lt-data">13 de ago. de 2026</span>
+                <span class="lt-data">24 de ago. de 2026</span>
+              </span>
+            </a>
+          </li>
+          <li class="lt-item">
+            <a class="lt-link" href="revisao-da-vida-toda-fim-definitivo-stf.html">
+              <span class="lt-texto">
+                <span class="lt-chip">INSS</span>
+                <span class="lt-titulo">Revisão da Vida Toda: STF encerrou de vez e não cabe mais recurso</span>
+                <span class="lt-data">7 de ago. de 2026</span>
+              </span>
+            </a>
+          </li>
+          <li class="lt-item">
+            <a class="lt-link" href="inss-recurso-ganho-implantacao-automatica.html">
+              <span class="lt-texto">
+                <span class="lt-chip">INSS</span>
+                <span class="lt-titulo">Ganhou o recurso no INSS e o benefício não sai: 336 mil casos esperam a implantação</span>
+                <span class="lt-data">21 de ago. de 2026</span>
               </span>
             </a>
           </li>
@@ -199,7 +222,7 @@
 
   <footer>
     <div class="container footer-inner">
-      <p>&copy; 2026 Portal Júnior Arrais. Todos os direitos reservados. &middot; <a href="../sobre.html">Sobre</a> &middot; <a href="../contato.html">Contato</a> &middot; <a href="../politica-de-privacidade.html">Política de Privacidade</a></p>
+      <p>&copy; 2026 Portal Júnior Arrais. Todos os direitos reservados. &middot; <a href="../sobre.html">Sobre</a> &middot; <a href="../contato.html">Contato</a> &middot; <a href="../politica-de-privacidade.html">Política de Privacidade</a> &middot; <a href="../termos-de-uso.html">Termos de Uso</a></p>
     </div>
   </footer>
 

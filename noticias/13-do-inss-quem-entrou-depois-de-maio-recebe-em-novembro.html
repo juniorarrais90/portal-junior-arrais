@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="../favicon.png">
-  <link rel="stylesheet" href="../styles.css?v=5">
+  <link rel="stylesheet" href="../styles.css?v=6">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -28,13 +28,24 @@
   "dateModified": "2026-08-24",
   "author": {
     "@type": "Person",
-    "name": "Júnior Arrais"
+    "@id": "https://portaljuniorarrais.com.br/sobre.html#autor",
+    "name": "Júnior Arrais",
+    "url": "https://portaljuniorarrais.com.br/sobre.html",
+    "jobTitle": "Editor responsável"
   },
   "publisher": {
-    "@type": "Organization",
-    "name": "Portal Júnior Arrais"
+    "@type": "NewsMediaOrganization",
+    "@id": "https://portaljuniorarrais.com.br/#organizacao",
+    "name": "Portal Júnior Arrais",
+    "url": "https://portaljuniorarrais.com.br/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://portaljuniorarrais.com.br/img/logo-header.png"
+    }
   },
-  "mainEntityOfPage": "https://portaljuniorarrais.com.br/noticias/13-do-inss-quem-entrou-depois-de-maio-recebe-em-novembro.html"
+  "mainEntityOfPage": "https://portaljuniorarrais.com.br/noticias/13-do-inss-quem-entrou-depois-de-maio-recebe-em-novembro.html",
+  "inLanguage": "pt-BR",
+  "isAccessibleForFree": true
 }
   </script>
   <!-- ADSENSE -->
@@ -75,6 +86,7 @@
       <nav>
         <a href="../">Início</a>
         <a href="../noticias.html">Notícias</a>
+        <a href="../guias.html">Guias</a>
         <a href="../#videos">Vídeos</a>
         <a href="../emprestimo.html">Empréstimo</a>
         <a href="../sobre.html">Sobre</a>
@@ -89,7 +101,7 @@
       <a class="voltar" href="../">&larr; Voltar para o início</a>
       <div><span class="chip">INSS</span></div>
       <h1>13º do INSS: quem começou a receber depois de maio só recebe em novembro</h1>
-      <div class="meta"><img src="../img/junior-avatar.png" alt="Júnior Arrais" class="autor-foto"> Por Júnior Arrais &middot; 24 de ago. de 2026</div>
+      <div class="meta"><img src="../img/junior-avatar.png" alt="Júnior Arrais" class="autor-foto"> Por <a href="../sobre.html#autor" class="autor-link">Júnior Arrais</a> &middot; 24 de ago. de 2026</div>
       <div class="artigo-capa"><img src="../img/13-do-inss-quem-entrou-depois-de-maio-recebe-em-novembro.png" alt="13º do INSS: quem começou a receber depois de maio só recebe em novembro"></div>
       <div class="artigo-conteudo">
 <p>Circula muita informação desencontrada sobre um "novo 13º" que estaria por vir no fim do ano. O <strong>INSS</strong> esclareceu o ponto, e a explicação é simples: <strong>não há segundo pagamento para quem já recebeu</strong>. O que existe é o pagamento normal para quem entrou depois.</p>
@@ -108,11 +120,11 @@
 
 <p>O 13º é devido aos titulares de <strong>benefícios previdenciários</strong>, como a aposentadoria e a pensão por morte, e, quando a lei prevê, também a beneficiários de benefícios concedidos por legislação especial.</p>
 
-<p>Atenção a um ponto que causa muita frustração todo ano: <strong>quem recebe o BPC/LOAS não tem direito ao 13º</strong>. O motivo é jurídico, não é falha do sistema — o BPC é um benefício <strong>assistencial</strong>, pago a idosos e a pessoas com deficiência de baixa renda, e não um benefício previdenciário decorrente de contribuição. Por isso não gera abono anual.</p>
+<p>Atenção a um ponto que causa muita frustração todo ano: <strong>quem recebe o <a class="link-interno" href="guia-bpc-loas-quem-tem-direito-renda-e-avaliacao.html">BPC/LOAS</a> não tem direito ao 13º</strong>. O motivo é jurídico, não é falha do sistema — o BPC é um benefício <strong>assistencial</strong>, pago a idosos e a pessoas com deficiência de baixa renda, e não um benefício previdenciário decorrente de contribuição. Por isso não gera abono anual.</p>
 
 <h2>E quem recebe benefício temporário?</h2>
 
-<p>Nos benefícios <strong>temporários</strong> ou concedidos depois do período da antecipação — como o benefício por incapacidade temporária (o antigo auxílio-doença) e o <strong>salário-maternidade</strong> —, o valor do 13º é calculado de forma <strong>proporcional ao período em que a pessoa recebeu</strong> o benefício, e pago durante a vigência dele, conforme as regras aplicáveis.</p>
+<p>Nos benefícios <strong>temporários</strong> ou concedidos depois do período da antecipação — como o <a class="link-interno" href="guia-auxilio-doenca-e-aposentadoria-por-incapacidade-inss.html">benefício por incapacidade</a> temporária (o antigo auxílio-doença) e o <strong>salário-maternidade</strong> —, o valor do 13º é calculado de forma <strong>proporcional ao período em que a pessoa recebeu</strong> o benefício, e pago durante a vigência dele, conforme as regras aplicáveis.</p>
 
 <p>Na prática: quem ficou afastado quatro meses não recebe um 13º cheio, e sim a fração correspondente.</p>
 
@@ -126,6 +138,17 @@
       </div>
 
 <!-- LEIA TAMBEM: gerado por scripts/gerar_relacionadas.py -->
+
+      <!-- AUTOR (Portal Junior Arrais) -->
+      <div class="autor-box" id="autor">
+        <img class="autor-box-foto" src="../img/junior-avatar.png" alt="Júnior Arrais" width="72" height="72" loading="lazy">
+        <div class="autor-box-texto">
+          <p class="autor-box-nome"><a href="../sobre.html#autor">Júnior Arrais</a> <span class="autor-box-cargo">· Editor do Portal Júnior Arrais</span></p>
+          <p class="autor-box-bio">Comunicador de Ubá (MG). Escreve todos os dias sobre benefícios sociais, INSS, trabalho e economia do dia a dia, a partir do Diário Oficial, de portarias e de fontes oficiais, em linguagem simples. Conheça a <a href="../sobre.html#linha-editorial">linha editorial</a> e a <a href="../sobre.html#correcoes">política de correções</a> do portal.</p>
+          <p class="autor-box-links"><a href="mailto:contato@portaljuniorarrais.com.br?subject=Correcao: 13-do-inss-quem-entrou-depois-de-maio-recebe-em-novembro">Encontrou um erro? Avise a redação</a></p>
+        </div>
+      </div>
+      <!-- FIM AUTOR -->
 
 <!-- LEIA TAMBEM (gerado por scripts/gerar_relacionadas.py) -->
       <aside class="leia-tambem" aria-label="Outras notícias do portal">
@@ -150,21 +173,18 @@
             </a>
           </li>
           <li class="lt-item">
-            <a class="lt-link" href="consignado-inss-novas-regras-portabilidade-20-dias.html">
+            <a class="lt-link" href="dependentes-do-inss-quem-entra-na-lista.html">
               <span class="lt-texto">
                 <span class="lt-chip">INSS</span>
-                <span class="lt-titulo">Consignado do INSS muda: portabilidade em 20 dias e banco tem de provar o contrato</span>
-                <span class="lt-data">23 de ago. de 2026</span>
+                <span class="lt-titulo">Dependentes do INSS: quem entra na lista e em que ordem</span>
               </span>
             </a>
           </li>
           <li class="lt-item">
             <a class="lt-link" href="pericia-do-inss-o-que-levar-e-o-que-o-perito-olha.html">
-              <img class="lt-thumb" src="../img/pericia-do-inss-o-que-levar-e-o-que-o-perito-olha.png" alt="" loading="lazy" width="120" height="68">
               <span class="lt-texto">
                 <span class="lt-chip">INSS</span>
                 <span class="lt-titulo">Perícia do INSS: o que levar no dia e o que o perito realmente olha</span>
-                <span class="lt-data">2 de set. de 2026</span>
               </span>
             </a>
           </li>
@@ -201,7 +221,7 @@
 
   <footer>
     <div class="container footer-inner">
-      <p>&copy; 2026 Portal Júnior Arrais. Todos os direitos reservados. &middot; <a href="../sobre.html">Sobre</a> &middot; <a href="../contato.html">Contato</a> &middot; <a href="../politica-de-privacidade.html">Política de Privacidade</a></p>
+      <p>&copy; 2026 Portal Júnior Arrais. Todos os direitos reservados. &middot; <a href="../sobre.html">Sobre</a> &middot; <a href="../contato.html">Contato</a> &middot; <a href="../politica-de-privacidade.html">Política de Privacidade</a> &middot; <a href="../termos-de-uso.html">Termos de Uso</a></p>
     </div>
   </footer>
 

@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="../favicon.png">
-  <link rel="stylesheet" href="../styles.css?v=5">
+  <link rel="stylesheet" href="../styles.css?v=6">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -28,13 +28,24 @@
   "dateModified": "2026-08-31",
   "author": {
     "@type": "Person",
-    "name": "Júnior Arrais"
+    "@id": "https://portaljuniorarrais.com.br/sobre.html#autor",
+    "name": "Júnior Arrais",
+    "url": "https://portaljuniorarrais.com.br/sobre.html",
+    "jobTitle": "Editor responsável"
   },
   "publisher": {
-    "@type": "Organization",
-    "name": "Portal Júnior Arrais"
+    "@type": "NewsMediaOrganization",
+    "@id": "https://portaljuniorarrais.com.br/#organizacao",
+    "name": "Portal Júnior Arrais",
+    "url": "https://portaljuniorarrais.com.br/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://portaljuniorarrais.com.br/img/logo-header.png"
+    }
   },
-  "mainEntityOfPage": "https://portaljuniorarrais.com.br/noticias/taxa-das-blusinhas-mp-vence-8-de-setembro.html"
+  "mainEntityOfPage": "https://portaljuniorarrais.com.br/noticias/taxa-das-blusinhas-mp-vence-8-de-setembro.html",
+  "inLanguage": "pt-BR",
+  "isAccessibleForFree": true
 }
   </script>
   <!-- ADSENSE -->
@@ -75,6 +86,7 @@
       <nav>
         <a href="../">Início</a>
         <a href="../noticias.html">Notícias</a>
+        <a href="../guias.html">Guias</a>
         <a href="../#videos">Vídeos</a>
         <a href="../emprestimo.html">Empréstimo</a>
         <a href="../sobre.html">Sobre</a>
@@ -89,7 +101,7 @@
       <a class="voltar" href="../">&larr; Voltar para o início</a>
       <div><span class="chip">Economia</span></div>
       <h1>Taxa das blusinhas volta dia 8 se o Congresso não votar a medida provisória</h1>
-      <div class="meta"><img src="../img/junior-avatar.png" alt="Júnior Arrais" class="autor-foto"> Por Júnior Arrais &middot; 31 de ago. de 2026</div>
+      <div class="meta"><img src="../img/junior-avatar.png" alt="Júnior Arrais" class="autor-foto"> Por <a href="../sobre.html#autor" class="autor-link">Júnior Arrais</a> &middot; 31 de ago. de 2026</div>
       <div class="artigo-capa"><img src="../img/taxa-das-blusinhas-mp-vence-8-de-setembro.png" alt="Taxa das blusinhas volta dia 8 se o Congresso não votar a medida provisória"></div>
       <div class="artigo-conteudo">
 <p>Quem faz compra pequena em site internacional tem uma data para marcar: <strong>8 de setembro</strong>. É o prazo final para o Congresso Nacional votar a <strong>Medida Provisória 1.357/2026</strong>, que derrubou o imposto de importação de <strong>20%</strong> sobre compras de até <strong>US$ 50</strong> feitas por pessoa física.</p>
@@ -123,6 +135,17 @@
 <p><em>Conteúdo informativo — não substitui orientação individualizada sobre o seu caso.</em></p>
       </div>
 
+      <!-- AUTOR (Portal Junior Arrais) -->
+      <div class="autor-box" id="autor">
+        <img class="autor-box-foto" src="../img/junior-avatar.png" alt="Júnior Arrais" width="72" height="72" loading="lazy">
+        <div class="autor-box-texto">
+          <p class="autor-box-nome"><a href="../sobre.html#autor">Júnior Arrais</a> <span class="autor-box-cargo">· Editor do Portal Júnior Arrais</span></p>
+          <p class="autor-box-bio">Comunicador de Ubá (MG). Escreve todos os dias sobre benefícios sociais, INSS, trabalho e economia do dia a dia, a partir do Diário Oficial, de portarias e de fontes oficiais, em linguagem simples. Conheça a <a href="../sobre.html#linha-editorial">linha editorial</a> e a <a href="../sobre.html#correcoes">política de correções</a> do portal.</p>
+          <p class="autor-box-links"><a href="mailto:contato@portaljuniorarrais.com.br?subject=Correcao: taxa-das-blusinhas-mp-vence-8-de-setembro">Encontrou um erro? Avise a redação</a></p>
+        </div>
+      </div>
+      <!-- FIM AUTOR -->
+
 <!-- LEIA TAMBEM (gerado por scripts/gerar_relacionadas.py) -->
       <aside class="leia-tambem" aria-label="Outras notícias do portal">
         <h2>Leia também</h2>
@@ -138,7 +161,6 @@
           </li>
           <li class="lt-item">
             <a class="lt-link" href="orcamento-2027-salario-minimo-1741-o-que-sobe-junto.html">
-              <img class="lt-thumb" src="../img/orcamento-2027-salario-minimo-1741-o-que-sobe-junto.png" alt="" loading="lazy" width="120" height="68">
               <span class="lt-texto">
                 <span class="lt-chip">Economia</span>
                 <span class="lt-titulo">Orçamento de 2027 vai ao Congresso com mínimo de R$ 1.741: veja o que sobe junto</span>
@@ -194,7 +216,7 @@
 
   <footer>
     <div class="container footer-inner">
-      <p>&copy; 2026 Portal Júnior Arrais. Todos os direitos reservados. &middot; <a href="../sobre.html">Sobre</a> &middot; <a href="../contato.html">Contato</a> &middot; <a href="../politica-de-privacidade.html">Política de Privacidade</a></p>
+      <p>&copy; 2026 Portal Júnior Arrais. Todos os direitos reservados. &middot; <a href="../sobre.html">Sobre</a> &middot; <a href="../contato.html">Contato</a> &middot; <a href="../politica-de-privacidade.html">Política de Privacidade</a> &middot; <a href="../termos-de-uso.html">Termos de Uso</a></p>
     </div>
   </footer>
 

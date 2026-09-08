@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="../favicon.png">
-  <link rel="stylesheet" href="../styles.css?v=5">
+  <link rel="stylesheet" href="../styles.css?v=6">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -28,13 +28,24 @@
   "dateModified": "2026-08-12",
   "author": {
     "@type": "Person",
-    "name": "Júnior Arrais"
+    "@id": "https://portaljuniorarrais.com.br/sobre.html#autor",
+    "name": "Júnior Arrais",
+    "url": "https://portaljuniorarrais.com.br/sobre.html",
+    "jobTitle": "Editor responsável"
   },
   "publisher": {
-    "@type": "Organization",
-    "name": "Portal Júnior Arrais"
+    "@type": "NewsMediaOrganization",
+    "@id": "https://portaljuniorarrais.com.br/#organizacao",
+    "name": "Portal Júnior Arrais",
+    "url": "https://portaljuniorarrais.com.br/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://portaljuniorarrais.com.br/img/logo-header.png"
+    }
   },
-  "mainEntityOfPage": "https://portaljuniorarrais.com.br/noticias/prova-de-vida-inss-aviso-por-whatsapp-oficial.html"
+  "mainEntityOfPage": "https://portaljuniorarrais.com.br/noticias/prova-de-vida-inss-aviso-por-whatsapp-oficial.html",
+  "inLanguage": "pt-BR",
+  "isAccessibleForFree": true
 }
   </script>
   <!-- ADSENSE -->
@@ -75,6 +86,7 @@
       <nav>
         <a href="../">Início</a>
         <a href="../noticias.html">Notícias</a>
+        <a href="../guias.html">Guias</a>
         <a href="../#videos">Vídeos</a>
         <a href="../emprestimo.html">Empréstimo</a>
         <a href="../sobre.html">Sobre</a>
@@ -89,7 +101,7 @@
       <a class="voltar" href="../">&larr; Voltar para o início</a>
       <div><span class="chip">INSS</span></div>
       <h1>Prova de vida do INSS: o aviso chega por WhatsApp oficial — e o golpista já descobriu isso</h1>
-      <div class="meta"><img src="../img/junior-avatar.png" alt="Júnior Arrais" class="autor-foto"> Por Júnior Arrais &middot; 12 de ago. de 2026</div>
+      <div class="meta"><img src="../img/junior-avatar.png" alt="Júnior Arrais" class="autor-foto"> Por <a href="../sobre.html#autor" class="autor-link">Júnior Arrais</a> &middot; 12 de ago. de 2026</div>
       <div class="artigo-capa"><img src="../img/prova-de-vida-inss-aviso-por-whatsapp-oficial.png" alt="Prova de vida do INSS: o aviso chega por WhatsApp oficial — e o golpista já descobriu isso"></div>
       <div class="artigo-conteudo">
 <p>Durante anos, prova de vida foi sinônimo de fila de banco. Aposentado e pensionista pegavam a senha uma vez por ano, muitas vezes com dificuldade de locomoção, só para provar que estavam vivos. Isso acabou — e boa parte dos beneficiários ainda não entendeu direito o que entrou no lugar.</p>
@@ -131,7 +143,7 @@
 
 <p>A lei previdenciária determina que existam <strong>meios alternativos</strong> para o beneficiário com <strong>80 anos ou mais</strong> e para quem tem dificuldade de locomoção, <strong>inclusive atendimento domiciliar quando for necessário</strong>. Os bancos, por sua vez, são obrigados a evitar o deslocamento desse público e a dar preferência máxima no atendimento.</p>
 
-<p>Vale desfazer uma confusão que circulou muito este ano: a dispensa de <strong>biometria</strong> para maiores de 80 anos, criada em junho de 2026, é regra de <strong>pedido de benefício novo</strong> — não tem relação com prova de vida.</p>
+<p>Vale desfazer uma confusão que circulou muito este ano: a dispensa de <strong><a class="link-interno" href="biometria-obrigatoria-beneficios-prazo.html">biometria</a></strong> para maiores de 80 anos, criada em junho de 2026, é regra de <strong>pedido de benefício novo</strong> — não tem relação com prova de vida.</p>
 
 <h2>O golpe que nasceu dessa mudança</h2>
 
@@ -143,6 +155,17 @@
 
 <p><em>Conteúdo informativo — não substitui orientação individualizada sobre o seu caso.</em></p>
       </div>
+
+      <!-- AUTOR (Portal Junior Arrais) -->
+      <div class="autor-box" id="autor">
+        <img class="autor-box-foto" src="../img/junior-avatar.png" alt="Júnior Arrais" width="72" height="72" loading="lazy">
+        <div class="autor-box-texto">
+          <p class="autor-box-nome"><a href="../sobre.html#autor">Júnior Arrais</a> <span class="autor-box-cargo">· Editor do Portal Júnior Arrais</span></p>
+          <p class="autor-box-bio">Comunicador de Ubá (MG). Escreve todos os dias sobre benefícios sociais, INSS, trabalho e economia do dia a dia, a partir do Diário Oficial, de portarias e de fontes oficiais, em linguagem simples. Conheça a <a href="../sobre.html#linha-editorial">linha editorial</a> e a <a href="../sobre.html#correcoes">política de correções</a> do portal.</p>
+          <p class="autor-box-links"><a href="mailto:contato@portaljuniorarrais.com.br?subject=Correcao: prova-de-vida-inss-aviso-por-whatsapp-oficial">Encontrou um erro? Avise a redação</a></p>
+        </div>
+      </div>
+      <!-- FIM AUTOR -->
 
 <!-- LEIA TAMBEM (gerado por scripts/gerar_relacionadas.py) -->
       <aside class="leia-tambem" aria-label="Outras notícias do portal">
@@ -158,11 +181,11 @@
             </a>
           </li>
           <li class="lt-item">
-            <a class="lt-link" href="inss-calendario-de-pagamentos-de-julho.html">
+            <a class="lt-link" href="revisao-da-vida-toda-fim-definitivo-stf.html">
               <span class="lt-texto">
                 <span class="lt-chip">INSS</span>
-                <span class="lt-titulo">INSS começa a pagar julho nesta segunda (27); veja o calendário completo até 7 de agosto</span>
-                <span class="lt-data">25 de jul. de 2026</span>
+                <span class="lt-titulo">Revisão da Vida Toda: STF encerrou de vez e não cabe mais recurso</span>
+                <span class="lt-data">7 de ago. de 2026</span>
               </span>
             </a>
           </li>
@@ -217,7 +240,7 @@
 
   <footer>
     <div class="container footer-inner">
-      <p>&copy; 2026 Portal Júnior Arrais. Todos os direitos reservados. &middot; <a href="../sobre.html">Sobre</a> &middot; <a href="../contato.html">Contato</a> &middot; <a href="../politica-de-privacidade.html">Política de Privacidade</a></p>
+      <p>&copy; 2026 Portal Júnior Arrais. Todos os direitos reservados. &middot; <a href="../sobre.html">Sobre</a> &middot; <a href="../contato.html">Contato</a> &middot; <a href="../politica-de-privacidade.html">Política de Privacidade</a> &middot; <a href="../termos-de-uso.html">Termos de Uso</a></p>
     </div>
   </footer>
 

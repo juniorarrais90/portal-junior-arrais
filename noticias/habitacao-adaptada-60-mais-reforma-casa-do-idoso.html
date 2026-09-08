@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="../favicon.png">
-  <link rel="stylesheet" href="../styles.css?v=5">
+  <link rel="stylesheet" href="../styles.css?v=6">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -28,13 +28,24 @@
   "dateModified": "2026-08-19",
   "author": {
     "@type": "Person",
-    "name": "Júnior Arrais"
+    "@id": "https://portaljuniorarrais.com.br/sobre.html#autor",
+    "name": "Júnior Arrais",
+    "url": "https://portaljuniorarrais.com.br/sobre.html",
+    "jobTitle": "Editor responsável"
   },
   "publisher": {
-    "@type": "Organization",
-    "name": "Portal Júnior Arrais"
+    "@type": "NewsMediaOrganization",
+    "@id": "https://portaljuniorarrais.com.br/#organizacao",
+    "name": "Portal Júnior Arrais",
+    "url": "https://portaljuniorarrais.com.br/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://portaljuniorarrais.com.br/img/logo-header.png"
+    }
   },
-  "mainEntityOfPage": "https://portaljuniorarrais.com.br/noticias/habitacao-adaptada-60-mais-reforma-casa-do-idoso.html"
+  "mainEntityOfPage": "https://portaljuniorarrais.com.br/noticias/habitacao-adaptada-60-mais-reforma-casa-do-idoso.html",
+  "inLanguage": "pt-BR",
+  "isAccessibleForFree": true
 }
   </script>
   <!-- ADSENSE -->
@@ -75,6 +86,7 @@
       <nav>
         <a href="../">Início</a>
         <a href="../noticias.html">Notícias</a>
+        <a href="../guias.html">Guias</a>
         <a href="../#videos">Vídeos</a>
         <a href="../emprestimo.html">Empréstimo</a>
         <a href="../sobre.html">Sobre</a>
@@ -89,7 +101,7 @@
       <a class="voltar" href="../">&larr; Voltar para o início</a>
       <div><span class="chip">Moradia</span></div>
       <h1>Projeto cria subsídio para adaptar a casa de quem tem 60 anos ou mais</h1>
-      <div class="meta"><img src="../img/junior-avatar.png" alt="Júnior Arrais" class="autor-foto"> Por Júnior Arrais &middot; 19 de ago. de 2026</div>
+      <div class="meta"><img src="../img/junior-avatar.png" alt="Júnior Arrais" class="autor-foto"> Por <a href="../sobre.html#autor" class="autor-link">Júnior Arrais</a> &middot; 19 de ago. de 2026</div>
       <div class="artigo-capa"><img src="../img/habitacao-adaptada-60-mais-reforma-casa-do-idoso.png" alt="Projeto cria subsídio para adaptar a casa de quem tem 60 anos ou mais"></div>
       <div class="artigo-conteudo">
 <p>A queda dentro de casa é uma das principais causas de internação de pessoas idosas no Brasil, e quase sempre acontece nos mesmos lugares: banheiro sem barra de apoio, degrau na porta, piso escorregadio. Um projeto aprovado na Câmara em <strong>18 de agosto de 2026</strong> quer atacar exatamente isso — com dinheiro público bancando a obra.</p>
@@ -133,10 +145,31 @@
 
 
 
+      <!-- AUTOR (Portal Junior Arrais) -->
+      <div class="autor-box" id="autor">
+        <img class="autor-box-foto" src="../img/junior-avatar.png" alt="Júnior Arrais" width="72" height="72" loading="lazy">
+        <div class="autor-box-texto">
+          <p class="autor-box-nome"><a href="../sobre.html#autor">Júnior Arrais</a> <span class="autor-box-cargo">· Editor do Portal Júnior Arrais</span></p>
+          <p class="autor-box-bio">Comunicador de Ubá (MG). Escreve todos os dias sobre benefícios sociais, INSS, trabalho e economia do dia a dia, a partir do Diário Oficial, de portarias e de fontes oficiais, em linguagem simples. Conheça a <a href="../sobre.html#linha-editorial">linha editorial</a> e a <a href="../sobre.html#correcoes">política de correções</a> do portal.</p>
+          <p class="autor-box-links"><a href="mailto:contato@portaljuniorarrais.com.br?subject=Correcao: habitacao-adaptada-60-mais-reforma-casa-do-idoso">Encontrou um erro? Avise a redação</a></p>
+        </div>
+      </div>
+      <!-- FIM AUTOR -->
+
 <!-- LEIA TAMBEM (gerado por scripts/gerar_relacionadas.py) -->
       <aside class="leia-tambem" aria-label="Outras notícias do portal">
         <h2>Leia também</h2>
         <ul class="lt-lista">
+          <li class="lt-item">
+            <a class="lt-link" href="guia-minha-casa-minha-vida-faixas-de-renda-subsidio-e-juros.html">
+              <img class="lt-thumb" src="../img/guia-minha-casa-minha-vida-faixas-de-renda-subsidio-e-juros.png" alt="" loading="lazy" width="120" height="68">
+              <span class="lt-texto">
+                <span class="lt-chip">Guia · Minha Casa Minha Vida</span>
+                <span class="lt-titulo">Minha Casa Minha Vida: faixas de renda de 2026, subsídio, juros, uso do FGTS e como a família entra no programa</span>
+                <span class="lt-data">8 de set. de 2026</span>
+              </span>
+            </a>
+          </li>
           <li class="lt-item">
             <a class="lt-link" href="minha-casa-minha-vida-juros-faixa-3-em-estudo.html">
               <span class="lt-texto">
@@ -147,29 +180,20 @@
             </a>
           </li>
           <li class="lt-item">
-            <a class="lt-link" href="minha-casa-minha-vida-mp-1382-fghab.html">
+            <a class="lt-link" href="id-jovem-passagem-gratis-e-meia-entrada.html">
               <span class="lt-texto">
-                <span class="lt-chip">Minha Casa Minha Vida</span>
-                <span class="lt-titulo">Minha Casa Minha Vida: R$ 750 milhões vão para o fundo que cobre o risco do financiamento</span>
-                <span class="lt-data">8 de ago. de 2026</span>
+                <span class="lt-chip">Benefícios</span>
+                <span class="lt-titulo">ID Jovem: duas vagas grátis no ônibus interestadual e meia-entrada em eventos</span>
+                <span class="lt-data">5 de ago. de 2026</span>
               </span>
             </a>
           </li>
           <li class="lt-item">
-            <a class="lt-link" href="minha-casa-minha-vida-renda-ate-13-mil-faixa-4.html">
+            <a class="lt-link" href="reforma-de-casa-e-mei-governo-libera-3-5-bilhoes.html">
               <span class="lt-texto">
-                <span class="lt-chip">Minha Casa Minha Vida</span>
-                <span class="lt-titulo">Minha Casa Minha Vida para renda de até R$ 13 mil: o que é a tal 'Faixa 4' e o que a norma realmente diz</span>
-                <span class="lt-data">12 de ago. de 2026</span>
-              </span>
-            </a>
-          </li>
-          <li class="lt-item">
-            <a class="lt-link" href="minha-casa-minha-vida-novos-limites-de-renda.html">
-              <span class="lt-texto">
-                <span class="lt-chip">Minha Casa Minha Vida</span>
-                <span class="lt-titulo">Minha Casa Minha Vida amplia limite de renda para R$ 3.200 na faixa 1; imóvel pode chegar a R$ 600 mil</span>
-                <span class="lt-data">25 de jul. de 2026</span>
+                <span class="lt-chip">Moradia</span>
+                <span class="lt-titulo">Reforma de casa e pequenos negócios: governo libera R$ 3,5 bilhões para facilitar crédito</span>
+                <span class="lt-data">15 de ago. de 2026</span>
               </span>
             </a>
           </li>
@@ -206,7 +230,7 @@
 
   <footer>
     <div class="container footer-inner">
-      <p>&copy; 2026 Portal Júnior Arrais. Todos os direitos reservados. &middot; <a href="../sobre.html">Sobre</a> &middot; <a href="../contato.html">Contato</a> &middot; <a href="../politica-de-privacidade.html">Política de Privacidade</a></p>
+      <p>&copy; 2026 Portal Júnior Arrais. Todos os direitos reservados. &middot; <a href="../sobre.html">Sobre</a> &middot; <a href="../contato.html">Contato</a> &middot; <a href="../politica-de-privacidade.html">Política de Privacidade</a> &middot; <a href="../termos-de-uso.html">Termos de Uso</a></p>
     </div>
   </footer>
 

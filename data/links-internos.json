@@ -5,11 +5,30 @@
     "Usado por scripts/aplicar_links_contextuais.py. Rodar o script depois de qualquer alteracao aqui.",
     "REGRA: o destino deve ser a materia mais EXPLICATIVA do tema, nunca a de calendario do mes.",
     "Quando existirem paginas-pilar permanentes (item 5 do plano de SEO), trocar o slug de destino aqui e rodar o script.",
-    "Campo opcional 'nao_em': lista de slugs de ORIGEM onde aquele destino nao deve ser aplicado. Use quando o termo tem sentido diferente naquela materia (ex.: 'biometria' eleitoral nao e a biometria de beneficios)."
+    "Campo opcional 'nao_em': lista de slugs de ORIGEM onde aquele destino nao deve ser aplicado. Use quando o termo tem sentido diferente naquela materia (ex.: 'biometria' eleitoral nao e a biometria de beneficios).",
+    "08/09/2026: destinos trocados para as paginas-pilar (guias) — CadUnico, Bolsa Familia, BPC, Tarifa Social, golpes, Gas do Povo, Pe-de-Meia, auxilio-doenca, aposentadoria e Minha Casa Minha Vida."
   ],
   "destinos": [
     {
-      "slug": "como-saber-se-esta-no-cadunico",
+      "slug": "guia-bolsa-familia-quem-tem-direito-valores-e-regras",
+      "ancoras": [
+        "regras do Bolsa Família",
+        "Bolsa Família"
+      ],
+      "nao_em": [
+        "bolsa-familia-calendario-de-agosto",
+        "bolsa-familia-calendario-de-setembro",
+        "bolsa-familia-calendario-de-pagamentos-de-julho"
+      ]
+    },
+    {
+      "slug": "atestmed-90-dias-sem-pericia",
+      "ancoras": [
+        "Atestmed"
+      ]
+    },
+    {
+      "slug": "guia-cadunico-o-que-e-quem-pode-e-quando-atualizar",
       "ancoras": [
         "cadastro no CadÚnico",
         "cadastro único",
@@ -52,7 +71,7 @@
       ]
     },
     {
-      "slug": "bpc-loas-regras-2026-renda-e-revisao",
+      "slug": "guia-bpc-loas-quem-tem-direito-renda-e-avaliacao",
       "ancoras": [
         "BPC/LOAS",
         "benefício assistencial",
@@ -72,7 +91,7 @@
       ]
     },
     {
-      "slug": "conta-de-luz-gratis-tarifa-social",
+      "slug": "guia-conta-de-luz-tarifa-social-luz-do-povo-e-desconto-social",
       "ancoras": [
         "Tarifa Social de Energia Elétrica",
         "Tarifa Social"
@@ -105,7 +124,7 @@
       ]
     },
     {
-      "slug": "golpe-do-falso-beneficio",
+      "slug": "guia-golpes-contra-quem-recebe-beneficio-como-reconhecer",
       "ancoras": [
         "golpe do falso benefício",
         "golpes mais comuns",
@@ -113,13 +132,13 @@
       ]
     },
     {
-      "slug": "gas-do-povo-nova-recarga-10-de-agosto",
+      "slug": "guia-gas-do-povo-como-funciona-quem-recebe-e-prazos",
       "ancoras": [
         "Gás do Povo"
       ]
     },
     {
-      "slug": "pe-de-meia-contas-paradas",
+      "slug": "guia-pe-de-meia-regras-valores-e-calendario",
       "ancoras": [
         "Pé-de-Meia"
       ]
@@ -164,10 +183,11 @@
       ]
     },
     {
-      "slug": "atestmed-90-dias-sem-pericia",
+      "slug": "guia-auxilio-doenca-e-aposentadoria-por-incapacidade-inss",
       "ancoras": [
-        "Atestmed",
-        "auxílio-doença"
+        "auxílio-doença",
+        "benefício por incapacidade",
+        "auxílio por incapacidade"
       ]
     },
     {
@@ -178,7 +198,7 @@
       ]
     },
     {
-      "slug": "aposentadoria-2026-regra-de-pontos",
+      "slug": "guia-aposentadoria-inss-2026-idade-pontos-rural-e-especial",
       "ancoras": [
         "regra de pontos",
         "aposentadoria por tempo de contribuição"
@@ -246,7 +266,7 @@
       ]
     },
     {
-      "slug": "minha-casa-minha-vida-novos-limites-de-renda",
+      "slug": "guia-minha-casa-minha-vida-faixas-de-renda-subsidio-e-juros",
       "ancoras": [
         "Minha Casa Minha Vida"
       ]
@@ -339,6 +359,14 @@
       "ancoras": [
         "defeso eleitoral",
         "período eleitoral"
+      ]
+    },
+    {
+      "slug": "guia-aposentadoria-inss-2026-idade-pontos-rural-e-especial",
+      "ancoras": [
+        "aposentadoria por idade",
+        "regras de aposentadoria",
+        "aposentadoria do INSS"
       ]
     }
   ]

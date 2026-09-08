@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="../favicon.png">
-  <link rel="stylesheet" href="../styles.css?v=5">
+  <link rel="stylesheet" href="../styles.css?v=6">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -28,13 +28,24 @@
   "dateModified": "2026-08-21",
   "author": {
     "@type": "Person",
-    "name": "Júnior Arrais"
+    "@id": "https://portaljuniorarrais.com.br/sobre.html#autor",
+    "name": "Júnior Arrais",
+    "url": "https://portaljuniorarrais.com.br/sobre.html",
+    "jobTitle": "Editor responsável"
   },
   "publisher": {
-    "@type": "Organization",
-    "name": "Portal Júnior Arrais"
+    "@type": "NewsMediaOrganization",
+    "@id": "https://portaljuniorarrais.com.br/#organizacao",
+    "name": "Portal Júnior Arrais",
+    "url": "https://portaljuniorarrais.com.br/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://portaljuniorarrais.com.br/img/logo-header.png"
+    }
   },
-  "mainEntityOfPage": "https://portaljuniorarrais.com.br/noticias/encceja-2026-prova-neste-domingo-23-de-agosto.html"
+  "mainEntityOfPage": "https://portaljuniorarrais.com.br/noticias/encceja-2026-prova-neste-domingo-23-de-agosto.html",
+  "inLanguage": "pt-BR",
+  "isAccessibleForFree": true
 }
   </script>
   <!-- ADSENSE -->
@@ -75,6 +86,7 @@
       <nav>
         <a href="../">Início</a>
         <a href="../noticias.html">Notícias</a>
+        <a href="../guias.html">Guias</a>
         <a href="../#videos">Vídeos</a>
         <a href="../emprestimo.html">Empréstimo</a>
         <a href="../sobre.html">Sobre</a>
@@ -89,13 +101,13 @@
       <a class="voltar" href="../">&larr; Voltar para o início</a>
       <div><span class="chip">Educação</span></div>
       <h1>Encceja 2026: prova é neste domingo, 23 de agosto, em todo o país</h1>
-      <div class="meta"><img src="../img/junior-avatar.png" alt="Júnior Arrais" class="autor-foto"> Por Júnior Arrais &middot; 21 de ago. de 2026</div>
+      <div class="meta"><img src="../img/junior-avatar.png" alt="Júnior Arrais" class="autor-foto"> Por <a href="../sobre.html#autor" class="autor-link">Júnior Arrais</a> &middot; 21 de ago. de 2026</div>
       <div class="artigo-capa"><img src="../img/encceja-2026-prova-neste-domingo-23-de-agosto.png" alt="Encceja 2026: prova é neste domingo, 23 de agosto, em todo o país">
         <span class="credito-foto">Foto: Tomaz Silva/Agência Brasil</span></div>
       <div class="artigo-conteudo">
 <p>Quem se inscreveu no <strong>Exame Nacional para Certificação de Competências de Jovens e Adultos (Encceja) 2026</strong> faz as provas neste <strong>domingo, 23 de agosto</strong>, em todos os estados e no Distrito Federal.</p>
 
-<p>O exame é destinado a jovens e adultos que não concluíram os estudos na idade prevista para cada nível de ensino, e o resultado pode ser usado pelas secretarias de Educação e pelos institutos federais que aderem ao Encceja como referência para a certificação do ensino fundamental ou médio.</p>
+<p>O exame é destinado a jovens e adultos que não concluíram os estudos na idade prevista para cada nível de ensino, e o resultado pode ser usado pelas secretarias de Educação e pelos institutos federais que aderem ao <a class="link-interno" href="encceja-2026-cartao-de-inscricao-prova-23-de-agosto.html">Encceja</a> como referência para a certificação do ensino fundamental ou médio.</p>
 
 <h2>Horários dos dois turnos</h2>
 
@@ -131,6 +143,17 @@
 <p><em>Conteúdo informativo — não substitui orientação individualizada sobre o seu caso.</em></p>
       </div>
 
+      <!-- AUTOR (Portal Junior Arrais) -->
+      <div class="autor-box" id="autor">
+        <img class="autor-box-foto" src="../img/junior-avatar.png" alt="Júnior Arrais" width="72" height="72" loading="lazy">
+        <div class="autor-box-texto">
+          <p class="autor-box-nome"><a href="../sobre.html#autor">Júnior Arrais</a> <span class="autor-box-cargo">· Editor do Portal Júnior Arrais</span></p>
+          <p class="autor-box-bio">Comunicador de Ubá (MG). Escreve todos os dias sobre benefícios sociais, INSS, trabalho e economia do dia a dia, a partir do Diário Oficial, de portarias e de fontes oficiais, em linguagem simples. Conheça a <a href="../sobre.html#linha-editorial">linha editorial</a> e a <a href="../sobre.html#correcoes">política de correções</a> do portal.</p>
+          <p class="autor-box-links"><a href="mailto:contato@portaljuniorarrais.com.br?subject=Correcao: encceja-2026-prova-neste-domingo-23-de-agosto">Encontrou um erro? Avise a redação</a></p>
+        </div>
+      </div>
+      <!-- FIM AUTOR -->
+
 <!-- LEIA TAMBEM (gerado por scripts/gerar_relacionadas.py) -->
       <aside class="leia-tambem" aria-label="Outras notícias do portal">
         <h2>Leia também</h2>
@@ -154,20 +177,21 @@
             </a>
           </li>
           <li class="lt-item">
-            <a class="lt-link" href="transporte-escolar-rural-professores-vagas-que-sobram.html">
-              <img class="lt-thumb" src="../img/transporte-escolar-rural-professores-vagas-que-sobram.png" alt="" loading="lazy" width="120" height="68">
+            <a class="lt-link" href="guia-pe-de-meia-regras-valores-e-calendario.html">
+              <img class="lt-thumb" src="../img/guia-pe-de-meia-regras-valores-e-calendario.png" alt="" loading="lazy" width="120" height="68">
               <span class="lt-texto">
-                <span class="lt-chip">Educação</span>
-                <span class="lt-titulo">Transporte escolar rural: projeto libera vaga que sobra para professor e universitário</span>
+                <span class="lt-chip">Guia · Pé-de-Meia</span>
+                <span class="lt-titulo">Pé-de-Meia: quem tem direito, quanto o estudante recebe, o que trava a conta e o calendário</span>
+                <span class="lt-data">8 de set. de 2026</span>
               </span>
             </a>
           </li>
           <li class="lt-item">
-            <a class="lt-link" href="pe-de-meia-pagamentos-voltam-em-agosto.html">
+            <a class="lt-link" href="pe-de-meia-contas-paradas.html">
               <span class="lt-texto">
                 <span class="lt-chip">Pé-de-Meia</span>
-                <span class="lt-titulo">Pé-de-Meia volta a pagar de 24 a 31 de agosto; veja o calendário e quem recebe</span>
-                <span class="lt-data">24 de jul. de 2026</span>
+                <span class="lt-titulo">Pé-de-Meia: quase 1 milhão de contas estão paradas; veja como liberar a sua</span>
+                <span class="lt-data">27 de jul. de 2026</span>
               </span>
             </a>
           </li>
@@ -204,7 +228,7 @@
 
   <footer>
     <div class="container footer-inner">
-      <p>&copy; 2026 Portal Júnior Arrais. Todos os direitos reservados. &middot; <a href="../sobre.html">Sobre</a> &middot; <a href="../contato.html">Contato</a> &middot; <a href="../politica-de-privacidade.html">Política de Privacidade</a></p>
+      <p>&copy; 2026 Portal Júnior Arrais. Todos os direitos reservados. &middot; <a href="../sobre.html">Sobre</a> &middot; <a href="../contato.html">Contato</a> &middot; <a href="../politica-de-privacidade.html">Política de Privacidade</a> &middot; <a href="../termos-de-uso.html">Termos de Uso</a></p>
     </div>
   </footer>
 
