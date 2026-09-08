@@ -1456,7 +1456,9 @@
       "publicar_em": "2026-09-08T15:00:00Z",
       "horario_brasilia": "08/09 12:00",
       "alt_text": "Escala 6x1: CCJ do Senado aprovou a PEC, mas ainda faltam dois turnos no Plenário",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-09-08T15:01:31Z",
+      "link": "https://www.instagram.com/p/DdB9cCogvCT/"
     },
     {
       "slug": "taxa-das-blusinhas-senado-aprovou-o-fim-e-medida-vai-a-sancao",
