@@ -1566,7 +1566,9 @@
       "publicar_em": "2026-09-09T20:00:00Z",
       "horario_brasilia": "09/09 17:00",
       "alt_text": "Atestado médico: até quando a empresa paga e quando o INSS entra",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-09-09T20:01:26Z",
+      "link": "https://www.instagram.com/p/DdFEkSqD10-/"
     }
   ]
 }
