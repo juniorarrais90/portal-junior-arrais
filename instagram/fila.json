@@ -1606,7 +1606,9 @@
       "publicar_em": "2026-09-10T20:30:00Z",
       "horario_brasilia": "10/09 17:30",
       "alt_text": "Dinheiro esquecido nos bancos chega a R$ 5,65 bilhões; 7 em cada 10 valores são de até R$ 10",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-09-10T20:31:34Z",
+      "link": "https://www.instagram.com/p/DdHsz4AGHu_/"
     },
     {
       "slug": "burnout-da-auxilio-doenca-o-que-o-inss-e-a-justica-reconhecem",
