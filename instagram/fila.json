@@ -1586,7 +1586,9 @@
       "publicar_em": "2026-09-10T17:30:00Z",
       "horario_brasilia": "10/09 14:30",
       "alt_text": "Escala 6x1: Senado adia a votação e o fim da escala fica para depois das eleições",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-09-10T17:31:33Z",
+      "link": "https://www.instagram.com/p/DdHYNaUGG2I/"
     },
     {
       "slug": "gravida-e-acidentado-stf-mantem-protecao-contra-demissao",
