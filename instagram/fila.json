@@ -1656,7 +1656,9 @@
       "publicar_em": "2026-09-11T23:30:00Z",
       "horario_brasilia": "11/09 20:30",
       "alt_text": "Gasolina com R$ 0,63 a menos de imposto por litro até 9 de outubro; o botijão ficou de fora",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-09-11T23:31:34Z",
+      "link": "https://www.instagram.com/p/DdKmNFKmFjA/"
     },
     {
       "slug": "medicos-falsos-de-ia-no-youtube-governo-aciona-google",
