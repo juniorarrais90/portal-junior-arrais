@@ -1636,7 +1636,9 @@
       "publicar_em": "2026-09-11T20:30:00Z",
       "horario_brasilia": "11/09 17:30",
       "alt_text": "Inflação de agosto fica em -0,32%, e o INPC negativo freia o reajuste do INSS em 2027",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-09-11T20:31:52Z",
+      "link": "https://www.instagram.com/p/DdKRpKtCRdB/"
     },
     {
       "slug": "novo-desenrola-acabou-o-que-vale-para-quem-ja-renegociou",
