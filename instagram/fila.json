@@ -1626,7 +1626,9 @@
       "publicar_em": "2026-09-11T19:00:00Z",
       "horario_brasilia": "11/09 16:00",
       "alt_text": "Greve da Caixa: Bolsa Família, INSS e FGTS continuam sendo pagos; só as agências fecharam",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-09-11T19:01:41Z",
+      "link": "https://www.instagram.com/p/DdKHUVUmufp/"
     },
     {
       "slug": "inflacao-de-agosto-ipca-inpc-o-que-muda-no-reajuste-do-inss",
