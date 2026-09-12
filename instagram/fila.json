@@ -1676,7 +1676,9 @@
       "publicar_em": "2026-09-12T12:30:00Z",
       "horario_brasilia": "12/09 09:30",
       "alt_text": "Cesta básica fica mais barata em 25 capitais em agosto, mas mínimo necessário seria R$ 7.565",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-09-12T12:31:49Z",
+      "link": "https://www.instagram.com/p/DdL_gBslv7D/"
     },
     {
       "slug": "minha-casa-minha-vida-fgts-aumenta-subsidio-para-13-bilhoes",
