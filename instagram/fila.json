@@ -1699,6 +1699,54 @@
       "status": "publicado",
       "publicado_em": "2026-09-12T15:31:35Z",
       "link": "https://www.instagram.com/p/DdMUEiwm3sT/"
+    },
+    {
+      "slug": "greve-da-caixa-continua-e-bolsa-familia-comeca-dia-17",
+      "titulo": "Greve da Caixa continua por tempo indeterminado e o Bolsa Família começa dia 17",
+      "publicar_em": "2026-09-15T12:00:00Z",
+      "horario_brasilia": "15/09 09:00",
+      "alt_text": "Fachada de agência da Caixa Econômica Federal coberta de cartazes vermelhos com os dizeres BANCÁRIOS EM GREVE",
+      "status": "pendente"
+    },
+    {
+      "slug": "nao-votar-nao-corta-bolsa-familia-bpc-nem-inss",
+      "titulo": "Não votar não corta Bolsa Família, BPC nem INSS: veja o que realmente acontece",
+      "publicar_em": "2026-09-15T13:30:00Z",
+      "horario_brasilia": "15/09 10:30",
+      "alt_text": "Urna eletrônica ligada dentro de uma cabine de votação de papelão, sobre a carteira de uma sala de aula",
+      "status": "pendente"
+    },
+    {
+      "slug": "mesario-nas-eleicoes-folga-pelo-dobro-dos-dias",
+      "titulo": "Convocado para mesário em 4 de outubro? A folga é pelo dobro dos dias de convocação",
+      "publicar_em": "2026-09-15T15:00:00Z",
+      "horario_brasilia": "15/09 12:00",
+      "alt_text": "Mesa de seção eleitoral em uma escola, com crachá de mesário, pastas e cartaz escrito SEÇÃO na parede",
+      "status": "pendente"
+    },
+    {
+      "slug": "operacao-resgate-479-trabalhadores-libertados-208-em-minas",
+      "titulo": "Operação Resgate liberta 479 trabalhadores em agosto e Minas Gerais lidera a lista",
+      "publicar_em": "2026-09-15T16:30:00Z",
+      "horario_brasilia": "15/09 13:30",
+      "alt_text": "Trabalhador de chapéu de palha, visto de costas, ao lado de sacas de colheita em uma lavoura de café",
+      "status": "pendente"
+    },
+    {
+      "slug": "taxa-das-blusinhas-acabou-o-que-muda-na-sua-compra",
+      "titulo": "Taxa das blusinhas acabou: compra de até US$ 50 fica sem imposto de importação",
+      "publicar_em": "2026-09-15T18:00:00Z",
+      "horario_brasilia": "15/09 15:00",
+      "alt_text": "Mãos entregando um pacote de papel pardo sobre o balcão de uma loja, com cartaz escrito RETIRADA DE PEDIDOS na parede",
+      "status": "pendente"
+    },
+    {
+      "slug": "governo-diz-que-zerou-a-fila-do-inss-mas-224-mil-ainda-esperam",
+      "titulo": "Governo diz que zerou a fila do INSS, mas 224 mil pedidos ainda passam de 45 dias",
+      "publicar_em": "2026-09-15T19:30:00Z",
+      "horario_brasilia": "15/09 16:30",
+      "alt_text": "Mulher de aproximadamente 60 anos sentada à mesa da sala de casa, olhando a tela do celular",
+      "status": "pendente"
     }
   ]
 }
