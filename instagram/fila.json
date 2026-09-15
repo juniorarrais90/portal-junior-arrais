@@ -1746,7 +1746,9 @@
       "publicar_em": "2026-09-15T18:00:00Z",
       "horario_brasilia": "15/09 15:00",
       "alt_text": "Mãos entregando um pacote de papel pardo sobre o balcão de uma loja, com cartaz escrito RETIRADA DE PEDIDOS na parede",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-09-15T18:01:43Z",
+      "link": "https://www.instagram.com/p/DdUTo6omsH-/"
     },
     {
       "slug": "governo-diz-que-zerou-a-fila-do-inss-mas-224-mil-ainda-esperam",
