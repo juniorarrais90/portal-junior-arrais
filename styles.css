@@ -726,3 +726,14 @@ header nav.faixa-categorias { display: block; }
 .guias-intro { max-width: 820px; margin: -6px 0 22px; color: #33404f; font-size: 1.02rem; line-height: 1.55; }
 #guias .grid { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
 @media (min-width: 900px) { #guias-home .guias-grid { grid-template-columns: repeat(4, 1fr); } }
+
+/* Destaque de ferramenta na home (Calculadora do Bolsa Família, 18/09/2026) */
+.destaque-ferramenta { margin-top: 14px; }
+.destaque-ferramenta-card { display: grid; grid-template-columns: 150px 1fr auto; align-items: center; gap: 22px; padding: 22px 26px; border-radius: var(--radius); background: var(--bg-card); border: 1px solid var(--border); border-top: 6px solid #40B048; box-shadow: 0 6px 24px rgba(30, 42, 56, .08); text-decoration: none; color: var(--text); transition: .2s; }
+.destaque-ferramenta-card:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(30, 42, 56, .12); }
+.destaque-ferramenta-card img { width: 150px; height: auto; }
+.destaque-ferramenta-chip { display: inline-block; background: #F8D008; color: #1A1A1A; font-weight: 800; font-size: .75rem; letter-spacing: .06em; text-transform: uppercase; padding: 4px 10px; border-radius: 999px; margin-bottom: 8px; }
+.destaque-ferramenta-texto h2 { margin: 0 0 6px; font-size: 1.35rem; line-height: 1.2; }
+.destaque-ferramenta-texto p { margin: 0; color: var(--text-muted); }
+.destaque-ferramenta-btn { background: #2E8F37; color: #fff; font-weight: 700; padding: 13px 26px; border-radius: 999px; white-space: nowrap; box-shadow: 0 4px 14px rgba(46, 143, 55, .35); }
+@media (max-width: 760px) { .destaque-ferramenta-card { grid-template-columns: 1fr; text-align: center; gap: 14px; } .destaque-ferramenta-card img { margin: 0 auto; width: 130px; } }
