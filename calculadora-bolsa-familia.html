@@ -313,7 +313,7 @@
       <label class="cbf-check">
         <input type="checkbox" id="protecao" name="protecao">
         <span>Minha família está na Regra de Proteção
-          <span class="cbf-ajuda">Quando a renda por pessoa sobe acima do limite, a família continua um tempo no programa recebendo metade do valor.</span>
+          <span class="cbf-ajuda">Se a renda por pessoa passou de R$ 218 mas ficou em até R$ 706, a família não é desligada na hora: continua no programa por até 18 meses recebendo metade do valor (regra do MDS em vigor desde julho de 2026).</span>
         </span>
       </label>
       <p class="cbf-erro-geral" id="erroFamilia" hidden role="alert"></p>
@@ -657,7 +657,7 @@
     if (n.gestantes) { notas.push('A gestante entra no cálculo quando consta na relação que o Ministério da Saúde envia ao MDS a partir do pré-natal no SUS. O adicional dela é pago por até 9 parcelas.'); }
     if (n.nutrizes) { notas.push('O adicional de nutriz é pago em 6 parcelas, enquanto o bebê ainda não completou 7 meses.'); }
     if (n.gestantes || n.nutrizes) { notas.push('Pela regra, o Variável Familiar é calculado por integrante. Por isso gestante ou nutriz com menos de 18 anos conta uma vez só, como adolescente.'); }
-    if (n.protecao) { notas.push('Na Regra de Proteção a família recebe metade dos benefícios, pelo prazo definido pelo MDS. Essa condição aparece no aplicativo do Bolsa Família. Por causa do arredondamento, o valor pode variar em R$ 1.'); }
+    if (n.protecao) { notas.push('Na Regra de Proteção a família recebe metade dos benefícios por até 18 meses, enquanto a renda por pessoa ficar entre R$ 218 e R$ 706 (Portaria MDS nº 897/2023, com a redação da Portaria nº 1.191/2026). Essa condição aparece no aplicativo do Bolsa Família. Por causa do arredondamento, o valor pode variar em R$ 1.'); }
     notas.push('Para entrar no Bolsa Família, a renda por pessoa da família precisa ser de até R$ 218 por mês (Lei nº 14.601/2023, art. 5º). Esse limite não mudou com o reajuste de outubro.');
     notas.push('Este é um valor estimado. O valor pago pode ser diferente se o cadastro estiver desatualizado, se algum compromisso do programa (vacinação, escola, pré-natal) não estiver em dia ou se a renda da família tiver mudado.');
     $('notas').innerHTML = notas.map(function (t) { return '<li>' + esc(t) + '</li>'; }).join('');
