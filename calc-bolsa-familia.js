@@ -48,6 +48,11 @@
     return Math.floor(n);
   }
 
+  function booleano(v) {
+    if (typeof v === 'string') { var t = v.trim().toLowerCase(); return !(t === '' || t === '0' || t === 'false' || t === 'nao' || t === 'não'); }
+    return !!v;
+  }
+
   function normalizar(f) {
     f = f || {};
     return {
@@ -56,7 +61,7 @@
       menores7: inteiro(f.menores7),
       gestantes: inteiro(f.gestantes),
       nutrizes: inteiro(f.nutrizes),
-      protecao: !!f.protecao
+      protecao: booleano(f.protecao)
     };
   }
 
@@ -65,10 +70,20 @@
     return n.adultos + n.criancas7a17 + n.menores7;
   }
 
+  function fracionario(v) {
+    if (v === undefined || v === null || v === '') { return false; }
+    var x = Number(v);
+    return isFinite(x) && x !== Math.floor(x);
+  }
+
   function validar(f) {
     var n = normalizar(f);
     var erros = [];
     var total = n.adultos + n.criancas7a17 + n.menores7;
+    var bruto = f || {};
+    if (['adultos', 'criancas7a17', 'menores7', 'gestantes', 'nutrizes'].some(function (k) { return fracionario(bruto[k]); })) {
+      erros.push('Use números inteiros para contar as pessoas.');
+    }
 
     if (total < 1) {
       erros.push('Informe pelo menos uma pessoa na família.');
@@ -89,14 +104,15 @@
 
   function calcular(f, tabela) {
     var n = normalizar(f);
-    var t = typeof tabela === 'string' ? TABELAS[tabela] : tabela;
-    if (!t) { throw new Error('Tabela desconhecida: ' + tabela); }
+    var t = typeof tabela === 'string' ? (Object.prototype.hasOwnProperty.call(TABELAS, tabela) ? TABELAS[tabela] : null) : tabela;
+    if (!t || typeof t.brc !== 'number') { throw new Error('Tabela desconhecida: ' + tabela); }
 
     var pessoas = n.adultos + n.criancas7a17 + n.menores7;
+    // Sem integrante não há família beneficiária: nada é devido (nem Complementar, nem adicionais).
     var brc = t.brc * pessoas;
-    var bco = Math.max(0, t.piso - brc);
-    var bpi = t.bpi * n.menores7;
-    var bvfQtd = n.criancas7a17 + n.gestantes + n.nutrizes;
+    var bco = pessoas > 0 ? Math.max(0, t.piso - brc) : 0;
+    var bpi = pessoas > 0 ? t.bpi * n.menores7 : 0;
+    var bvfQtd = pessoas > 0 ? n.criancas7a17 + n.gestantes + n.nutrizes : 0;
     var bvf = t.bvf * bvfQtd;
     var subtotal = brc + bco + bpi + bvf;
     // Decreto 12.064/2024, art. 21, § 1º: total arredondado ao inteiro imediatamente superior.

@@ -64,8 +64,8 @@
   .cbf h1 { font-size: clamp(32px, 8vw, 50px); line-height: 1.02; color: var(--preto); }
   h1 .cbf-ano { color: var(--verde-2); }
   .cbf h2 { font-size: 22px; color: var(--preto); display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
-  .cbf h2 .cbf-num { width: 30px; height: 30px; border-radius: 50%; background: var(--verde); color: #fff; font-family: Manrope, Arial, sans-serif; font-weight: 800; font-size: 15px; display: inline-flex; align-items: center; justify-content: center; flex: none; }
-  .cbf h2 .cbf-num.cbf-azul { background: var(--azul); }
+  .cbf h2 .cbf-num { width: 30px; height: 30px; border-radius: 50%; background: var(--verde-3); color: #fff; font-family: Manrope, Arial, sans-serif; font-weight: 800; font-size: 15px; display: inline-flex; align-items: center; justify-content: center; flex: none; }
+  .cbf h2 .cbf-num.cbf-azul { background: var(--azul-2); }
   .cbf p { margin: 0; }
   .cbf strong { font-weight: 800; }
   .cbf a { color: var(--azul-2); }
@@ -79,8 +79,8 @@
 
   /* Topo */
   .cbf-topo { background: #fff; border-bottom: 1px solid var(--cbf-line); }
-  .cbf-topo-inner { padding-top: 22px; padding-bottom: 26px; display: grid; grid-template-columns: 1fr; gap: 14px; }
-  .cbf-logo-bf { width: 200px; max-width: 60%; height: auto; display: block; }
+  .cbf-topo-inner { padding-top: 16px; padding-bottom: 18px; display: grid; grid-template-columns: 1fr; gap: 10px; }
+  .cbf-logo-bf { width: 150px; max-width: 50%; height: auto; display: block; }
   .cbf-autor { display: flex; align-items: center; gap: 12px; }
   .cbf-foto { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; border: 3px solid var(--verde); background: #fff; flex: none; }
   .cbf-kicker { display: block; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--azul-2); font-weight: 800; }
@@ -107,9 +107,9 @@
   .cbf-campo label, .cbf-campo .cbf-rotulo { display: block; font-weight: 700; font-size: 15px; margin-bottom: 4px; }
   .cbf-campo .cbf-ajuda { display: block; color: var(--cbf-muted); font-size: 13px; margin-bottom: 8px; }
   .cbf-campo input[type=text], .cbf-campo input[type=tel], .cbf-campo input[type=email], .cbf-campo select {
-    width: 100%; height: 48px; border: 1.5px solid var(--cbf-line); border-radius: 10px; padding: 0 14px; font: inherit; font-size: 16px; background: #fff; color: var(--cbf-text);
+    width: 100%; height: 48px; border: 1.5px solid #8C95A2; border-radius: 10px; padding: 0 14px; font: inherit; font-size: 16px; background: #fff; color: var(--cbf-text);
   }
-  .cbf-campo input:focus, .cbf-campo select:focus, .cbf-stepper input:focus { outline: 3px solid rgba(64, 176, 72, .35); border-color: var(--verde); }
+  .cbf-campo input:focus, .cbf-campo select:focus, .cbf-stepper input:focus, .cbf-stepper button:focus-visible, .cbf-btn-principal:focus-visible, .cbf-btn:focus-visible { outline: 3px solid var(--verde-3); outline-offset: 2px; }
   .cbf-campo.cbf-invalido input, .cbf-campo.cbf-invalido select { border-color: var(--vermelho); background: #FFF8F8; }
   .cbf-campo .cbf-msg { display: none; color: var(--vermelho-2); font-size: 13px; margin-top: 5px; font-weight: 600; }
   .cbf-campo.cbf-invalido .cbf-msg { display: block; }
@@ -120,20 +120,21 @@
   .cbf-stepper { display: flex; align-items: center; gap: 8px; }
   .cbf-stepper button { width: 46px; height: 46px; border-radius: 10px; border: 1.5px solid var(--preto); background: #fff; color: var(--preto); font-size: 26px; font-weight: 700; line-height: 1; cursor: pointer; flex: none; }
   .cbf-stepper button:active { background: var(--verde-soft); border-color: var(--verde); }
-  .cbf-stepper input { width: 74px; height: 46px; text-align: center; font: inherit; font-size: 20px; font-weight: 800; border: 1.5px solid var(--cbf-line); border-radius: 10px; color: var(--preto); }
+  .cbf-stepper input { width: 74px; height: 46px; text-align: center; font: inherit; font-size: 20px; font-weight: 800; border: 1.5px solid #8C95A2; border-radius: 10px; color: var(--preto); }
   .cbf-stepper input::-webkit-outer-spin-button, .cbf-stepper input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
   .cbf-stepper input[type=number] { -moz-appearance: textfield; appearance: textfield; }
   .cbf-total-linha { margin-top: 18px; padding: 12px 14px; background: var(--azul-soft); border-radius: 10px; font-size: 15px; display: flex; justify-content: space-between; align-items: center; }
   .cbf-total-linha strong { font-size: 20px; color: var(--azul-2); }
   .cbf-check { display: flex; gap: 10px; align-items: flex-start; margin-top: 14px; font-size: 14.5px; cursor: pointer; }
-  .cbf-check input { width: 20px; height: 20px; margin-top: 2px; flex: none; accent-color: var(--verde-2); }
+  .cbf-check input { width: 24px; height: 24px; margin-top: 0; flex: none; accent-color: var(--verde-3); }
+  .cbf-campo .cbf-check { font-weight: 400; font-size: 14px; }
   .cbf-check .cbf-ajuda { display: block; color: var(--cbf-muted); font-size: 13px; font-weight: 400; }
   .cbf-campo.cbf-invalido .cbf-check { color: var(--vermelho-2); }
 
   .cbf-honeypot { position: absolute; left: -9999px; top: -9999px; height: 0; overflow: hidden; }
 
-  .cbf-btn-principal { width: 100%; margin-top: 18px; height: 56px; border: 0; border-radius: 12px; background: var(--verde-2); color: #fff; font: inherit; font-weight: 800; font-size: 17px; cursor: pointer; box-shadow: 0 6px 18px rgba(46, 143, 55, .3); }
-  .cbf-btn-principal:hover { background: var(--verde-3); }
+  .cbf-btn-principal { width: 100%; margin-top: 18px; height: 56px; border: 0; border-radius: 12px; background: var(--verde-3); color: #fff; font: inherit; font-weight: 800; font-size: 17px; cursor: pointer; box-shadow: 0 6px 18px rgba(46, 143, 55, .3); }
+  .cbf-btn-principal:hover { background: #175522; }
   .cbf-btn-principal:disabled { opacity: .7; cursor: wait; }
   .cbf-erro-geral { margin-top: 12px; background: var(--vermelho-soft); color: var(--vermelho-2); border-radius: 10px; padding: 12px 14px; font-weight: 600; font-size: 14.5px; }
   .cbf-erro-geral[hidden] { display: none; }
@@ -141,6 +142,10 @@
   /* Resultado */
   .cbf-resultado { margin-top: 22px; }
   .cbf-resultado[hidden] { display: none; }
+  .cbf-resultado.desatualizado .cbf-card, .cbf-resultado.desatualizado .cbf-cta { opacity: .45; }
+  .aviso-recalcular { margin-top: 22px; background: var(--amarelo-soft); border: 1px solid #F0E3A0; border-left: 5px solid var(--amarelo); border-radius: 10px; padding: 12px 14px; font-size: 14.5px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; }
+  .aviso-recalcular[hidden] { display: none; }
+  .btn-recalcular { border: 0; border-radius: 10px; background: var(--verde-3); color: #fff; font: inherit; font-weight: 800; padding: 10px 16px; cursor: pointer; }
   .cbf-comparativo { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px; }
   @media (max-width: 420px) { .cbf-comparativo { grid-template-columns: 1fr; } }
   .cbf-valor-card { border-radius: 12px; padding: 16px 14px; text-align: center; }
@@ -150,13 +155,13 @@
   .cbf-valor-card.cbf-antes { background: var(--amarelo-soft); color: var(--preto); }
   .cbf-valor-card.cbf-antes .cbf-rotulo { color: #6B5D00; }
   .cbf-valor-card.cbf-depois { background: var(--verde-2); color: #fff; }
-  .cbf-valor-card.cbf-depois .cbf-rotulo { color: var(--amarelo); }
+  .cbf-valor-card.cbf-depois .cbf-rotulo { color: #fff; }
   .cbf-diferenca { margin-top: 12px; background: var(--verde-soft); color: var(--verde-3); border-radius: 12px; padding: 14px; font-weight: 800; text-align: center; font-size: 17px; }
   .cbf-diferenca small { display: block; font-weight: 600; font-size: 13px; margin-top: 2px; }
   .cbf-detalhe { width: 100%; border-collapse: collapse; margin-top: 18px; font-size: 14.5px; }
   .cbf-detalhe th, .cbf-detalhe td { padding: 10px 6px; border-bottom: 1px solid var(--cbf-line); text-align: right; vertical-align: top; }
   .cbf-detalhe th:first-child, .cbf-detalhe td:first-child { text-align: left; }
-  .cbf-detalhe th { font-size: 12px; text-transform: uppercase; letter-spacing: .8px; color: var(--cbf-muted); }
+  .cbf-detalhe th { font-size: 11px; text-transform: uppercase; letter-spacing: .6px; color: #4A5260; }
   .cbf-detalhe td .cbf-sub { display: block; font-size: 12.5px; color: var(--cbf-muted); font-weight: 400; }
   .cbf-detalhe tr.cbf-total td { font-weight: 800; font-size: 16px; color: var(--preto); border-bottom: 0; border-top: 2px solid var(--preto); }
   .cbf-detalhe td.cbf-dep { font-weight: 700; color: var(--verde-3); }
@@ -168,7 +173,7 @@
   .cbf-cta p { color: #DDE3F5; font-size: 15px; max-width: 52ch; margin: 0 auto; }
   .cbf-cta .cbf-botoes { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 16px; }
   .cbf-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 50px; padding: 0 20px; border-radius: 12px; font-weight: 800; font-size: 15.5px; text-decoration: none; border: 0; cursor: pointer; font-family: inherit; }
-  .cbf-btn-whats { background: #25D366; color: #073B1D; }
+  .cbf-btn-whats { background: #1FA95A; color: #fff; }
   .cbf-btn-secundario { background: transparent; color: #fff; border: 2px solid var(--amarelo); }
   .cbf-btn-secundario:hover { background: rgba(248, 208, 8, .15); }
   .cbf-btn[hidden] { display: none; }
@@ -225,7 +230,7 @@
 <header class="cbf-topo">
   <div class="cbf-faixa" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
   <div class="cbf-container cbf-topo-inner">
-    <img class="cbf-logo-bf" src="img/calculadora/logo-bolsa-familia-640.png" alt="Programa Bolsa Família" width="240" height="139">
+    <img class="cbf-logo-bf" src="img/calculadora/logo-bolsa-familia-320.png" alt="Programa Bolsa Família" width="240" height="139">
     <div class="cbf-autor">
       <img class="cbf-foto" src="img/junior-avatar.png" alt="Júnior Arrais" width="64" height="64">
       <div>
@@ -234,24 +239,24 @@
       </div>
     </div>
     <h1>Calculadora do Bolsa Família <span class="cbf-ano">2026</span></h1>
-    <p class="cbf-lead">Veja quanto a sua família recebe hoje e quanto vai receber a partir de outubro, com o reajuste de 15,04% (INPC) aplicado pelo Decreto nº 13.120/2026.</p>
-    <span class="cbf-pill">Novos valores valem a partir da folha de outubro de 2026</span>
+    <p class="cbf-lead">Veja quanto a sua família recebe hoje e quanto deve receber a partir de outubro, com a correção pela inflação (INPC de 15,04%, segundo o MDS) determinada pelo Decreto nº 13.120/2026.</p>
+    <span class="cbf-pill">Novos valores a partir do pagamento de outubro de 2026</span>
   </div>
 </header>
 
 <main class="cbf-container">
   <div class="cbf-independente">
-    Ferramenta independente do Portal Júnior Arrais, sem vínculo com o Governo Federal, o MDS ou a Caixa. O valor calculado é uma estimativa: o valor real depende dos dados da família no CadÚnico.
+    Ferramenta independente do Portal Júnior Arrais, sem vínculo com o Governo Federal, o Ministério do Desenvolvimento Social (MDS) ou a Caixa. O valor calculado é uma estimativa: o valor real depende do cadastro da família no CadÚnico.
   </div>
 
-  <form id="form" novalidate autocomplete="on">
+  <form id="form" novalidate autocomplete="on" onsubmit="return false">
     <section class="cbf-card" aria-labelledby="t1">
       <h2 id="t1"><span class="cbf-num">1</span> Quem mora na sua casa</h2>
       <p class="cbf-intro">Conte todas as pessoas da família que estão no seu Cadastro Único, inclusive você.</p>
 
       <div class="cbf-campo">
         <span class="cbf-rotulo" id="l-adultos">Adultos (18 anos ou mais)</span>
-        <span class="cbf-ajuda">Inclua você, cônjuge, avós, filhos maiores e qualquer outro adulto da casa.</span>
+        <span class="cbf-ajuda">Inclua você, marido ou mulher, avós, filhos maiores e qualquer outro adulto da casa.</span>
         <div class="cbf-stepper" role="group" aria-labelledby="l-adultos">
           <button type="button" data-menos="adultos" aria-label="Diminuir adultos">−</button>
           <input type="number" id="adultos" name="adultos" inputmode="numeric" min="0" max="30" value="1" aria-labelledby="l-adultos">
@@ -311,6 +316,7 @@
           <span class="cbf-ajuda">Quando a renda por pessoa sobe acima do limite, a família continua um tempo no programa recebendo metade do valor.</span>
         </span>
       </label>
+      <p class="cbf-erro-geral" id="erroFamilia" hidden role="alert"></p>
     </section>
 
     <section class="cbf-card cbf-azul" aria-labelledby="t2">
@@ -355,14 +361,14 @@
       <div class="cbf-campo" id="c-consent">
         <label class="cbf-check" for="consent">
           <input type="checkbox" id="consent" name="consent" required>
-          <span>Autorizo o Portal Júnior Arrais a guardar meus dados para me enviar o resultado e novidades sobre benefícios sociais, conforme a <a href="politica-de-privacidade.html" target="_blank" rel="noopener">Política de Privacidade</a>.</span>
+          <span>Autorizo o Portal Júnior Arrais a guardar meu nome e contato para me enviar o resultado e novidades sobre benefícios sociais, conforme a <a href="politica-de-privacidade.html" target="_blank" rel="noopener">Política de Privacidade</a>. Posso pedir a exclusão quando quiser.</span>
         </label>
         <span class="cbf-msg">Para continuar, marque a autorização.</span>
       </div>
 
       <div class="cbf-honeypot" aria-hidden="true">
-        <label for="site">Não preencha este campo</label>
-        <input type="text" id="site" name="site" tabindex="-1" autocomplete="off">
+        <label for="campo_extra">Deixe em branco</label>
+        <input type="text" id="campo_extra" name="campo_extra" tabindex="-1" autocomplete="off">
       </div>
     </section>
 
@@ -370,7 +376,8 @@
     <p class="cbf-erro-geral" id="erroGeral" hidden role="alert"></p>
   </form>
 
-  <section id="resultado" class="cbf-resultado" hidden aria-live="polite">
+  <section id="resultado" class="cbf-resultado" hidden tabindex="-1">
+    <div class="aviso-recalcular" id="avisoRecalcular" hidden><span>Você mudou os dados da família. O resultado abaixo está desatualizado.</span><button type="button" class="btn-recalcular" id="btnRecalcular">Recalcular</button></div>
     <div class="cbf-card">
       <h2>Resultado para a sua família</h2>
       <p class="cbf-intro" id="resumoFamilia"></p>
@@ -390,7 +397,7 @@
 
       <table class="cbf-detalhe" aria-label="Detalhamento por benefício">
         <thead>
-          <tr><th>Benefício</th><th>Até set/2026</th><th>A partir de out/2026</th></tr>
+          <tr><th>Benefício</th><th>Até setembro</th><th>A partir de outubro</th></tr>
         </thead>
         <tbody id="detalheCorpo"></tbody>
       </table>
@@ -413,15 +420,15 @@
 
   <div class="cbf-rodape">
     <p><strong>Base legal:</strong> Lei nº 14.601/2023, art. 7º; Decreto nº 12.064/2024, art. 21 (valores por integrante e piso por família) e art. 33 (Regra de Proteção); Decreto nº 13.120/2026, que corrigiu os valores pela variação do INPC de março de 2023 a agosto de 2026 (15,04%, segundo o MDS), com efeitos financeiros a partir de outubro de 2026.</p>
-    <p><strong>Aviso:</strong> esta página é uma ferramenta educativa e independente do Portal Júnior Arrais, sem vínculo com o Governo Federal, o Ministério do Desenvolvimento e Assistência Social ou a Caixa. A marca do Programa Bolsa Família pertence ao Governo Federal e aparece aqui apenas para identificar o assunto. O valor pago depende da situação cadastral da família no CadÚnico, do cumprimento das condicionalidades e das regras de permanência do programa.</p>
-    <p><strong>Privacidade:</strong> os dados informados ficam com a equipe do portal e são usados só para enviar o resultado e novidades sobre benefícios sociais; não são vendidos nem repassados a terceiros. Você pode pedir a exclusão a qualquer momento pela página de <a href="contato.html">Contato</a>.</p>
+    <p><strong>Aviso:</strong> esta página é uma ferramenta educativa e independente do Portal Júnior Arrais, sem vínculo com o Governo Federal, o Ministério do Desenvolvimento e Assistência Social ou a Caixa. A marca do Programa Bolsa Família pertence ao Governo Federal e aparece aqui apenas para identificar o assunto. O valor pago depende do cadastro da família no CadÚnico, do cumprimento dos compromissos do programa (vacinação, escola e pré-natal) e das regras de permanência.</p>
+    <p><strong>Privacidade:</strong> nome, contato, cidade e o tamanho da família ficam guardados em planilha da equipe do portal e são usados só para enviar o resultado e novidades sobre benefícios sociais; a página registra também o navegador e a origem do acesso, para medir a divulgação. Nada é vendido nem repassado a terceiros. Quantas gestantes ou nutrizes há na família fica só no seu aparelho: esse dado não é enviado. Você pode pedir a exclusão a qualquer momento pela página de <a href="contato.html">Contato</a>.</p>
   </div>
 </main>
 
 </div>
   <div class="cbf-toast" id="toast" role="status"></div>
 
-<script src="municipios-br.js"></script>
+<script src="municipios-br.js" defer></script>
 <script src="calc-bolsa-familia.js"></script>
 <script>
 (function () {
@@ -451,6 +458,10 @@
   var erroGeral = $('erroGeral');
   var cacheCidades = {};
   var sessao = gerarSessao();
+  var carregadoEm = Date.now();
+  var jaCalculou = false;
+  var enviando = false;
+  var VERSAO_CONSENTIMENTO = '2026-09-18';
 
   // ----- Estado (select) e cidade (IBGE) -----
   var selUf = $('uf');
@@ -474,15 +485,7 @@
       preencherCidades(cacheCidades[uf]);
       return;
     }
-    $('cidade').placeholder = 'Carregando cidades...';
-    fetch('https://servicodados.ibge.gov.br/api/v1/localidades/estados/' + uf + '/municipios?orderBy=nome')
-      .then(function (r) { return r.ok ? r.json() : []; })
-      .then(function (lista) {
-        var nomes = (lista || []).map(function (m) { return m.nome; });
-        cacheCidades[uf] = nomes;
-        preencherCidades(nomes);
-      })
-      .catch(function () { preencherCidades([]); });
+    preencherCidades([]);
   }
   function preencherCidades(nomes) {
     var dl = $('cidades');
@@ -491,7 +494,7 @@
       var o = document.createElement('option');
       o.value = n; dl.appendChild(o);
     });
-    $('cidade').placeholder = nomes.length ? 'Comece a digitar' : 'Digite o nome da cidade';
+    $('cidade').placeholder = nomes.length ? 'Digite e escolha na lista' : 'Digite o nome da cidade';
   }
 
   // ----- Steppers -----
@@ -506,8 +509,15 @@
       atualizarTotal();
     });
   });
+  function marcarDesatualizado() {
+    if (!jaCalculou) { return; }
+    resultado.classList.add('desatualizado');
+    $('avisoRecalcular').hidden = false;
+  }
+  $('protecao').addEventListener('change', marcarDesatualizado);
+  $('btnRecalcular').addEventListener('click', function () { $('btnCalcular').click(); });
   ['adultos', 'criancas7a17', 'menores7', 'gestantes', 'nutrizes'].forEach(function (id) {
-    $(id).addEventListener('input', atualizarTotal);
+    $(id).addEventListener('input', function () { atualizarTotal(); marcarDesatualizado(); });
     $(id).addEventListener('blur', function () {
       var v = parseInt($(id).value, 10); if (isNaN(v) || v < 0) { v = 0; }
       $(id).value = Math.min(parseInt($(id).max, 10) || 30, v);
@@ -525,7 +535,10 @@
 
   // ----- Máscara de telefone -----
   $('telefone').addEventListener('input', function (e) {
-    var d = e.target.value.replace(/\D/g, '').slice(0, 11);
+    var d = e.target.value.replace(/\D/g, '');
+    if (d.length > 11 && d.indexOf('55') === 0) { d = d.slice(2); }   // colou com +55
+    if (d.length > 10 && d.charAt(0) === '0') { d = d.slice(1); }      // digitou 0 antes do DDD
+    d = d.slice(0, 11);
     var f = d;
     if (d.length > 10) { f = '(' + d.slice(0, 2) + ') ' + d.slice(2, 7) + '-' + d.slice(7); }
     else if (d.length > 6) { f = '(' + d.slice(0, 2) + ') ' + d.slice(2, 6) + '-' + d.slice(6); }
@@ -560,28 +573,41 @@
   });
 
   // ----- Envio -----
-  form.addEventListener('submit', function (ev) {
-    ev.preventDefault();
+  function calcularAgora(ev) {
+    if (ev) { ev.preventDefault(); }
+    if (enviando) { return; }
     erroGeral.hidden = true;
+    $('erroFamilia').hidden = true;
     var fam = lerFamilia();
     var v = Calc.validar(fam);
     var errosDados = validarDados();
-    if (!v.ok || errosDados) {
-      var msgs = v.erros.slice();
-      if (errosDados) { msgs.push('Confira os campos destacados em vermelho.'); }
-      erroGeral.textContent = msgs.join(' ');
-      erroGeral.hidden = false;
-      var primeiro = document.querySelector('.cbf-campo.cbf-invalido input, .cbf-campo.cbf-invalido select');
-      if (!v.ok) { $('t1').scrollIntoView({ behavior: 'smooth', block: 'start' }); }
-      else if (primeiro) { primeiro.focus(); }
+    if (!v.ok) {
+      $('erroFamilia').textContent = v.erros.join(' ');
+      $('erroFamilia').hidden = false;
+      $('erroFamilia').scrollIntoView({ behavior: 'smooth', block: 'center' });
       return;
     }
+    if (errosDados) {
+      erroGeral.textContent = 'Confira os campos destacados em vermelho.';
+      erroGeral.hidden = false;
+      var primeiro = document.querySelector('.cbf-campo.cbf-invalido input, .cbf-campo.cbf-invalido select');
+      if (primeiro) { primeiro.focus(); primeiro.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
+      return;
+    }
+    enviando = true;
+    $('btnCalcular').disabled = true;
+    setTimeout(function () { enviando = false; $('btnCalcular').disabled = false; }, 2500);
     var r = Calc.comparar(fam);
     renderizar(r, fam);
     enviarContato(fam, r);
+    jaCalculou = true;
+    resultado.classList.remove('desatualizado');
+    $('avisoRecalcular').hidden = true;
     resultado.hidden = false;
     resultado.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  });
+    setTimeout(function () { resultado.focus({ preventScroll: true }); }, 400);
+  }
+  form.addEventListener('submit', calcularAgora);
 
   function fmt(v) { return 'R$ ' + Number(v).toLocaleString('pt-BR', { minimumFractionDigits: 0, maximumFractionDigits: 0 }); }
 
@@ -599,8 +625,8 @@
     $('valAntes').textContent = fmt(r.antes.total);
     $('valDepois').textContent = fmt(r.depois.total);
     var pct = (r.percentual * 100).toFixed(1).replace('.', ',').replace(',0', '');
-    $('diferenca').innerHTML = 'Sua família passa a receber <strong>' + fmt(r.diferenca) + ' a mais por mês</strong>' +
-      '<small>aumento de ' + pct + '% para a sua família (índice oficial: 15,04%) · novos valores na folha de outubro, paga de 19 a 30/10/2026 conforme o final do NIS</small>';
+    $('diferenca').innerHTML = 'Sua família deve passar a receber <strong>' + fmt(r.diferenca) + ' a mais por mês</strong>' +
+      '<small>aumento de ' + pct + '% para a sua família (índice divulgado pelo MDS: 15,04%) · vale no pagamento de outubro, previsto de 19 a 30/10/2026 conforme o final do NIS</small>';
 
     var corpo = $('detalheCorpo');
     corpo.innerHTML = '';
@@ -627,13 +653,13 @@
     corpo.appendChild(trt);
 
     var notas = [];
-    notas.push('Valores por pessoa: Renda de Cidadania de R$ 142 para R$ 164; piso por família de R$ 600 para R$ 691; Primeira Infância de R$ 150 para R$ 173; Variável Familiar de R$ 50 para R$ 58 (Decreto nº 13.120/2026).');
+    notas.push('Valores por pessoa: Renda de Cidadania de R$ 142 para R$ 164; valor mínimo por família de R$ 600 para R$ 691; Primeira Infância de R$ 150 para R$ 173; Variável Familiar de R$ 50 para R$ 58 (Decreto nº 13.120/2026).');
     if (n.gestantes) { notas.push('A gestante entra no cálculo quando consta na relação que o Ministério da Saúde envia ao MDS a partir do pré-natal no SUS. O adicional dela é pago por até 9 parcelas.'); }
     if (n.nutrizes) { notas.push('O adicional de nutriz é pago em 6 parcelas, enquanto o bebê ainda não completou 7 meses.'); }
-    if (n.gestantes || n.nutrizes) { notas.push('Gestante ou nutriz com menos de 18 anos conta uma vez só, como adolescente: cada pessoa recebe um único Variável Familiar.'); }
+    if (n.gestantes || n.nutrizes) { notas.push('Pela regra, o Variável Familiar é calculado por integrante. Por isso gestante ou nutriz com menos de 18 anos conta uma vez só, como adolescente.'); }
     if (n.protecao) { notas.push('Na Regra de Proteção a família recebe metade dos benefícios, pelo prazo definido pelo MDS. Essa condição aparece no aplicativo do Bolsa Família. Por causa do arredondamento, o valor pode variar em R$ 1.'); }
     notas.push('Para entrar no Bolsa Família, a renda por pessoa da família precisa ser de até R$ 218 por mês (Lei nº 14.601/2023, art. 5º). Esse limite não mudou com o reajuste de outubro.');
-    notas.push('Este é um valor estimado. O valor pago pode ser diferente se o cadastro estiver desatualizado, se houver descumprimento de condicionalidades ou se a renda da família tiver mudado.');
+    notas.push('Este é um valor estimado. O valor pago pode ser diferente se o cadastro estiver desatualizado, se algum compromisso do programa (vacinação, escola, pré-natal) não estiver em dia ou se a renda da família tiver mudado.');
     $('notas').innerHTML = notas.map(function (t) { return '<li>' + esc(t) + '</li>'; }).join('');
 
     // CTA
@@ -645,8 +671,8 @@
     if (la.codigo === 'brc') { return plural(q, 'pessoa', 'pessoas') + ' · de R$ ' + la.unitario + ' para R$ ' + ld.unitario + ' por pessoa'; }
     if (la.codigo === 'bco') {
       return (la.valor > 0 || ld.valor > 0)
-        ? 'completa o piso por família: de R$ ' + r.antes.piso + ' para R$ ' + r.depois.piso
-        : 'a família já passa do piso (R$ ' + r.antes.piso + ' e R$ ' + r.depois.piso + ')';
+        ? 'completa o valor mínimo por família: de R$ ' + r.antes.piso + ' para R$ ' + r.depois.piso
+        : 'a família já passa do valor mínimo (R$ ' + r.antes.piso + ' e R$ ' + r.depois.piso + ')';
     }
     if (la.codigo === 'bpi') { return q ? plural(q, 'criança', 'crianças') + ' com menos de 7 anos · de R$ ' + la.unitario + ' para R$ ' + ld.unitario + ' cada' : 'nenhuma criança com menos de 7 anos'; }
     return q ? plural(q, 'pessoa', 'pessoas') + ' (7 a 17 anos, gestantes e nutrizes) · de R$ ' + la.unitario + ' para R$ ' + ld.unitario + ' cada' : 'ninguém nessa situação';
@@ -671,20 +697,27 @@
       uf: $('uf').value,
       cidade: $('cidade').value.trim(),
       adultos: n.adultos, criancas7a17: n.criancas7a17, menores7: n.menores7,
-      gestantes: n.gestantes, nutrizes: n.nutrizes, protecao: n.protecao,
+      protecao: n.protecao,   // gestantes e nutrizes são dado de saúde: ficam só no aparelho
       total_pessoas: r.antes.pessoas,
       valor_antes: r.antes.total, valor_depois: r.depois.total, diferenca: r.diferenca,
       origem: origem || (document.referrer ? 'ref=' + document.referrer : ''),
       pagina: location.href.split('#')[0],
       navegador: navigator.userAgent,
-      site: $('site').value // campo-armadilha: pessoas reais não preenchem
+      consentimento: $('consent').checked,
+      versao_consentimento: VERSAO_CONSENTIMENTO,
+      segundos_na_pagina: Math.round((Date.now() - carregadoEm) / 1000),
+      armadilha: $('campo_extra').value // pessoas reais não preenchem este campo
     };
+    var corpo = JSON.stringify(payload);
+    var opcoes = { method: 'POST', keepalive: true, headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: corpo };
     try {
-      fetch(CONFIG.ENDPOINT, {
-        method: 'POST', mode: 'no-cors', keepalive: true,
-        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-        body: JSON.stringify(payload)
-      }).catch(function () {});
+      // 1ª tentativa lendo a resposta (mostra no console token errado ou implantação sem acesso);
+      // se o navegador bloquear a leitura, repete sem ler (no-cors), que grava do mesmo jeito.
+      fetch(CONFIG.ENDPOINT, opcoes).then(function (resp) { return resp.json(); }).then(function (j) {
+        if (!j || !j.ok) { console.warn('Calculadora: contato não gravado', j); }
+      }).catch(function () {
+        fetch(CONFIG.ENDPOINT, Object.assign({}, opcoes, { mode: 'no-cors' })).catch(function () {});
+      });
     } catch (e) { /* o resultado aparece mesmo se o envio falhar */ }
   }
 
