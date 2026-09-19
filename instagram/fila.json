@@ -1846,7 +1846,9 @@
       "publicar_em": "2026-09-19T20:00:00Z",
       "horario_brasilia": "19/09 17:00",
       "alt_text": "Greve dos Correios: TST julga o dissídio na segunda e o que muda para quem espera encomenda",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-09-19T20:01:50Z",
+      "link": "https://www.instagram.com/p/Dde0jzYo-p_/"
     },
     {
       "slug": "analfabetismo-e-12-vezes-maior-entre-jovens-com-deficiencia-aponta-o-censo",
