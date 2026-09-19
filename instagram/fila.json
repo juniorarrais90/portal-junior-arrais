@@ -1826,7 +1826,9 @@
       "publicar_em": "2026-09-19T12:00:00Z",
       "horario_brasilia": "19/09 09:00",
       "alt_text": "Pessoa com deficiência ganha R$ 2.053 e só 3 em cada 10 têm trabalho, mostra o Censo",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-09-19T12:01:53Z",
+      "link": "https://www.instagram.com/p/Ddd9oyGG5Dk/"
     },
     {
       "slug": "pix-vai-marcar-cpf-suspeito-de-fraude-e-barrar-transferencia",
