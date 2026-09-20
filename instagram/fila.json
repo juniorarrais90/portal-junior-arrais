@@ -1866,7 +1866,9 @@
       "publicar_em": "2026-09-20T16:00:00Z",
       "horario_brasilia": "20/09 13:00",
       "alt_text": "e-Título começa a enviar avisos do TSE; saiba como reconhecer mensagem falsa de multa",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-09-20T16:01:48Z",
+      "link": "https://www.instagram.com/p/Ddg94u8FmtQ/"
     },
     {
       "slug": "casa-com-pessoa-com-deficiencia-tem-menos-esgoto-e-menos-internet-diz-o-censo",
