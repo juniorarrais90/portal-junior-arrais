@@ -1,10 +1,13 @@
 User-agent: *
 Allow: /
 
-# URLs de filtro e busca sao geradas por JavaScript e servem o mesmo HTML de
-# noticias.html (o canonical ja aponta para la). Bloquear evita gastar
-# orcamento de rastreamento com paginas que nao trazem conteudo novo.
-Disallow: /*?cat=
-Disallow: /*?q=
+# NAO bloquear /*?cat= nem /*?q= aqui.
+# Essas URLs de filtro/busca servem o mesmo HTML de noticias.html e ja tem
+# <link rel="canonical"> apontando para la. O canonical, porem, so e lido se o
+# Googlebot puder RASTREAR a pagina: bloquear no robots.txt impede o rastreamento,
+# nao a indexacao. O resultado do bloqueio foi o aviso do Search Console
+# "Indexada, mas bloqueada pelo robots.txt" (21/09/2026).
+# Deixando liberado, o Google rastreia, le o canonical e consolida tudo em
+# noticias.html — que e o comportamento desejado.
 
 Sitemap: https://portaljuniorarrais.com.br/sitemap.xml
