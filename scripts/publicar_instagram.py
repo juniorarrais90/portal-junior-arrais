@@ -27,6 +27,21 @@ Uso:
 
 O --dry-run monta tudo, valida a imagem e a legenda, mas NÃO publica. É o modo
 recomendado para o primeiro teste.
+
+FALHA DE DOWNLOAD DA ARTE — incidente de 22/09/2026 (run #5558):
+    A Meta respondeu 400, código 9004 / subcódigo 2207052 ("Media download has
+    failed. The media URI doesn't meet our requirements"), embora a arte
+    estivesse no ar. O servidor da Meta não conseguiu baixar a imagem
+    naquele instante — build do GitHub Pages ainda propagando ou CDN servindo
+    cópia velha. O item só saiu 16 minutos depois, e o Júnior recebeu
+    e-mail de falha e aviso no Telegram por um erro passageiro.
+    Defesas:
+      1. espera a arte ficar acessível (até ESPERA_ARTE_MAX s) em vez de
+         desistir no primeiro 404;
+      2. nessa falha de download, tenta criar o contêiner de novo, com
+         pausa crescente e parâmetro ?v= na URL para furar cache de CDN;
+      3. em vez de pausa fixa, espera o contêiner ficar FINISHED antes de
+         publicar.
 """
 
 import argparse
@@ -41,6 +56,30 @@ API = "https://graph.instagram.com/v23.0"
 BASE_IMG = "https://portaljuniorarrais.com.br/img/feed45"
 LIMITE_LEGENDA = 2200
 MAX_BYTES = 8 * 1024 * 1024
+
+# Falha de download da arte pela Meta: códigos que merecem nova tentativa.
+SUBCODIGOS_DOWNLOAD = {2207052, 2207003, 2207020, 2207026}
+PAUSAS_DOWNLOAD = (30, 60, 120, 180)   # segundos entre as tentativas (~6,5 min)
+ESPERA_ARTE_MAX = 600                  # até 10 min esperando a arte entrar no ar
+ESPERA_CONTEINER_MAX = 60              # até 1 min esperando o contêiner ficar pronto
+
+
+class ErroAPI(Exception):
+    """Erro devolvido pela Graph API, com o JSON da Meta já decodificado."""
+
+    def __init__(self, codigo_http, metodo, caminho, detalhe):
+        self.codigo_http = codigo_http
+        self.detalhe = detalhe
+        try:
+            self.erro = json.loads(detalhe).get("error", {})
+        except Exception:
+            self.erro = {}
+        super().__init__(f"Erro da API ({codigo_http}) em {metodo} {caminho}:\n{detalhe}")
+
+    def falha_de_download(self):
+        e = self.erro
+        return (e.get("error_subcode") in SUBCODIGOS_DOWNLOAD
+                or (e.get("code") == 9004 and "download" in str(e).lower()))
 
 
 def env(nome):
@@ -66,18 +105,37 @@ def chamar(caminho, dados=None, metodo="GET"):
             return json.loads(r.read().decode())
     except urllib.error.HTTPError as e:
         detalhe = e.read().decode(errors="replace")
-        sys.exit(f"Erro da API ({e.code}) em {metodo} {caminho}:\n{detalhe}")
+        raise ErroAPI(e.code, metodo, caminho, detalhe)
+
+
+def baixar_arte(url):
+    """Baixa a arte, esperando o GitHub Pages terminar o build se ainda não estiver no ar."""
+    inicio = time.time()
+    tentativa = 0
+    while True:
+        tentativa += 1
+        try:
+            req = urllib.request.Request(url, method="GET",
+                                         headers={"Cache-Control": "no-cache"})
+            with urllib.request.urlopen(req, timeout=30) as r:
+                tipo = r.headers.get("Content-Type", "")
+                dados = r.read()
+            if not tipo.startswith("image/"):
+                raise ValueError(f"resposta não é imagem (Content-Type: {tipo})")
+            if tentativa > 1:
+                print(f"  arte no ar após {int(time.time() - inicio)} s de espera")
+            return dados, tipo
+        except Exception as e:
+            decorrido = time.time() - inicio
+            if decorrido >= ESPERA_ARTE_MAX:
+                sys.exit(f"A arte não está acessível publicamente: {url}\n{e}")
+            print(f"  arte ainda não acessível ({e}); nova checagem em 30 s...")
+            time.sleep(30)
 
 
 def conferir_imagem(url):
     """Confere que a arte está pública, é JPEG/PNG, cabe no limite e tem proporção válida."""
-    req = urllib.request.Request(url, method="GET")
-    try:
-        with urllib.request.urlopen(req, timeout=30) as r:
-            dados = r.read()
-            tipo = r.headers.get("Content-Type", "")
-    except Exception as e:
-        sys.exit(f"A arte não está acessível publicamente: {url}\n{e}")
+    dados, tipo = baixar_arte(url)
 
     if len(dados) > MAX_BYTES:
         sys.exit(f"Arte com {len(dados)/1e6:.1f} MB — o limite da Meta é 8 MB.")
@@ -134,15 +192,9 @@ def publicar(slug, legenda, alt_text=None, dry_run=False):
         return
 
     print("\n1/2 criando o contêiner...")
-    dados = {"image_url": url, "caption": legenda, "access_token": token}
-    if alt_text:
-        dados["alt_text"] = alt_text
-    cont = chamar(f"{uid}/media", dados, "POST")
-    cid = cont["id"]
+    cid = criar_conteiner(uid, token, url, legenda, alt_text)
     print(f"  contêiner: {cid}")
-
-    # imagem é síncrona, mas a Meta pede uma pausa curta antes de publicar
-    time.sleep(5)
+    esperar_conteiner(cid, token)
 
     print("2/2 publicando...")
     pub = chamar(f"{uid}/media_publish",
@@ -152,6 +204,46 @@ def publicar(slug, legenda, alt_text=None, dry_run=False):
 
     perm = chamar(mid, {"fields": "permalink", "access_token": token})
     print(f"  link: {perm.get('permalink')}")
+
+
+def criar_conteiner(uid, token, url, legenda, alt_text):
+    """Cria o contêiner. Se a Meta não conseguir baixar a arte, tenta de novo."""
+    tentativas = len(PAUSAS_DOWNLOAD) + 1
+    for n in range(1, tentativas + 1):
+        # a partir da 2ª tentativa, ?v= muda a URL e fura cache velho de CDN
+        url_envio = url if n == 1 else f"{url}?v={int(time.time())}"
+        dados = {"image_url": url_envio, "caption": legenda, "access_token": token}
+        if alt_text:
+            dados["alt_text"] = alt_text
+        try:
+            return chamar(f"{uid}/media", dados, "POST")["id"]
+        except ErroAPI as e:
+            if not e.falha_de_download() or n == tentativas:
+                raise
+            pausa = PAUSAS_DOWNLOAD[n - 1]
+            print(f"  a Meta não conseguiu baixar a arte (tentativa {n}/{tentativas}, "
+                  f"subcódigo {e.erro.get('error_subcode')}). Nova tentativa em {pausa} s...")
+            time.sleep(pausa)
+
+
+def esperar_conteiner(cid, token):
+    """Espera o contêiner ficar FINISHED. Se a consulta falhar, segue como antes."""
+    inicio = time.time()
+    while True:
+        time.sleep(5)
+        try:
+            st = chamar(cid, {"fields": "status_code", "access_token": token})
+        except ErroAPI as e:
+            print(f"  não consegui consultar o contêiner, seguindo: {e.erro.get('message')}")
+            return
+        codigo = st.get("status_code")
+        if codigo in (None, "FINISHED", "PUBLISHED"):
+            return
+        if codigo in ("ERROR", "EXPIRED"):
+            sys.exit(f"Contêiner {cid} com status {codigo}: {json.dumps(st, ensure_ascii=False)}")
+        if time.time() - inicio >= ESPERA_CONTEINER_MAX:
+            print(f"  contêiner ainda {codigo} após {ESPERA_CONTEINER_MAX} s; tentando publicar")
+            return
 
 
 def main():
@@ -166,13 +258,16 @@ def main():
                     help="só diagnostica a conta e a cota")
     a = ap.parse_args()
 
-    if a.checar:
-        return checar_conta()
-    if not a.slug or not a.legenda:
-        ap.error("--slug e --legenda são obrigatórios (ou use --checar-conta)")
+    try:
+        if a.checar:
+            return checar_conta()
+        if not a.slug or not a.legenda:
+            ap.error("--slug e --legenda são obrigatórios (ou use --checar-conta)")
 
-    legenda = open(a.legenda, encoding="utf-8").read()
-    publicar(a.slug, legenda, a.alt_text, a.dry_run)
+        legenda = open(a.legenda, encoding="utf-8").read()
+        publicar(a.slug, legenda, a.alt_text, a.dry_run)
+    except ErroAPI as e:
+        sys.exit(str(e))
 
 
 if __name__ == "__main__":
