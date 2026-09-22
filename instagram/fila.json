@@ -1896,7 +1896,9 @@
       "publicar_em": "2026-09-22T17:30:00Z",
       "horario_brasilia": "22/09 14:30",
       "alt_text": "Urna eletrônica sobre a mesa de uma seção eleitoral montada em sala de aula, com as mãos de uma pessoa idosa apoiadas na mesa e a placa SEÇÃO 0142 na parede",
-      "status": "pendente"
+      "status": "pendente",
+      "falhas": 1,
+      "ultima_falha": "2026-09-22T17:31:39Z"
     },
     {
       "slug": "greve-da-caixa-continua-bancarios-rejeitaram-a-proposta-com-59-3",
