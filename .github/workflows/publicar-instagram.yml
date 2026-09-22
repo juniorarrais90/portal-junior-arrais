@@ -39,10 +39,12 @@ concurrency:
 jobs:
   publicar:
     runs-on: ubuntu-latest
+    # teto de segurança: com as novas tentativas o pior caso fica em ~17 min
+    timeout-minutes: 25
     steps:
       # ref: main (em vez do SHA do gatilho) para o run que ficou na fila NÃO
       # trabalhar em cima de um estado velho do repositório.
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           ref: main
 
@@ -54,7 +56,7 @@ jobs:
           git reset --hard origin/main
           echo "Estado atual: $(git rev-parse --short HEAD)"
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.11"
 
