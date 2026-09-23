@@ -1926,7 +1926,9 @@
       "publicar_em": "2026-09-23T17:00:00Z",
       "horario_brasilia": "23/09 14:00",
       "alt_text": "Escritório de contabilidade organizado, com placa azul escrita Imposto de Renda na parede e pasta, calculadora e celular sobre a mesa",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-09-23T17:02:02Z",
+      "link": "https://www.instagram.com/p/DdozKoGFRDK/"
     },
     {
       "slug": "combustivel-mais-caro-governo-abre-70-processos-contra-postos",
