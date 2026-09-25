@@ -2045,6 +2045,38 @@
       "horario_brasilia": "25/09 12:30",
       "alt_text": "Greve da Caixa: banco leva o impasse ao TST e as agências seguem fechadas",
       "status": "pendente"
+    },
+    {
+      "slug": "fgts-saque-aniversario-de-outubro-e-o-fim-das-cinco-antecipacoes",
+      "titulo": "Saque-aniversário de outubro: FGTS libera no dia 1º, e a antecipação encolhe em novembro",
+      "publicar_em": "2026-09-25T17:00:00Z",
+      "horario_brasilia": "25/09 14:00",
+      "alt_text": "Saque-aniversário de outubro: FGTS libera no dia 1º, e a antecipação encolhe em novembro",
+      "status": "pendente"
+    },
+    {
+      "slug": "gas-do-povo-novo-lote-de-vales-sai-em-10-de-outubro",
+      "titulo": "Gás do Povo: novo lote de vales sai em 10 de outubro; vale de setembro vence no dia 9",
+      "publicar_em": "2026-09-25T20:00:00Z",
+      "horario_brasilia": "25/09 17:00",
+      "alt_text": "Gás do Povo: novo lote de vales sai em 10 de outubro; vale de setembro vence no dia 9",
+      "status": "pendente"
+    },
+    {
+      "slug": "stj-afasta-divisor-minimo-mas-revisao-da-aposentadoria-nao-e-automatica",
+      "titulo": "STJ afasta o divisor mínimo numa aposentadoria, mas a revisão não é automática",
+      "publicar_em": "2026-09-25T18:30:00Z",
+      "horario_brasilia": "25/09 15:30",
+      "alt_text": "STJ afasta o divisor mínimo numa aposentadoria, mas a revisão não é automática",
+      "status": "pendente"
+    },
+    {
+      "slug": "cuidadora-com-dois-plantoes-de-24h-por-semana-tst-negou-o-vinculo",
+      "titulo": "Cuidadora com dois plantões de 24h por semana: TST negou o vínculo, e o tema divide o tribunal",
+      "publicar_em": "2026-09-25T21:30:00Z",
+      "horario_brasilia": "25/09 18:30",
+      "alt_text": "Cuidadora com dois plantões de 24h por semana: TST negou o vínculo, e o tema divide o tribunal",
+      "status": "pendente"
     }
   ]
 }
