@@ -2046,7 +2046,9 @@
       "publicar_em": "2026-09-25T15:30:00Z",
       "horario_brasilia": "25/09 12:30",
       "alt_text": "Greve da Caixa: banco leva o impasse ao TST e as agências seguem fechadas",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-09-25T15:31:50Z",
+      "link": "https://www.instagram.com/p/DdtybrrldE0/"
     },
     {
       "slug": "fgts-saque-aniversario-de-outubro-e-o-fim-das-cinco-antecipacoes",
