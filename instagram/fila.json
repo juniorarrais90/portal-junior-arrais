@@ -2036,7 +2036,9 @@
       "publicar_em": "2026-09-25T14:00:00Z",
       "horario_brasilia": "25/09 11:00",
       "alt_text": "Greve dos Correios acaba: TST dá reajuste de 4,09% e as entregas atrasadas começam a andar",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-09-25T14:01:24Z",
+      "link": "https://www.instagram.com/p/DdtoFUSoG4C/"
     },
     {
       "slug": "greve-da-caixa-banco-leva-impasse-ao-tst-e-agencias-seguem-fechadas",
