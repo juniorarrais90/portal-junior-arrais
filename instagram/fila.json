@@ -2029,6 +2029,22 @@
       "status": "publicado",
       "publicado_em": "2026-09-25T00:31:12Z",
       "link": "https://www.instagram.com/p/DdsLXNdmfvp/"
+    },
+    {
+      "slug": "correios-greve-acaba-tst-da-reajuste-de-4-09-e-entregas-voltam",
+      "titulo": "Greve dos Correios acaba: TST dá reajuste de 4,09% e as entregas atrasadas começam a andar",
+      "publicar_em": "2026-09-25T14:00:00Z",
+      "horario_brasilia": "25/09 11:00",
+      "alt_text": "Greve dos Correios acaba: TST dá reajuste de 4,09% e as entregas atrasadas começam a andar",
+      "status": "pendente"
+    },
+    {
+      "slug": "greve-da-caixa-banco-leva-impasse-ao-tst-e-agencias-seguem-fechadas",
+      "titulo": "Greve da Caixa: banco leva o impasse ao TST e as agências seguem fechadas",
+      "publicar_em": "2026-09-25T15:30:00Z",
+      "horario_brasilia": "25/09 12:30",
+      "alt_text": "Greve da Caixa: banco leva o impasse ao TST e as agências seguem fechadas",
+      "status": "pendente"
     }
   ]
 }
