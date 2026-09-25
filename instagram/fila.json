@@ -2066,7 +2066,9 @@
       "publicar_em": "2026-09-25T20:00:00Z",
       "horario_brasilia": "25/09 17:00",
       "alt_text": "Gás do Povo: novo lote de vales sai em 10 de outubro; vale de setembro vence no dia 9",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-09-25T20:01:19Z",
+      "link": "https://www.instagram.com/p/DduRRYUn3FK/"
     },
     {
       "slug": "stj-afasta-divisor-minimo-mas-revisao-da-aposentadoria-nao-e-automatica",
