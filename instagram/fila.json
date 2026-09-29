@@ -2146,7 +2146,9 @@
       "publicar_em": "2026-09-29T15:00:00Z",
       "horario_brasilia": "29/09 12:00",
       "alt_text": "Não vai votar dia 4? Justificativa tem 60 dias, e quem não justifica perde acesso a serviços",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-09-29T15:01:34Z",
+      "link": "https://www.instagram.com/p/Dd4CJp6lkMP/"
     },
     {
       "slug": "carteira-de-identidade-nacional-ja-da-conta-ouro-no-gov-br-e-22-milhoes-ainda-nao-ativaram",
