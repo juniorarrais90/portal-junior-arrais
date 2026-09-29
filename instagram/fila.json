@@ -2126,7 +2126,9 @@
       "publicar_em": "2026-09-29T12:00:00Z",
       "horario_brasilia": "29/09 09:00",
       "alt_text": "Greve da Caixa: TST julga o dissídio nesta terça (29) e manda manter 60% do efetivo",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-09-29T12:01:41Z",
+      "link": "https://www.instagram.com/p/Dd3tixBlQXg/"
     },
     {
       "slug": "pis-pasep-antigo-caixa-paga-quem-trabalhou-entre-1971-e-1988-e-herdeiro-tambem-recebe",
