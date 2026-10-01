@@ -2206,7 +2206,9 @@
       "publicar_em": "2026-10-01T23:00:00Z",
       "horario_brasilia": "01/10 20:00",
       "alt_text": "Quinto dia útil de outubro: o salário de setembro tem de cair até terça, dia 6",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-10-01T23:01:50Z",
+      "link": "https://www.instagram.com/p/Dd-Cs-WlWzE/"
     },
     {
       "slug": "pis-pasep-antigo-quem-pediu-ate-30-de-setembro-recebe-em-26-de-outubro",
