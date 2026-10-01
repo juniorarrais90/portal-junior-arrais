@@ -7,7 +7,9 @@
       "arte": "img/feed45/greve-da-caixa-tst-julga-o-dissidio-nesta-terca-e-manda-manter-60-do-efetivo.png",
       "publicar_em": "2026-09-29T12:15:00Z",
       "horario_brasilia": "29/09 09:15",
-      "status": "pendente"
+      "status": "expirado",
+      "expirado_em": "2026-10-01T12:24:02Z",
+      "motivo": "48 h de atraso (limite de 24 h); não publicado para não postar matéria velha."
     },
     {
       "slug": "pis-pasep-antigo-caixa-paga-quem-trabalhou-entre-1971-e-1988-e-herdeiro-tambem-recebe",
@@ -16,7 +18,9 @@
       "arte": "img/feed45/pis-pasep-antigo-caixa-paga-quem-trabalhou-entre-1971-e-1988-e-herdeiro-tambem-recebe.png",
       "publicar_em": "2026-09-29T13:45:00Z",
       "horario_brasilia": "29/09 10:45",
-      "status": "pendente"
+      "status": "expirado",
+      "expirado_em": "2026-10-01T12:24:02Z",
+      "motivo": "46 h de atraso (limite de 24 h); não publicado para não postar matéria velha."
     },
     {
       "slug": "nao-vai-votar-dia-4-justificativa-tem-60-dias-e-quem-nao-justifica-perde-servicos",
@@ -25,7 +29,9 @@
       "arte": "img/feed45/nao-vai-votar-dia-4-justificativa-tem-60-dias-e-quem-nao-justifica-perde-servicos.png",
       "publicar_em": "2026-10-01T12:20:00Z",
       "horario_brasilia": "01/10 09:20",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-10-01T12:24:10Z",
+      "link_post": "https://www.facebook.com/1298971973295874_122115938601442468"
     },
     {
       "slug": "carteira-de-identidade-nacional-ja-da-conta-ouro-no-gov-br-e-22-milhoes-ainda-nao-ativaram",
@@ -34,7 +40,9 @@
       "arte": "img/feed45/carteira-de-identidade-nacional-ja-da-conta-ouro-no-gov-br-e-22-milhoes-ainda-nao-ativaram.png",
       "publicar_em": "2026-09-29T16:45:00Z",
       "horario_brasilia": "29/09 13:45",
-      "status": "pendente"
+      "status": "expirado",
+      "expirado_em": "2026-10-01T12:24:02Z",
+      "motivo": "43 h de atraso (limite de 24 h); não publicado para não postar matéria velha."
     },
     {
       "slug": "anvisa-proibe-propaganda-da-caneta-emagrecedora-semavy-e-o-que-isso-muda-para-quem-compra",
@@ -43,7 +51,9 @@
       "arte": "img/feed45/anvisa-proibe-propaganda-da-caneta-emagrecedora-semavy-e-o-que-isso-muda-para-quem-compra.png",
       "publicar_em": "2026-09-29T18:15:00Z",
       "horario_brasilia": "29/09 15:15",
-      "status": "pendente"
+      "status": "expirado",
+      "expirado_em": "2026-10-01T12:24:02Z",
+      "motivo": "42 h de atraso (limite de 24 h); não publicado para não postar matéria velha."
     },
     {
       "slug": "pe-de-meia-parcela-de-setembro-fechou-e-a-proxima-cai-entre-19-e-26-de-outubro",
@@ -52,7 +62,9 @@
       "arte": "img/feed45/pe-de-meia-parcela-de-setembro-fechou-e-a-proxima-cai-entre-19-e-26-de-outubro.png",
       "publicar_em": "2026-09-29T19:45:00Z",
       "horario_brasilia": "29/09 16:45",
-      "status": "pendente"
+      "status": "expirado",
+      "expirado_em": "2026-10-01T12:24:02Z",
+      "motivo": "40 h de atraso (limite de 24 h); não publicado para não postar matéria velha."
     }
   ]
 }
