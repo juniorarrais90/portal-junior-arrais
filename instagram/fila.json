@@ -2186,7 +2186,9 @@
       "publicar_em": "2026-10-01T20:30:00Z",
       "horario_brasilia": "01/10 17:30",
       "alt_text": "Greve da Caixa acabou: TST dá reajuste de 4,6% e agências voltam ao normal",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-10-01T20:30:17Z",
+      "link": "https://www.instagram.com/p/Dd9xWllmT2V/"
     },
     {
       "slug": "receita-de-remedio-controlado-agora-pode-ser-digital-o-que-muda-na-farmacia",
