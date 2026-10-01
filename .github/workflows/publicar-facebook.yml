@@ -1,0 +1,128 @@
+name: Publicar no Facebook
+
+# Roda periodicamente e publica no máximo UM item vencido de facebook/fila.json
+# na Página do portal. Cópia da arquitetura do publicar-instagram.yml (ler os
+# comentários de lá para o histórico dos incidentes que motivaram cada defesa).
+#
+# Gatilhos:
+#   1. cron interno do GitHub;
+#   2. repository_dispatch do tipo publicar-facebook, para um serviço externo
+#      poder cutucar o robô quando o cron do GitHub atrasar.
+#
+# MINUTOS DO CRON: 6, 21, 36 e 51. Não coincidem com o robô do Instagram
+# (3, 8, 13, 23, 33, 38, 43, 52, 53) nem com o serviço externo (00, 15, 30, 45),
+# para dois robôs nunca empurrarem commits no mesmo instante.
+on:
+  schedule:
+    - cron: "6,21,36,51 * * * *"
+  workflow_dispatch:
+  repository_dispatch:
+    types: [publicar-facebook]
+
+permissions:
+  contents: write           # necessário para gravar a fila atualizada
+
+concurrency:
+  group: facebook-fila      # nunca duas execuções ao mesmo tempo
+  cancel-in-progress: false
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      # ref: main (em vez do SHA do gatilho) para o run que ficou na fila NÃO
+      # trabalhar em cima de um estado velho do repositório.
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+
+      # Entre o checkout e a leitura da fila outro run pode ter empurrado.
+      # Sincroniza com o topo real de main.
+      - name: Sincronizar com o topo de main
+        run: |
+          git fetch origin main
+          git reset --hard origin/main
+          echo "Estado atual: $(git rev-parse --short HEAD)"
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+
+      - name: Instalar dependências
+        run: pip install --quiet pillow
+
+      - name: Processar a fila
+        env:
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+          TG_TOKEN: ${{ secrets.TG_TOKEN }}
+          TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
+        run: python scripts/processar_fila_facebook.py
+
+      # Tenta o push até 5 vezes. Se a fila mudou dos dois lados, remonta a
+      # marcação por cima da fila remota: só promove item que lá ainda está
+      # "pendente" (preserva "publicado", "expirado" e o contador de falhas),
+      # nunca sobrescreve um registro que já existe lá nem apaga item novo.
+      # if: always() para gravar também o contador de falhas e a pausa.
+      - name: Gravar a fila atualizada
+        if: always()
+        run: |
+          if [ -z "$(git status --porcelain facebook/fila.json)" ]; then
+            echo "Nada mudou na fila."
+            exit 0
+          fi
+          cp facebook/fila.json /tmp/fila-local.json
+          git config user.name "Portal Júnior Arrais"
+          git config user.email "juniorarrais90@gmail.com"
+          for tentativa in 1 2 3 4 5; do
+            git add facebook/fila.json
+            git diff --cached --quiet || \
+              git commit -m "Facebook: marca item como publicado [skip ci]"
+            if git push; then
+              echo "Fila gravada na tentativa $tentativa."
+              exit 0
+            fi
+            echo "Push recusado (tentativa $tentativa). Remontando sobre o topo de main..."
+            git fetch origin main
+            git reset --hard origin/main
+            python3 - <<'PY'
+          import json
+          remota = json.load(open("facebook/fila.json", encoding="utf-8"))
+          local = json.load(open("/tmp/fila-local.json", encoding="utf-8"))
+          CAMPOS = ("status", "publicado_em", "link_post", "expirado_em", "motivo",
+                    "falhas", "ultima_falha")
+          locais = {i["slug"]: i for i in local["fila"]}
+          mudou = False
+          for item in remota["fila"]:
+              m = locais.get(item["slug"])
+              if not m or item.get("status") != "pendente":
+                  continue
+              if m.get("status") in ("publicado", "expirado"):
+                  for c in CAMPOS:
+                      if c in m:
+                          item[c] = m[c]
+                      else:
+                          item.pop(c, None)
+                  mudou = True
+                  print(f"Remarcado como {m['status']}:", item["slug"])
+              elif m.get("falhas", 0) > item.get("falhas", 0):
+                  item["falhas"] = m["falhas"]
+                  item["ultima_falha"] = m.get("ultima_falha")
+                  mudou = True
+                  print("Contador de falhas preservado:", item["slug"])
+          if local.get("pausado") and not remota.get("pausado"):
+              remota["pausado"] = True
+              remota["pausa_motivo"] = local.get("pausa_motivo")
+              mudou = True
+              print("Pausa da fila preservada.")
+          if mudou:
+              json.dump(remota, open("facebook/fila.json", "w", encoding="utf-8"),
+                        ensure_ascii=False, indent=2)
+          else:
+              print("A fila remota já está correta.")
+          PY
+            sleep $((tentativa * 5))
+          done
+          echo "::error::Não consegui gravar a fila após 5 tentativas."
+          exit 1
