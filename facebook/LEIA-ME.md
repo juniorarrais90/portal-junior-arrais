@@ -12,6 +12,16 @@ O workflow **Publicar no Facebook** (`.github/workflows/publicar-facebook.yml`) 
 3. no sucesso, grava `status: "publicado"`, `publicado_em` (UTC) e `link_post` (o post na página), e avisa no Telegram com os links do post e da matéria. O campo `link` continua sendo o da matéria;
 4. grava a fila de volta em `main` com o commit `Facebook: marca item como publicado [skip ci]`.
 
+### Página Júnior Arrais Advogado
+
+O mesmo post (mesma arte e legenda) sai também na página do escritório, **10 minutos depois** de sair no portal: o mesmo post em duas páginas no mesmo minuto parece spam para a Meta. Entre dois posts dessa página há pelo menos 20 minutos. O andamento fica no próprio item, em `"advogado": {"status", "publicado_em", "link_post"}`. Post do portal com mais de 24 horas não é repetido (`"advogado": {"status": "expirado"}`).
+
+- **Ligar:** cadastrar os secrets `FB_ADV_PAGE_ID` e `FB_ADV_PAGE_TOKEN`. Sem eles, essa parte fica desligada e o log mostra "Desligada".
+- **Pausar só esta página:** `"pausado_advogado": true` no topo de `fila.json`. Na 3ª falha seguida, ou no erro 368, o robô pausa só ela e avisa no Telegram; o portal segue normal.
+- **Avisos no Telegram:** começam com "Facebook (Júnior Arrais Advogado):".
+
+**Perfil pessoal:** a Meta não permite publicar em perfil por API (nem em perfil no modo profissional), então o robô não posta lá. O aviso de sucesso do portal traz o link do post para compartilhar no perfil à mão.
+
 ### A arte do Facebook
 
 A arte do Instagram traz o selo "LINK NOS STORIES", que não faz sentido no Facebook, onde o link vai clicável na legenda. A cada execução, o passo "Gerar artes do Facebook" roda `scripts/gerar_arte_facebook.py --fila`. Para cada item pendente, o script pega `img/feed45/<slug>.png`, troca o selo por **"LINK NA LEGENDA"** (com a seta apontando para baixo), grava `img/feedfb/<slug>.png` e publica no site antes de postar. A fonte do selo é a Outfit (`fontes/Outfit-Bold.ttf`, licença SIL OFL), a mesma das artes.

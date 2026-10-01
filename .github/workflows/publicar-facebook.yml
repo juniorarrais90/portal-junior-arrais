@@ -84,6 +84,9 @@ jobs:
         env:
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
           FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+          # página Júnior Arrais Advogado (sem estes dois, essa parte fica desligada)
+          FB_ADV_PAGE_ID: ${{ secrets.FB_ADV_PAGE_ID }}
+          FB_ADV_PAGE_TOKEN: ${{ secrets.FB_ADV_PAGE_TOKEN }}
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
           TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
         run: python scripts/processar_fila_facebook.py
@@ -124,7 +127,17 @@ jobs:
           mudou = False
           for item in remota["fila"]:
               m = locais.get(item["slug"])
-              if not m or item.get("status") != "pendente":
+              if not m:
+                  continue
+              # andamento da página do advogado: mesmo critério, dentro de "advogado"
+              ma, ra = m.get("advogado", {}), item.get("advogado", {})
+              if ra.get("status") not in ("publicado", "expirado", "publicado_manual"):
+                  if ma.get("status") in ("publicado", "expirado") or \
+                     ma.get("falhas", 0) > ra.get("falhas", 0):
+                      item["advogado"] = ma
+                      mudou = True
+                      print("Andamento do advogado preservado:", item["slug"])
+              if item.get("status") != "pendente":
                   continue
               if m.get("status") in ("publicado", "expirado"):
                   for c in CAMPOS:
@@ -144,6 +157,11 @@ jobs:
               remota["pausa_motivo"] = local.get("pausa_motivo")
               mudou = True
               print("Pausa da fila preservada.")
+          if local.get("pausado_advogado") and not remota.get("pausado_advogado"):
+              remota["pausado_advogado"] = True
+              remota["pausa_motivo_advogado"] = local.get("pausa_motivo_advogado")
+              mudou = True
+              print("Pausa da página do advogado preservada.")
           if mudou:
               json.dump(remota, open("facebook/fila.json", "w", encoding="utf-8"),
                         ensure_ascii=False, indent=2)

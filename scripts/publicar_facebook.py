@@ -106,9 +106,10 @@ class ErroAPI(Exception):
         """Explica em português o que fazer nos erros conhecidos."""
         c = self.codigo
         if c == 190:
+            secret = os.environ.get("FB_NOME_SECRET", "FB_PAGE_TOKEN")
             return ("Token inválido ou vencido (código 190). Gere um token novo da "
-                    "PÁGINA (GET /me/accounts com um token de usuário de longa "
-                    "duração) e atualize o secret FB_PAGE_TOKEN.")
+                    "PÁGINA (GET /<id-da-página>?fields=access_token com um token de "
+                    f"usuário de longa duração) e atualize o secret {secret}.")
         if c in (200, 10):
             return (f"Permissão faltando no app (código {c}). O token precisa de "
                     "pages_manage_posts (e de pages_read_engagement e "

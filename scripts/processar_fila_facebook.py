@@ -22,7 +22,18 @@ Regras de segurança embutidas (as mesmas do Instagram, mais a de expiração):
   - falha de publicação avisa no Telegram e, na terceira seguida no mesmo item,
     pausa a fila sozinha. Bloqueio por spam da Meta (código 368) pausa na hora.
 
-Variáveis de ambiente: FB_PAGE_ID, FB_PAGE_TOKEN, TG_TOKEN e TG_CHAT_ID.
+PÁGINA JÚNIOR ARRAIS ADVOGADO (segunda página, opcional):
+  o mesmo post (arte e legenda) sai também na página do escritório, ADV_ATRASO
+  minutos depois de sair no portal — post idêntico em duas páginas no mesmo
+  minuto parece spam para a Meta. O andamento fica em item["advogado"]
+  ({"status", "publicado_em", "link_post", ...}) e a pausa própria em
+  "pausado_advogado": um problema numa página não para a outra. Sem os
+  secrets FB_ADV_PAGE_ID/FB_ADV_PAGE_TOKEN, essa parte fica desligada.
+  O perfil pessoal NÃO entra: a Meta não permite publicar em perfil por API.
+  O aviso de sucesso do portal traz o link para compartilhar no perfil à mão.
+
+Variáveis de ambiente: FB_PAGE_ID, FB_PAGE_TOKEN, FB_ADV_PAGE_ID,
+FB_ADV_PAGE_TOKEN, TG_TOKEN e TG_CHAT_ID.
 Saída: 0 quando não há nada a fazer ou deu certo; 1 só em erro real.
 """
 
@@ -45,6 +56,9 @@ EXPIRA_HORAS = 24            # atraso a partir do qual o item expira sem publica
 FALHAS_PARA_PAUSAR = 3       # falhas seguidas no mesmo item que congelam a fila
 SAIDA_PAUSAR_FILA = 3        # código de saída do publicar_facebook.py no erro 368
 FORMATO = "%Y-%m-%dT%H:%M:%SZ"
+ADV_ATRASO = 10              # minutos depois do portal para sair na página do advogado
+ADV_INTERVALO = 20           # minutos mínimos entre dois posts na página do advogado
+FINAIS = ("publicado", "publicado_manual", "expirado")
 
 
 def agora():
@@ -56,7 +70,7 @@ def ler(iso):
 
 
 def mascarar(texto):
-    for nome in ("FB_PAGE_TOKEN", "TG_TOKEN"):
+    for nome in ("FB_PAGE_TOKEN", "FB_ADV_PAGE_TOKEN", "TG_TOKEN"):
         tok = os.environ.get(nome, "")
         if tok:
             texto = texto.replace(tok, "***")
@@ -141,16 +155,28 @@ def arte_do_item(slug):
     return fb if os.path.exists(os.path.join(RAIZ, fb)) else f"img/feed45/{slug}.png"
 
 
-def executar_publicacao(slug, legenda, arte):
+def executar_publicacao(slug, legenda, arte, env=None):
     """Chama o publicar_facebook.py. Devolve (código de saída, saída de texto).
 
+    env troca as credenciais para publicar em outra página (a do advogado).
     Isolado numa função para os testes trocarem por um stub sem tocar na API.
     """
     cmd = [sys.executable, os.path.join(RAIZ, "scripts", "publicar_facebook.py"),
            "--slug", slug, "--legenda", legenda, "--arte", arte]
     r = subprocess.run(cmd, capture_output=True, text=True, encoding="utf-8",
-                       errors="replace")
+                       errors="replace", env={**os.environ, **(env or {})})
     return r.returncode, r.stdout + r.stderr
+
+
+def ler_saida(saida):
+    """Extrai o link do post e a arte usada da saída do publicar_facebook.py."""
+    link = arte_usada = ""
+    for linha in saida.splitlines():
+        if "link:" in linha:
+            link = linha.split("link:")[-1].strip()
+        if "arte usada:" in linha:
+            arte_usada = linha.split("arte usada:")[-1].strip()
+    return link, arte_usada
 
 
 def registrar_falha(dados, item, saida, pausar_ja=False):
@@ -183,12 +209,21 @@ def main():
         return 0
 
     dados = json.load(open(FILA, encoding="utf-8"))
-    fila = dados.get("fila", [])
 
     if dados.get("pausado"):
         print(f"Fila PAUSADA. Motivo: {dados.get('pausa_motivo', 'não informado')}")
         print("Para retomar, remover \"pausado\" de facebook/fila.json.")
         return 0
+
+    print("== Página do portal ==")
+    rc_portal = processar_portal(dados)
+    print("\n== Página Júnior Arrais Advogado ==")
+    rc_adv = processar_advogado(dados)
+    return max(rc_portal, rc_adv)
+
+
+def processar_portal(dados):
+    fila = dados.get("fila", [])
 
     # EXPIRAÇÃO: pendente com mais de EXPIRA_HORAS de atraso não é publicado.
     limite = agora() - timedelta(hours=EXPIRA_HORAS)
@@ -256,12 +291,7 @@ def main():
     if rc != 0:
         return registrar_falha(dados, item, saida, pausar_ja=(rc == SAIDA_PAUSAR_FILA))
 
-    link = arte_usada = ""
-    for linha in saida.splitlines():
-        if "link:" in linha:
-            link = linha.split("link:")[-1].strip()
-        if "arte usada:" in linha:
-            arte_usada = linha.split("arte usada:")[-1].strip()
+    link, arte_usada = ler_saida(saida)
 
     # "link" continua sendo o endereço da matéria; o do post vai em "link_post".
     item["status"] = "publicado"
@@ -281,6 +311,110 @@ def main():
            f"{item.get('titulo', item['slug'])}\n\n"
            f"Post: {link or 'link não informado pela Meta'}\n"
            f"Matéria: {item.get('link', '')}")
+    if link:
+        txt += ("\n\n📤 Compartilhe no seu perfil: abra o link do post, toque em "
+                "Compartilhar e escolha \"Compartilhar agora\" no seu perfil.")
+    if _telegram(txt):
+        print("Aviso de sucesso enviado no Telegram.")
+    return 0
+
+
+def falha_advogado(dados, item, saida, pausar_ja=False):
+    """Igual a registrar_falha, mas só para a página do advogado."""
+    adv = item.setdefault("advogado", {})
+    falhas = adv.get("falhas", 0) + 1
+    adv["falhas"] = falhas
+    adv["ultima_falha"] = agora().strftime(FORMATO)
+    pausou = pausar_ja or falhas >= FALHAS_PARA_PAUSAR
+    if pausou:
+        dados["pausado_advogado"] = True
+        dados["pausa_motivo_advogado"] = (
+            ("A Meta bloqueou a página do advogado por spam (código 368)"
+             if pausar_ja else f"{falhas} falhas seguidas")
+            + f" em {item['slug']} ({adv['ultima_falha']}). Resolver e remover esta chave.")
+        print("Página do advogado PAUSADA. A página do portal segue normal.")
+    gravar(dados)
+    motivo = next((l.strip()[:400] for l in saida.splitlines() if "O que fazer:" in l), "") \
+        or next((l.strip()[:300] for l in saida.splitlines()
+                 if "Erro da API" in l or "ERRO" in l), "")
+    txt = (f"Facebook (Júnior Arrais Advogado): ❌ falha ao publicar "
+           f"(tentativa {falhas}).\n\n{item.get('titulo', item['slug'])}\n\n"
+           f"{motivo or 'Sem mensagem de erro legível — ver o log do Actions.'}")
+    txt += ("\n\nA página do advogado foi PAUSADA. Depois de resolver, tirar "
+            "\"pausado_advogado\" de facebook/fila.json." if pausou
+            else "\n\nSerá tentado de novo.")
+    _telegram(mascarar(txt))
+    return 1
+
+
+def processar_advogado(dados):
+    """Repete na página Júnior Arrais Advogado o que já saiu no portal."""
+    pid = os.environ.get("FB_ADV_PAGE_ID")
+    tok = os.environ.get("FB_ADV_PAGE_TOKEN")
+    if not pid or not tok:
+        print("Desligada (faltam os secrets FB_ADV_PAGE_ID e FB_ADV_PAGE_TOKEN).")
+        return 0
+    if dados.get("pausado_advogado"):
+        print(f"PAUSADA. Motivo: {dados.get('pausa_motivo_advogado', 'não informado')}")
+        return 0
+
+    fila = dados.get("fila", [])
+    candidatos = [f for f in fila if f.get("status") == "publicado" and f.get("publicado_em")
+                  and f.get("advogado", {}).get("status") not in FINAIS]
+
+    # post do portal com mais de EXPIRA_HORAS não é repetido no advogado
+    limite = agora() - timedelta(hours=EXPIRA_HORAS)
+    velhos = [f for f in candidatos if ler(f["publicado_em"]) < limite]
+    for f in velhos:
+        f.setdefault("advogado", {}).update(
+            status="expirado", expirado_em=agora().strftime(FORMATO),
+            motivo=f"publicado no portal há mais de {EXPIRA_HORAS} h")
+        print(f"Expirado no advogado: {f['slug']}")
+    if velhos:
+        gravar(dados)
+
+    prontos = [f for f in candidatos if f not in velhos
+               and ler(f["publicado_em"]) + timedelta(minutes=ADV_ATRASO) <= agora()]
+    if not prontos:
+        print("Nada a repetir agora.")
+        return 0
+
+    feitos = [ler(f["advogado"]["publicado_em"]) for f in fila
+              if f.get("advogado", {}).get("status") == "publicado"
+              and f["advogado"].get("publicado_em")]
+    if feitos:
+        faltam = max(feitos) + timedelta(minutes=ADV_INTERVALO) - agora()
+        if faltam.total_seconds() > 0:
+            print(f"Intervalo mínimo não cumprido. Faltam {int(faltam.total_seconds()/60)} min.")
+            return 0
+
+    item = min(prontos, key=lambda f: ler(f["publicado_em"]))
+    print(f"Publicando: {item['slug']} (saiu no portal em {item['publicado_em']})")
+    legenda = os.path.join(LEGENDAS, f"{item['slug']}.txt")
+    if not os.path.exists(legenda):
+        saida = f"ERRO: legenda não encontrada: facebook/legendas/{item['slug']}.txt"
+        print(saida)
+        return falha_advogado(dados, item, saida)
+
+    rc, saida = executar_publicacao(
+        item["slug"], legenda, item.get("arte") or arte_do_item(item["slug"]),
+        env={"FB_PAGE_ID": pid, "FB_PAGE_TOKEN": tok,
+             "FB_NOME_SECRET": "FB_ADV_PAGE_TOKEN"})
+    saida = mascarar(saida)
+    print(saida)
+    if rc != 0:
+        return falha_advogado(dados, item, saida, pausar_ja=(rc == SAIDA_PAUSAR_FILA))
+
+    link, _ = ler_saida(saida)
+    item["advogado"] = {"status": "publicado",
+                        "publicado_em": agora().strftime(FORMATO)}
+    if link:
+        item["advogado"]["link_post"] = link
+    gravar(dados)
+    print(f"OK. Publicado na página do advogado. {link}")
+    txt = (f"Facebook (Júnior Arrais Advogado): ✅ post publicado.\n\n"
+           f"{item.get('titulo', item['slug'])}\n\n"
+           f"Post: {link or 'link não informado pela Meta'}")
     if _telegram(txt):
         print("Aviso de sucesso enviado no Telegram.")
     return 0
