@@ -31,7 +31,12 @@
       "horario_brasilia": "01/10 09:20",
       "status": "publicado",
       "publicado_em": "2026-10-01T12:24:10Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122115938601442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122115938601442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-10-01T15:03:56Z",
+        "link_post": "https://www.facebook.com/113029587494887_1509590764530605"
+      }
     },
     {
       "slug": "carteira-de-identidade-nacional-ja-da-conta-ouro-no-gov-br-e-22-milhoes-ainda-nao-ativaram",
