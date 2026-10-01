@@ -52,6 +52,34 @@ jobs:
       - name: Instalar dependências
         run: pip install --quiet pillow
 
+      # Gera a arte do Facebook ("LINK NA LEGENDA" no lugar de "LINK NOS
+      # STORIES") de cada pendente que ainda não tem, e empurra JÁ, antes de
+      # publicar: a Meta busca a arte no site, então ela precisa estar no ar.
+      # O commit só traz arquivos novos em img/feedfb/, por isso o rebase nunca
+      # conflita. Se nada der certo aqui, o robô publica com a arte do
+      # Instagram — este passo nunca derruba a publicação.
+      - name: Gerar artes do Facebook
+        continue-on-error: true
+        run: |
+          python scripts/gerar_arte_facebook.py --fila || exit 0
+          if [ -z "$(git status --porcelain img/feedfb)" ]; then
+            echo "Nenhuma arte nova."
+            exit 0
+          fi
+          git config user.name "Portal Júnior Arrais"
+          git config user.email "juniorarrais90@gmail.com"
+          git add img/feedfb
+          git commit -m "Facebook: artes com link na legenda [skip ci]"
+          for tentativa in 1 2 3 4 5; do
+            if git push; then
+              echo "Artes enviadas na tentativa $tentativa."
+              exit 0
+            fi
+            git pull --rebase origin main || git rebase --abort || true
+            sleep $((tentativa * 5))
+          done
+          echo "::warning::Não consegui enviar as artes; o robô usa a arte do Instagram."
+
       - name: Processar a fila
         env:
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
@@ -90,8 +118,8 @@ jobs:
           import json
           remota = json.load(open("facebook/fila.json", encoding="utf-8"))
           local = json.load(open("/tmp/fila-local.json", encoding="utf-8"))
-          CAMPOS = ("status", "publicado_em", "link_post", "expirado_em", "motivo",
-                    "falhas", "ultima_falha")
+          CAMPOS = ("status", "publicado_em", "link_post", "arte", "expirado_em",
+                    "motivo", "falhas", "ultima_falha")
           locais = {i["slug"]: i for i in local["fila"]}
           mudou = False
           for item in remota["fila"]:

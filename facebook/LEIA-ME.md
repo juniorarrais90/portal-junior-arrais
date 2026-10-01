@@ -12,6 +12,14 @@ O workflow **Publicar no Facebook** (`.github/workflows/publicar-facebook.yml`) 
 3. no sucesso, grava `status: "publicado"`, `publicado_em` (UTC) e `link_post` (o post na página), e avisa no Telegram com os links do post e da matéria. O campo `link` continua sendo o da matéria;
 4. grava a fila de volta em `main` com o commit `Facebook: marca item como publicado [skip ci]`.
 
+### A arte do Facebook
+
+A arte do Instagram traz o selo "LINK NOS STORIES", que não faz sentido no Facebook, onde o link vai clicável na legenda. A cada execução, o passo "Gerar artes do Facebook" roda `scripts/gerar_arte_facebook.py --fila`. Para cada item pendente, o script pega `img/feed45/<slug>.png`, troca o selo por **"LINK NA LEGENDA"** (com a seta apontando para baixo), grava `img/feedfb/<slug>.png` e publica no site antes de postar. A fonte do selo é a Outfit (`fontes/Outfit-Bold.ttf`, licença SIL OFL), a mesma das artes.
+
+Não é preciso fazer nada à mão: basta a arte do Instagram existir. Se a versão do Facebook não estiver pronta ou não entrar no ar a tempo, o robô publica com a do Instagram em vez de falhar. Depois de publicar, o campo `arte` do item registra qual das duas saiu. Para gerar uma à mão: `python scripts/gerar_arte_facebook.py --slug <slug>`.
+
+### Validações
+
 Antes de publicar, o script confere se a arte está no ar (espera até 10 minutos pelo GitHub Pages), se é imagem, se tem até 8 MB e se mede 1080x1350. Na legenda, confere se não está vazia, se cabe no limite do Facebook, se traz o link da matéria e se não tem os termos proibidos ("grátis", "de graça", "gratuit…", "garantid…", "WhatsApp", "direct"). Se algo falhar, **nada é publicado**.
 
 ## Status de um item

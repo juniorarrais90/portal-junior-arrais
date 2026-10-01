@@ -8,8 +8,11 @@ Publica um post de foto na Página do Facebook do portal usando a Graph API
 mesmas defesas, adaptado à API de Páginas.
 
 Como no Instagram, a Meta NÃO recebe o arquivo: ela busca a arte numa URL
-pública do GitHub Pages (https://portaljuniorarrais.com.br/img/feed45/<slug>.png),
-a mesma 4:5 (1080x1350) usada no Instagram. Nenhuma arte nova é gerada.
+pública do GitHub Pages. A arte padrão é a 4:5 (1080x1350) do Instagram,
+img/feed45/<slug>.png. O processador da fila passa --arte img/feedfb/<slug>.png
+quando existe a versão do Facebook, com o selo "LINK NA LEGENDA" no lugar de
+"LINK NOS STORIES" (ver gerar_arte_facebook.py). Se essa versão não entrar no ar
+a tempo, o script publica com a arte do Instagram em vez de falhar.
 
 CREDENCIAIS — nunca em arquivo, sempre em variável de ambiente:
     export FB_PAGE_ID="..."      # ID da Página do portal
@@ -20,6 +23,7 @@ CREDENCIAIS — nunca em arquivo, sempre em variável de ambiente:
 
 Uso:
     python scripts/publicar_facebook.py --slug <slug> --legenda facebook/legendas/<slug>.txt
+    python scripts/publicar_facebook.py --slug <slug> --legenda ... --arte img/feedfb/<slug>.png
     python scripts/publicar_facebook.py --slug <slug> --legenda ... --dry-run
     python scripts/publicar_facebook.py --checar-pagina     # diagnóstico, não publica
 
@@ -41,7 +45,7 @@ import urllib.parse
 import urllib.request
 
 API = "https://graph.facebook.com/v23.0"
-BASE_IMG = "https://portaljuniorarrais.com.br/img/feed45"
+SITE = "https://portaljuniorarrais.com.br"
 BASE_MATERIA = "https://portaljuniorarrais.com.br/noticias"
 LIMITE_LEGENDA = 63206                 # limite de caracteres de um post no Facebook
 MAX_BYTES = 8 * 1024 * 1024
@@ -121,6 +125,10 @@ class ErroAPI(Exception):
         return ""
 
 
+class ArteIndisponivel(Exception):
+    """A arte não ficou acessível publicamente dentro do tempo de espera."""
+
+
 def env(nome):
     v = os.environ.get(nome)
     if not v:
@@ -172,7 +180,7 @@ def baixar_arte(url):
             return dados, tipo
         except Exception as e:
             if time.time() - inicio >= ESPERA_ARTE_MAX:
-                sair(f"A arte não está acessível publicamente: {url}\n{e}")
+                raise ArteIndisponivel(f"A arte não está acessível publicamente: {url}\n{e}")
             print(f"  arte ainda não acessível ({e}); nova checagem em 30 s...")
             time.sleep(30)
 
@@ -257,10 +265,31 @@ def checar_pagina():
     return 1 if faltando else 0
 
 
-def publicar(slug, legenda, dry_run=False):
-    url = f"{BASE_IMG}/{slug}.png"
+def escolher_arte(slug, arte):
+    """Confere a arte pedida; se ela não entrar no ar, cai para a do Instagram."""
+    padrao = f"img/feed45/{slug}.png"
+    arte = (arte or padrao).lstrip("/")
+    url = f"{SITE}/{arte}"
     print(f"Arte....: {url}")
-    conferir_imagem(url)
+    try:
+        conferir_imagem(url)
+        return url
+    except ArteIndisponivel as e:
+        if arte == padrao:
+            sair(str(e))
+        print(f"  {e}\n  usando a arte do Instagram no lugar")
+    url = f"{SITE}/{padrao}"
+    print(f"Arte....: {url}")
+    try:
+        conferir_imagem(url)
+    except ArteIndisponivel as e:
+        sair(str(e))
+    return url
+
+
+def publicar(slug, legenda, arte=None, dry_run=False):
+    url = escolher_arte(slug, arte)
+    print(f"  arte usada: {url}")
 
     legenda = legenda.strip()
     conferir_legenda(slug, legenda)
@@ -303,6 +332,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--slug", help="slug da matéria (nome do arquivo em img/feed45/)")
     ap.add_argument("--legenda", help="arquivo .txt com a legenda")
+    ap.add_argument("--arte", default=None,
+                    help="caminho da arte no site (padrão: img/feed45/<slug>.png)")
     ap.add_argument("--dry-run", dest="dry_run", action="store_true",
                     help="valida arte e legenda, mas não publica")
     ap.add_argument("--checar-pagina", dest="checar", action="store_true",
@@ -317,7 +348,7 @@ def main():
         if not os.path.exists(a.legenda):
             sair(f"Arquivo de legenda não encontrado: {a.legenda}")
         legenda = open(a.legenda, encoding="utf-8").read()
-        return publicar(a.slug, legenda, a.dry_run)
+        return publicar(a.slug, legenda, a.arte, a.dry_run)
     except ErroAPI as e:
         print(str(e), file=sys.stderr)
         dica = e.explicacao()

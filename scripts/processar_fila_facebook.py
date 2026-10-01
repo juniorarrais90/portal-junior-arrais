@@ -135,13 +135,19 @@ def alertar_falha(item, saida, falhas, pausou):
         print("Aviso de falha enviado no Telegram.")
 
 
-def executar_publicacao(slug, legenda):
+def arte_do_item(slug):
+    """Arte com "LINK NA LEGENDA" (img/feedfb/) se já foi gerada; senão, a do Instagram."""
+    fb = f"img/feedfb/{slug}.png"
+    return fb if os.path.exists(os.path.join(RAIZ, fb)) else f"img/feed45/{slug}.png"
+
+
+def executar_publicacao(slug, legenda, arte):
     """Chama o publicar_facebook.py. Devolve (código de saída, saída de texto).
 
     Isolado numa função para os testes trocarem por um stub sem tocar na API.
     """
     cmd = [sys.executable, os.path.join(RAIZ, "scripts", "publicar_facebook.py"),
-           "--slug", slug, "--legenda", legenda]
+           "--slug", slug, "--legenda", legenda, "--arte", arte]
     r = subprocess.run(cmd, capture_output=True, text=True, encoding="utf-8",
                        errors="replace")
     return r.returncode, r.stdout + r.stderr
@@ -243,17 +249,19 @@ def main():
         print(saida)
         return registrar_falha(dados, item, saida)
 
-    rc, saida = executar_publicacao(item["slug"], legenda)
+    rc, saida = executar_publicacao(item["slug"], legenda, arte_do_item(item["slug"]))
     saida = mascarar(saida)
     print(saida)
 
     if rc != 0:
         return registrar_falha(dados, item, saida, pausar_ja=(rc == SAIDA_PAUSAR_FILA))
 
-    link = ""
+    link = arte_usada = ""
     for linha in saida.splitlines():
         if "link:" in linha:
             link = linha.split("link:")[-1].strip()
+        if "arte usada:" in linha:
+            arte_usada = linha.split("arte usada:")[-1].strip()
 
     # "link" continua sendo o endereço da matéria; o do post vai em "link_post".
     item["status"] = "publicado"
@@ -262,6 +270,9 @@ def main():
     item.pop("ultima_falha", None)
     if link:
         item["link_post"] = link
+    if arte_usada:
+        # registra qual arte saiu (a do Facebook ou, na falta dela, a do Instagram)
+        item["arte"] = arte_usada.split("portaljuniorarrais.com.br/")[-1]
     gravar(dados)
     print(f"OK. Marcado como publicado. {link}")
 
