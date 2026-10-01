@@ -80,7 +80,12 @@
       "horario_brasilia": "01/10 17:45",
       "status": "publicado",
       "publicado_em": "2026-10-01T21:11:55Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122116030419442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122116030419442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-10-01T21:53:49Z",
+        "link_post": "https://www.facebook.com/113029587494887_1509891847833830"
+      }
     },
     {
       "slug": "receita-de-remedio-controlado-agora-pode-ser-digital-o-que-muda-na-farmacia",
