@@ -70,6 +70,60 @@
       "status": "expirado",
       "expirado_em": "2026-10-01T12:24:02Z",
       "motivo": "40 h de atraso (limite de 24 h); não publicado para não postar matéria velha."
+    },
+    {
+      "slug": "greve-da-caixa-acabou-tst-da-reajuste-de-4-6-e-agencias-voltam-ao-normal",
+      "titulo": "Greve da Caixa acabou: TST dá reajuste de 4,6% e agências voltam ao normal",
+      "link": "https://portaljuniorarrais.com.br/noticias/greve-da-caixa-acabou-tst-da-reajuste-de-4-6-e-agencias-voltam-ao-normal.html",
+      "arte": "img/feed45/greve-da-caixa-acabou-tst-da-reajuste-de-4-6-e-agencias-voltam-ao-normal.png",
+      "publicar_em": "2026-10-01T20:45:00Z",
+      "horario_brasilia": "01/10 17:45",
+      "status": "pendente"
+    },
+    {
+      "slug": "receita-de-remedio-controlado-agora-pode-ser-digital-o-que-muda-na-farmacia",
+      "titulo": "Receita de remédio controlado agora pode ser digital: o que muda na farmácia",
+      "link": "https://portaljuniorarrais.com.br/noticias/receita-de-remedio-controlado-agora-pode-ser-digital-o-que-muda-na-farmacia.html",
+      "arte": "img/feed45/receita-de-remedio-controlado-agora-pode-ser-digital-o-que-muda-na-farmacia.png",
+      "publicar_em": "2026-10-01T22:00:00Z",
+      "horario_brasilia": "01/10 19:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "vale-refeicao-e-vale-alimentacao-em-novembro-o-cartao-passa-em-mais-maquininhas",
+      "titulo": "Vale-refeição e vale-alimentação: em novembro, o cartão passa a valer em mais maquininhas",
+      "link": "https://portaljuniorarrais.com.br/noticias/vale-refeicao-e-vale-alimentacao-em-novembro-o-cartao-passa-em-mais-maquininhas.html",
+      "arte": "img/feed45/vale-refeicao-e-vale-alimentacao-em-novembro-o-cartao-passa-em-mais-maquininhas.png",
+      "publicar_em": "2026-10-02T11:15:00Z",
+      "horario_brasilia": "02/10 08:15",
+      "status": "pendente"
+    },
+    {
+      "slug": "quinto-dia-util-de-outubro-o-salario-tem-de-cair-ate-terca-dia-6",
+      "titulo": "Quinto dia útil de outubro: o salário de setembro tem de cair até terça, dia 6",
+      "link": "https://portaljuniorarrais.com.br/noticias/quinto-dia-util-de-outubro-o-salario-tem-de-cair-ate-terca-dia-6.html",
+      "arte": "img/feed45/quinto-dia-util-de-outubro-o-salario-tem-de-cair-ate-terca-dia-6.png",
+      "publicar_em": "2026-10-01T23:15:00Z",
+      "horario_brasilia": "01/10 20:15",
+      "status": "pendente"
+    },
+    {
+      "slug": "pis-pasep-antigo-quem-pediu-ate-30-de-setembro-recebe-em-26-de-outubro",
+      "titulo": "PIS/Pasep antigo: quem pediu até 30 de setembro recebe em 26 de outubro",
+      "link": "https://portaljuniorarrais.com.br/noticias/pis-pasep-antigo-quem-pediu-ate-30-de-setembro-recebe-em-26-de-outubro.html",
+      "arte": "img/feed45/pis-pasep-antigo-quem-pediu-ate-30-de-setembro-recebe-em-26-de-outubro.png",
+      "publicar_em": "2026-10-02T00:30:00Z",
+      "horario_brasilia": "01/10 21:30",
+      "status": "pendente"
+    },
+    {
+      "slug": "desemprego-fica-em-5-3-mas-38-8-milhoes-trabalham-na-informalidade",
+      "titulo": "Desemprego fica em 5,3%, mas 38,8 milhões trabalham na informalidade",
+      "link": "https://portaljuniorarrais.com.br/noticias/desemprego-fica-em-5-3-mas-38-8-milhoes-trabalham-na-informalidade.html",
+      "arte": "img/feed45/desemprego-fica-em-5-3-mas-38-8-milhoes-trabalham-na-informalidade.png",
+      "publicar_em": "2026-10-02T12:45:00Z",
+      "horario_brasilia": "02/10 09:45",
+      "status": "pendente"
     }
   ]
 }
