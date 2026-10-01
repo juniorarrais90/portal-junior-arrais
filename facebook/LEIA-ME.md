@@ -9,7 +9,7 @@ O workflow **Publicar no Facebook** (`.github/workflows/publicar-facebook.yml`) 
 
 1. publica **no máximo um** item vencido por execução, sempre o mais antigo, com `scripts/publicar_facebook.py` (Graph API, `POST /{FB_PAGE_ID}/photos` com a arte 4:5 e a legenda daqui);
 2. respeita 60 minutos entre posts. Se a fila atrasar mais de 45 minutos, o intervalo cai para 20 minutos até ela se normalizar. Com mais de 120 minutos de atraso, avisa no Telegram;
-3. no sucesso, grava `status: "publicado"`, `publicado_em` (UTC) e `link_post` (o post na página). O campo `link` continua sendo o da matéria;
+3. no sucesso, grava `status: "publicado"`, `publicado_em` (UTC) e `link_post` (o post na página), e avisa no Telegram com os links do post e da matéria. O campo `link` continua sendo o da matéria;
 4. grava a fila de volta em `main` com o commit `Facebook: marca item como publicado [skip ci]`.
 
 Antes de publicar, o script confere se a arte está no ar (espera até 10 minutos pelo GitHub Pages), se é imagem, se tem até 8 MB e se mede 1080x1350. Na legenda, confere se não está vazia, se cabe no limite do Facebook, se traz o link da matéria e se não tem os termos proibidos ("grátis", "de graça", "gratuit…", "garantid…", "WhatsApp", "direct"). Se algo falhar, **nada é publicado**.

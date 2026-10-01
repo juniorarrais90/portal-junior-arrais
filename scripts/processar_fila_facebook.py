@@ -264,6 +264,14 @@ def main():
         item["link_post"] = link
     gravar(dados)
     print(f"OK. Marcado como publicado. {link}")
+
+    # Aviso de sucesso. Falha aqui NÃO invalida a publicação: o post já saiu.
+    txt = (f"Facebook: ✅ post publicado na página.\n\n"
+           f"{item.get('titulo', item['slug'])}\n\n"
+           f"Post: {link or 'link não informado pela Meta'}\n"
+           f"Matéria: {item.get('link', '')}")
+    if _telegram(txt):
+        print("Aviso de sucesso enviado no Telegram.")
     return 0
 
 
