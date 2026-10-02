@@ -2216,7 +2216,9 @@
       "publicar_em": "2026-10-02T00:15:00Z",
       "horario_brasilia": "01/10 21:15",
       "alt_text": "PIS/Pasep antigo: quem pediu até 30 de setembro recebe em 26 de outubro",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-10-02T00:17:40Z",
+      "link": "https://www.instagram.com/p/Dd-LYGemSmI/"
     },
     {
       "slug": "vale-refeicao-e-vale-alimentacao-em-novembro-o-cartao-passa-em-mais-maquininhas",
