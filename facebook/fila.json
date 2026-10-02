@@ -121,16 +121,23 @@
       "horario_brasilia": "01/10 20:15",
       "status": "publicado",
       "publicado_em": "2026-10-02T07:31:21Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122116140171442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122116140171442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-10-02T14:06:27Z",
+        "link_post": "https://www.facebook.com/113029587494887_1510587444430937"
+      }
     },
     {
       "slug": "pis-pasep-antigo-quem-pediu-ate-30-de-setembro-recebe-em-26-de-outubro",
       "titulo": "PIS/Pasep antigo: quem pediu até 30 de setembro recebe em 26 de outubro",
       "link": "https://portaljuniorarrais.com.br/noticias/pis-pasep-antigo-quem-pediu-ate-30-de-setembro-recebe-em-26-de-outubro.html",
-      "arte": "img/feed45/pis-pasep-antigo-quem-pediu-ate-30-de-setembro-recebe-em-26-de-outubro.png",
+      "arte": "img/feedfb/pis-pasep-antigo-quem-pediu-ate-30-de-setembro-recebe-em-26-de-outubro.png",
       "publicar_em": "2026-10-02T00:30:00Z",
       "horario_brasilia": "01/10 21:30",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-10-02T14:06:19Z",
+      "link_post": "https://www.facebook.com/1298971973295874_122116217757442468"
     },
     {
       "slug": "desemprego-fica-em-5-3-mas-38-8-milhoes-trabalham-na-informalidade",
