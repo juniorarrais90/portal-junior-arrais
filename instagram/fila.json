@@ -2236,7 +2236,9 @@
       "publicar_em": "2026-10-02T12:30:00Z",
       "horario_brasilia": "02/10 09:30",
       "alt_text": "Desemprego fica em 5,3%, mas 38,8 milhões trabalham na informalidade",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-10-02T12:31:55Z",
+      "link": "https://www.instagram.com/p/Dd_faIdGxfe/"
     }
   ]
 }
