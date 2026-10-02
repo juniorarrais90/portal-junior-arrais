@@ -112,7 +112,12 @@
       "horario_brasilia": "02/10 08:15",
       "status": "publicado",
       "publicado_em": "2026-10-02T19:14:47Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122116270437442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122116270437442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-10-02T23:03:47Z",
+        "link_post": "https://www.facebook.com/113029587494887_1510973547725660"
+      }
     },
     {
       "slug": "quinto-dia-util-de-outubro-o-salario-tem-de-cair-ate-terca-dia-6",
@@ -150,10 +155,12 @@
       "slug": "desemprego-fica-em-5-3-mas-38-8-milhoes-trabalham-na-informalidade",
       "titulo": "Desemprego fica em 5,3%, mas 38,8 milhões trabalham na informalidade",
       "link": "https://portaljuniorarrais.com.br/noticias/desemprego-fica-em-5-3-mas-38-8-milhoes-trabalham-na-informalidade.html",
-      "arte": "img/feed45/desemprego-fica-em-5-3-mas-38-8-milhoes-trabalham-na-informalidade.png",
+      "arte": "img/feedfb/desemprego-fica-em-5-3-mas-38-8-milhoes-trabalham-na-informalidade.png",
       "publicar_em": "2026-10-02T12:45:00Z",
       "horario_brasilia": "02/10 09:45",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-10-02T23:03:41Z",
+      "link_post": "https://www.facebook.com/1298971973295874_122116304001442468"
     }
   ]
 }
