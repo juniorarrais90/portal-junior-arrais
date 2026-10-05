@@ -224,7 +224,12 @@
       "horario_brasilia": "05/10 14:15",
       "status": "publicado",
       "publicado_em": "2026-10-05T17:17:57Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122116963983442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122116963983442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-10-05T17:32:55Z",
+        "link_post": "https://www.facebook.com/113029587494887_1513521044137577"
+      }
     },
     {
       "slug": "anvisa-proibe-agua-sanitaria-e-limpadores-sem-registro-e-recolhe-gel-intimo-falsificado",
