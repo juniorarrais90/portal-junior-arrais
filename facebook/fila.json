@@ -176,7 +176,12 @@
       "horario_brasilia": "05/10 09:45",
       "status": "publicado",
       "publicado_em": "2026-10-05T12:48:00Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122116917999442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122116917999442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-10-05T13:03:36Z",
+        "link_post": "https://www.facebook.com/113029587494887_1513312950825053"
+      }
     },
     {
       "slug": "violencia-domestica-inss-passa-a-pagar-afastamento-sem-nova-acao-na-justica",
