@@ -5,7 +5,7 @@
 
 ## O robô
 
-O workflow **Publicar no Facebook** (`.github/workflows/publicar-facebook.yml`) roda nos minutos 6, 21, 36 e 51 de cada hora e chama `scripts/processar_fila_facebook.py`, que:
+O workflow **Publicar no Facebook** (`.github/workflows/publicar-facebook.yml`) roda nos minutos 6, 21, 36 e 51 de cada hora e também logo depois de cada execução do robô do Instagram (gatilho `workflow_run`, desde 05/10/2026, porque só o cron do GitHub atrasava os posts em horas), e chama `scripts/processar_fila_facebook.py`, que:
 
 1. publica **no máximo um** item vencido por execução, sempre o mais antigo, com `scripts/publicar_facebook.py` (Graph API, `POST /{FB_PAGE_ID}/photos` com a arte 4:5 e a legenda daqui);
 2. respeita 60 minutos entre posts. Se a fila atrasar mais de 45 minutos, o intervalo cai para 20 minutos até ela se normalizar. Com mais de 120 minutos de atraso, avisa no Telegram;

@@ -7,7 +7,8 @@ name: Publicar no Facebook
 # Gatilhos:
 #   1. cron interno do GitHub;
 #   2. repository_dispatch do tipo publicar-facebook, para um serviço externo
-#      poder cutucar o robô quando o cron do GitHub atrasar.
+#      poder cutucar o robô quando o cron do GitHub atrasar;
+#   3. workflow_run: roda logo depois de cada execução do Publicar no Instagram.
 #
 # MINUTOS DO CRON: 6, 21, 36 e 51. Não coincidem com o robô do Instagram
 # (3, 8, 13, 23, 33, 38, 43, 52, 53) nem com o serviço externo (00, 15, 30, 45),
@@ -18,6 +19,12 @@ on:
   workflow_dispatch:
   repository_dispatch:
     types: [publicar-facebook]
+  # Carona no robô do Instagram: o cron do GitHub sozinho atrasava o Facebook
+  # em horas. O Instagram é cutucado a cada 15 min pelo serviço externo; ao
+  # TERMINAR cada run dele, este robô roda em seguida (nunca ao mesmo tempo).
+  workflow_run:
+    workflows: ["Publicar no Instagram"]
+    types: [completed]
 
 permissions:
   contents: write           # necessário para gravar a fila atualizada
