@@ -2246,7 +2246,9 @@
       "publicar_em": "2026-10-05T12:30:00Z",
       "horario_brasilia": "05/10 09:30",
       "alt_text": "Bets: prazo para sacar o saldo acaba hoje, e quem não sacar recebe de volta entre 9 e 14 de outubro",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-10-05T12:31:44Z",
+      "link": "https://www.instagram.com/p/DeHNxJbEdRA/"
     },
     {
       "slug": "violencia-domestica-inss-passa-a-pagar-afastamento-sem-nova-acao-na-justica",
