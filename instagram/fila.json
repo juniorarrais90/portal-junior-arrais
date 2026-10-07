@@ -2326,7 +2326,9 @@
       "publicar_em": "2026-10-07T17:30:00Z",
       "horario_brasilia": "07/10 14:30",
       "alt_text": "Outubro Rosa: mamografia pelo SUS a partir dos 40 e falta abonada para fazer o exame",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-10-07T17:32:35Z",
+      "link": "https://www.instagram.com/p/DeM5ykqFbIO/"
     },
     {
       "slug": "inflacao-de-setembro-sai-sexta-conta-de-luz-deve-puxar-alta-e-pesa-no-reajuste-do-inss",
