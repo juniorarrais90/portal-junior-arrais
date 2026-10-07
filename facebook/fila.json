@@ -256,7 +256,12 @@
       "horario_brasilia": "07/10 10:15",
       "status": "publicado",
       "publicado_em": "2026-10-07T13:18:27Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122117423877442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122117423877442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-10-07T13:34:07Z",
+        "link_post": "https://www.facebook.com/113029587494887_1515165797306435"
+      }
     },
     {
       "slug": "feriado-de-12-de-outubro-quem-trabalha-recebe-em-dobro-ou-ganha-folga",
