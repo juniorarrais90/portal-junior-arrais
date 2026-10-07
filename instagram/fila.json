@@ -2306,7 +2306,9 @@
       "publicar_em": "2026-10-07T14:30:00Z",
       "horario_brasilia": "07/10 11:30",
       "alt_text": "Feriado de 12 de outubro: quem trabalha recebe em dobro ou ganha folga",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-10-07T14:31:57Z",
+      "link": "https://www.instagram.com/p/DeMlHqBm0Gh/"
     },
     {
       "slug": "fgts-atrasado-empresa-ganha-desconto-para-quitar-mas-a-parte-do-trabalhador-nao-diminui",
