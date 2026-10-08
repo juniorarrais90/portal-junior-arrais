@@ -384,7 +384,12 @@
       "horario_brasilia": "08/10 16:15",
       "status": "publicado",
       "publicado_em": "2026-10-08T19:18:24Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122117795307442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122117795307442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-10-08T19:33:16Z",
+        "link_post": "https://www.facebook.com/113029587494887_1516350687187946"
+      }
     },
     {
       "slug": "lista-suja-do-trabalho-escravo-ganha-82-nomes-e-minas-gerais-lidera-com-19",
