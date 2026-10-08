@@ -352,7 +352,12 @@
       "horario_brasilia": "08/10 13:15",
       "status": "publicado",
       "publicado_em": "2026-10-08T16:18:24Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122117762517442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122117762517442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-10-08T16:33:22Z",
+        "link_post": "https://www.facebook.com/113029587494887_1516230223866659"
+      }
     },
     {
       "slug": "sarampo-brasil-tem-52-casos-importados-em-2026-veja-quem-precisa-se-vacinar",
