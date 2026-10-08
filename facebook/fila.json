@@ -368,7 +368,12 @@
       "horario_brasilia": "08/10 14:45",
       "status": "publicado",
       "publicado_em": "2026-10-08T17:48:44Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122117775693442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122117775693442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-10-08T18:03:13Z",
+        "link_post": "https://www.facebook.com/113029587494887_1516293130527035"
+      }
     },
     {
       "slug": "malha-fina-receita-manda-carta-a-498-mil-contribuintes-ate-o-dia-20",
