@@ -2356,35 +2356,31 @@
       "publicar_em": "2026-10-08T16:00:00Z",
       "horario_brasilia": "08/10 13:00",
       "alt_text": "Bets: devolução começa sexta e R$ 1,3 bilhão volta para 26,5 milhões de apostadores",
-      "status": "pendente",
-      "falhas": 3,
-      "ultima_falha": "2026-10-08T16:31:42Z"
+      "status": "pendente"
     },
     {
       "slug": "sarampo-brasil-tem-52-casos-importados-em-2026-veja-quem-precisa-se-vacinar",
       "titulo": "Sarampo: Brasil tem 52 casos importados em 2026; veja quem precisa se vacinar",
-      "publicar_em": "2026-10-08T17:30:00Z",
-      "horario_brasilia": "08/10 14:30",
+      "publicar_em": "2026-10-09T15:00:00Z",
+      "horario_brasilia": "09/10 12:00",
       "alt_text": "Sarampo: Brasil tem 52 casos importados em 2026; veja quem precisa se vacinar",
       "status": "pendente"
     },
     {
       "slug": "malha-fina-receita-manda-carta-a-498-mil-contribuintes-ate-o-dia-20",
       "titulo": "Malha fina: Receita manda carta a 498 mil contribuintes até o dia 20; veja os erros mais comuns",
-      "publicar_em": "2026-10-08T19:00:00Z",
-      "horario_brasilia": "08/10 16:00",
+      "publicar_em": "2026-10-09T17:00:00Z",
+      "horario_brasilia": "09/10 14:00",
       "alt_text": "Malha fina: Receita manda carta a 498 mil contribuintes até o dia 20; veja os erros mais comuns",
       "status": "pendente"
     },
     {
       "slug": "lista-suja-do-trabalho-escravo-ganha-82-nomes-e-minas-gerais-lidera-com-19",
       "titulo": "Lista suja do trabalho escravo ganha 82 nomes, e Minas Gerais lidera com 19",
-      "publicar_em": "2026-10-08T20:30:00Z",
-      "horario_brasilia": "08/10 17:30",
+      "publicar_em": "2026-10-09T19:00:00Z",
+      "horario_brasilia": "09/10 16:00",
       "alt_text": "Lista suja do trabalho escravo ganha 82 nomes, e Minas Gerais lidera com 19",
       "status": "pendente"
     }
-  ],
-  "pausado": true,
-  "pausa_motivo": "3 falhas seguidas em bets-devolucao-comeca-sexta-e-r-1-3-bilhao-volta-para-26-5-milhoes-de-apostadores (2026-10-08T16:31:42Z). Resolver e remover esta chave."
+  ]
 }
