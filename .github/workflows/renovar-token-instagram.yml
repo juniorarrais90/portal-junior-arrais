@@ -1,0 +1,60 @@
+name: Renovar token do Instagram
+
+# O token do Instagram vale 60 dias e, depois de vencido, NÃO pode mais ser
+# renovado — só gerado de novo à mão no painel da Meta. Foi o que parou a fila
+# em 08/10/2026. Esta rotina renova toda semana, sempre com folga de semanas.
+#
+# Se a Meta devolver um token DIFERENTE, ele precisa ser regravado no segredo
+# IG_TOKEN. O GITHUB_TOKEN padrão não pode escrever segredos; para isso existe
+# o segredo GH_PAT_SEGREDOS (token pessoal do GitHub, só deste repositório,
+# permissão "Secrets: Read and write"). Sem ele, a rotina avisa no Telegram.
+on:
+  schedule:
+    - cron: "17 12 * * 1"     # segunda-feira, 09:17 em Brasília
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: renovar-token-instagram
+  cancel-in-progress: false
+
+jobs:
+  renovar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+
+      - name: Renovar na Meta
+        id: renovar
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          TG_TOKEN: ${{ secrets.TG_TOKEN }}
+          TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
+        run: |
+          python scripts/renovar_token_instagram.py --saida "$RUNNER_TEMP/ig_token"
+
+      - name: Regravar o segredo IG_TOKEN
+        if: steps.renovar.outputs.mudou == 'sim'
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT_SEGREDOS }}
+          TG_TOKEN: ${{ secrets.TG_TOKEN }}
+          TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
+        run: |
+          if [ -z "$GH_TOKEN" ]; then
+            MSG="A Meta devolveu um token NOVO do Instagram, mas falta o segredo GH_PAT_SEGREDOS para gravá-lo. O token atual ainda vale, mas vai vencer: crie o GH_PAT_SEGREDOS e rode de novo a rotina 'Renovar token do Instagram'."
+            curl -s -o /dev/null --data-urlencode "chat_id=$TG_CHAT_ID" --data-urlencode "text=⚠️ $MSG" "https://api.telegram.org/bot$TG_TOKEN/sendMessage" || true
+            echo "::error::$MSG"
+            exit 1
+          fi
+          gh secret set IG_TOKEN --repo "$GITHUB_REPOSITORY" < "$RUNNER_TEMP/ig_token"
+          echo "Segredo IG_TOKEN atualizado."
+
+      - name: Resumo
+        run: echo "Token do Instagram renovado. Validade agora de ${{ steps.renovar.outputs.dias }} dias (mudou=${{ steps.renovar.outputs.mudou }})."
