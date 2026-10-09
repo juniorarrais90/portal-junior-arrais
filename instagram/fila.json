@@ -2366,7 +2366,9 @@
       "publicar_em": "2026-10-09T15:00:00Z",
       "horario_brasilia": "09/10 12:00",
       "alt_text": "Sarampo: Brasil tem 52 casos importados em 2026; veja quem precisa se vacinar",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-10-09T15:02:11Z",
+      "link": "https://www.instagram.com/p/DeRyKs4m7gU/"
     },
     {
       "slug": "malha-fina-receita-manda-carta-a-498-mil-contribuintes-ate-o-dia-20",
