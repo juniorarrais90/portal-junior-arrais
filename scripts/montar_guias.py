@@ -57,7 +57,7 @@ for f in sorted(glob.glob(os.path.expanduser('guias-fonte/g*.html'))):
     # vídeo: remover bloco se houver
     s=re.sub(r'\s*<div class="video-relacionado">.*?</div>\s*</div>', '\n', s, count=1, flags=re.S)
     # banner
-    s=re.sub(r'(<div class="banner-emprestimo">\s*<div>\s*<span class="chip-verde">Serviço</span>\s*<h2>)[^<]*(</h2>)', lambda m: m.group(1)+esc(BANNERS[cat])+m.group(2), s, count=1)
+    s=re.sub(r'\s*<div class="banner-emprestimo"[^>]*>.*?</a>\s*</div>', '', s, count=1, flags=re.S)  # banner saiu das páginas em 10/10/2026
     # sanity: nada do molde
     for resto in ['As falhas mais comuns','hist&oacute;rico de contribui&ccedil;&otilde;es antes','Por que isso pesa tanto']:
         assert resto not in s, f'resto do molde: {resto}'
