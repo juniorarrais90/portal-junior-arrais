@@ -1,4 +1,5 @@
 User-agent: *
+Disallow: /agendadas/
 Allow: /
 
 # NAO bloquear /*?cat= nem /*?q= aqui.

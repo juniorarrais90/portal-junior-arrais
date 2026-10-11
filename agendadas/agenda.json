@@ -1,0 +1,185 @@
+{
+  "_leia_me": "Matérias prontas que o robô (scripts/publicar_agendadas.py) põe no ar no horário de publicar_em (UTC). As páginas ficam compactadas em agendadas/<slug>.html.gz até a hora.",
+  "agenda": [
+    {
+      "slug": "faltas-justificadas-clt-quando-a-empresa-nao-pode-descontar-o-salario",
+      "titulo": "Faltas justificadas: os casos em que a empresa não pode descontar o salário",
+      "categoria": "Trabalho",
+      "data_exibicao": "12 de out. de 2026",
+      "alt": "Relógio de ponto eletrônico preso na parede de uma fábrica, abaixo de uma placa com os dizeres \"CONTROLE DE PONTO\".",
+      "publicar_em": "2026-10-12T11:00:00Z",
+      "horario_brasilia": "12/10 08:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "nome-sujo-quanto-tempo-a-divida-fica-no-serasa-e-no-spc",
+      "titulo": "Nome sujo: a dívida sai do Serasa e do SPC em até 5 anos, mas não desaparece",
+      "categoria": "Direitos",
+      "data_exibicao": "12 de out. de 2026",
+      "alt": "Carteira aberta, cartão sem marca e envelope com carimbo \"COBRANÇA\" sobre uma mesa.",
+      "publicar_em": "2026-10-12T17:00:00Z",
+      "horario_brasilia": "12/10 14:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "pensao-alimenticia-quem-pode-pedir-valor-e-prisao-por-atraso",
+      "titulo": "Pensão alimentícia: quem pode pedir, como o valor é definido e o que acontece no atraso",
+      "categoria": "Justiça",
+      "data_exibicao": "12 de out. de 2026",
+      "alt": "Mãe e filha de costas, de mãos dadas, subindo a escadaria de um fórum.",
+      "publicar_em": "2026-10-12T23:00:00Z",
+      "horario_brasilia": "12/10 20:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "aposentadoria-hibrida-por-idade-tempo-de-roca-e-carteira-assinada",
+      "titulo": "Aposentadoria híbrida: como o tempo de roça soma com a carteira assinada no INSS",
+      "categoria": "INSS",
+      "data_exibicao": "13 de out. de 2026",
+      "alt": "Sala de espera de repartição pública com cadeiras azuis, painel eletrônico de senhas e placa escrita \"ATENDIMENTO\".",
+      "publicar_em": "2026-10-13T11:00:00Z",
+      "horario_brasilia": "13/10 08:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "compra-pela-internet-direito-de-arrependimento-7-dias-devolucao",
+      "titulo": "Compra pela internet: 7 dias para desistir e receber todo o dinheiro de volta",
+      "categoria": "Direitos",
+      "data_exibicao": "13 de out. de 2026",
+      "alt": "Caixa de papelão com etiqueta \"DEVOLUÇÃO\" na porta de uma casa, com um celular apoiado ao lado.",
+      "publicar_em": "2026-10-13T17:00:00Z",
+      "horario_brasilia": "13/10 14:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "tratamento-fora-de-domicilio-tfd-sus-transporte-e-diaria-para-paciente",
+      "titulo": "Tratamento Fora de Domicílio: quando o SUS paga a viagem para tratar em outra cidade",
+      "categoria": "Saúde",
+      "data_exibicao": "13 de out. de 2026",
+      "alt": "Van branca de transporte de pacientes estacionada diante da entrada de um hospital.",
+      "publicar_em": "2026-10-13T23:00:00Z",
+      "horario_brasilia": "13/10 20:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "rescisao-prazo-de-10-dias-para-pagar-e-multa-por-atraso",
+      "titulo": "Rescisão: empresa tem 10 dias para pagar as verbas, e o atraso gera multa de um salário",
+      "categoria": "Trabalho",
+      "data_exibicao": "14 de out. de 2026",
+      "alt": "Caixa de papelão com pertences pessoais sobre uma mesa de escritório.",
+      "publicar_em": "2026-10-14T11:00:00Z",
+      "horario_brasilia": "14/10 08:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "juros-do-rotativo-do-cartao-limite-de-100-e-portabilidade-da-divida",
+      "titulo": "Rotativo do cartão: juros limitados a 100% da dívida e portabilidade para outro banco",
+      "categoria": "Economia",
+      "data_exibicao": "14 de out. de 2026",
+      "alt": "Mão segurando um cartão sem marca diante de uma maquininha com a palavra PAGAMENTO no visor.",
+      "publicar_em": "2026-10-14T17:00:00Z",
+      "horario_brasilia": "14/10 14:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "reconhecimento-de-paternidade-no-cartorio-dna-e-paternidade-socioafetiva",
+      "titulo": "Reconhecimento de paternidade: como funciona no cartório, na Justiça e com o exame de DNA",
+      "categoria": "Direitos",
+      "data_exibicao": "14 de out. de 2026",
+      "alt": "Homem de costas com um bebê no colo diante de um balcão com a placa REGISTRO CIVIL.",
+      "publicar_em": "2026-10-14T23:00:00Z",
+      "horario_brasilia": "14/10 20:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "acidente-de-trabalho-cat-estabilidade-de-12-meses-e-fgts-no-afastamento",
+      "titulo": "Acidente de trabalho: o que conta, a CAT, a estabilidade de 12 meses e o FGTS",
+      "categoria": "Trabalho",
+      "data_exibicao": "15 de out. de 2026",
+      "alt": "Capacete, luvas e colete sobre uma bancada em um canteiro de obras, com a placa USE O CAPACETE ao fundo.",
+      "publicar_em": "2026-10-15T11:00:00Z",
+      "horario_brasilia": "15/10 08:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "produto-com-defeito-30-dias-para-consertar-troca-ou-dinheiro-de-volta",
+      "titulo": "Produto com defeito: 30 dias para o conserto e, depois, troca ou dinheiro de volta",
+      "categoria": "Direitos",
+      "data_exibicao": "15 de out. de 2026",
+      "alt": "Balcão de assistência técnica com um liquidificador e um celular à espera de conserto.",
+      "publicar_em": "2026-10-15T17:00:00Z",
+      "horario_brasilia": "15/10 14:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "aluguel-fiador-caucao-ou-seguro-fianca-dono-so-pode-exigir-um",
+      "titulo": "Aluguel: dono do imóvel só pode exigir fiador, caução ou seguro-fiança, nunca dois juntos",
+      "categoria": "Moradia",
+      "data_exibicao": "15 de out. de 2026",
+      "alt": "Prédio pequeno com faixa ALUGA-SE na fachada e uma mão segurando chaves em primeiro plano.",
+      "publicar_em": "2026-10-15T23:00:00Z",
+      "horario_brasilia": "15/10 20:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "aviso-previo-proporcional-30-dias-mais-3-por-ano-ate-90",
+      "titulo": "Aviso prévio proporcional: 30 dias mais 3 por ano de empresa, até o limite de 90",
+      "categoria": "Trabalho",
+      "data_exibicao": "16 de out. de 2026",
+      "alt": "Trabalhador de costas saindo pelo portão de uma fábrica, sob uma placa com a palavra PORTARIA.",
+      "publicar_em": "2026-10-16T11:00:00Z",
+      "horario_brasilia": "16/10 08:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "superendividamento-minimo-existencial-repactuacao-de-dividas-cdc",
+      "titulo": "Superendividamento: como a lei protege o mínimo para viver e reúne as dívidas num plano",
+      "categoria": "Economia",
+      "data_exibicao": "16 de out. de 2026",
+      "alt": "Mãos organizando carnês e faturas empilhados sobre uma mesa, ao lado de uma calculadora.",
+      "publicar_em": "2026-10-16T17:00:00Z",
+      "horario_brasilia": "16/10 14:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "saldo-bancario-poupanca-restituicao-de-quem-morreu-sem-inventario",
+      "titulo": "Saldo no banco e restituição de quem morreu: quando dá para receber sem inventário",
+      "categoria": "Direitos",
+      "data_exibicao": "16 de out. de 2026",
+      "alt": "Fachada de agência bancária sem marca, com placa de AUTOATENDIMENTO acima da porta de vidro.",
+      "publicar_em": "2026-10-16T23:00:00Z",
+      "horario_brasilia": "16/10 20:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "carencia-do-inss-quantas-contribuicoes-cada-beneficio-exige",
+      "titulo": "Carência do INSS: quantas contribuições cada benefício exige e quais não pedem nenhuma",
+      "categoria": "INSS",
+      "data_exibicao": "17 de out. de 2026",
+      "alt": "Pasta sanfonada com abas coloridas e uma carteira de trabalho azul fechada sobre a mesa.",
+      "publicar_em": "2026-10-17T11:00:00Z",
+      "horario_brasilia": "17/10 08:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "cobranca-abusiva-cdc-ameaca-constrangimento-devolucao-em-dobro",
+      "titulo": "Cobrança abusiva: o que o credor não pode fazer e quando cabe devolução em dobro",
+      "categoria": "Direitos",
+      "data_exibicao": "17 de out. de 2026",
+      "alt": "Celular tocando sobre a mesa de cabeceira à noite, ao lado de um relógio que marca 22:47.",
+      "publicar_em": "2026-10-17T17:00:00Z",
+      "horario_brasilia": "17/10 14:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "estabilidade-da-gestante-5-meses-apos-parto-contrato-de-experiencia",
+      "titulo": "Estabilidade da gestante: proteção vai da gravidez até 5 meses após o parto",
+      "categoria": "Trabalho",
+      "data_exibicao": "17 de out. de 2026",
+      "alt": "Mulher grávida de uniforme numa loja de roupas, com o rosto fora do enquadramento, perto de uma placa de PROVADOR.",
+      "publicar_em": "2026-10-17T23:00:00Z",
+      "horario_brasilia": "17/10 20:00",
+      "status": "pendente"
+    }
+  ]
+}
