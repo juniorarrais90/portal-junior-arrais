@@ -1,0 +1,372 @@
+/* =========================================================
+   PÁGINA DE EMPRÉSTIMO — versão 7
+   Estrutura inspirada no modelo de landing page (dobra escura,
+   faixa de números, logos, dores, 3 cartões, sobre, destaque,
+   chamada final e balão flutuante), com as cores do portal.
+   Cabeçalho e rodapé continuam vindo do styles.css do portal.
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   1. PALETA DE CORES (troque aqui e a página toda muda)
+   --------------------------------------------------------- */
+.k {
+  --k-marinho:       #0f2c63;  /* fundo da dobra principal e da faixa  */
+  --k-marinho-2:     #123c85;  /* tom do degradê da dobra principal    */
+  --k-azul:          #1c48bf;  /* rótulos, etiquetas e links           */
+  --k-amarelo:       #ffca3a;  /* botões e destaques                   */
+  --k-amarelo-hover: #ffdb70;  /* botão ao passar o mouse              */
+  --k-tinta:         #14264b;  /* títulos                              */
+  --k-texto:         #4f5f78;  /* textos comuns                        */
+  --k-claro:         #dbe6f7;  /* textos sobre fundo escuro            */
+  --k-linha:         #e0e8f2;  /* linhas finas e bordas                */
+  --k-suave:         #f4f7fb;  /* fundo das seções alternadas          */
+  --k-branco:        #ffffff;
+
+  --k-largura: 1180px;
+  --k-raio: 18px;
+  --k-suavidade: cubic-bezier(.22, 1, .36, 1);
+
+  background: var(--k-branco);
+  color: var(--k-texto);
+  font-family: Inter, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  display: block;
+}
+
+/* ---------------------------------------------------------
+   2. BASE
+   --------------------------------------------------------- */
+.k-wrap { width: 100%; max-width: var(--k-largura); margin: 0 auto; padding: 0 24px; }
+.k-secao { padding: 110px 0; }
+.k-secao-suave { background: var(--k-suave); }
+
+.k h1, .k h2, .k h3 { color: var(--k-tinta); font-weight: 800; letter-spacing: -0.025em; line-height: 1.12; }
+.k h1 { font-size: clamp(2.4rem, 4.4vw, 3.7rem); letter-spacing: -0.035em; }
+.k h2 { font-size: clamp(1.9rem, 3.5vw, 2.8rem); margin-bottom: 22px; max-width: 760px; }
+.k h3 { font-size: 1.2rem; margin-bottom: 10px; letter-spacing: -0.01em; }
+.k h2 em { font-style: normal; color: var(--k-azul); }
+
+.k-rotulo {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--k-azul);
+  margin-bottom: 16px;
+}
+.k-rotulo-suave { color: var(--k-texto); margin: 0; }
+.k-texto-grande { font-size: 1.08rem; max-width: 620px; margin-bottom: 16px; }
+
+.k-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.k-pular { position: absolute; left: -9999px; }
+.k-pular:focus { left: 16px; top: 16px; z-index: 100; background: var(--k-amarelo); color: var(--k-tinta); padding: 10px 16px; border-radius: 8px; }
+
+/* ---------------------------------------------------------
+   3. BOTÕES
+   --------------------------------------------------------- */
+.k-botao {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  background: var(--k-amarelo);
+  color: var(--k-tinta);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 17px 30px;
+  border-radius: 999px;
+  transition: transform .3s var(--k-suavidade), background .3s ease, box-shadow .3s ease;
+}
+.k-botao:hover { background: var(--k-amarelo-hover); transform: translateY(-2px); box-shadow: 0 12px 26px rgba(255, 202, 58, .28); }
+.k-botao-largo { display: flex; width: 100%; }
+
+.k-link-seta {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--k-azul);
+  border-bottom: 1px solid transparent;
+  transition: border-color .25s ease, color .25s ease;
+}
+.k-link-seta:hover { border-color: currentColor; }
+.k-link-claro { color: var(--k-branco); }
+.k-link-claro:hover { color: var(--k-amarelo); }
+
+.k a:focus-visible, .k button:focus-visible, .k select:focus-visible, .k summary:focus-visible {
+  outline: 3px solid var(--k-amarelo); outline-offset: 3px;
+}
+
+/* Linha de chamada no fim de cada bloco */
+.k-cta-linha { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 26px; margin-top: 44px; }
+.k-cta-linha small { font-size: 0.82rem; color: var(--k-texto); }
+.k-sobre-grade .k-cta-linha, .k-faq .k-cta-linha { margin-top: 32px; }
+
+/* ---------------------------------------------------------
+   4. DOBRA PRINCIPAL
+   --------------------------------------------------------- */
+.k-hero {
+  background: radial-gradient(120% 90% at 85% 10%, var(--k-marinho-2) 0%, var(--k-marinho) 60%);
+  color: var(--k-claro);
+  padding: 84px 0 96px;
+  overflow: hidden;
+}
+.k-hero-grade { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 64px; align-items: center; }
+.k-hero .k-rotulo { color: var(--k-amarelo); }
+.k-hero h1 { color: var(--k-branco); }
+.k-hero h1 em { font-style: normal; color: var(--k-amarelo); }
+.k-lead { font-size: 1.12rem; max-width: 520px; margin: 26px 0 36px; color: var(--k-claro); }
+.k-acoes { display: flex; flex-wrap: wrap; align-items: center; gap: 26px; }
+.k-observacao { font-size: 0.8rem; margin-top: 22px; color: #a9bddf; max-width: 520px; }
+
+/* Arte da Novo Horizonte com o cartão "Antes de decidir" */
+.k-hero-foto { position: relative; margin: 0; width: 100%; max-width: 460px; justify-self: end; }
+.k-hero-foto img {
+  width: 100%; height: auto;
+  border-radius: 26px;
+  border: 1px solid rgba(255,255,255,.16);
+  box-shadow: 0 34px 70px rgba(3, 14, 40, .45);
+}
+/* Legenda embaixo da arte, sem cobrir a imagem */
+.k-hero-foto figcaption {
+  margin-top: 18px;
+  display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 12px;
+  color: var(--k-claro); font-size: 0.9rem; line-height: 1.45;
+}
+.k-hero-foto figcaption b { color: var(--k-branco); }
+.k-hero-foto figcaption br { display: none; }
+.k-hero-foto figcaption span { display: block; width: 100%; font-size: 0.64rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--k-amarelo); margin-bottom: 0; }
+
+/* ---------------------------------------------------------
+   5. FAIXA DE NÚMEROS
+   --------------------------------------------------------- */
+.k-numeros { background: #0b2350; border-top: 1px solid rgba(255,255,255,.1); }
+.k-numeros-grade { display: grid; grid-template-columns: repeat(5, 1fr); text-align: center; }
+.k-numeros-grade > div { padding: 30px 12px; border-right: 1px solid rgba(255,255,255,.1); }
+.k-numeros-grade > div:last-child { border-right: 0; }
+.k-numeros strong { display: block; color: var(--k-branco); font-size: 1.35rem; font-weight: 800; letter-spacing: -0.02em; line-height: 1.3; white-space: nowrap; }
+.k-numeros small { display: block; color: #a9bddf; font-size: 0.68rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; margin-top: 4px; }
+
+/* ---------------------------------------------------------
+   6. PARCERIA (LOGOS) + ESTEIRA DE PERFIS
+   --------------------------------------------------------- */
+.k-parceria { padding: 56px 0 0; border-bottom: 1px solid var(--k-linha); }
+.k-parceria-linha { display: flex; flex-wrap: wrap; gap: 24px 40px; align-items: center; justify-content: center; }
+.k-logos { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; justify-content: center; }
+.k-logo-portal { height: 30px; width: auto; }
+.k-mais { color: var(--k-texto); font-size: 1.4rem; font-weight: 300; }
+/* O logo da parceira é branco: por isso fica dentro de uma pílula azul */
+.k-logo-parceira { background: var(--k-marinho); border-radius: 999px; padding: 8px 26px; }
+.k-logo-parceira img { height: 44px; width: auto; }
+
+.k-esteira { overflow: hidden; margin-top: 48px; padding: 22px 0; border-top: 1px solid var(--k-linha);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent); }
+.k-esteira-trilho { display: flex; gap: 56px; width: max-content; animation: k-correr 38s linear infinite; }
+.k-esteira-trilho span { font-size: 0.78rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #8b9ab3; white-space: nowrap; }
+.k-esteira-trilho span::before { content: "●"; color: var(--k-amarelo); margin-right: 14px; font-size: .6rem; vertical-align: middle; }
+@keyframes k-correr { to { transform: translateX(-50%); } }
+
+/* ---------------------------------------------------------
+   7. ISSO SOA FAMILIAR?
+   --------------------------------------------------------- */
+.k-intro { max-width: 780px; }
+.k-intro p:not(.k-rotulo) { font-size: 1.08rem; margin-bottom: 16px; }
+.k-dores { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 44px; }
+.k-dores > div {
+  border: 1px solid var(--k-linha); border-radius: var(--k-raio);
+  padding: 26px 28px; background: var(--k-branco);
+  transition: border-color .3s ease, transform .3s var(--k-suavidade);
+}
+.k-dores > div:hover { border-color: var(--k-azul); transform: translateY(-3px); }
+.k-dores strong { display: block; color: var(--k-tinta); font-weight: 700; margin-bottom: 6px; }
+
+/* ---------------------------------------------------------
+   8. CARTÕES (como funciona e outros perfis)
+   --------------------------------------------------------- */
+.k-grade-3, .k-grade-4 { display: grid; gap: 22px; margin-top: 46px; }
+.k-grade-3 { grid-template-columns: repeat(3, 1fr); }
+.k-grade-4 { grid-template-columns: repeat(4, 1fr); }
+.k-cartao {
+  display: flex; flex-direction: column;
+  background: var(--k-branco);
+  border: 1px solid var(--k-linha); border-radius: var(--k-raio);
+  padding: 32px 28px;
+  transition: border-color .3s ease, transform .3s var(--k-suavidade), box-shadow .3s ease;
+}
+.k-cartao:hover { border-color: var(--k-azul); transform: translateY(-4px); box-shadow: 0 18px 40px rgba(20, 38, 75, .08); }
+.k-cartao p { flex: 1; margin-bottom: 22px; }
+.k-etiqueta {
+  align-self: flex-start;
+  font-size: 0.66rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--k-azul); border: 1px solid currentColor; border-radius: 999px;
+  padding: 5px 12px; margin-bottom: 20px;
+}
+
+/* ---------------------------------------------------------
+   9. CONSULTE SEU PERFIL
+   --------------------------------------------------------- */
+.k-consulta-grade { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.k-consulta-cartao {
+  background: var(--k-marinho); color: var(--k-claro);
+  border-radius: 24px; padding: 38px;
+  box-shadow: 0 30px 60px rgba(15, 44, 99, .2);
+}
+.k-consulta-cartao label { display: block; font-size: 0.72rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--k-amarelo); margin-bottom: 10px; }
+.k-consulta-cartao select {
+  width: 100%; font: inherit; font-weight: 600; color: var(--k-tinta);
+  background: var(--k-branco); border: 0; border-radius: 12px; padding: 15px 16px; cursor: pointer;
+}
+.k-perfil-info { border-top: 1px solid rgba(255,255,255,.14); border-bottom: 1px solid rgba(255,255,255,.14); margin: 24px 0; padding: 22px 0; }
+.k-perfil-info h3 { color: var(--k-branco); }
+.k-observacao-escura { font-size: 0.8rem; color: #a9bddf; margin-top: 16px; text-align: center; }
+
+/* ---------------------------------------------------------
+   10. PERGUNTAS (no estilo de depoimentos)
+   --------------------------------------------------------- */
+.k-pergunta { margin: 0; border-left: 3px solid var(--k-amarelo); padding: 4px 0 4px 24px; }
+.k-pergunta blockquote { color: var(--k-tinta); font-size: 1.3rem; font-weight: 700; line-height: 1.4; letter-spacing: -0.015em; margin-bottom: 16px; }
+.k-pergunta figcaption { font-size: 0.9rem; }
+.k-pergunta figcaption b { display: block; color: var(--k-tinta); }
+
+/* ---------------------------------------------------------
+   11. SOBRE
+   --------------------------------------------------------- */
+.k-sobre-grade { display: grid; grid-template-columns: 1.25fr 1fr; gap: 70px; align-items: center; }
+.k-sobre-foto { position: relative; margin: 0; max-width: 440px; justify-self: end; width: 100%; }
+.k-sobre-foto img, .k-foto-pequena img {
+  width: 100%; height: auto; border-radius: 24px;
+  box-shadow: 0 26px 60px rgba(20, 38, 75, .14);
+}
+.k-sobre-foto figcaption {
+  position: absolute; left: -26px; bottom: 30px;
+  background: var(--k-branco); border-radius: 12px; padding: 12px 18px;
+  font-size: 0.82rem; line-height: 1.4; box-shadow: 0 12px 30px rgba(5, 20, 50, .18);
+}
+.k-sobre-foto figcaption b { display: block; color: var(--k-tinta); }
+/* Fotos menores ao lado da consulta e das perguntas frequentes */
+.k-foto-pequena { margin: 34px 0 0; max-width: 300px; }
+.k-papeis { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 28px 0 30px; }
+.k-papeis > div { border: 1px solid var(--k-linha); border-radius: 14px; padding: 18px 20px; background: var(--k-branco); }
+.k-papeis span { display: block; font-size: 0.66rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--k-azul); margin-bottom: 4px; }
+.k-papeis b { color: var(--k-tinta); }
+
+/* ---------------------------------------------------------
+   12. DESTAQUE "O ORÇAMENTO VEM PRIMEIRO"
+   --------------------------------------------------------- */
+.k-destaque {
+  display: grid; grid-template-columns: 1.25fr 1fr; gap: 60px; align-items: center;
+  border: 1px solid var(--k-linha); border-radius: 26px;
+  padding: 60px; background: var(--k-suave);
+}
+.k-destaque > div > p:not(.k-rotulo) { font-size: 1.08rem; margin-bottom: 30px; max-width: 520px; }
+.k-metricas > div { padding: 18px 0; border-bottom: 1px solid var(--k-linha); }
+.k-metricas > div:first-child { padding-top: 0; }
+.k-metricas > div:last-child { border-bottom: 0; padding-bottom: 0; }
+.k-metricas strong { display: block; font-size: 2.3rem; font-weight: 800; letter-spacing: -0.03em; color: var(--k-azul); line-height: 1.15; }
+
+/* ---------------------------------------------------------
+   13. PERGUNTAS FREQUENTES
+   --------------------------------------------------------- */
+.k-faq-grade { display: grid; grid-template-columns: 1fr 1.3fr; gap: 64px; align-items: start; }
+.k-faq details { border-bottom: 1px solid var(--k-linha); }
+.k-faq details:first-child { border-top: 1px solid var(--k-linha); }
+.k-faq summary {
+  list-style: none; cursor: pointer;
+  display: flex; justify-content: space-between; gap: 20px;
+  padding: 22px 0; color: var(--k-tinta); font-weight: 700; font-size: 1.02rem;
+}
+.k-faq summary::-webkit-details-marker { display: none; }
+.k-faq summary::after { content: "+"; color: var(--k-azul); font-size: 1.4rem; line-height: 1; transition: transform .3s ease; }
+.k-faq details[open] summary::after { transform: rotate(45deg); }
+.k-faq details p { padding: 0 40px 22px 0; }
+
+/* ---------------------------------------------------------
+   14. CHAMADA FINAL
+   --------------------------------------------------------- */
+.k-final {
+  background: radial-gradient(120% 120% at 50% 0%, var(--k-marinho-2), var(--k-marinho) 70%);
+  color: var(--k-claro); text-align: center; padding: 110px 0 70px;
+}
+.k-final .k-rotulo { color: var(--k-amarelo); }
+.k-final h2 { color: var(--k-branco); margin: 0 auto 18px; }
+.k-final h2 em { color: var(--k-amarelo); }
+.k-final > .k-wrap > p:not(.k-rotulo) { font-size: 1.1rem; margin-bottom: 36px; }
+.k-aviso { max-width: 780px; margin: 70px auto 0; padding-top: 30px; border-top: 1px solid rgba(255,255,255,.14); font-size: 0.78rem; color: #a9bddf; line-height: 1.7; }
+.k-aviso p + p { margin-top: 10px; }
+.k-aviso b { color: var(--k-branco); }
+
+/* ---------------------------------------------------------
+   15. BALÃO FLUTUANTE "Como podemos ajudar?"
+   --------------------------------------------------------- */
+.k-balao { position: fixed; right: 22px; bottom: 22px; z-index: 60; }
+.k-balao-botao {
+  width: 58px; height: 58px; border-radius: 50%; border: 0; cursor: pointer;
+  background: var(--k-amarelo); color: var(--k-tinta);
+  font: 800 1.5rem/1 Inter, Arial, sans-serif;
+  box-shadow: 0 12px 30px rgba(15, 44, 99, .3);
+  transition: transform .3s var(--k-suavidade);
+}
+.k-balao-botao:hover { transform: scale(1.07); }
+.k-balao-caixa {
+  position: absolute; right: 0; bottom: 72px; width: 300px;
+  background: var(--k-branco); border: 1px solid var(--k-linha); border-radius: 18px;
+  padding: 24px; box-shadow: 0 24px 60px rgba(15, 44, 99, .22);
+  opacity: 0; visibility: hidden; transform: translateY(10px);
+  transition: opacity .25s ease, transform .25s ease, visibility .25s;
+}
+.k-balao.aberto .k-balao-caixa { opacity: 1; visibility: visible; transform: none; }
+.k-balao-caixa b { display: block; color: var(--k-tinta); font-size: 1.1rem; }
+.k-balao-caixa p { font-size: 0.9rem; margin: 4px 0 16px; }
+.k-balao-caixa .k-link-seta { display: block; text-align: center; margin-top: 14px; }
+
+/* ---------------------------------------------------------
+   16. ENTRADA SUAVE DAS SEÇÕES (desligada para quem prefere menos movimento)
+   --------------------------------------------------------- */
+.k-animar .k-revelar { opacity: 0; transform: translateY(24px); transition: opacity .8s var(--k-suavidade), transform .8s var(--k-suavidade); }
+.k-animar .k-revelar.k-visivel { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .k-esteira-trilho { animation: none; }
+  .k * { transition: none !important; }
+}
+
+/* ---------------------------------------------------------
+   17. TABLET E CELULAR
+   --------------------------------------------------------- */
+@media (max-width: 1000px) {
+  .k-grade-4 { grid-template-columns: repeat(2, 1fr); }
+  .k-numeros-grade { grid-template-columns: repeat(3, 1fr); }
+  .k-numeros-grade > div:nth-child(3) { border-right: 0; }
+  .k-numeros-grade > div:nth-child(-n+3) { border-bottom: 1px solid rgba(255,255,255,.1); }
+}
+
+@media (max-width: 880px) {
+  .k-secao { padding: 80px 0; }
+  .k-hero { padding: 56px 0 72px; }
+  .k-hero-grade, .k-consulta-grade, .k-sobre-grade, .k-destaque, .k-faq-grade { grid-template-columns: 1fr; gap: 44px; }
+  .k-hero-foto { justify-self: center; max-width: 420px; }
+  .k-sobre-foto { justify-self: start; }
+  .k-foto-pequena { max-width: 240px; }
+  .k-grade-3 { grid-template-columns: 1fr; }
+  .k-destaque { padding: 40px 28px; }
+}
+
+@media (max-width: 600px) {
+  .k-wrap { padding: 0 16px; }
+  .k-secao { padding: 64px 0; }
+  .k-dores, .k-grade-4, .k-papeis { grid-template-columns: 1fr; }
+  .k-numeros-grade { grid-template-columns: repeat(2, 1fr); }
+  .k-numeros-grade > div { border-right: 1px solid rgba(255,255,255,.1) !important; border-bottom: 1px solid rgba(255,255,255,.1); }
+  .k-numeros-grade > div:nth-child(2n) { border-right: 0 !important; }
+  .k-numeros-grade > div:last-child { grid-column: 1 / -1; border-right: 0 !important; border-bottom: 0; }
+  .k-numeros strong { white-space: normal; font-size: 1.15rem; }
+  .k-acoes { gap: 18px; }
+  .k-acoes .k-botao, .k-cta-linha .k-botao { width: 100%; }
+  .k-sobre-foto figcaption { left: 12px; bottom: 12px; }
+  .k-consulta-cartao { padding: 28px 22px; }
+  .k-faq details p { padding-right: 0; }
+  .k-final { padding: 80px 0 56px; }
+  .k-balao { right: 16px; bottom: 16px; }
+  .k-balao-caixa { width: calc(100vw - 32px); }
+}
