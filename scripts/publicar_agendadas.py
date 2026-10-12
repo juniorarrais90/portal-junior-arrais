@@ -16,9 +16,11 @@ Como funciona
     a lateral; a última da lateral vira o 1º card de "Últimas"; o último card sai),
     roda gerar_relacionadas.py e aplicar_links_contextuais.py e valida a home.
 
-Quem chama: scripts/atualizar_shorts.py, no começo de cada execução do workflow
-"Atualizar Shorts do portal" (08h, 14h e 20h de Brasília). Aquele workflow já faz
-`git add -A` + commit + push, então tudo o que este script muda entra no ar junto.
+Quem chama: scripts/processar_fila_instagram.py, no começo de cada execução do
+workflow "Publicar no Instagram" (a cada ~10 min, com reforço externo). Chamado
+assim, com push=True, este script faz o próprio commit e push (com nova tentativa).
+Até 12/10/2026 ele era chamado pelo workflow dos Shorts, mas aquele cron atrasava
+até 3 horas: a matéria das 8h não tinha saído às 9h.
 
 Segurança
   - nunca derruba quem chamou: qualquer erro é impresso e o script segue;
@@ -169,7 +171,33 @@ def publicar(item):
     print("Publicada:", slug)
 
 
-def main():
+def git(*a, timeout=120):
+    return subprocess.run(["git", *a], cwd=RAIZ, capture_output=True, text=True, timeout=timeout)
+
+
+def gravar_no_git(slugs):
+    """Commit + push só dos caminhos que a publicação mexe, com até 5 tentativas."""
+    caminhos = ["noticias", "noticias.html", "index.html", "sitemap.xml", "agendadas"]
+    for tentativa in range(1, 6):
+        git("add", "-A", *caminhos)
+        if git("diff", "--cached", "--quiet").returncode != 0:
+            git("-c", "user.name=Portal Júnior Arrais", "-c", "user.email=juniorarrais90@gmail.com",
+                "commit", "-q", "-m", "Gaveta: publica " + ", ".join(slugs))
+        r = git("push", "origin", "HEAD:main")
+        if r.returncode == 0:
+            print(f"Gaveta gravada no GitHub (tentativa {tentativa}).")
+            return True
+        print(f"Push recusado (tentativa {tentativa}); sincronizando...")
+        p = git("-c", "user.name=Portal Júnior Arrais", "-c", "user.email=juniorarrais90@gmail.com",
+                "pull", "--rebase", "origin", "main")
+        if p.returncode != 0:
+            git("rebase", "--abort")
+            print("Rebase falhou:", (p.stdout + p.stderr)[-300:])
+            return False
+    return False
+
+
+def main(push=False):
     if not os.path.exists(AGENDA):
         return 0
     ag = json.load(open(AGENDA, encoding="utf-8"))
@@ -201,8 +229,10 @@ def main():
             r = subprocess.run([sys.executable, os.path.join(RAIZ, "scripts", sc)], cwd=RAIZ,
                                capture_output=True, text=True)
             print(sc, "ok" if r.returncode == 0 else "FALHOU: " + r.stderr[-300:])
+        if push:
+            gravar_no_git([i["slug"] for i in vencidos if i.get("status") == "publicado"])
     return 0
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    sys.exit(main(push="--push" in sys.argv))

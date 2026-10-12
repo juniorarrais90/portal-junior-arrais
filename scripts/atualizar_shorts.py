@@ -179,16 +179,5 @@ def main():
     return 0
 
 
-def publicar_gaveta():
-    """Antes dos Shorts, publica as matérias agendadas que venceram (ver publicar_agendadas.py).
-    Qualquer erro aqui é só impresso: os Shorts seguem normalmente."""
-    try:
-        import publicar_agendadas
-        publicar_agendadas.main()
-    except Exception as e:
-        print("AVISO: publicacao agendada falhou: %s" % e)
-
-
 if __name__ == "__main__":
-    publicar_gaveta()
     sys.exit(main())

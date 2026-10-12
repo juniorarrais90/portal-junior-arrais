@@ -213,5 +213,18 @@ def main():
     return 0
 
 
+def publicar_gaveta():
+    """Antes da fila, põe no ar as matérias da grade semanal que venceram
+    (scripts/publicar_agendadas.py). Este workflow roda a cada ~10 min e é pontual;
+    o dos Shorts atrasava até 3 h. O próprio publicar_agendadas faz commit e push.
+    Qualquer erro aqui é só impresso: a fila do Instagram segue normalmente."""
+    try:
+        import publicar_agendadas
+        publicar_agendadas.main(push=True)
+    except Exception as e:
+        print("AVISO: publicação da gaveta falhou: %s" % e)
+
+
 if __name__ == "__main__":
+    publicar_gaveta()
     sys.exit(main())
