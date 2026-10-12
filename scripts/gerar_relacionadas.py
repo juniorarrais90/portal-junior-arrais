@@ -159,6 +159,9 @@ def ler_materia(caminho):
         "temas": temas,
         "tokens": tokens(slug + " " + titulo),
         "capa": f"../img/{slug}.png" if os.path.exists(os.path.join(DIR_IMG, slug + ".png")) else None,
+        # Matéria vencida ou repetida leva noindex (12/10/2026, revisão do AdSense)
+        # e deixa de receber link do "Leia também".
+        "noindex": bool(re.search(r'<meta name="robots" content="noindex', html)),
     }
 
 
@@ -204,7 +207,7 @@ def escolher(materias, n):
         )
         escolhidos = []
         for alvo in candidatos:
-            if alvo["slug"] == origem["slug"]:
+            if alvo["slug"] == origem["slug"] or alvo["noindex"]:
                 continue
             escolhidos.append(alvo["slug"])
             inlinks[alvo["slug"]] += 1
