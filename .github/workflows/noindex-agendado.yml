@@ -1,0 +1,68 @@
+name: Noindex agendado
+
+# Uma vez por dia aplica noindex (e tira do sitemap) as matérias de
+# data/noindex-agendado.json cuja data já chegou. Criado em 12/10/2026 para a
+# revisão do AdSense: notícia de prazo vencido conta como conteúdo de baixo valor.
+#
+# MINUTO DO CRON: 41, livre dos robôs do Instagram (3, 8, 13, 23, 33, 38, 43,
+# 52, 53), do Facebook (6, 21, 36, 51) e do serviço externo (00, 15, 30, 45).
+on:
+  schedule:
+    - cron: "41 3 * * *"     # 00:41 em Brasília
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: noindex-agendado
+  cancel-in-progress: false
+
+jobs:
+  aplicar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+
+      - name: Aplicar noindex vencido
+        id: aplicar
+        run: |
+          saida=$(python scripts/aplicar_noindex_agendado.py)
+          echo "$saida"
+          if echo "$saida" | grep -q '^MUDOU$'; then
+            echo "mudou=1" >> "$GITHUB_OUTPUT"
+          fi
+
+      # O "Leia também" deixa de apontar para as páginas que ganharam noindex.
+      - name: Refazer o Leia também
+        if: steps.aplicar.outputs.mudou == '1'
+        run: python scripts/gerar_relacionadas.py
+
+      - name: Validar HTML
+        if: steps.aplicar.outputs.mudou == '1'
+        run: python scripts/validar_home.py
+
+      - name: Gravar
+        if: steps.aplicar.outputs.mudou == '1'
+        run: |
+          git config user.name "Portal Júnior Arrais"
+          git config user.email "juniorarrais90@gmail.com"
+          git add -A noticias sitemap.xml data/noindex-agendado.json
+          git commit -m "Noindex agendado: matérias vencidas [skip ci]"
+          for tentativa in 1 2 3 4 5; do
+            if git push; then
+              echo "Gravado na tentativa $tentativa."
+              exit 0
+            fi
+            git pull --rebase origin main || { git rebase --abort; exit 1; }
+            sleep $((tentativa * 5))
+          done
+          echo "::error::Não consegui gravar após 5 tentativas."
+          exit 1

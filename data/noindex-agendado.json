@@ -1,0 +1,67 @@
+{
+  "_leia": "Matérias que ganham <meta name=\"robots\" content=\"noindex, follow\"> e saem do sitemap a partir da data indicada (horário de Brasília). Aplicado diariamente por .github/workflows/noindex-agendado.yml. Para incluir uma matéria, acrescente um item; o campo aplicado_em é preenchido pelo robô.",
+  "itens": [
+    {
+      "slug": "correios-greve-acaba-tst-da-reajuste-de-4-09-e-entregas-voltam",
+      "a_partir_de": "2026-10-12",
+      "motivo": "greve encerrada",
+      "aplicado_em": "2026-10-12"
+    },
+    {
+      "slug": "greve-da-caixa-acabou-tst-da-reajuste-de-4-6-e-agencias-voltam-ao-normal",
+      "a_partir_de": "2026-10-12",
+      "motivo": "greve encerrada",
+      "aplicado_em": "2026-10-12"
+    },
+    {
+      "slug": "bets-devolucao-comeca-sexta-e-r-1-3-bilhao-volta-para-26-5-milhoes-de-apostadores",
+      "a_partir_de": "2026-10-15",
+      "motivo": "devolução terminou em 14/10"
+    },
+    {
+      "slug": "escala-6x1-pec-entra-em-discussao-no-senado-e-votacao-pode-sair-na-semana-que-vem",
+      "a_partir_de": "2026-10-20",
+      "motivo": "previsão de votação vencida"
+    },
+    {
+      "slug": "mesario-nas-eleicoes-folga-pelo-dobro-dos-dias",
+      "a_partir_de": "2026-10-26",
+      "motivo": "segundo turno em 25/10"
+    },
+    {
+      "slug": "segundo-turno-em-25-de-outubro-quem-faltou-no-primeiro-pode-votar",
+      "a_partir_de": "2026-10-26",
+      "motivo": "segundo turno em 25/10"
+    },
+    {
+      "slug": "pis-pasep-antigo-quem-pediu-ate-30-de-setembro-recebe-em-26-de-outubro",
+      "a_partir_de": "2026-10-27",
+      "motivo": "pagamento em 26/10"
+    },
+    {
+      "slug": "pe-de-meia-parcela-de-setembro-fechou-e-a-proxima-cai-entre-19-e-26-de-outubro",
+      "a_partir_de": "2026-10-27",
+      "motivo": "parcela até 26/10"
+    },
+    {
+      "slug": "bolsa-familia-calendario-de-outubro",
+      "a_partir_de": "2026-11-01",
+      "motivo": "calendário de outubro"
+    },
+    {
+      "slug": "fgts-saque-aniversario-de-outubro-e-o-fim-das-cinco-antecipacoes",
+      "a_partir_de": "2026-11-01",
+      "motivo": "saque de outubro"
+    },
+    {
+      "slug": "inss-calendario-de-outubro",
+      "a_partir_de": "2026-11-10",
+      "motivo": "pagamentos até 09/11"
+    },
+    {
+      "slug": "enem-2026-pe-de-meia-paga-r-200-a-quem-fizer-os-dois-dias",
+      "a_partir_de": "2026-11-16",
+      "motivo": "Enem em 8 e 15/11"
+    }
+  ]
+}
