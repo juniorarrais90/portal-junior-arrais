@@ -416,7 +416,12 @@
       "horario_brasilia": "12/10 09:45",
       "status": "publicado",
       "publicado_em": "2026-10-12T12:49:02Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122118913341442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122118913341442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-10-12T13:05:09Z",
+        "link_post": "https://www.facebook.com/113029587494887_1519831933506488"
+      }
     },
     {
       "slug": "nome-sujo-quanto-tempo-a-divida-fica-no-serasa-e-no-spc",
