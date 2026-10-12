@@ -325,6 +325,7 @@ nav a:hover, nav a.active { color: var(--text); background: var(--bg-card-hover)
 .artigo-conteudo { font-size: 1.06rem; color: #33404f; }
 .artigo-conteudo p { margin-bottom: 18px; }
 .artigo-conteudo h2 { font-size: 1.3rem; margin: 28px 0 12px; font-weight: 800; }
+.artigo-conteudo h3 { font-size: 1.05rem; margin: 20px 0 6px; font-weight: 700; }
 .artigo-conteudo a { color: #2c89e7; text-decoration: underline; }
 .artigo-conteudo ul, .artigo-conteudo ol { margin: 0 0 18px 22px; }
 
