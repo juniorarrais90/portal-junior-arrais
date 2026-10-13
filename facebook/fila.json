@@ -448,7 +448,12 @@
       "horario_brasilia": "12/10 21:45",
       "status": "publicado",
       "publicado_em": "2026-10-13T00:49:11Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122119052367442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122119052367442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-10-13T01:07:42Z",
+        "link_post": "https://www.facebook.com/113029587494887_1520358726787142"
+      }
     },
     {
       "slug": "aposentadoria-hibrida-por-idade-tempo-de-roca-e-carteira-assinada",
