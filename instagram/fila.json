@@ -2436,7 +2436,9 @@
       "publicar_em": "2026-10-13T18:30:00Z",
       "horario_brasilia": "13/10 15:30",
       "alt_text": "Compra pela internet: 7 dias para desistir e receber todo o dinheiro de volta",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-10-13T18:32:16Z",
+      "link": "https://www.instagram.com/p/DecdZEymKmH/"
     },
     {
       "slug": "tratamento-fora-de-domicilio-tfd-sus-transporte-e-diaria-para-paciente",
