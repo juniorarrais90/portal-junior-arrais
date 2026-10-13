@@ -480,7 +480,12 @@
       "horario_brasilia": "13/10 15:45",
       "status": "publicado",
       "publicado_em": "2026-10-13T18:49:01Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122119248495442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122119248495442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-10-13T19:04:21Z",
+        "link_post": "https://www.facebook.com/113029587494887_1521100146713000"
+      }
     },
     {
       "slug": "tratamento-fora-de-domicilio-tfd-sus-transporte-e-diaria-para-paciente",
