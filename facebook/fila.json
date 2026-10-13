@@ -464,7 +464,12 @@
       "horario_brasilia": "13/10 09:45",
       "status": "publicado",
       "publicado_em": "2026-10-13T12:48:35Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122119197327442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122119197327442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-10-13T13:04:03Z",
+        "link_post": "https://www.facebook.com/113029587494887_1520820180074330"
+      }
     },
     {
       "slug": "compra-pela-internet-direito-de-arrependimento-7-dias-devolucao",
