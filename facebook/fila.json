@@ -512,7 +512,12 @@
       "horario_brasilia": "14/10 09:45",
       "status": "publicado",
       "publicado_em": "2026-10-14T12:46:10Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122119402557442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122119402557442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-10-14T13:03:55Z",
+        "link_post": "https://www.facebook.com/113029587494887_1521791559977192"
+      }
     },
     {
       "slug": "juros-do-rotativo-do-cartao-limite-de-100-e-portabilidade-da-divida",
