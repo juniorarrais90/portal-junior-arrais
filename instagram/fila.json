@@ -2446,7 +2446,9 @@
       "publicar_em": "2026-10-14T00:30:00Z",
       "horario_brasilia": "13/10 21:30",
       "alt_text": "Tratamento Fora de Domicílio: quando o SUS paga a viagem para tratar em outra cidade",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-10-14T00:32:05Z",
+      "link": "https://www.instagram.com/p/DedGkVtGDjU/"
     },
     {
       "slug": "rescisao-prazo-de-10-dias-para-pagar-e-multa-por-atraso",
