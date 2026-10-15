@@ -2496,7 +2496,9 @@
       "publicar_em": "2026-10-15T18:30:00Z",
       "horario_brasilia": "15/10 15:30",
       "alt_text": "Produto com defeito: 30 dias para o conserto e, depois, troca ou dinheiro de volta",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-10-15T18:31:21Z",
+      "link": "https://www.instagram.com/p/Dehm4AroHQA/"
     },
     {
       "slug": "aluguel-fiador-caucao-ou-seguro-fianca-dono-so-pode-exigir-um",
