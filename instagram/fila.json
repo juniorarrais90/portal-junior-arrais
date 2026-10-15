@@ -2486,7 +2486,9 @@
       "publicar_em": "2026-10-15T12:30:00Z",
       "horario_brasilia": "15/10 09:30",
       "alt_text": "Acidente de trabalho: o que conta, a CAT, a estabilidade de 12 meses e o FGTS",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-10-15T12:31:23Z",
+      "link": "https://www.instagram.com/p/Deg9rssG0lM/"
     },
     {
       "slug": "produto-com-defeito-30-dias-para-consertar-troca-ou-dinheiro-de-volta",
