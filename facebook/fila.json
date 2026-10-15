@@ -544,7 +544,12 @@
       "horario_brasilia": "14/10 21:45",
       "status": "publicado",
       "publicado_em": "2026-10-15T00:50:42Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122119520613442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122119520613442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-10-15T01:02:15Z",
+        "link_post": "https://www.facebook.com/113029587494887_1522268143262867"
+      }
     },
     {
       "slug": "acidente-de-trabalho-cat-estabilidade-de-12-meses-e-fgts-no-afastamento",
