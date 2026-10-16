@@ -592,7 +592,12 @@
       "horario_brasilia": "15/10 21:45",
       "status": "publicado",
       "publicado_em": "2026-10-16T00:46:59Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122119729545442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122119729545442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-10-16T01:02:13Z",
+        "link_post": "https://www.facebook.com/113029587494887_1523216269834721"
+      }
     },
     {
       "slug": "aviso-previo-proporcional-30-dias-mais-3-por-ano-ate-90",
