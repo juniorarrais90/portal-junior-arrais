@@ -624,7 +624,12 @@
       "horario_brasilia": "16/10 15:45",
       "status": "publicado",
       "publicado_em": "2026-10-16T18:47:34Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122119913613442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122119913613442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-10-16T19:02:20Z",
+        "link_post": "https://www.facebook.com/113029587494887_1523960826426932"
+      }
     },
     {
       "slug": "saldo-bancario-poupanca-restituicao-de-quem-morreu-sem-inventario",
