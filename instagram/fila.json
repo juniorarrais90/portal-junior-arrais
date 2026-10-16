@@ -2516,7 +2516,9 @@
       "publicar_em": "2026-10-16T12:30:00Z",
       "horario_brasilia": "16/10 09:30",
       "alt_text": "Aviso prévio proporcional: 30 dias mais 3 por ano de empresa, até o limite de 90",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-10-16T12:31:18Z",
+      "link": "https://www.instagram.com/p/Dejidxtkac1/"
     },
     {
       "slug": "superendividamento-minimo-existencial-repactuacao-de-dividas-cdc",
