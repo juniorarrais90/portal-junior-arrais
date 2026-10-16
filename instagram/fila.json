@@ -2506,7 +2506,9 @@
       "publicar_em": "2026-10-16T00:30:00Z",
       "horario_brasilia": "15/10 21:30",
       "alt_text": "Aluguel: dono do imóvel só pode exigir fiador, caução ou seguro-fiança, nunca dois juntos",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-10-16T00:31:21Z",
+      "link": "https://www.instagram.com/p/DeiQEwFFe3A/"
     },
     {
       "slug": "aviso-previo-proporcional-30-dias-mais-3-por-ano-ate-90",
