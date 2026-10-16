@@ -608,7 +608,12 @@
       "horario_brasilia": "16/10 09:45",
       "status": "publicado",
       "publicado_em": "2026-10-16T12:48:46Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122119853979442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122119853979442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-10-16T13:02:14Z",
+        "link_post": "https://www.facebook.com/113029587494887_1523680233121658"
+      }
     },
     {
       "slug": "superendividamento-minimo-existencial-repactuacao-de-dividas-cdc",
