@@ -656,7 +656,12 @@
       "horario_brasilia": "17/10 09:45",
       "status": "publicado",
       "publicado_em": "2026-10-17T12:48:33Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122120076783442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122120076783442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-10-17T13:02:27Z",
+        "link_post": "https://www.facebook.com/113029587494887_1524625259693822"
+      }
     },
     {
       "slug": "cobranca-abusiva-cdc-ameaca-constrangimento-devolucao-em-dobro",
