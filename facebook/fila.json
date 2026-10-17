@@ -672,7 +672,12 @@
       "horario_brasilia": "17/10 15:45",
       "status": "publicado",
       "publicado_em": "2026-10-17T18:46:55Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122120127615442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122120127615442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-10-17T19:02:24Z",
+        "link_post": "https://www.facebook.com/113029587494887_1524907619665586"
+      }
     },
     {
       "slug": "estabilidade-da-gestante-5-meses-apos-parto-contrato-de-experiencia",
