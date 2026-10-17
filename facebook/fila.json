@@ -640,7 +640,12 @@
       "horario_brasilia": "16/10 21:45",
       "status": "publicado",
       "publicado_em": "2026-10-17T00:46:58Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122119957539442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122119957539442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-10-17T01:02:06Z",
+        "link_post": "https://www.facebook.com/113029587494887_1524157853073896"
+      }
     },
     {
       "slug": "carencia-do-inss-quantas-contribuicoes-cada-beneficio-exige",
