@@ -688,7 +688,12 @@
       "horario_brasilia": "17/10 21:45",
       "status": "publicado",
       "publicado_em": "2026-10-18T00:47:25Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122120163987442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122120163987442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-10-18T01:01:53Z",
+        "link_post": "https://www.facebook.com/113029587494887_1525106042979077"
+      }
     }
   ]
 }
