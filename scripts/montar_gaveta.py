@@ -20,9 +20,9 @@ e gera, dentro do repositório:
   - instagram/legendas, facebook/legendas e os itens nas duas filas
   - <trabalho>/youtube.json           texto, data e hora de cada post do YouTube
 
-Grade: 3 matérias por dia a partir de --inicio (segunda). Site às 8h/14h/20h,
-Instagram às 9h30/15h30/21h30, Facebook 15 min depois do Instagram, YouTube às
-9h/15h/21h (horário de Brasília). num 1-3 = 1º dia, 4-6 = 2º dia etc.
+Grade: 3 matérias por dia a partir de --inicio (segunda). Site às 8h/14h/18h,
+Instagram às 9h30/15h30/19h30, Facebook 15 min depois do Instagram, YouTube às
+9h/15h/19h (horário de Brasília). num 1-3 = 1º dia, 4-6 = 2º dia etc.
 
 Uso:
   python3 scripts/montar_gaveta.py --materias ~/w/materias --masters ~/w/master \
@@ -37,9 +37,9 @@ from PIL import Image, ImageDraw, ImageFont
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = 'https://portaljuniorarrais.com.br'
 MESES = ['jan.', 'fev.', 'mar.', 'abr.', 'mai.', 'jun.', 'jul.', 'ago.', 'set.', 'out.', 'nov.', 'dez.']
-SLOT_SITE = [(8, 0), (14, 0), (20, 0)]
-SLOT_IG = [(9, 30), (15, 30), (21, 30)]
-SLOT_YT = ['9:00 AM', '3:00 PM', '9:00 PM']
+SLOT_SITE = [(8, 0), (14, 0), (18, 0)]
+SLOT_IG = [(9, 30), (15, 30), (19, 30)]
+SLOT_YT = ['9:00 AM', '3:00 PM', '7:00 PM']
 FONTE = os.path.join(RAIZ, 'fontes', 'Outfit-Bold.ttf')
 
 

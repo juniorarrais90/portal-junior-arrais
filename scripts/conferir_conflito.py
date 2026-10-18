@@ -77,7 +77,7 @@ def main():
             livres.append(t.strftime('%H:%M'))
         t += timedelta(minutes=30)
     print('\n  Horários livres para o Instagram (Facebook 15 min depois):', ', '.join(livres) or 'nenhum')
-    print('  Site: pode publicar a qualquer hora, mas evite 8h, 14h e 20h (horário do robô da grade).')
+    print('  Site: pode publicar a qualquer hora, mas evite 8h, 14h e 18h (horário do robô da grade).')
 
 
 if __name__ == '__main__':
