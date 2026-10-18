@@ -2569,6 +2569,150 @@
       "status": "publicado",
       "publicado_em": "2026-10-18T00:31:19Z",
       "link": "https://www.instagram.com/p/DenZqLCIBVO/"
+    },
+    {
+      "slug": "hora-extra-e-banco-de-horas-adicional-de-50-limite-diario-e-prazo-para-compensar",
+      "titulo": "Hora extra e banco de horas: adicional de 50%, limite de 2 horas e prazo para compensar",
+      "publicar_em": "2026-10-19T12:30:00Z",
+      "horario_brasilia": "19/10 09:30",
+      "alt_text": "Hora extra e banco de horas: adicional de 50%, limite de 2 horas e prazo para compensar",
+      "status": "pendente"
+    },
+    {
+      "slug": "voo-atrasado-ou-cancelado-assistencia-da-anac-reembolso-e-indenizacao",
+      "titulo": "Voo atrasado ou cancelado: o que a companhia aérea deve oferecer e quando cabe indenização",
+      "publicar_em": "2026-10-19T18:30:00Z",
+      "horario_brasilia": "19/10 15:30",
+      "alt_text": "Voo atrasado ou cancelado: o que a companhia aérea deve oferecer e quando cabe indenização",
+      "status": "pendente"
+    },
+    {
+      "slug": "usucapiao-modalidades-prazos-requisitos-e-pedido-no-cartorio",
+      "titulo": "Usucapião: os prazos de cada modalidade e como pedir o imóvel no cartório ou na Justiça",
+      "publicar_em": "2026-10-20T00:30:00Z",
+      "horario_brasilia": "19/10 21:30",
+      "alt_text": "Usucapião: os prazos de cada modalidade e como pedir o imóvel no cartório ou na Justiça",
+      "status": "pendente"
+    },
+    {
+      "slug": "autonomo-no-inss-plano-normal-de-20-ou-simplificado-de-11-como-contribuir",
+      "titulo": "Autônomo no INSS: plano de 20% ou de 11%, o que cada um cobre e como pagar",
+      "publicar_em": "2026-10-20T12:30:00Z",
+      "horario_brasilia": "20/10 09:30",
+      "alt_text": "Autônomo no INSS: plano de 20% ou de 11%, o que cada um cobre e como pagar",
+      "status": "pendente"
+    },
+    {
+      "slug": "venda-casada-seguro-embutido-no-emprestimo-e-financiamento-devolucao",
+      "titulo": "Seguro embutido no empréstimo: quando é venda casada e como pedir o dinheiro de volta",
+      "publicar_em": "2026-10-20T18:30:00Z",
+      "horario_brasilia": "20/10 15:30",
+      "alt_text": "Seguro embutido no empréstimo: quando é venda casada e como pedir o dinheiro de volta",
+      "status": "pendente"
+    },
+    {
+      "slug": "guarda-compartilhada-regra-convivencia-casa-de-referencia-e-pensao",
+      "titulo": "Guarda compartilhada: quando é a regra, como fica a convivência e por que a pensão continua",
+      "publicar_em": "2026-10-21T00:30:00Z",
+      "horario_brasilia": "20/10 21:30",
+      "alt_text": "Guarda compartilhada: quando é a regra, como fica a convivência e por que a pensão continua",
+      "status": "pendente"
+    },
+    {
+      "slug": "justa-causa-motivos-clt-482-o-que-perde-e-como-reverter",
+      "titulo": "Justa causa: os motivos da lei, o que o trabalhador perde e como contestar na Justiça",
+      "publicar_em": "2026-10-21T12:30:00Z",
+      "horario_brasilia": "21/10 09:30",
+      "alt_text": "Justa causa: os motivos da lei, o que o trabalhador perde e como contestar na Justiça",
+      "status": "pendente"
+    },
+    {
+      "slug": "corte-de-luz-e-agua-por-falta-de-pagamento-aviso-dias-proibidos-religacao",
+      "titulo": "Corte de luz e de água por falta de pagamento: aviso, dias proibidos e prazo de religação",
+      "publicar_em": "2026-10-21T18:30:00Z",
+      "horario_brasilia": "21/10 15:30",
+      "alt_text": "Corte de luz e de água por falta de pagamento: aviso, dias proibidos e prazo de religação",
+      "status": "pendente"
+    },
+    {
+      "slug": "remedio-que-o-sus-nao-fornece-lista-rename-falta-e-regras-do-stf",
+      "titulo": "Remédio que o SUS não fornece: o que fazer quando falta e quando está fora da lista",
+      "publicar_em": "2026-10-22T00:30:00Z",
+      "horario_brasilia": "21/10 21:30",
+      "alt_text": "Remédio que o SUS não fornece: o que fazer quando falta e quando está fora da lista",
+      "status": "pendente"
+    },
+    {
+      "slug": "adicional-de-insalubridade-e-periculosidade-percentuais-pericia-epi",
+      "titulo": "Insalubridade e periculosidade: quem recebe, quanto vale e por que não dá para somar",
+      "publicar_em": "2026-10-22T12:30:00Z",
+      "horario_brasilia": "22/10 09:30",
+      "alt_text": "Insalubridade e periculosidade: quem recebe, quanto vale e por que não dá para somar",
+      "status": "pendente"
+    },
+    {
+      "slug": "plano-de-saude-carencia-maxima-doenca-preexistente-urgencia-negativa",
+      "titulo": "Plano de saúde: carências máximas, doença preexistente e o que fazer diante da negativa",
+      "publicar_em": "2026-10-22T18:30:00Z",
+      "horario_brasilia": "22/10 15:30",
+      "alt_text": "Plano de saúde: carências máximas, doença preexistente e o que fazer diante da negativa",
+      "status": "pendente"
+    },
+    {
+      "slug": "uniao-estavel-o-que-caracteriza-como-registrar-cartorio-direitos",
+      "titulo": "União estável: o que caracteriza, como registrar no cartório e quais direitos ela dá",
+      "publicar_em": "2026-10-23T00:30:00Z",
+      "horario_brasilia": "22/10 21:30",
+      "alt_text": "União estável: o que caracteriza, como registrar no cartório e quais direitos ela dá",
+      "status": "pendente"
+    },
+    {
+      "slug": "demissao-por-acordo-multa-de-20-saque-de-80-do-fgts-e-sem-seguro-desemprego",
+      "titulo": "Demissão por acordo: metade do aviso, multa de 20% do FGTS e nada de seguro-desemprego",
+      "publicar_em": "2026-10-23T12:30:00Z",
+      "horario_brasilia": "23/10 09:30",
+      "alt_text": "Demissão por acordo: metade do aviso, multa de 20% do FGTS e nada de seguro-desemprego",
+      "status": "pendente"
+    },
+    {
+      "slug": "golpe-do-pix-med-mecanismo-especial-de-devolucao-como-pedir-o-dinheiro-de-volta",
+      "titulo": "Golpe do Pix: como o MED funciona e quando o banco pode devolver o dinheiro",
+      "publicar_em": "2026-10-23T18:30:00Z",
+      "horario_brasilia": "23/10 15:30",
+      "alt_text": "Golpe do Pix: como o MED funciona e quando o banco pode devolver o dinheiro",
+      "status": "pendente"
+    },
+    {
+      "slug": "heranca-sem-testamento-quem-herda-ordem-dos-herdeiros-conjuge-e-inventario",
+      "titulo": "Herança sem testamento: quem herda primeiro, a parte do cônjuge e como fazer o inventário",
+      "publicar_em": "2026-10-24T00:30:00Z",
+      "horario_brasilia": "23/10 21:30",
+      "alt_text": "Herança sem testamento: quem herda primeiro, a parte do cônjuge e como fazer o inventário",
+      "status": "pendente"
+    },
+    {
+      "slug": "inss-contribuicao-em-atraso-quando-pode-pagar-e-quando-conta-para-carencia",
+      "titulo": "INSS em atraso: quando dá para pagar a contribuição e quando ela conta para a carência",
+      "publicar_em": "2026-10-24T12:30:00Z",
+      "horario_brasilia": "24/10 09:30",
+      "alt_text": "INSS em atraso: quando dá para pagar a contribuição e quando ela conta para a carência",
+      "status": "pendente"
+    },
+    {
+      "slug": "condominio-atrasado-multa-de-2-juros-cobranca-leilao-e-o-que-o-sindico-nao-pode-fazer",
+      "titulo": "Condomínio atrasado: multa de até 2%, cobrança rápida e risco de leilão do imóvel",
+      "publicar_em": "2026-10-24T18:30:00Z",
+      "horario_brasilia": "24/10 15:30",
+      "alt_text": "Condomínio atrasado: multa de até 2%, cobrança rápida e risco de leilão do imóvel",
+      "status": "pendente"
+    },
+    {
+      "slug": "mudar-nome-e-sobrenome-no-cartorio-sem-processo-maior-de-18-anos",
+      "titulo": "Mudança de nome no cartório: maior de 18 anos troca o prenome uma vez, sem justificar",
+      "publicar_em": "2026-10-25T00:30:00Z",
+      "horario_brasilia": "24/10 21:30",
+      "alt_text": "Mudança de nome no cartório: maior de 18 anos troca o prenome uma vez, sem justificar",
+      "status": "pendente"
     }
   ]
 }

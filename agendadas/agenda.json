@@ -198,6 +198,186 @@
       "horario_brasilia": "17/10 20:00",
       "status": "publicado",
       "publicado_em": "2026-10-17T23:01:07Z"
+    },
+    {
+      "slug": "hora-extra-e-banco-de-horas-adicional-de-50-limite-diario-e-prazo-para-compensar",
+      "titulo": "Hora extra e banco de horas: adicional de 50%, limite de 2 horas e prazo para compensar",
+      "categoria": "Trabalho",
+      "data_exibicao": "19 de out. de 2026",
+      "alt": "Corredor de fábrica de calçados no começo da noite, com bancadas iluminadas e um relógio digital na parede marcando 19:40.",
+      "publicar_em": "2026-10-19T11:00:00Z",
+      "horario_brasilia": "19/10 08:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "voo-atrasado-ou-cancelado-assistencia-da-anac-reembolso-e-indenizacao",
+      "titulo": "Voo atrasado ou cancelado: o que a companhia aérea deve oferecer e quando cabe indenização",
+      "categoria": "Direitos",
+      "data_exibicao": "19 de out. de 2026",
+      "alt": "Saguão de aeroporto com um carrinho de duas malas parado diante de um painel de voos, sob a placa EMBARQUE.",
+      "publicar_em": "2026-10-19T17:00:00Z",
+      "horario_brasilia": "19/10 14:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "usucapiao-modalidades-prazos-requisitos-e-pedido-no-cartorio",
+      "titulo": "Usucapião: os prazos de cada modalidade e como pedir o imóvel no cartório ou na Justiça",
+      "categoria": "Moradia",
+      "data_exibicao": "19 de out. de 2026",
+      "alt": "Casa térrea pintada de amarelo-claro, com varanda, vasos de plantas e cerca de madeira com um marco de concreto no canto do terreno.",
+      "publicar_em": "2026-10-19T23:00:00Z",
+      "horario_brasilia": "19/10 20:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "autonomo-no-inss-plano-normal-de-20-ou-simplificado-de-11-como-contribuir",
+      "titulo": "Autônomo no INSS: plano de 20% ou de 11%, o que cada um cobre e como pagar",
+      "categoria": "INSS",
+      "data_exibicao": "20 de out. de 2026",
+      "alt": "Mulher de costas sentada à mesa de uma cozinha arrumada, olhando o celular, com um carnê fechado e uma caneta sobre a mesa.",
+      "publicar_em": "2026-10-20T11:00:00Z",
+      "horario_brasilia": "20/10 08:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "venda-casada-seguro-embutido-no-emprestimo-e-financiamento-devolucao",
+      "titulo": "Seguro embutido no empréstimo: quando é venda casada e como pedir o dinheiro de volta",
+      "categoria": "Economia",
+      "data_exibicao": "20 de out. de 2026",
+      "alt": "Mesa de atendimento de agência bancária sem marca, com contrato, um segundo documento grampeado e uma caneta, sob a placa CRÉDITO.",
+      "publicar_em": "2026-10-20T17:00:00Z",
+      "horario_brasilia": "20/10 14:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "guarda-compartilhada-regra-convivencia-casa-de-referencia-e-pensao",
+      "titulo": "Guarda compartilhada: quando é a regra, como fica a convivência e por que a pensão continua",
+      "categoria": "Justiça",
+      "data_exibicao": "20 de out. de 2026",
+      "alt": "Hall de entrada de apartamento com duas mochilas infantis de cores diferentes penduradas lado a lado e um calendário com dias marcados em duas cores.",
+      "publicar_em": "2026-10-20T23:00:00Z",
+      "horario_brasilia": "20/10 20:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "justa-causa-motivos-clt-482-o-que-perde-e-como-reverter",
+      "titulo": "Justa causa: os motivos da lei, o que o trabalhador perde e como contestar na Justiça",
+      "categoria": "Trabalho",
+      "data_exibicao": "21 de out. de 2026",
+      "alt": "Sala de recursos humanos com uma carteira de trabalho azul fechada, um envelope pardo e uma caneta sobre a mesa, sob a placa RECURSOS HUMANOS.",
+      "publicar_em": "2026-10-21T11:00:00Z",
+      "horario_brasilia": "21/10 08:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "corte-de-luz-e-agua-por-falta-de-pagamento-aviso-dias-proibidos-religacao",
+      "titulo": "Corte de luz e de água por falta de pagamento: aviso, dias proibidos e prazo de religação",
+      "categoria": "Direitos",
+      "data_exibicao": "21 de out. de 2026",
+      "alt": "Muro branco de casa com a caixa do medidor de energia e um poste ao fundo, enquanto a mão de um eletricista de luva segura a portinhola do medidor.",
+      "publicar_em": "2026-10-21T17:00:00Z",
+      "horario_brasilia": "21/10 14:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "remedio-que-o-sus-nao-fornece-lista-rename-falta-e-regras-do-stf",
+      "titulo": "Remédio que o SUS não fornece: o que fazer quando falta e quando está fora da lista",
+      "categoria": "Saúde",
+      "data_exibicao": "21 de out. de 2026",
+      "alt": "Balcão de farmácia de unidade de saúde pública com prateleiras de caixas brancas sem marca e uma receita sobre o balcão, sob a placa FARMÁCIA.",
+      "publicar_em": "2026-10-21T23:00:00Z",
+      "horario_brasilia": "21/10 20:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "adicional-de-insalubridade-e-periculosidade-percentuais-pericia-epi",
+      "titulo": "Insalubridade e periculosidade: quem recebe, quanto vale e por que não dá para somar",
+      "categoria": "Trabalho",
+      "data_exibicao": "22 de out. de 2026",
+      "alt": "Trabalhador de costas, de macacão, luvas e máscara respiratória, diante de tanques metálicos numa indústria, sob a placa USO OBRIGATÓRIO DE EPI.",
+      "publicar_em": "2026-10-22T11:00:00Z",
+      "horario_brasilia": "22/10 08:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "plano-de-saude-carencia-maxima-doenca-preexistente-urgencia-negativa",
+      "titulo": "Plano de saúde: carências máximas, doença preexistente e o que fazer diante da negativa",
+      "categoria": "Saúde",
+      "data_exibicao": "22 de out. de 2026",
+      "alt": "Mão segurando um cartão de convênio azul sem marca diante do balcão de uma clínica, sob a placa RECEPÇÃO.",
+      "publicar_em": "2026-10-22T17:00:00Z",
+      "horario_brasilia": "22/10 14:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "uniao-estavel-o-que-caracteriza-como-registrar-cartorio-direitos",
+      "titulo": "União estável: o que caracteriza, como registrar no cartório e quais direitos ela dá",
+      "categoria": "Direitos",
+      "data_exibicao": "22 de out. de 2026",
+      "alt": "Duas mãos com alianças lado a lado sobre a mesa de um cartório, com uma caneta sobre um documento e a placa TABELIONATO ao fundo.",
+      "publicar_em": "2026-10-22T23:00:00Z",
+      "horario_brasilia": "22/10 20:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "demissao-por-acordo-multa-de-20-saque-de-80-do-fgts-e-sem-seguro-desemprego",
+      "titulo": "Demissão por acordo: metade do aviso, multa de 20% do FGTS e nada de seguro-desemprego",
+      "categoria": "Trabalho",
+      "data_exibicao": "23 de out. de 2026",
+      "alt": "Aperto de mão entre duas pessoas sobre a mesa de um escritório, com papéis e uma caneta, rostos fora do enquadramento.",
+      "publicar_em": "2026-10-23T11:00:00Z",
+      "horario_brasilia": "23/10 08:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "golpe-do-pix-med-mecanismo-especial-de-devolucao-como-pedir-o-dinheiro-de-volta",
+      "titulo": "Golpe do Pix: como o MED funciona e quando o banco pode devolver o dinheiro",
+      "categoria": "Economia",
+      "data_exibicao": "23 de out. de 2026",
+      "alt": "Mão segurando um celular com a tela acesa num ícone vermelho de alerta, sobre uma mesa de sala com toalha clara, à noite.",
+      "publicar_em": "2026-10-23T17:00:00Z",
+      "horario_brasilia": "23/10 14:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "heranca-sem-testamento-quem-herda-ordem-dos-herdeiros-conjuge-e-inventario",
+      "titulo": "Herança sem testamento: quem herda primeiro, a parte do cônjuge e como fazer o inventário",
+      "categoria": "Direitos",
+      "data_exibicao": "23 de out. de 2026",
+      "alt": "Mesa de madeira com um molho de chaves de casa, uma pasta de documentos fechada e um álbum de fotos aberto, com porta-retratos fora de foco ao fundo.",
+      "publicar_em": "2026-10-23T23:00:00Z",
+      "horario_brasilia": "23/10 20:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "inss-contribuicao-em-atraso-quando-pode-pagar-e-quando-conta-para-carencia",
+      "titulo": "INSS em atraso: quando dá para pagar a contribuição e quando ela conta para a carência",
+      "categoria": "INSS",
+      "data_exibicao": "24 de out. de 2026",
+      "alt": "Balcão de casa lotérica com guichê de vidro, maquininha e um boleto dobrado, sob a placa PAGAMENTOS.",
+      "publicar_em": "2026-10-24T11:00:00Z",
+      "horario_brasilia": "24/10 08:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "condominio-atrasado-multa-de-2-juros-cobranca-leilao-e-o-que-o-sindico-nao-pode-fazer",
+      "titulo": "Condomínio atrasado: multa de até 2%, cobrança rápida e risco de leilão do imóvel",
+      "categoria": "Moradia",
+      "data_exibicao": "24 de out. de 2026",
+      "alt": "Portaria de prédio residencial bem cuidado, com portão de grade pintado, jardim pequeno e quadro de avisos, sob a placa CONDOMÍNIO.",
+      "publicar_em": "2026-10-24T17:00:00Z",
+      "horario_brasilia": "24/10 14:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "mudar-nome-e-sobrenome-no-cartorio-sem-processo-maior-de-18-anos",
+      "titulo": "Mudança de nome no cartório: maior de 18 anos troca o prenome uma vez, sem justificar",
+      "categoria": "Direitos",
+      "data_exibicao": "24 de out. de 2026",
+      "alt": "Mulher de costas diante do balcão de um cartório entregando um documento à atendente, sob a placa CARTÓRIO.",
+      "publicar_em": "2026-10-24T23:00:00Z",
+      "horario_brasilia": "24/10 20:00",
+      "status": "pendente"
     }
   ]
 }
