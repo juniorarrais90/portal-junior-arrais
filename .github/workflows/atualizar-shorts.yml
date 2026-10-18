@@ -2,8 +2,8 @@ name: Atualizar Shorts do portal
 
 on:
   schedule:
-    # 08h, 14h e 20h no horario de Brasilia
-    - cron: '0 11,17,23 * * *'
+    # 08h, 14h e 18h no horario de Brasilia
+    - cron: '0 11,17,21 * * *'
   workflow_dispatch:
 
 permissions:
