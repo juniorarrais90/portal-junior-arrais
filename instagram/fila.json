@@ -2576,7 +2576,9 @@
       "publicar_em": "2026-10-19T12:30:00Z",
       "horario_brasilia": "19/10 09:30",
       "alt_text": "Hora extra e banco de horas: adicional de 50%, limite de 2 horas e prazo para compensar",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-10-19T12:31:45Z",
+      "link": "https://www.instagram.com/p/DerQ5pxESvz/"
     },
     {
       "slug": "voo-atrasado-ou-cancelado-assistencia-da-anac-reembolso-e-indenizacao",
