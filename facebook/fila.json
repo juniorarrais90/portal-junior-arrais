@@ -720,7 +720,12 @@
       "horario_brasilia": "19/10 15:45",
       "status": "publicado",
       "publicado_em": "2026-10-19T18:48:48Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122120485263442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122120485263442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-10-19T19:03:31Z",
+        "link_post": "https://www.facebook.com/113029587494887_1526827002806981"
+      }
     },
     {
       "slug": "usucapiao-modalidades-prazos-requisitos-e-pedido-no-cartorio",
