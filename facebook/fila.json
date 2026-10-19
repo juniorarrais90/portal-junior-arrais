@@ -736,7 +736,12 @@
       "horario_brasilia": "19/10 19:45",
       "status": "publicado",
       "publicado_em": "2026-10-19T22:48:07Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122120507019442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122120507019442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-10-19T23:02:58Z",
+        "link_post": "https://www.facebook.com/113029587494887_1526969309459417"
+      }
     },
     {
       "slug": "autonomo-no-inss-plano-normal-de-20-ou-simplificado-de-11-como-contribuir",
