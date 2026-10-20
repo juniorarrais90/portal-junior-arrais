@@ -768,7 +768,12 @@
       "horario_brasilia": "20/10 15:45",
       "status": "publicado",
       "publicado_em": "2026-10-20T18:48:00Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122120670807442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122120670807442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-10-20T19:03:32Z",
+        "link_post": "https://www.facebook.com/113029587494887_1527782022711479"
+      }
     },
     {
       "slug": "guarda-compartilhada-regra-convivencia-casa-de-referencia-e-pensao",
