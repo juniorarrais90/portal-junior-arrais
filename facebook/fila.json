@@ -752,7 +752,12 @@
       "horario_brasilia": "20/10 09:45",
       "status": "publicado",
       "publicado_em": "2026-10-20T12:48:15Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122120605785442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122120605785442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-10-20T13:03:36Z",
+        "link_post": "https://www.facebook.com/113029587494887_1527505659405782"
+      }
     },
     {
       "slug": "venda-casada-seguro-embutido-no-emprestimo-e-financiamento-devolucao",
