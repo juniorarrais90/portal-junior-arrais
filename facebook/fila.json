@@ -784,7 +784,12 @@
       "horario_brasilia": "20/10 19:45",
       "status": "publicado",
       "publicado_em": "2026-10-20T22:47:57Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122120700447442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122120700447442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-10-20T23:03:05Z",
+        "link_post": "https://www.facebook.com/113029587494887_1527922899364058"
+      }
     },
     {
       "slug": "justa-causa-motivos-clt-482-o-que-perde-e-como-reverter",
