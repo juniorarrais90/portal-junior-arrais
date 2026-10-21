@@ -2646,7 +2646,9 @@
       "publicar_em": "2026-10-21T18:30:00Z",
       "horario_brasilia": "21/10 15:30",
       "alt_text": "Corte de luz e de água por falta de pagamento: aviso, dias proibidos e prazo de religação",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-10-21T18:31:46Z",
+      "link": "https://www.instagram.com/p/DexDsVQCWaq/"
     },
     {
       "slug": "remedio-que-o-sus-nao-fornece-lista-rename-falta-e-regras-do-stf",
