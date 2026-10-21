@@ -800,7 +800,12 @@
       "horario_brasilia": "21/10 09:45",
       "status": "publicado",
       "publicado_em": "2026-10-21T12:48:11Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122120815335442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122120815335442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-10-21T13:03:57Z",
+        "link_post": "https://www.facebook.com/113029587494887_1528451959311152"
+      }
     },
     {
       "slug": "corte-de-luz-e-agua-por-falta-de-pagamento-aviso-dias-proibidos-religacao",
