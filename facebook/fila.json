@@ -816,7 +816,12 @@
       "horario_brasilia": "21/10 15:45",
       "status": "publicado",
       "publicado_em": "2026-10-21T18:47:50Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122120870385442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122120870385442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-10-21T19:00:46Z",
+        "link_post": "https://www.facebook.com/113029587494887_1528722825950732"
+      }
     },
     {
       "slug": "remedio-que-o-sus-nao-fornece-lista-rename-falta-e-regras-do-stf",
