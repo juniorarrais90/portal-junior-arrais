@@ -832,7 +832,12 @@
       "horario_brasilia": "21/10 19:45",
       "status": "publicado",
       "publicado_em": "2026-10-21T22:46:28Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122120908467442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122120908467442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-10-21T23:03:03Z",
+        "link_post": "https://www.facebook.com/113029587494887_1528861029270245"
+      }
     },
     {
       "slug": "adicional-de-insalubridade-e-periculosidade-percentuais-pericia-epi",
