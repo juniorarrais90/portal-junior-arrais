@@ -848,7 +848,12 @@
       "horario_brasilia": "22/10 09:45",
       "status": "publicado",
       "publicado_em": "2026-10-22T12:48:55Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122121119415442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122121119415442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-10-22T13:06:43Z",
+        "link_post": "https://www.facebook.com/113029587494887_1529395145883500"
+      }
     },
     {
       "slug": "plano-de-saude-carencia-maxima-doenca-preexistente-urgencia-negativa",
