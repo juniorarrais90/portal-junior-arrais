@@ -880,7 +880,12 @@
       "horario_brasilia": "22/10 19:45",
       "status": "publicado",
       "publicado_em": "2026-10-22T22:48:42Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122121203145442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122121203145442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-10-22T23:04:06Z",
+        "link_post": "https://www.facebook.com/113029587494887_1529807835842231"
+      }
     },
     {
       "slug": "demissao-por-acordo-multa-de-20-saque-de-80-do-fgts-e-sem-seguro-desemprego",
