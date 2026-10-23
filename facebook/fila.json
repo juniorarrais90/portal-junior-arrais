@@ -896,7 +896,12 @@
       "horario_brasilia": "23/10 09:45",
       "status": "publicado",
       "publicado_em": "2026-10-23T12:47:37Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122121323493442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122121323493442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-10-23T13:03:14Z",
+        "link_post": "https://www.facebook.com/113029587494887_1530345469121801"
+      }
     },
     {
       "slug": "golpe-do-pix-med-mecanismo-especial-de-devolucao-como-pedir-o-dinheiro-de-volta",
