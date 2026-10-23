@@ -912,7 +912,12 @@
       "horario_brasilia": "23/10 15:45",
       "status": "publicado",
       "publicado_em": "2026-10-23T18:47:49Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122121392427442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122121392427442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-10-23T19:03:20Z",
+        "link_post": "https://www.facebook.com/113029587494887_1530636535759361"
+      }
     },
     {
       "slug": "heranca-sem-testamento-quem-herda-ordem-dos-herdeiros-conjuge-e-inventario",
