@@ -976,7 +976,12 @@
       "horario_brasilia": "24/10 19:45",
       "status": "publicado",
       "publicado_em": "2026-10-24T22:48:03Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122121652941442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122121652941442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-10-24T23:03:09Z",
+        "link_post": "https://www.facebook.com/113029587494887_1531724722317209"
+      }
     }
   ]
 }
