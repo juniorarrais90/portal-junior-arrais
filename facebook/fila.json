@@ -944,7 +944,12 @@
       "horario_brasilia": "24/10 09:45",
       "status": "publicado",
       "publicado_em": "2026-10-24T12:48:04Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122121572715442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122121572715442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-10-24T13:03:00Z",
+        "link_post": "https://www.facebook.com/113029587494887_1531310505691964"
+      }
     },
     {
       "slug": "condominio-atrasado-multa-de-2-juros-cobranca-leilao-e-o-que-o-sindico-nao-pode-fazer",
