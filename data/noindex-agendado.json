@@ -28,12 +28,14 @@
     {
       "slug": "mesario-nas-eleicoes-folga-pelo-dobro-dos-dias",
       "a_partir_de": "2026-10-26",
-      "motivo": "segundo turno em 25/10"
+      "motivo": "segundo turno em 25/10",
+      "aplicado_em": "2026-10-26"
     },
     {
       "slug": "segundo-turno-em-25-de-outubro-quem-faltou-no-primeiro-pode-votar",
       "a_partir_de": "2026-10-26",
-      "motivo": "segundo turno em 25/10"
+      "motivo": "segundo turno em 25/10",
+      "aplicado_em": "2026-10-26"
     },
     {
       "slug": "pis-pasep-antigo-quem-pediu-ate-30-de-setembro-recebe-em-26-de-outubro",
