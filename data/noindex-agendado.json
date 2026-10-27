@@ -40,12 +40,14 @@
     {
       "slug": "pis-pasep-antigo-quem-pediu-ate-30-de-setembro-recebe-em-26-de-outubro",
       "a_partir_de": "2026-10-27",
-      "motivo": "pagamento em 26/10"
+      "motivo": "pagamento em 26/10",
+      "aplicado_em": "2026-10-27"
     },
     {
       "slug": "pe-de-meia-parcela-de-setembro-fechou-e-a-proxima-cai-entre-19-e-26-de-outubro",
       "a_partir_de": "2026-10-27",
-      "motivo": "parcela até 26/10"
+      "motivo": "parcela até 26/10",
+      "aplicado_em": "2026-10-27"
     },
     {
       "slug": "bolsa-familia-calendario-de-outubro",
