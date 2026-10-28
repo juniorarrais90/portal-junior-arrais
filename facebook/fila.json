@@ -1000,6 +1000,24 @@
       "publicar_em": "2026-10-28T22:45:00Z",
       "horario_brasilia": "28/10 19:45",
       "status": "pendente"
+    },
+    {
+      "slug": "e-falso-que-bolsa-familia-foi-cortado-apos-a-eleicao-gas-do-povo-continua",
+      "titulo": "É falso que o Bolsa Família foi cortado após a eleição; Gás do Povo também continua",
+      "link": "https://portaljuniorarrais.com.br/noticias/e-falso-que-bolsa-familia-foi-cortado-apos-a-eleicao-gas-do-povo-continua.html",
+      "arte": "img/feed45/e-falso-que-bolsa-familia-foi-cortado-apos-a-eleicao-gas-do-povo-continua.png",
+      "publicar_em": "2026-10-29T12:45:00Z",
+      "horario_brasilia": "29/10 09:45",
+      "status": "pendente"
+    },
+    {
+      "slug": "bolsa-familia-novembro-2026-pagamento-comeca-dia-16",
+      "titulo": "Bolsa Família de novembro: pagamento começa dia 16 e deve sair em três dias",
+      "link": "https://portaljuniorarrais.com.br/noticias/bolsa-familia-novembro-2026-pagamento-comeca-dia-16.html",
+      "arte": "img/feed45/bolsa-familia-novembro-2026-pagamento-comeca-dia-16.png",
+      "publicar_em": "2026-10-29T18:45:00Z",
+      "horario_brasilia": "29/10 15:45",
+      "status": "pendente"
     }
   ]
 }
