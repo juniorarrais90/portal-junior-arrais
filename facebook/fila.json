@@ -1008,7 +1008,12 @@
       "horario_brasilia": "28/10 19:45",
       "status": "publicado",
       "publicado_em": "2026-10-28T22:47:44Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122122385301442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122122385301442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-10-28T23:03:15Z",
+        "link_post": "https://www.facebook.com/113029587494887_1535747638581584"
+      }
     },
     {
       "slug": "e-falso-que-bolsa-familia-foi-cortado-apos-a-eleicao-gas-do-povo-continua",
