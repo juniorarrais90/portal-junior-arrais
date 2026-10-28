@@ -396,6 +396,26 @@
       "horario_brasilia": "24/10 18:00",
       "status": "publicado",
       "publicado_em": "2026-10-24T21:01:28Z"
+    },
+    {
+      "slug": "fim-da-escala-6x1-emenda-141-jornada-cai-para-42-horas-em-dezembro",
+      "titulo": "Fim da escala 6x1 está na Constituição: jornada cai para 42 horas em dezembro",
+      "categoria": "Trabalho",
+      "data_exibicao": "28 de out. de 2026",
+      "alt": "Relógio de ponto e quadro de avisos com a placa Escala de Folgas no corredor de funcionários",
+      "publicar_em": "2026-10-28T17:00:00Z",
+      "horario_brasilia": "28/10 14:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "mei-lei-complementar-238-perdao-de-dividas-teto-de-140-mil-e-pix-de-5-mil",
+      "titulo": "MEI: lei perdoa dívida do INSS, teto vai a R$ 140 mil e Pix de R$ 5 mil ainda não existe",
+      "categoria": "Economia",
+      "data_exibicao": "28 de out. de 2026",
+      "alt": "Costureira de costas trabalhando em ateliê com a placa Consertos e Ajustes na parede",
+      "publicar_em": "2026-10-28T21:00:00Z",
+      "horario_brasilia": "28/10 18:00",
+      "status": "pendente"
     }
   ]
 }
