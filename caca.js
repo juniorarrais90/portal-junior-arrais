@@ -1,8 +1,11 @@
 /* Caça ao Tesouro de Férias (31/10 a 08/11/2026).
-   A letra vem da planilha do Google, que só entrega a letra de um dia a partir daquele dia. */
+   Cada letra e cada pista só aparecem no dia delas. A letra vem da planilha do Google,
+   que também só entrega a letra do dia de hoje. */
 (function () {
   var API = 'https://script.google.com/macros/s/AKfycbwxWiEy6dAJQBRXofMBediN2tup-US_Tuz1EcigZzMiKbWvhG5VZ_0p_zJxwy0MOpVv7A/exec';
   var INICIO = Date.parse('2026-10-31T00:00:00-03:00');
+  var ABRE_FORMULARIO = Date.parse('2026-11-08T00:00:00-03:00');
+  var FECHA_FORMULARIO = Date.parse('2026-11-09T12:00:00-03:00');
   var DIA_MS = 86400000;
 
   // Uma matéria por dia, na ordem das letras
@@ -22,16 +25,11 @@
     return Math.floor((Date.now() - INICIO) / DIA_MS) + 1;
   }
 
-  function dataDoDia(n) {
-    var d = new Date(INICIO + (n - 1) * DIA_MS + 12 * 3600000);
-    return ('0' + d.getUTCDate()).slice(-2) + '/' + ('0' + (d.getUTCMonth() + 1)).slice(-2);
-  }
-
-  // Quadro da letra dentro da matéria
+  // Quadro da letra dentro da matéria: só no dia dela
   var caixa = document.getElementById('caca-tesouro');
   if (caixa) {
     var n = Number(caixa.getAttribute('data-dia'));
-    if (n && diaDeHoje() >= n) {
+    if (n && diaDeHoje() === n) {
       fetch(API + '?dia=' + n)
         .then(function (r) { return r.json(); })
         .then(function (r) {
@@ -40,26 +38,38 @@
             '<div style="margin:28px 0;padding:18px 20px;border:2px dashed #2c89e7;border-radius:14px;background:#eef4fb;text-align:center">' +
             '<p style="margin:0 0 6px;font-weight:700">🔎 Caça ao Tesouro de Férias · Letra nº ' + n + ' de 9</p>' +
             '<p style="margin:0;font-size:48px;font-weight:800;color:#2c89e7;line-height:1.1">' + r.mensagem + '</p>' +
-            '<p style="margin:8px 0 0;font-size:14px">Guarde esta letra! O código só fecha com as 9. ' +
+            '<p style="margin:8px 0 0;font-size:14px">Anote agora: amanhã esta letra some! ' +
             '<a href="../caca-ao-tesouro.html">Veja o regulamento e participe</a></p></div>';
         })
         .catch(function () {});
     }
   }
 
-  // Lista de pistas na página da Caça ao Tesouro
-  var lista = document.getElementById('caca-pistas');
-  if (lista) {
+  // Pista de hoje na página da Caça ao Tesouro
+  var pista = document.getElementById('caca-pistas');
+  if (pista) {
     var hoje = diaDeHoje();
-    var html = '';
-    for (var i = 0; i < PISTAS.length; i++) {
-      var dia = i + 1;
-      html += '<li><strong>Letra nº ' + dia + ' (' + dataDoDia(dia) + '):</strong> ' +
-        (hoje >= dia
-          ? 'está na matéria sobre <a href="noticias/' + PISTAS[i].url + '">' + PISTAS[i].tema + '</a>.'
-          : '🔒 a pista aparece aqui no dia ' + dataDoDia(dia) + '.') +
-        '</li>';
+    if (hoje >= 1 && hoje <= PISTAS.length) {
+      pista.innerHTML = '<p><strong>Letra nº ' + hoje + ' de 9:</strong> está escondida na matéria sobre ' +
+        '<a href="noticias/' + PISTAS[hoje - 1].url + '">' + PISTAS[hoje - 1].tema + '</a>. ' +
+        'Abra, procure o quadro no fim do texto e anote a letra. Amanhã tem outra!</p>';
+    } else if (hoje > PISTAS.length) {
+      pista.innerHTML = '<p>As 9 letras já foram reveladas. Agora é com você!</p>';
     }
-    lista.innerHTML = html;
+  }
+
+  // Formulário: só aparece de 08/11 até 09/11 às 12h
+  var form = document.getElementById('cacada');
+  if (form) {
+    var agora = Date.now();
+    if (agora < ABRE_FORMULARIO || agora > FECHA_FORMULARIO) {
+      form.style.display = 'none';
+      var aviso = document.createElement('div');
+      aviso.className = 'destaque-box';
+      aviso.innerHTML = agora < ABRE_FORMULARIO
+        ? '<p>📅 O formulário abre aqui no dia <strong>8 de novembro</strong>, quando sai a última letra. Até lá, junte as letras!</p>'
+        : '<p>As inscrições foram encerradas em 9 de novembro, às 12h. Acompanhe o resultado na live do YouTube, às 19h!</p>';
+      form.parentNode.insertBefore(aviso, form);
+    }
   }
 })();
