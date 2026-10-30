@@ -3,9 +3,9 @@
    que também só entrega a letra do dia de hoje. */
 (function () {
   var API = 'https://script.google.com/macros/s/AKfycbwxWiEy6dAJQBRXofMBediN2tup-US_Tuz1EcigZzMiKbWvhG5VZ_0p_zJxwy0MOpVv7A/exec';
-  var INICIO = Date.parse('2026-10-31T00:00:00-03:00');
-  var ABRE_FORMULARIO = Date.parse('2026-11-08T00:00:00-03:00');
-  var FECHA_FORMULARIO = Date.parse('2026-11-09T12:00:00-03:00');
+  var INICIO = Date.parse('2026-10-31T12:00:00-03:00'); // cada letra vale do meio-dia ao meio-dia
+  var ABRE_FORMULARIO = Date.parse('2026-11-08T12:00:00-03:00');
+  var FECHA_FORMULARIO = Date.parse('2026-11-09T14:00:00-03:00');
   var DIA_MS = 86400000;
 
   // Uma matéria por dia, na ordem das letras
@@ -38,7 +38,7 @@
             '<div style="margin:28px 0;padding:18px 20px;border:2px dashed #2c89e7;border-radius:14px;background:#eef4fb;text-align:center">' +
             '<p style="margin:0 0 6px;font-weight:700">🔎 Caça ao Tesouro de Férias · Letra nº ' + n + ' de 9</p>' +
             '<p style="margin:0;font-size:48px;font-weight:800;color:#2c89e7;line-height:1.1">' + r.mensagem + '</p>' +
-            '<p style="margin:8px 0 0;font-size:14px">Anote agora: amanhã esta letra some! ' +
+            '<p style="margin:8px 0 0;font-size:14px">Anote agora: amanhã ao meio-dia esta letra some! ' +
             '<a href="../caca-ao-tesouro.html">Veja o regulamento e participe</a></p></div>';
         })
         .catch(function () {});
@@ -52,13 +52,13 @@
     if (hoje >= 1 && hoje <= PISTAS.length) {
       pista.innerHTML = '<p><strong>Letra nº ' + hoje + ' de 9:</strong> está escondida na matéria sobre ' +
         '<a href="noticias/' + PISTAS[hoje - 1].url + '">' + PISTAS[hoje - 1].tema + '</a>. ' +
-        'Abra, procure o quadro no fim do texto e anote a letra. Amanhã tem outra!</p>';
+        'Abra, procure o quadro no fim do texto e anote a letra. Amanhã ao meio-dia tem outra!</p>';
     } else if (hoje > PISTAS.length) {
       pista.innerHTML = '<p>As 9 letras já foram reveladas. Agora é com você!</p>';
     }
   }
 
-  // Formulário: só aparece de 08/11 até 09/11 às 12h
+  // Formulário: só aparece de 08/11 ao meio-dia até 09/11 às 14h
   var form = document.getElementById('cacada');
   if (form) {
     var agora = Date.now();
@@ -67,8 +67,8 @@
       var aviso = document.createElement('div');
       aviso.className = 'destaque-box';
       aviso.innerHTML = agora < ABRE_FORMULARIO
-        ? '<p>📅 O formulário abre aqui no dia <strong>8 de novembro</strong>, quando sai a última letra. Até lá, junte as letras!</p>'
-        : '<p>As inscrições foram encerradas em 9 de novembro, às 12h. Acompanhe o resultado na live do YouTube, às 19h!</p>';
+        ? '<p>📅 O formulário abre aqui no dia <strong>8 de novembro, ao meio-dia</strong>, quando sai a última letra. Até lá, junte as letras!</p>'
+        : '<p>As inscrições foram encerradas em 9 de novembro, às 14h. Acompanhe o resultado na live do YouTube, às 19h!</p>';
       form.parentNode.insertBefore(aviso, form);
     }
   }
