@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Caça ao Tesouro de Férias — Portal Júnior Arrais</title>
-  <meta name="description" content="Concurso cultural do Portal Júnior Arrais: de 31 de outubro a 8 de novembro, uma letra por dia nas matérias. Junte as 9 letras, monte o código secreto, escreva a sua frase e concorra a um prêmio. Participação gratuita.">
+  <meta name="description" content="Concurso cultural do Portal Júnior Arrais: de 31 de outubro a 8 de novembro, uma letra por dia nas matérias. Junte as letras, monte o código secreto, escreva a sua frase e concorra a até R$ 500 em vale-compras. Participação gratuita.">
   <link rel="canonical" href="https://portaljuniorarrais.com.br/caca-ao-tesouro.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -20,7 +20,12 @@
     .cacada-form .aceite input { margin-top: 4px; }
     .cacada-form button { font: inherit; font-weight: 700; padding: 14px; border: 0; border-radius: 10px; background: var(--gradient); color: #fff; cursor: pointer; }
     .cacada-form button:disabled { opacity: .6; cursor: wait; }
-    .cacada-palavra { letter-spacing: .3em; text-transform: uppercase; font-weight: 800; }
+    .cacada-letras { border: 0; padding: 0; margin: 0; }
+    .cacada-letras legend { font-weight: 600; margin-bottom: 8px; }
+    .cacada-caixas { display: grid; grid-template-columns: repeat(9, 1fr); gap: 4px; }
+    .cacada-caixas label { display: grid; gap: 2px; text-align: center; font-weight: 400; }
+    .cacada-caixas span { font-size: 10px; color: var(--text-muted); }
+    .cacada-caixas input { font: inherit; font-weight: 800; font-size: 20px; text-transform: uppercase; text-align: center; padding: 8px 0; width: 100%; min-width: 0; box-sizing: border-box; border: 1px solid var(--border); border-radius: 8px; background: var(--bg-card); color: var(--text); }
     .cacada-aviso { padding: 14px; border-radius: 10px; display: none; }
     .cacada-aviso.ok { display: block; background: #e7f8ee; color: #14532d; }
     .cacada-aviso.erro { display: block; background: #fdecec; color: #7f1d1d; }
@@ -57,7 +62,7 @@
   <main>
     <div class="pagina">
       <h1>🔎 Caça ao Tesouro de Férias</h1>
-      <p>De <strong>31 de outubro a 8 de novembro</strong>, todo dia uma <strong>letra nova</strong> aparece escondida numa matéria aqui do portal. São 9 dias, 9 letras. Juntas, na ordem dos dias, elas formam um <strong>código secreto</strong>. Não é uma palavra: não dá para adivinhar, só acerta quem acompanhar todas as letras.</p>
+      <p>De <strong>31 de outubro a 8 de novembro</strong>, todo dia uma <strong>letra nova</strong> aparece escondida numa matéria aqui do portal. São 9 dias, 9 letras. Juntas, na ordem dos dias, elas formam um <strong>código secreto</strong>. Não é uma palavra: não dá para adivinhar. Quanto mais letras você juntar, maior o prêmio!</p>
 
       <div class="destaque-box">
         <p><strong>Participar é 100% gratuito.</strong> O portal nunca pede senha, código de verificação, dados bancários nem pagamento.</p>
@@ -66,7 +71,7 @@
       <h2>Como funciona</h2>
       <ul>
         <li><strong>Todo dia, uma letra:</strong> volte a esta página todo dia. Em "Pista de hoje" aparece o link da matéria onde a letra do dia está escondida. Abra a matéria e procure o quadro "Caça ao Tesouro" no fim do texto.</li>
-        <li><strong>A letra só vale no dia dela:</strong> cada letra e cada pista ficam no ar só durante o seu dia, da 0h às 23h59. No dia seguinte somem e dão lugar à próxima. Perdeu um dia, perdeu a letra!</li>
+        <li><strong>A letra só vale no dia dela:</strong> cada letra e cada pista ficam no ar só durante o seu dia, da 0h às 23h59. No dia seguinte somem e dão lugar à próxima. Perdeu um dia, perdeu a letra, mas não perde o concurso: dá para concorrer com 5 letras ou mais.</li>
         <li><strong>A ordem importa:</strong> a letra do dia 31/10 é a 1ª, a do dia 01/11 é a 2ª, e assim até a 9ª, no dia 08/11.</li>
         <li><strong>A frase:</strong> junto com o código, escreva em poucas linhas <em>como uma informação do portal ajudou você ou alguém da sua família</em>.</li>
         <li><strong>Siga os dois perfis:</strong> para receber o prêmio, é preciso seguir no Instagram o <a href="https://www.instagram.com/portaljuniorarrais/" target="_blank" rel="noopener">@portaljuniorarrais</a> e o <a href="https://www.instagram.com/juniorarraisadvogado/" target="_blank" rel="noopener">@juniorarraisadvogado</a>.</li>
@@ -75,7 +80,7 @@
       </ul>
 
       <div class="destaque-box">
-        <p><strong>🎯 Meta: bateu, são DOIS vencedores!</strong> Se até a live o <strong>@portaljuniorarrais</strong> chegar a <strong>7.500 seguidores</strong> e o <strong>@juniorarraisadvogado</strong> chegar a <strong>420 mil</strong>, a comissão escolhe <strong>duas</strong> frases vencedoras, e cada uma leva um vale-compras de R$ 500. Compartilhe nos stories marcando os dois perfis e ajude a bater a meta!</p>
+        <p><strong>🎯 Meta: bateu, são DOIS vencedores!</strong> Se até a live o <strong>@portaljuniorarrais</strong> chegar a <strong>7.500 seguidores</strong> e o <strong>@juniorarraisadvogado</strong> chegar a <strong>420 mil</strong>, serão escolhidas <strong>duas</strong> frases vencedoras, cada uma com o seu vale-compras. Compartilhe nos stories marcando os dois perfis e ajude a bater a meta!</p>
       </div>
 
       <h2>Pista de hoje</h2>
@@ -86,10 +91,10 @@
       <h2>Regulamento resumido</h2>
       <ul>
         <li><strong>Concurso exclusivamente cultural:</strong> não há sorteio nem qualquer elemento de sorte, e a participação não depende de compra, pagamento ou contratação de serviço.</li>
-        <li><strong>Quem pode vencer:</strong> só concorrem as inscrições com o código secreto correto.</li>
-        <li><strong>Como o vencedor é escolhido:</strong> uma comissão julgadora do portal lê as frases <strong>sem ver o nome de quem escreveu</strong> e escolhe a melhor por <strong>criatividade, clareza e originalidade</strong>. A decisão da comissão é final.</li>
-        <li><strong>Prêmio:</strong> 1 (um) vale-compras no valor de <strong>R$ 500,00</strong>. Se as duas metas de seguidores forem batidas até o início da live, serão 2 (dois) vencedores, cada um com um vale-compras de R$ 500,00. Os seguidores são conferidos ao vivo, na própria live.</li>
-        <li><strong>Seguir os perfis:</strong> o vencedor precisa estar seguindo o @portaljuniorarrais e o @juniorarraisadvogado no Instagram. Se não estiver, a comissão escolhe a próxima melhor frase.</li>
+        <li><strong>Quem pode vencer:</strong> concorrem as inscrições com <strong>pelo menos 5 letras certas</strong>, cada uma no lugar do seu dia.</li>
+        <li><strong>Como o vencedor é escolhido:</strong> o Júnior Arrais lê as frases <strong>sem ver o nome de quem escreveu</strong> e escolhe a melhor por <strong>criatividade, clareza e originalidade</strong>. Quem juntou mais letras tem preferência: a escolha começa entre quem acertou as 9; se ninguém acertou as 9, passa para quem acertou 7 ou 8; depois, 5 ou 6. A decisão é final.</li>
+        <li><strong>Prêmio:</strong> 1 (um) vale-compras, no valor de acordo com as letras certas do vencedor: <strong>9 letras, R$ 500,00</strong>; <strong>7 ou 8 letras, R$ 300,00</strong>; <strong>5 ou 6 letras, R$ 150,00</strong>. Se as duas metas de seguidores forem batidas até o início da live, serão 2 (dois) vencedores, cada um com o vale-compras da sua faixa. Os seguidores são conferidos ao vivo, na própria live.</li>
+        <li><strong>Seguir os perfis:</strong> o vencedor precisa estar seguindo o @portaljuniorarrais e o @juniorarraisadvogado no Instagram. Se não estiver, é escolhida a próxima melhor frase, pela mesma regra.</li>
         <li><strong>Resultado:</strong> anunciado ao vivo no <strong>canal do Júnior Arrais no YouTube</strong>, em <strong>9 de novembro de 2026, às 19h</strong> (horário de Brasília). Depois disso, o portal fala com o vencedor pelo contato informado para combinar a entrega.</li>
         <li><strong>Frases:</strong> não serão aceitas frases ofensivas ou copiadas. Ao participar, você autoriza o portal a ler a frase vencedora na live, com o seu primeiro nome e a sua cidade.</li>
         <li><strong>Instagram:</strong> este concurso não é patrocinado, endossado nem administrado pelo Instagram, nem tem qualquer ligação com ele.</li>
@@ -118,9 +123,20 @@
         <label>Seu @ no Instagram (você precisa seguir @portaljuniorarrais e @juniorarraisadvogado)
           <input type="text" name="instagram" placeholder="@seuperfil" autocomplete="off" autocapitalize="none" required maxlength="60">
         </label>
-        <label>Código secreto (as 9 letras, na ordem dos dias)
-          <input type="text" name="codigo" class="cacada-palavra" autocomplete="off" required maxlength="30">
-        </label>
+        <fieldset class="cacada-letras">
+          <legend>Suas letras, uma em cada dia (deixe em branco o dia que você perdeu)</legend>
+          <div class="cacada-caixas">
+            <label><span>31/10</span><input type="text" name="l1" maxlength="1" autocomplete="off"></label>
+            <label><span>01/11</span><input type="text" name="l2" maxlength="1" autocomplete="off"></label>
+            <label><span>02/11</span><input type="text" name="l3" maxlength="1" autocomplete="off"></label>
+            <label><span>03/11</span><input type="text" name="l4" maxlength="1" autocomplete="off"></label>
+            <label><span>04/11</span><input type="text" name="l5" maxlength="1" autocomplete="off"></label>
+            <label><span>05/11</span><input type="text" name="l6" maxlength="1" autocomplete="off"></label>
+            <label><span>06/11</span><input type="text" name="l7" maxlength="1" autocomplete="off"></label>
+            <label><span>07/11</span><input type="text" name="l8" maxlength="1" autocomplete="off"></label>
+            <label><span>08/11</span><input type="text" name="l9" maxlength="1" autocomplete="off"></label>
+          </div>
+        </fieldset>
         <label>Sua frase: como uma informação do portal ajudou você ou alguém da sua família?
           <textarea name="frase" rows="4" required minlength="20" maxlength="400"></textarea>
         </label>
@@ -159,6 +175,14 @@
         contato.placeholder = email ? 'voce@exemplo.com' : '(32) 99999-9999';
       });
 
+      // Digitou uma letra, pula para a caixinha do dia seguinte
+      var caixas = form.querySelectorAll('.cacada-caixas input');
+      Array.prototype.forEach.call(caixas, function (c, i) {
+        c.addEventListener('input', function () {
+          if (c.value && caixas[i + 1]) caixas[i + 1].focus();
+        });
+      });
+
       function mostrar(ok, texto) {
         aviso.className = 'cacada-aviso ' + (ok ? 'ok' : 'erro');
         aviso.textContent = texto;
@@ -176,7 +200,7 @@
           headers: { 'Content-Type': 'text/plain;charset=utf-8' },
           body: JSON.stringify({
             nome: f.nome.value, cpf: f.cpf.value, cidade: f.cidade.value, tipoContato: f.tipoContato.value,
-            contato: f.contato.value, instagram: f.instagram.value, codigo: f.codigo.value, frase: f.frase.value,
+            contato: f.contato.value, instagram: f.instagram.value, letras: [1,2,3,4,5,6,7,8,9].map(function (n) { return f['l' + n].value; }), frase: f.frase.value,
             aceite: f.aceite.checked, site: f.site.value
           })
         })
