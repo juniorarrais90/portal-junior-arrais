@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caça ao Tesouro de Férias — Portal Júnior Arrais</title>
+  <meta name="description" content="Concurso cultural do Portal Júnior Arrais: de 31 de outubro a 8 de novembro, uma letra por dia nas matérias. Junte as 9 letras, monte o código secreto, escreva a sua frase e concorra a um prêmio. Participação gratuita.">
+  <link rel="canonical" href="https://portaljuniorarrais.com.br/caca-ao-tesouro.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="styles.css?v=6">
+  <style>
+    .cacada-form { display: grid; gap: 14px; margin: 18px 0; }
+    .cacada-form label { font-weight: 600; display: grid; gap: 6px; }
+    .cacada-form input[type=text], .cacada-form input[type=email], .cacada-form input[type=tel], .cacada-form select, .cacada-form textarea {
+      font: inherit; padding: 12px 14px; border: 1px solid var(--border); border-radius: 10px; background: var(--bg-card); color: var(--text); width: 100%; box-sizing: border-box;
+    }
+    .cacada-form .aceite { display: flex; gap: 10px; align-items: flex-start; font-weight: 400; }
+    .cacada-form .aceite input { margin-top: 4px; }
+    .cacada-form button { font: inherit; font-weight: 700; padding: 14px; border: 0; border-radius: 10px; background: var(--gradient); color: #fff; cursor: pointer; }
+    .cacada-form button:disabled { opacity: .6; cursor: wait; }
+    .cacada-palavra { letter-spacing: .3em; text-transform: uppercase; font-weight: 800; }
+    .cacada-aviso { padding: 14px; border-radius: 10px; display: none; }
+    .cacada-aviso.ok { display: block; background: #e7f8ee; color: #14532d; }
+    .cacada-aviso.erro { display: block; background: #fdecec; color: #7f1d1d; }
+    .cacada-isca { position: absolute; left: -9999px; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container topo-central">
+      <a class="logo" href="/">
+        <img src="img/logo-header.png" alt="Portal Júnior Arrais" class="logo-img">
+      </a>
+      <form class="busca" action="noticias.html" method="get">
+        <input type="search" name="q" placeholder="Pesquisar..." aria-label="Pesquisar notícias">
+        <button type="submit" aria-label="Buscar"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4.2-4.2"/></svg></button>
+      </form>
+    </div>
+    <nav class="faixa-categorias">
+      <div class="container faixa-inner">
+        <a href="/">Início</a>
+        <a href="noticias.html?cat=Bolsa%20Fam%C3%ADlia">Bolsa Família</a>
+        <a href="noticias.html?cat=INSS">INSS</a>
+        <a href="noticias.html?cat=Benef%C3%ADcios">Benefícios</a>
+        <a href="noticias.html?cat=G%C3%A1s%20do%20Povo">Gás do Povo</a>
+        <a href="noticias.html?cat=P%C3%A9-de-Meia">Pé-de-Meia</a>
+        <a href="emprestimo.html">Empréstimo</a>
+        <a href="noticias.html">Notícias</a>
+        <a href="guias.html">Guias</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="pagina">
+      <h1>🔎 Caça ao Tesouro de Férias</h1>
+      <p>De <strong>31 de outubro a 8 de novembro</strong>, todo dia uma <strong>letra nova</strong> aparece escondida numa matéria aqui do portal. São 9 dias, 9 letras. Juntas, na ordem dos dias, elas formam um <strong>código secreto</strong>. Não é uma palavra: não dá para adivinhar, só acerta quem acompanhar todas as letras.</p>
+
+      <div class="destaque-box">
+        <p><strong>Participar é 100% gratuito.</strong> O portal nunca pede senha, código de verificação, dados bancários nem pagamento.</p>
+      </div>
+
+      <h2>Como funciona</h2>
+      <ul>
+        <li><strong>Todo dia, uma letra:</strong> a pista de cada dia aparece logo abaixo, nesta página. Abra a matéria indicada e procure o quadro "Caça ao Tesouro" no fim do texto.</li>
+        <li><strong>A ordem importa:</strong> a letra do dia 31/10 é a 1ª, a do dia 01/11 é a 2ª, e assim até a 9ª, no dia 08/11.</li>
+        <li><strong>Chegou atrasado?</strong> Sem problema: as letras dos dias que já passaram continuam nas matérias até o fim do prazo.</li>
+        <li><strong>A frase:</strong> junto com o código, escreva em poucas linhas <em>como uma informação do portal ajudou você ou alguém da sua família</em>.</li>
+        <li><strong>Uma inscrição por pessoa:</strong> cada CPF e cada contato só podem ser usados uma vez. Confira tudo antes de enviar.</li>
+        <li><strong>Quando enviar:</strong> o formulário abre em <strong>8 de novembro</strong>, dia da última letra, e fica aberto até <strong>9 de novembro de 2026, às 12h</strong> (horário de Brasília).</li>
+      </ul>
+
+      <h2>Pistas do dia</h2>
+      <ul id="caca-pistas">
+        <li>As pistas aparecem aqui a partir de 31 de outubro.</li>
+      </ul>
+
+      <h2>Regulamento resumido</h2>
+      <ul>
+        <li><strong>Concurso exclusivamente cultural:</strong> não há sorteio nem qualquer elemento de sorte, e a participação não depende de compra, pagamento ou contratação de serviço.</li>
+        <li><strong>Quem pode vencer:</strong> só concorrem as inscrições com o código secreto correto.</li>
+        <li><strong>Como o vencedor é escolhido:</strong> uma comissão julgadora do portal lê as frases <strong>sem ver o nome de quem escreveu</strong> e escolhe a melhor por <strong>criatividade, clareza e originalidade</strong>. A decisão da comissão é final.</li>
+        <li><strong>Prêmio:</strong> 1 (um) vale-compras no valor de <strong>R$ 500,00</strong>. O prêmio não pode ser trocado por dinheiro.</li>
+        <li><strong>Resultado:</strong> anunciado ao vivo no <strong>canal do Júnior Arrais no YouTube</strong>, em <strong>9 de novembro de 2026, às 19h</strong> (horário de Brasília). Depois disso, o portal fala com o vencedor pelo contato informado para combinar a entrega.</li>
+        <li><strong>Frases:</strong> não serão aceitas frases ofensivas ou copiadas. Ao participar, você autoriza o portal a ler a frase vencedora na live, com o seu primeiro nome e a sua cidade.</li>
+      </ul>
+
+      <h2>Enviar o meu código</h2>
+      <form class="cacada-form" id="cacada">
+        <label>Nome completo
+          <input type="text" name="nome" autocomplete="name" required maxlength="120">
+        </label>
+        <label>CPF
+          <input type="text" name="cpf" inputmode="numeric" placeholder="000.000.000-00" required maxlength="14">
+        </label>
+        <label>Cidade e estado
+          <input type="text" name="cidade" placeholder="Ex.: Ubá/MG" required maxlength="80">
+        </label>
+        <label>Como prefere ser avisado?
+          <select name="tipoContato" id="tipoContato">
+            <option value="whatsapp">WhatsApp</option>
+            <option value="email">E-mail</option>
+          </select>
+        </label>
+        <label><span id="rotuloContato">WhatsApp com DDD</span>
+          <input type="tel" name="contato" id="contato" placeholder="(32) 99999-9999" required maxlength="120">
+        </label>
+        <label>Código secreto (as 9 letras, na ordem dos dias)
+          <input type="text" name="codigo" class="cacada-palavra" autocomplete="off" required maxlength="30">
+        </label>
+        <label>Sua frase: como uma informação do portal ajudou você ou alguém da sua família?
+          <textarea name="frase" rows="4" required minlength="20" maxlength="400"></textarea>
+        </label>
+        <input type="text" name="site" class="cacada-isca" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <label class="aceite">
+          <input type="checkbox" name="aceite" required>
+          <span>Tenho 18 anos ou mais, li o regulamento acima e autorizo o uso dos meus dados apenas para esta Caça ao Tesouro (apuração, julgamento, anúncio do resultado e entrega do prêmio). Os dados são apagados após a entrega do prêmio. Veja a <a href="politica-de-privacidade.html">Política de Privacidade</a>.</span>
+        </label>
+        <button type="submit" id="enviar">Enviar meu código</button>
+        <div class="cacada-aviso" id="aviso" role="status"></div>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <p>&copy; 2026 Portal Júnior Arrais. Todos os direitos reservados. &middot; <a href="sobre.html">Sobre</a> &middot; <a href="contato.html">Contato</a> &middot; <a href="politica-de-privacidade.html">Política de Privacidade</a> &middot; <a href="termos-de-uso.html">Termos de Uso</a></p>
+    </div>
+  </footer>
+
+  <script>
+    // COLE AQUI o endereço do Apps Script (termina em /exec)
+    var ENDERECO_PLANILHA = 'https://script.google.com/macros/s/AKfycbwxWiEy6dAJQBRXofMBediN2tup-US_Tuz1EcigZzMiKbWvhG5VZ_0p_zJxwy0MOpVv7A/exec';
+    (function () {
+      var form = document.getElementById('cacada');
+      var aviso = document.getElementById('aviso');
+      var botao = document.getElementById('enviar');
+      var tipo = document.getElementById('tipoContato');
+      var contato = document.getElementById('contato');
+      var rotulo = document.getElementById('rotuloContato');
+
+      tipo.addEventListener('change', function () {
+        var email = tipo.value === 'email';
+        rotulo.textContent = email ? 'E-mail' : 'WhatsApp com DDD';
+        contato.type = email ? 'email' : 'tel';
+        contato.placeholder = email ? 'voce@exemplo.com' : '(32) 99999-9999';
+      });
+
+      function mostrar(ok, texto) {
+        aviso.className = 'cacada-aviso ' + (ok ? 'ok' : 'erro');
+        aviso.textContent = texto;
+      }
+
+      form.addEventListener('submit', function (ev) {
+        ev.preventDefault();
+        var f = form.elements;
+        botao.disabled = true;
+        botao.textContent = 'Enviando...';
+        aviso.className = 'cacada-aviso';
+
+        fetch(ENDERECO_PLANILHA, {
+          method: 'POST',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify({
+            nome: f.nome.value, cpf: f.cpf.value, cidade: f.cidade.value, tipoContato: f.tipoContato.value,
+            contato: f.contato.value, codigo: f.codigo.value, frase: f.frase.value,
+            aceite: f.aceite.checked, site: f.site.value
+          })
+        })
+          .then(function (r) { return r.json(); })
+          .then(function (r) {
+            mostrar(r.ok, r.mensagem);
+            if (r.ok) { form.reset(); tipo.dispatchEvent(new Event('change')); }
+          })
+          .catch(function () {
+            mostrar(false, 'Não conseguimos enviar agora. Confira a internet e tente de novo.');
+          })
+          .then(function () {
+            botao.disabled = false;
+            botao.textContent = 'Enviar meu código';
+          });
+      });
+    })();
+  </script>
+  <script src="caca.js" defer></script>
+  <script src="site.js?v=6"></script>
+</body>
+</html>
