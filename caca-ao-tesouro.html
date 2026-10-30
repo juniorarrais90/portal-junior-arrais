@@ -69,9 +69,14 @@
         <li><strong>A letra só vale no dia dela:</strong> cada letra e cada pista ficam no ar só durante o seu dia, da 0h às 23h59. No dia seguinte somem e dão lugar à próxima. Perdeu um dia, perdeu a letra!</li>
         <li><strong>A ordem importa:</strong> a letra do dia 31/10 é a 1ª, a do dia 01/11 é a 2ª, e assim até a 9ª, no dia 08/11.</li>
         <li><strong>A frase:</strong> junto com o código, escreva em poucas linhas <em>como uma informação do portal ajudou você ou alguém da sua família</em>.</li>
+        <li><strong>Siga os dois perfis:</strong> para receber o prêmio, é preciso seguir no Instagram o <a href="https://www.instagram.com/portaljuniorarrais/" target="_blank" rel="noopener">@portaljuniorarrais</a> e o <a href="https://www.instagram.com/juniorarraisadvogado/" target="_blank" rel="noopener">@juniorarraisadvogado</a>.</li>
         <li><strong>Uma inscrição por pessoa:</strong> cada CPF e cada contato só podem ser usados uma vez. Confira tudo antes de enviar.</li>
         <li><strong>Quando enviar:</strong> o formulário abre em <strong>8 de novembro</strong>, dia da última letra, e fica aberto até <strong>9 de novembro de 2026, às 12h</strong> (horário de Brasília).</li>
       </ul>
+
+      <div class="destaque-box">
+        <p><strong>🎯 Meta: bateu, são DOIS vencedores!</strong> Se até a live o <strong>@portaljuniorarrais</strong> chegar a <strong>7.500 seguidores</strong> e o <strong>@juniorarraisadvogado</strong> chegar a <strong>420 mil</strong>, a comissão escolhe <strong>duas</strong> frases vencedoras, e cada uma leva um vale-compras de R$ 500. Compartilhe nos stories marcando os dois perfis e ajude a bater a meta!</p>
+      </div>
 
       <h2>Pista de hoje</h2>
       <div class="destaque-box" id="caca-pistas">
@@ -83,9 +88,11 @@
         <li><strong>Concurso exclusivamente cultural:</strong> não há sorteio nem qualquer elemento de sorte, e a participação não depende de compra, pagamento ou contratação de serviço.</li>
         <li><strong>Quem pode vencer:</strong> só concorrem as inscrições com o código secreto correto.</li>
         <li><strong>Como o vencedor é escolhido:</strong> uma comissão julgadora do portal lê as frases <strong>sem ver o nome de quem escreveu</strong> e escolhe a melhor por <strong>criatividade, clareza e originalidade</strong>. A decisão da comissão é final.</li>
-        <li><strong>Prêmio:</strong> 1 (um) vale-compras no valor de <strong>R$ 500,00</strong>.</li>
+        <li><strong>Prêmio:</strong> 1 (um) vale-compras no valor de <strong>R$ 500,00</strong>. Se as duas metas de seguidores forem batidas até o início da live, serão 2 (dois) vencedores, cada um com um vale-compras de R$ 500,00. Os seguidores são conferidos ao vivo, na própria live.</li>
+        <li><strong>Seguir os perfis:</strong> o vencedor precisa estar seguindo o @portaljuniorarrais e o @juniorarraisadvogado no Instagram. Se não estiver, a comissão escolhe a próxima melhor frase.</li>
         <li><strong>Resultado:</strong> anunciado ao vivo no <strong>canal do Júnior Arrais no YouTube</strong>, em <strong>9 de novembro de 2026, às 19h</strong> (horário de Brasília). Depois disso, o portal fala com o vencedor pelo contato informado para combinar a entrega.</li>
         <li><strong>Frases:</strong> não serão aceitas frases ofensivas ou copiadas. Ao participar, você autoriza o portal a ler a frase vencedora na live, com o seu primeiro nome e a sua cidade.</li>
+        <li><strong>Instagram:</strong> este concurso não é patrocinado, endossado nem administrado pelo Instagram, nem tem qualquer ligação com ele.</li>
       </ul>
 
       <h2>Enviar o meu código</h2>
@@ -107,6 +114,9 @@
         </label>
         <label><span id="rotuloContato">WhatsApp com DDD</span>
           <input type="tel" name="contato" id="contato" placeholder="(32) 99999-9999" required maxlength="120">
+        </label>
+        <label>Seu @ no Instagram (você precisa seguir @portaljuniorarrais e @juniorarraisadvogado)
+          <input type="text" name="instagram" placeholder="@seuperfil" autocomplete="off" autocapitalize="none" required maxlength="60">
         </label>
         <label>Código secreto (as 9 letras, na ordem dos dias)
           <input type="text" name="codigo" class="cacada-palavra" autocomplete="off" required maxlength="30">
@@ -166,7 +176,7 @@
           headers: { 'Content-Type': 'text/plain;charset=utf-8' },
           body: JSON.stringify({
             nome: f.nome.value, cpf: f.cpf.value, cidade: f.cidade.value, tipoContato: f.tipoContato.value,
-            contato: f.contato.value, codigo: f.codigo.value, frase: f.frase.value,
+            contato: f.contato.value, instagram: f.instagram.value, codigo: f.codigo.value, frase: f.frase.value,
             aceite: f.aceite.checked, site: f.site.value
           })
         })
