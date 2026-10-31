@@ -1056,7 +1056,12 @@
       "horario_brasilia": "31/10 09:45",
       "status": "publicado",
       "publicado_em": "2026-10-31T12:49:10Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122122864869442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122122864869442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-10-31T13:07:08Z",
+        "link_post": "https://www.facebook.com/113029587494887_1538396704983344"
+      }
     },
     {
       "slug": "tarifas-bancarias-servicos-essenciais-que-o-banco-nao-pode-cobrar-pacote-e-conta-salario",
