@@ -2806,7 +2806,9 @@
       "publicar_em": "2026-10-31T12:30:00Z",
       "horario_brasilia": "31/10 09:30",
       "alt_text": "Adicional noturno: 20% a mais, hora de 52 minutos e o que vale depois das 5h",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-10-31T12:32:12Z",
+      "link": "https://www.instagram.com/p/DfKKfYmEYhd/"
     },
     {
       "slug": "tarifas-bancarias-servicos-essenciais-que-o-banco-nao-pode-cobrar-pacote-e-conta-salario",
