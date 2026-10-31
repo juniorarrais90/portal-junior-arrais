@@ -116,6 +116,9 @@ def main():
     cab = molde[:molde.find('<main>') + len('<main>')]
     cauda = molde[molde.find('<!-- fim COMPARTILHAR -->'):]
     autor = molde[molde.find('<!-- AUTOR (Portal Junior Arrais) -->'):molde.find('<!-- FIM AUTOR -->') + len('<!-- FIM AUTOR -->')]
+    # o molde pode ser uma matéria da Caça ao Tesouro: o quadro da letra não pode ir para as novas
+    tira_caca = lambda t: re.sub(r'\s*<div id="caca-tesouro"[^>]*></div>(<script src="\.\./caca\.js"[^>]*></script>)?', '', t)
+    cab, cauda, autor = tira_caca(cab), tira_caca(cauda), tira_caca(autor)
     assert cab and cauda and autor, 'molde sem os marcadores esperados'
 
     for p in ('agendadas', 'img/stories', 'img/feed', 'img/feed45', 'img/youtube', 'img/banco',
