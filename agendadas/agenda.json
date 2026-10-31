@@ -449,7 +449,8 @@
       "alt": "Corredor de fábrica à noite, com relógio de ponto na parede e uma placa escrita TURNO DA NOITE.",
       "publicar_em": "2026-10-31T11:00:00Z",
       "horario_brasilia": "31/10 08:00",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-10-31T11:02:08Z"
     },
     {
       "slug": "tarifas-bancarias-servicos-essenciais-que-o-banco-nao-pode-cobrar-pacote-e-conta-salario",
