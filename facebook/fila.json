@@ -1088,7 +1088,12 @@
       "horario_brasilia": "31/10 19:45",
       "status": "publicado",
       "publicado_em": "2026-10-31T22:49:04Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122122946607442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122122946607442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-10-31T23:04:52Z",
+        "link_post": "https://www.facebook.com/113029587494887_1538840088272339"
+      }
     },
     {
       "slug": "intervalo-de-almoco-clt-minimo-de-1-hora-15-minutos-e-o-que-a-empresa-paga-se-cortar",
