@@ -1072,7 +1072,12 @@
       "horario_brasilia": "31/10 15:45",
       "status": "publicado",
       "publicado_em": "2026-10-31T18:51:05Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122122914009442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122122914009442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-10-31T19:04:07Z",
+        "link_post": "https://www.facebook.com/113029587494887_1538688754954139"
+      }
     },
     {
       "slug": "divorcio-no-cartorio-sem-processo-quando-pode-filhos-menores-documentos-e-partilha",
