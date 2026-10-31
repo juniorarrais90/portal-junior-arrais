@@ -440,6 +440,306 @@
       "horario_brasilia": "29/10 14:00",
       "status": "publicado",
       "publicado_em": "2026-10-29T17:01:54Z"
+    },
+    {
+      "slug": "adicional-noturno-20-por-cento-hora-reduzida-de-52-minutos-e-trabalho-apos-as-5h",
+      "titulo": "Adicional noturno: 20% a mais, hora de 52 minutos e o que vale depois das 5h",
+      "categoria": "Trabalho",
+      "data_exibicao": "31 de out. de 2026",
+      "alt": "Corredor de fábrica à noite, com relógio de ponto na parede e uma placa escrita TURNO DA NOITE.",
+      "publicar_em": "2026-10-31T11:00:00Z",
+      "horario_brasilia": "31/10 08:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "tarifas-bancarias-servicos-essenciais-que-o-banco-nao-pode-cobrar-pacote-e-conta-salario",
+      "titulo": "Tarifa bancária: os serviços que o banco não pode cobrar e como sair do pacote",
+      "categoria": "Economia",
+      "data_exibicao": "31 de out. de 2026",
+      "alt": "Mão inserindo um cartão em um caixa eletrônico, com uma placa escrita AUTOATENDIMENTO acima das máquinas.",
+      "publicar_em": "2026-10-31T17:00:00Z",
+      "horario_brasilia": "31/10 14:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "divorcio-no-cartorio-sem-processo-quando-pode-filhos-menores-documentos-e-partilha",
+      "titulo": "Divórcio no cartório: quando dá para fazer sem processo e o que muda com filhos menores",
+      "categoria": "Justiça",
+      "data_exibicao": "31 de out. de 2026",
+      "alt": "Balcão de cartório com duas alianças douradas separadas, uma pasta fechada e a placa TABELIONATO DE NOTAS ao fundo.",
+      "publicar_em": "2026-10-31T21:00:00Z",
+      "horario_brasilia": "31/10 18:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "intervalo-de-almoco-clt-minimo-de-1-hora-15-minutos-e-o-que-a-empresa-paga-se-cortar",
+      "titulo": "Intervalo de almoço: mínimo de 1 hora e o que a empresa paga se cortar a pausa",
+      "categoria": "Trabalho",
+      "data_exibicao": "1 de nov. de 2026",
+      "alt": "Refeitório de empresa com uma bandeja de marmita sobre a mesa, um relógio marcando meio-dia e a placa REFEITÓRIO na parede.",
+      "publicar_em": "2026-11-01T11:00:00Z",
+      "horario_brasilia": "01/11 08:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "ligacoes-de-telemarketing-nao-me-perturbe-regras-da-anatel-e-como-reclamar",
+      "titulo": "Ligações de telemarketing: como bloquear no Não Me Perturbe e onde reclamar",
+      "categoria": "Direitos",
+      "data_exibicao": "1 de nov. de 2026",
+      "alt": "Celular tocando sobre uma mesa de madeira, com a tela mostrando os botões de atender e recusar, ao lado de uma xícara de café.",
+      "publicar_em": "2026-11-01T17:00:00Z",
+      "horario_brasilia": "01/11 14:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "testamento-quem-pode-fazer-publico-cerrado-ou-particular-e-a-metade-dos-herdeiros",
+      "titulo": "Testamento: quem pode fazer, os três tipos e a metade que fica para os herdeiros",
+      "categoria": "Justiça",
+      "data_exibicao": "1 de nov. de 2026",
+      "alt": "Escrivaninha de madeira com um envelope lacrado com cera vermelha, uma caneta-tinteiro e um molho de chaves.",
+      "publicar_em": "2026-11-01T21:00:00Z",
+      "horario_brasilia": "01/11 18:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "aposentadoria-da-pessoa-com-deficiencia-tempo-por-grau-idade-e-calculo",
+      "titulo": "Aposentadoria da pessoa com deficiência: quanto tempo cada grau exige e como é o cálculo",
+      "categoria": "INSS",
+      "data_exibicao": "2 de nov. de 2026",
+      "alt": "Homem de costas em cadeira de rodas chegando a um guichê com a placa ATENDIMENTO PREFERENCIAL.",
+      "publicar_em": "2026-11-02T11:00:00Z",
+      "horario_brasilia": "02/11 08:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "cancelar-internet-tv-e-telefone-regras-da-anatel-prazo-e-multa-de-fidelidade",
+      "titulo": "Cancelar internet, TV e telefone: as regras da Anatel, o prazo e a multa de fidelidade",
+      "categoria": "Direitos",
+      "data_exibicao": "2 de nov. de 2026",
+      "alt": "Mão desconectando o cabo de um roteador de internet em um rack de sala.",
+      "publicar_em": "2026-11-02T17:00:00Z",
+      "horario_brasilia": "02/11 14:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "acompanhante-no-hospital-quem-tem-direito-no-sus-e-no-plano-de-saude",
+      "titulo": "Acompanhante no hospital: quem tem direito no SUS e no plano de saúde",
+      "categoria": "Saúde",
+      "data_exibicao": "2 de nov. de 2026",
+      "alt": "Quarto de hospital com cama vazia e poltrona de acompanhante ao lado, com a placa ACOMPANHANTE na parede.",
+      "publicar_em": "2026-11-02T21:00:00Z",
+      "horario_brasilia": "02/11 18:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "contrato-de-experiencia-90-dias-prorrogacao-e-o-que-recebe-se-sair-antes",
+      "titulo": "Contrato de experiência: limite de 90 dias, uma prorrogação e o que recebe quem sai antes",
+      "categoria": "Trabalho",
+      "data_exibicao": "3 de nov. de 2026",
+      "alt": "Mesa de RH com uma carteira de trabalho fechada e um crachá em branco, com a placa RECURSOS HUMANOS ao fundo.",
+      "publicar_em": "2026-11-03T11:00:00Z",
+      "horario_brasilia": "03/11 08:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "cartao-clonado-e-compra-nao-reconhecida-banco-responde-pela-fraude-e-como-contestar",
+      "titulo": "Cartão clonado e compra que você não fez: o banco responde pela fraude; veja como contestar",
+      "categoria": "Economia",
+      "data_exibicao": "3 de nov. de 2026",
+      "alt": "Mão aproximando um cartão de uma maquininha no balcão de uma loja, com o cartaz ACEITAMOS CARTÃO ao fundo.",
+      "publicar_em": "2026-11-03T17:00:00Z",
+      "horario_brasilia": "03/11 14:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "despejo-quando-o-inquilino-pode-ser-despejado-prazos-para-sair-e-como-pagar-a-divida",
+      "titulo": "Despejo: quando o inquilino pode ser despejado, os prazos para sair e como evitar",
+      "categoria": "Moradia",
+      "data_exibicao": "3 de nov. de 2026",
+      "alt": "Mesa com um contrato de aluguel, uma caneta, um molho de chaves e uma casinha em miniatura.",
+      "publicar_em": "2026-11-03T21:00:00Z",
+      "horario_brasilia": "03/11 18:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "vale-transporte-desconto-de-ate-6-por-cento-quem-tem-direito-e-uso-indevido",
+      "titulo": "Vale-transporte: desconto de até 6% do salário, quem tem direito e o risco do uso indevido",
+      "categoria": "Trabalho",
+      "data_exibicao": "4 de nov. de 2026",
+      "alt": "Mulher de costas, com mochila, esperando no ponto de ônibus ao entardecer, sob a placa PONTO DE ÔNIBUS.",
+      "publicar_em": "2026-11-04T11:00:00Z",
+      "horario_brasilia": "04/11 08:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "emprestimo-pessoal-cet-como-comparar-propostas-e-quitar-antes-com-desconto",
+      "titulo": "Empréstimo pessoal: o CET mostra o custo real, e quitar antes dá desconto nos juros",
+      "categoria": "Economia",
+      "data_exibicao": "4 de nov. de 2026",
+      "alt": "Área de atendimento de agência com cadeiras de espera e guichês numerados, sob a placa ATENDIMENTO.",
+      "publicar_em": "2026-11-04T17:00:00Z",
+      "horario_brasilia": "04/11 14:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "plano-de-saude-reajuste-por-faixa-etaria-59-anos-limite-de-6-vezes-e-estatuto-do-idoso",
+      "titulo": "Plano de saúde: reajuste por idade tem 10 faixas, a última aos 59 anos, e teto de 6 vezes",
+      "categoria": "Saúde",
+      "data_exibicao": "4 de nov. de 2026",
+      "alt": "Mão segurando um cartão de convênio azul sem marca diante do balcão de uma clínica, sob a placa RECEPÇÃO.",
+      "publicar_em": "2026-11-04T21:00:00Z",
+      "horario_brasilia": "04/11 18:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "desvio-e-acumulo-de-funcao-diferenca-salarial-prova-e-prazo-para-cobrar",
+      "titulo": "Desvio e acúmulo de função: quando dá direito a diferença salarial e o prazo para cobrar",
+      "categoria": "Trabalho",
+      "data_exibicao": "5 de nov. de 2026",
+      "alt": "Estoque de supermercado com colete, prancheta e leitor de código de barras sobre a bancada, sob a placa ESTOQUE.",
+      "publicar_em": "2026-11-05T11:00:00Z",
+      "horario_brasilia": "05/11 08:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "bloqueio-de-conta-pela-justica-o-que-e-impenhoravel-e-como-pedir-o-desbloqueio",
+      "titulo": "Conta bloqueada pela Justiça: o que não pode ser penhorado e o prazo de 5 dias para reagir",
+      "categoria": "Economia",
+      "data_exibicao": "5 de nov. de 2026",
+      "alt": "Cartão bancário preso por uma corrente com cadeado, ao lado de um malhete de juiz e de uma carteira sobre a mesa.",
+      "publicar_em": "2026-11-05T17:00:00Z",
+      "horario_brasilia": "05/11 14:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "alimentos-gravidicos-pensao-durante-a-gravidez-quem-pede-e-o-que-cobre",
+      "titulo": "Pensão na gravidez: a gestante pode pedir ajuda do futuro pai antes de o bebê nascer",
+      "categoria": "Justiça",
+      "data_exibicao": "5 de nov. de 2026",
+      "alt": "Gestante de perfil, com o rosto fora do quadro, segurando um exame de ultrassom em frente à placa VARA DE FAMÍLIA.",
+      "publicar_em": "2026-11-05T21:00:00Z",
+      "horario_brasilia": "05/11 18:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "estagio-lei-11788-jornada-de-6-horas-bolsa-recesso-e-quando-vira-emprego",
+      "titulo": "Estágio: jornada de até 6 horas, bolsa, recesso de 30 dias e quando vira emprego",
+      "categoria": "Trabalho",
+      "data_exibicao": "6 de nov. de 2026",
+      "alt": "Mesa de trabalho com notebook aberto, mochila e crachá de estagiário, com um cartaz de VAGAS DE ESTÁGIO na parede ao fundo",
+      "publicar_em": "2026-11-06T11:00:00Z",
+      "horario_brasilia": "06/11 08:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "golpe-do-boleto-falso-como-conferir-antes-de-pagar-e-quem-responde",
+      "titulo": "Golpe do boleto falso: como conferir antes de pagar e quem responde pelo prejuízo",
+      "categoria": "Economia",
+      "data_exibicao": "6 de nov. de 2026",
+      "alt": "Mão segurando um celular que escaneia o código de barras de um boleto impresso sobre a mesa",
+      "publicar_em": "2026-11-06T17:00:00Z",
+      "horario_brasilia": "06/11 14:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "curatela-quando-a-familia-precisa-pedir-limites-e-o-beneficio-do-inss",
+      "titulo": "Curatela: quando a família precisa pedir e como fica o benefício do INSS",
+      "categoria": "Justiça",
+      "data_exibicao": "6 de nov. de 2026",
+      "alt": "Escadaria e fachada de um prédio de fórum, com a placa FÓRUM em letras grandes acima da porta de entrada",
+      "publicar_em": "2026-11-06T21:00:00Z",
+      "horario_brasilia": "06/11 18:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "jovem-aprendiz-idade-contrato-de-2-anos-jornada-salario-e-fgts-de-2",
+      "titulo": "Jovem aprendiz: idade, contrato de até 2 anos, jornada, salário e FGTS de 2%",
+      "categoria": "Trabalho",
+      "data_exibicao": "7 de nov. de 2026",
+      "alt": "Rapaz de costas, com mochila, numa oficina, ouvindo as explicações de um instrutor, sob a placa JOVEM APRENDIZ.",
+      "publicar_em": "2026-11-07T11:00:00Z",
+      "horario_brasilia": "07/11 08:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "seguro-de-celular-e-protecao-estendida-quando-vale-a-pena-e-como-cancelar",
+      "titulo": "Seguro de celular e proteção estendida: o que a lei já cobre, venda casada e como cancelar",
+      "categoria": "Direitos",
+      "data_exibicao": "7 de nov. de 2026",
+      "alt": "Vendedor entregando um celular novo a uma cliente no balcão de uma loja, ao lado da caixa aberta e de um termo de proteção.",
+      "publicar_em": "2026-11-07T17:00:00Z",
+      "horario_brasilia": "07/11 14:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "laqueadura-e-vasectomia-no-sus-idade-de-21-anos-prazo-de-60-dias-e-sem-aval-do-conjuge",
+      "titulo": "Laqueadura e vasectomia no SUS: 21 anos ou 2 filhos e sem aval do cônjuge",
+      "categoria": "Saúde",
+      "data_exibicao": "7 de nov. de 2026",
+      "alt": "Corredor de unidade de saúde com cadeiras de espera e uma placa de PLANEJAMENTO FAMILIAR acima de uma porta",
+      "publicar_em": "2026-11-07T21:00:00Z",
+      "horario_brasilia": "07/11 18:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "auxilio-reclusao-quem-tem-direito-carencia-baixa-renda-e-valor",
+      "titulo": "Auxílio-reclusão: quem tem direito, carência de 24 meses, limite de renda e valor",
+      "categoria": "INSS",
+      "data_exibicao": "8 de nov. de 2026",
+      "alt": "Guichê de atendimento vazio com placa escrita BENEFÍCIOS.",
+      "publicar_em": "2026-11-08T11:00:00Z",
+      "horario_brasilia": "08/11 08:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "cheque-especial-juros-limitados-a-8-ao-mes-e-como-sair-da-divida",
+      "titulo": "Cheque especial: juros limitados a 8% ao mês e como sair da dívida mais cara",
+      "categoria": "Economia",
+      "data_exibicao": "8 de nov. de 2026",
+      "alt": "Mesa de cozinha com envelopes de contas, uma calculadora, um cartão bancário e um celular virado para baixo.",
+      "publicar_em": "2026-11-08T17:00:00Z",
+      "horario_brasilia": "08/11 14:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "vizinho-barulhento-direito-ao-sossego-multa-no-condominio-e-o-que-fazer",
+      "titulo": "Vizinho barulhento: o que diz a lei, multa no condomínio e como resolver",
+      "categoria": "Moradia",
+      "data_exibicao": "8 de nov. de 2026",
+      "alt": "Hall de prédio residencial à noite, com uma placa escrita SILÊNCIO na parede.",
+      "publicar_em": "2026-11-08T21:00:00Z",
+      "horario_brasilia": "08/11 18:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "home-office-teletrabalho-quem-paga-as-despesas-controle-de-jornada-e-volta-ao-presencial",
+      "titulo": "Home office: quem paga as despesas, controle de jornada e volta ao presencial",
+      "categoria": "Trabalho",
+      "data_exibicao": "9 de nov. de 2026",
+      "alt": "Mesa em casa com notebook aberto, fone de ouvido e um envelope de conta de luz.",
+      "publicar_em": "2026-11-09T11:00:00Z",
+      "horario_brasilia": "09/11 08:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "recall-de-carro-e-produtos-reparo-sem-custo-consulta-pelo-chassi-e-licenciamento",
+      "titulo": "Recall de carro e de produtos: reparo sem custo, consulta pelo chassi e licenciamento",
+      "categoria": "Direitos",
+      "data_exibicao": "9 de nov. de 2026",
+      "alt": "Oficina com um carro de capô aberto e um cartaz escrito CONVOCAÇÃO na parede.",
+      "publicar_em": "2026-11-09T17:00:00Z",
+      "horario_brasilia": "09/11 14:00",
+      "status": "pendente"
+    },
+    {
+      "slug": "adocao-no-brasil-passo-a-passo-quem-pode-adotar-e-licenca-de-quem-adota",
+      "titulo": "Adoção no Brasil: passo a passo, quem pode adotar e licença de 120 dias",
+      "categoria": "Justiça",
+      "data_exibicao": "9 de nov. de 2026",
+      "alt": "Quarto de criança arrumado e vazio, com um ursinho de pelúcia sobre a cama.",
+      "publicar_em": "2026-11-09T21:00:00Z",
+      "horario_brasilia": "09/11 18:00",
+      "status": "pendente"
     }
   ]
 }
