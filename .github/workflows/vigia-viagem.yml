@@ -1,0 +1,36 @@
+name: Vigia da viagem
+
+# Confere a gaveta de 31/10 a 09/11/2026 (matérias, Instagram, Facebook e a letra
+# da Caça ao Tesouro) e avisa no Telegram se algo não saiu. Só lê: não grava nada.
+# Depois de 10/11 o script sai sem fazer nada; dá para apagar este arquivo.
+on:
+  schedule:
+    - cron: "30 15 * * *"     # 12:30 em Brasília: letra do dia e posts da manhã
+    - cron: "30 19 * * *"     # 16:30: posts da tarde
+    - cron: "30 23 * * *"     # 20:30: posts da noite + resumo "tudo certo"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  vigiar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+
+      - name: Conferir
+        env:
+          TG_TOKEN: ${{ secrets.TG_TOKEN }}
+          TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
+        run: |
+          if [ "${{ github.event.schedule }}" = "30 23 * * *" ] || [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            python scripts/vigia_viagem.py --resumo
+          else
+            python scripts/vigia_viagem.py
+          fi
