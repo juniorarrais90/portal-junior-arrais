@@ -1104,7 +1104,12 @@
       "horario_brasilia": "01/11 09:45",
       "status": "publicado",
       "publicado_em": "2026-11-01T12:49:05Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122123047701442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122123047701442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-11-01T13:04:32Z",
+        "link_post": "https://www.facebook.com/113029587494887_1539422928214055"
+      }
     },
     {
       "slug": "ligacoes-de-telemarketing-nao-me-perturbe-regras-da-anatel-e-como-reclamar",
