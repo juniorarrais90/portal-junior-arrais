@@ -52,12 +52,14 @@
     {
       "slug": "bolsa-familia-calendario-de-outubro",
       "a_partir_de": "2026-11-01",
-      "motivo": "calendário de outubro"
+      "motivo": "calendário de outubro",
+      "aplicado_em": "2026-11-01"
     },
     {
       "slug": "fgts-saque-aniversario-de-outubro-e-o-fim-das-cinco-antecipacoes",
       "a_partir_de": "2026-11-01",
-      "motivo": "saque de outubro"
+      "motivo": "saque de outubro",
+      "aplicado_em": "2026-11-01"
     },
     {
       "slug": "inss-calendario-de-outubro",
