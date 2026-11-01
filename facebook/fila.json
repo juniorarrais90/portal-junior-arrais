@@ -1136,7 +1136,12 @@
       "horario_brasilia": "01/11 19:45",
       "status": "publicado",
       "publicado_em": "2026-11-01T22:49:08Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122123120589442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122123120589442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-11-01T23:01:36Z",
+        "link_post": "https://www.facebook.com/113029587494887_1539887958167552"
+      }
     },
     {
       "slug": "aposentadoria-da-pessoa-com-deficiencia-tempo-por-grau-idade-e-calculo",
