@@ -1184,7 +1184,12 @@
       "horario_brasilia": "02/11 19:45",
       "status": "publicado",
       "publicado_em": "2026-11-02T22:54:41Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122123297805442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122123297805442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-11-02T23:05:34Z",
+        "link_post": "https://www.facebook.com/113029587494887_1540936441396037"
+      }
     },
     {
       "slug": "contrato-de-experiencia-90-dias-prorrogacao-e-o-que-recebe-se-sair-antes",
