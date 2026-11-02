@@ -1152,7 +1152,12 @@
       "horario_brasilia": "02/11 09:45",
       "status": "publicado",
       "publicado_em": "2026-11-02T12:49:37Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122123226819442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122123226819442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-11-02T13:04:22Z",
+        "link_post": "https://www.facebook.com/113029587494887_1540501071439574"
+      }
     },
     {
       "slug": "cancelar-internet-tv-e-telefone-regras-da-anatel-prazo-e-multa-de-fidelidade",
