@@ -1168,7 +1168,12 @@
       "horario_brasilia": "02/11 15:45",
       "status": "publicado",
       "publicado_em": "2026-11-02T18:49:38Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122123270625442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122123270625442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-11-02T19:06:48Z",
+        "link_post": "https://www.facebook.com/113029587494887_1540789938077354"
+      }
     },
     {
       "slug": "acompanhante-no-hospital-quem-tem-direito-no-sus-e-no-plano-de-saude",
