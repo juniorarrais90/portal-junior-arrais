@@ -1200,7 +1200,12 @@
       "horario_brasilia": "03/11 09:45",
       "status": "publicado",
       "publicado_em": "2026-11-03T12:49:11Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122123412771442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122123412771442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-11-03T13:05:44Z",
+        "link_post": "https://www.facebook.com/113029587494887_1541507341338947"
+      }
     },
     {
       "slug": "cartao-clonado-e-compra-nao-reconhecida-banco-responde-pela-fraude-e-como-contestar",
