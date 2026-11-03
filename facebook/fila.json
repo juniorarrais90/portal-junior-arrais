@@ -1216,7 +1216,12 @@
       "horario_brasilia": "03/11 15:45",
       "status": "publicado",
       "publicado_em": "2026-11-03T20:22:38Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122123471493442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122123471493442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-11-03T20:41:15Z",
+        "link_post": "https://www.facebook.com/113029587494887_1541857844637230"
+      }
     },
     {
       "slug": "despejo-quando-o-inquilino-pode-ser-despejado-prazos-para-sair-e-como-pagar-a-divida",
