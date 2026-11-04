@@ -1248,7 +1248,12 @@
       "horario_brasilia": "04/11 09:45",
       "status": "publicado",
       "publicado_em": "2026-11-04T12:49:03Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122123596755442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122123596755442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-11-04T13:04:13Z",
+        "link_post": "https://www.facebook.com/113029587494887_1542508534572161"
+      }
     },
     {
       "slug": "emprestimo-pessoal-cet-como-comparar-propostas-e-quitar-antes-com-desconto",
