@@ -1264,7 +1264,12 @@
       "horario_brasilia": "04/11 15:45",
       "status": "publicado",
       "publicado_em": "2026-11-04T18:49:27Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122123643873442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122123643873442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-11-04T19:04:30Z",
+        "link_post": "https://www.facebook.com/113029587494887_1542801334542881"
+      }
     },
     {
       "slug": "plano-de-saude-reajuste-por-faixa-etaria-59-anos-limite-de-6-vezes-e-estatuto-do-idoso",
