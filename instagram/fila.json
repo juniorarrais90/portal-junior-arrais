@@ -2936,7 +2936,9 @@
       "publicar_em": "2026-11-04T18:30:00Z",
       "horario_brasilia": "04/11 15:30",
       "alt_text": "Empréstimo pessoal: o CET mostra o custo real, e quitar antes dá desconto nos juros",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-11-04T18:32:25Z",
+      "link": "https://www.instagram.com/p/DfVG5m8FhFs/"
     },
     {
       "slug": "plano-de-saude-reajuste-por-faixa-etaria-59-anos-limite-de-6-vezes-e-estatuto-do-idoso",
