@@ -1328,7 +1328,12 @@
       "horario_brasilia": "05/11 19:45",
       "status": "publicado",
       "publicado_em": "2026-11-05T22:49:33Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122123873559442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122123873559442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-11-05T23:04:17Z",
+        "link_post": "https://www.facebook.com/113029587494887_1544037007752647"
+      }
     },
     {
       "slug": "estagio-lei-11788-jornada-de-6-horas-bolsa-recesso-e-quando-vira-emprego",
