@@ -1360,7 +1360,12 @@
       "horario_brasilia": "06/11 15:45",
       "status": "publicado",
       "publicado_em": "2026-11-06T18:48:59Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122124033051442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122124033051442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-11-06T19:04:17Z",
+        "link_post": "https://www.facebook.com/113029587494887_1544983587657989"
+      }
     },
     {
       "slug": "curatela-quando-a-familia-precisa-pedir-limites-e-o-beneficio-do-inss",
