@@ -1344,7 +1344,12 @@
       "horario_brasilia": "06/11 09:45",
       "status": "publicado",
       "publicado_em": "2026-11-06T12:48:59Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122123977359442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122123977359442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-11-06T13:04:05Z",
+        "link_post": "https://www.facebook.com/113029587494887_1544658251023856"
+      }
     },
     {
       "slug": "golpe-do-boleto-falso-como-conferir-antes-de-pagar-e-quem-responde",
