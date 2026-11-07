@@ -1424,7 +1424,12 @@
       "horario_brasilia": "07/11 19:45",
       "status": "publicado",
       "publicado_em": "2026-11-07T22:48:53Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122124228033442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122124228033442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-11-07T23:03:54Z",
+        "link_post": "https://www.facebook.com/113029587494887_1546169467539401"
+      }
     },
     {
       "slug": "auxilio-reclusao-quem-tem-direito-carencia-baixa-renda-e-valor",
