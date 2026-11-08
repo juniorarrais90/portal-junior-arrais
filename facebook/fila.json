@@ -1440,7 +1440,12 @@
       "horario_brasilia": "08/11 09:45",
       "status": "publicado",
       "publicado_em": "2026-11-08T12:48:50Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122124330717442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122124330717442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-11-08T13:04:00Z",
+        "link_post": "https://www.facebook.com/113029587494887_1546773867478961"
+      }
     },
     {
       "slug": "cheque-especial-juros-limitados-a-8-ao-mes-e-como-sair-da-divida",
