@@ -735,7 +735,8 @@
       "alt": "Hall de prédio residencial à noite, com uma placa escrita SILÊNCIO na parede.",
       "publicar_em": "2026-11-08T21:00:00Z",
       "horario_brasilia": "08/11 18:00",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-11-08T21:02:02Z"
     },
     {
       "slug": "home-office-teletrabalho-quem-paga-as-despesas-controle-de-jornada-e-volta-ao-presencial",
