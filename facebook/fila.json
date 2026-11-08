@@ -1472,7 +1472,12 @@
       "horario_brasilia": "08/11 19:45",
       "status": "publicado",
       "publicado_em": "2026-11-08T22:48:49Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122124394467442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122124394467442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-11-08T23:04:18Z",
+        "link_post": "https://www.facebook.com/113029587494887_1547281340761547"
+      }
     },
     {
       "slug": "home-office-teletrabalho-quem-paga-as-despesas-controle-de-jornada-e-volta-ao-presencial",
