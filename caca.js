@@ -5,7 +5,7 @@
   var API = 'https://script.google.com/macros/s/AKfycbwxWiEy6dAJQBRXofMBediN2tup-US_Tuz1EcigZzMiKbWvhG5VZ_0p_zJxwy0MOpVv7A/exec';
   var INICIO = Date.parse('2026-10-31T12:00:00-03:00'); // cada letra vale do meio-dia ao meio-dia
   var ABRE_FORMULARIO = Date.parse('2026-11-08T12:00:00-03:00');
-  var FECHA_FORMULARIO = Date.parse('2026-11-09T14:00:00-03:00');
+  var FECHA_FORMULARIO = Date.parse('2026-11-09T17:00:00-03:00');
   var DIA_MS = 86400000;
 
   // Uma matéria por dia, na ordem das letras
@@ -59,7 +59,7 @@
     }
   }
 
-  // Formulário: só aparece de 08/11 ao meio-dia até 09/11 às 14h
+  // Formulário: só aparece de 08/11 ao meio-dia até 09/11 às 17h
   var form = document.getElementById('cacada');
   if (form) {
     var agora = Date.now();
@@ -69,7 +69,7 @@
       aviso.className = 'destaque-box';
       aviso.innerHTML = agora < ABRE_FORMULARIO
         ? '<p>📅 O formulário abre aqui no dia <strong>8 de novembro, ao meio-dia</strong>, quando sai a última letra. Até lá, junte as letras!</p>'
-        : '<p>As inscrições foram encerradas em 9 de novembro, às 14h. Acompanhe o resultado na live do YouTube, às 19h!</p>';
+        : '<p>As inscrições foram encerradas em 9 de novembro, às 17h. Acompanhe o resultado na live do YouTube, às 19h!</p>';
       form.parentNode.insertBefore(aviso, form);
     }
   }
