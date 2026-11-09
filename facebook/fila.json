@@ -1520,7 +1520,12 @@
       "horario_brasilia": "09/11 19:45",
       "status": "publicado",
       "publicado_em": "2026-11-09T22:47:07Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122124547707442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122124547707442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-11-09T23:02:14Z",
+        "link_post": "https://www.facebook.com/113029587494887_1548370410652640"
+      }
     }
   ]
 }
