@@ -52,7 +52,8 @@
     if (hoje >= 1 && hoje <= PISTAS.length) {
       pista.innerHTML = '<p><strong>Letra nº ' + hoje + ' de 9:</strong> está escondida na matéria sobre ' +
         '<a href="noticias/' + PISTAS[hoje - 1].url + '">' + PISTAS[hoje - 1].tema + '</a>. ' +
-        'Abra, procure o quadro no fim do texto e anote a letra. Amanhã ao meio-dia tem outra!</p>';
+        'Abra, procure o quadro no fim do texto e anote a letra. ' +
+        (hoje < PISTAS.length ? 'Amanhã ao meio-dia tem outra!' : 'Esta é a última letra: agora é só enviar o seu código abaixo!') + '</p>';
     } else if (hoje > PISTAS.length) {
       pista.innerHTML = '<p>As 9 letras já foram reveladas. Agora é com você!</p>';
     }
