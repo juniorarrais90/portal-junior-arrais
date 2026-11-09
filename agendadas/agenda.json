@@ -757,7 +757,8 @@
       "alt": "Oficina com um carro de capô aberto e um cartaz escrito CONVOCAÇÃO na parede.",
       "publicar_em": "2026-11-09T17:00:00Z",
       "horario_brasilia": "09/11 14:00",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-11-09T17:02:26Z"
     },
     {
       "slug": "adocao-no-brasil-passo-a-passo-quem-pode-adotar-e-licenca-de-quem-adota",
