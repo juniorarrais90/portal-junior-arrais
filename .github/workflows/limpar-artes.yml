@@ -1,0 +1,55 @@
+name: Limpar artes publicadas
+
+# Tira do site as artes de Instagram/Facebook/story de posts já publicados há
+# mais de 2 dias (scripts/limpar_artes_publicadas.py explica as regras).
+# Motivo: o GitHub Pages aceita site de até 1 GB; em 09/11/2026 o portal chegou
+# a 2,5 GB e o deploy do site passou a falhar por tempo esgotado.
+# As capas das matérias (img/<slug>.png) e o img/banco NUNCA são tocados.
+#
+# Minuto 17: não coincide com o robô do Instagram (3, 8, 13, 23, 33, 38, 43,
+# 52, 53), do Facebook (6, 21, 36, 51) nem com o serviço externo (00/15/30/45).
+on:
+  schedule:
+    - cron: "17 7 * * *"     # 04:17 em Brasília
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: limpar-artes
+  cancel-in-progress: false
+
+jobs:
+  limpar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+
+      - name: Apagar artes de posts já publicados
+        run: python scripts/limpar_artes_publicadas.py --apagar
+
+      - name: Gravar
+        run: |
+          if [ -z "$(git status --porcelain img)" ]; then
+            echo "Nada para limpar."
+            exit 0
+          fi
+          git config user.name "Portal Júnior Arrais"
+          git config user.email "juniorarrais90@gmail.com"
+          git add -A img
+          git commit -m "Limpeza: tira artes de posts já publicados"
+          for tentativa in 1 2 3 4 5; do
+            if git push origin HEAD:main; then exit 0; fi
+            echo "Push recusado (tentativa $tentativa). Sincronizando..."
+            git pull --rebase origin main || { git rebase --abort; exit 1; }
+            sleep $((tentativa * 10))
+          done
+          exit 1
