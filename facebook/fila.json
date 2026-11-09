@@ -1504,7 +1504,12 @@
       "horario_brasilia": "09/11 15:45",
       "status": "publicado",
       "publicado_em": "2026-11-09T18:49:21Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122124527625442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122124527625442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-11-09T19:04:38Z",
+        "link_post": "https://www.facebook.com/113029587494887_1548184010671280"
+      }
     },
     {
       "slug": "adocao-no-brasil-passo-a-passo-quem-pode-adotar-e-licenca-de-quem-adota",
