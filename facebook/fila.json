@@ -1488,7 +1488,12 @@
       "horario_brasilia": "09/11 09:45",
       "status": "publicado",
       "publicado_em": "2026-11-09T12:49:01Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122124483897442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122124483897442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-11-09T13:04:24Z",
+        "link_post": "https://www.facebook.com/113029587494887_1547862884036726"
+      }
     },
     {
       "slug": "recall-de-carro-e-produtos-reparo-sem-custo-consulta-pelo-chassi-e-licenciamento",
