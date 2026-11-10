@@ -64,7 +64,8 @@
     {
       "slug": "inss-calendario-de-outubro",
       "a_partir_de": "2026-11-10",
-      "motivo": "pagamentos até 09/11"
+      "motivo": "pagamentos até 09/11",
+      "aplicado_em": "2026-11-10"
     },
     {
       "slug": "enem-2026-pe-de-meia-paga-r-200-a-quem-fizer-os-dois-dias",
