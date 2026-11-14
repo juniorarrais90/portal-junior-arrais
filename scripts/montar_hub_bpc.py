@@ -291,7 +291,7 @@ def montar(hoje):
 <a href="inss.html">INSS<small>calendário de aposentados e pensionistas</small></a>
 <a href="bolsa-familia.html">Bolsa Família<small>calendário pelo final do NIS</small></a>
 <a href="gas-do-povo.html">Gás do Povo<small>quando sai o próximo vale</small></a>
-<a href="noticias/guia-cadunico-o-que-e-quem-pode-e-quando-atualizar.html">CadÚnico<small>quem pode entrar e quando atualizar</small></a>
+<a href="cadunico.html">CadÚnico<small>calculadora de renda e prazo do cadastro</small></a>
 </div>
 <h2 id="perguntas">Perguntas frequentes</h2>
 {faq_html}<h2>Cuidado com golpe</h2>

@@ -401,6 +401,15 @@
         "BPC de novembro",
         "BPC de dezembro"
       ]
+    },
+    {
+      "slug": "../cadunico",
+      "ancoras": [
+        "revisão cadastral",
+        "atualizar o CadÚnico",
+        "atualização do CadÚnico",
+        "atualizar o cadastro"
+      ]
     }
   ]
 }
