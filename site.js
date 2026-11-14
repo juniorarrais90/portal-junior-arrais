@@ -208,3 +208,45 @@ function pjaFacebook(btn){
     }
   }, 1400);
 }
+
+/* ============================================
+   Notificações no navegador (OneSignal) — 14/11/2026
+   Fica desligado enquanto ONESIGNAL_APP_ID estiver vazio.
+   O arquivo OneSignalSDKWorker.js precisa estar na raiz do site.
+   ============================================ */
+var ONESIGNAL_APP_ID = '';
+(function () {
+  if (!ONESIGNAL_APP_ID || !('Notification' in window) || !('serviceWorker' in navigator)) return;
+  if (location.hostname !== 'portaljuniorarrais.com.br') return;
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  window.OneSignalDeferred.push(function (OneSignal) {
+    return OneSignal.init({
+      appId: ONESIGNAL_APP_ID,
+      serviceWorkerPath: '/OneSignalSDKWorker.js',
+      serviceWorkerParam: { scope: '/' },
+      notifyButton: { enable: false },
+      welcomeNotification: {
+        title: 'Portal Júnior Arrais',
+        message: 'Pronto! Você vai receber as notícias importantes por aqui.'
+      },
+      promptOptions: {
+        slidedown: {
+          prompts: [{
+            type: 'push',
+            autoPrompt: true,
+            delay: { pageViews: 1, timeDelay: 15 },
+            text: {
+              actionMessage: 'Quer saber na hora quando sair notícia de Bolsa Família, INSS e benefícios?',
+              acceptButton: 'Quero receber',
+              cancelButton: 'Agora não'
+            }
+          }]
+        }
+      }
+    });
+  });
+  var s = document.createElement('script');
+  s.src = 'https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js';
+  s.defer = true;
+  document.head.appendChild(s);
+})();

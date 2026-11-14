@@ -1,0 +1,71 @@
+name: Notificação de matéria nova
+
+# Manda notificação no navegador (OneSignal) quando entra matéria nova em
+# noticias/. Criado em 14/11/2026. Regras no topo de scripts/avisar_push.py
+# (1 aviso por rodada, até 4 por dia, madrugada vira 7h30).
+#
+# Precisa do segredo ONESIGNAL_REST_KEY (Settings > Secrets and variables >
+# Actions) e do ONESIGNAL_APP_ID preenchido no site.js. Sem eles, só registra.
+#
+# MINUTO DO CRON: 26 e 56, livres dos robôs do Instagram (3, 8, 13, 23, 33, 38,
+# 43, 52, 53), do Facebook (6, 21, 36, 51), do serviço externo (00, 15, 30, 45),
+# do noindex (41), da página do Bolsa Família (57) e do 17. A rodada por horário
+# existe porque as matérias da gaveta entram por outro robô, e push feito por
+# robô não dispara este workflow.
+on:
+  schedule:
+    - cron: "26,56 * * * *"
+  push:
+    branches: [main]
+    paths:
+      - "noticias/**.html"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: avisar-push
+  cancel-in-progress: false
+
+jobs:
+  avisar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+
+      - name: Avisar matéria nova
+        id: avisar
+        env:
+          ONESIGNAL_REST_KEY: ${{ secrets.ONESIGNAL_REST_KEY }}
+        run: |
+          saida=$(python scripts/avisar_push.py)
+          echo "$saida"
+          if echo "$saida" | grep -q '^MUDOU$'; then
+            echo "mudou=1" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Gravar lista de avisos
+        if: steps.avisar.outputs.mudou == '1'
+        run: |
+          git config user.name "Portal Júnior Arrais"
+          git config user.email "juniorarrais90@gmail.com"
+          git add data/push-enviados.json
+          git commit -m "Notificações: lista de matérias avisadas [skip ci]"
+          for tentativa in 1 2 3 4 5; do
+            if git push; then
+              echo "Gravado na tentativa $tentativa."
+              exit 0
+            fi
+            git pull --rebase origin main || { git rebase --abort; exit 1; }
+            sleep $((tentativa * 5))
+          done
+          echo "::error::Não consegui gravar após 5 tentativas."
+          exit 1
