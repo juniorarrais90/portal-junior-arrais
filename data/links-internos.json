@@ -391,6 +391,16 @@
         "datas do Pé-de-Meia",
         "pagamento do Pé-de-Meia"
       ]
+    },
+    {
+      "slug": "../bpc-loas",
+      "ancoras": [
+        "calendário do BPC",
+        "pagamento do BPC",
+        "datas do BPC",
+        "BPC de novembro",
+        "BPC de dezembro"
+      ]
     }
   ]
 }

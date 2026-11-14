@@ -413,7 +413,7 @@ def montar(hoje):
 <h2 id="outros">Outros benefícios</h2>
 <div class="bf-outros">
 <a href="bolsa-familia.html">Bolsa Família<small>calendário pelo final do NIS</small></a>
-<a href="noticias/guia-bpc-loas-quem-tem-direito-renda-e-avaliacao.html">BPC/LOAS<small>renda, avaliação e o que faz parar</small></a>
+<a href="bpc-loas.html">BPC/LOAS<small>calendário, renda e revisão</small></a>
 <a href="noticias/guia-aposentadoria-inss-2026-idade-pontos-rural-e-especial.html">Aposentadoria<small>idade, pontos, rural e especial</small></a>
 <a href="noticias/guia-golpes-contra-quem-recebe-beneficio-como-reconhecer.html">Golpes<small>como reconhecer antes de cair</small></a>
 </div>

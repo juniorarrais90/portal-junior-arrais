@@ -632,7 +632,7 @@ def montar(hoje):
 <h2 id="outros">Outros benefícios</h2>
 <div class="bf-outros">
 <a href="noticias/guia-cadunico-o-que-e-quem-pode-e-quando-atualizar.html">CadÚnico<small>quem pode entrar e quando atualizar</small></a>
-<a href="noticias/guia-bpc-loas-quem-tem-direito-renda-e-avaliacao.html">BPC/LOAS<small>renda, avaliação e o que faz parar</small></a>
+<a href="bpc-loas.html">BPC/LOAS<small>calendário, renda e revisão</small></a>
 <a href="noticias/guia-gas-do-povo-como-funciona-quem-recebe-e-prazos.html">Gás do Povo<small>quem recebe e de quanto em quanto tempo</small></a>
 <a href="noticias/guia-pe-de-meia-regras-valores-e-calendario.html">Pé-de-Meia<small>quanto o estudante recebe e quando</small></a>
 </div>
