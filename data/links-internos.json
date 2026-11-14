@@ -382,6 +382,15 @@
         "novo lote de vales",
         "vale-recarga"
       ]
+    },
+    {
+      "slug": "../pe-de-meia",
+      "ancoras": [
+        "calendário do Pé-de-Meia",
+        "parcela do Pé-de-Meia",
+        "datas do Pé-de-Meia",
+        "pagamento do Pé-de-Meia"
+      ]
     }
   ]
 }

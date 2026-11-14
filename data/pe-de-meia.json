@@ -1,0 +1,29 @@
+{
+ "_leia": "Dados da página central do Pé-de-Meia (pe-de-meia.html). Rode  python scripts/montar_hub_pe_de_meia.py . 'parcelas' = janelas oficiais do MEC (ensino médio regular). 'por_nascimento' (opcional) = tabela confirmada pela Caixa, na ordem jan-fev, mar-abr, mai-jun, jul-ago, set-out, nov-dez; sem ela a página mostra a previsão pela ordem de sempre quando a janela tem 6 dias úteis. Só entra o que foi conferido em fonte oficial.",
+ "atualizado_em": "2026-11-14",
+ "publicado_em": "2026-11-14",
+ "valores": {"matricula": 200, "frequencia": 200, "parcelas_frequencia": 9, "conclusao": 1000, "enem": 200, "total_3_anos": "9,2 mil",
+   "eja_frequencia": 225, "eja_parcelas": 8, "renda_valor": "810,50"},
+ "parcelas": [
+  {"n": 1, "ini": "2026-03-23", "fim": "2026-03-30", "ref": "matrícula e início das aulas"},
+  {"n": 2, "ini": "2026-04-27", "fim": "2026-05-04", "ref": ""},
+  {"n": 3, "ini": "2026-05-25", "fim": "2026-06-01", "ref": ""},
+  {"n": 4, "ini": "2026-06-29", "fim": "2026-07-06", "ref": ""},
+  {"n": 5, "ini": "2026-08-24", "fim": "2026-08-31", "ref": "maio e junho", "por_nascimento": ["2026-08-24","2026-08-25","2026-08-26","2026-08-27","2026-08-28","2026-08-31"]},
+  {"n": 6, "ini": "2026-09-21", "fim": "2026-09-28", "ref": "julho"},
+  {"n": 7, "ini": "2026-10-19", "fim": "2026-10-26", "ref": "agosto"},
+  {"n": 8, "ini": "2026-11-23", "fim": "2026-11-30", "ref": "setembro"},
+  {"n": 9, "ini": "2026-12-21", "fim": "2026-12-28", "ref": "outubro"},
+  {"n": 10, "ini": "2027-01-25", "fim": "2027-02-01", "ref": "novembro"}
+ ],
+ "conclusao": {"ini": "2027-02-22", "fim": "2027-03-01"},
+ "correcao": "março a junho de 2027",
+ "prazo_ajuste_2025": "2026-12-04",
+ "fontes": [
+  ["https://www.gov.br/mec/pt-br/pe-de-meia/calendario-pagamentos", "MEC: calendário de pagamentos do Pé-de-Meia em 2026"],
+  ["https://www.gov.br/mec/pt-br/assuntos/noticias/2026/fevereiro/pe-de-meia-divulgado-calendario-de-pagamentos-de-2026/", "MEC: divulgado o calendário de 2026 (Portaria nº 169/2026)"],
+  ["https://www.gov.br/mec/pt-br/assuntos/noticias/2026/junho/portaria-altera-calendario-operacional-do-pe-de-meia", "MEC: Portaria nº 539/2026 altera o calendário operacional"],
+  ["https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14818.htm", "Lei nº 14.818/2024 (cria o Pé-de-Meia)"],
+  ["https://www.gov.br/mec/pt-br/pe-de-meia", "MEC: página oficial do Pé-de-Meia"]
+ ]
+}
