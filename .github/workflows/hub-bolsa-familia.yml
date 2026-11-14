@@ -1,0 +1,66 @@
+name: Página do Bolsa Família
+
+# Uma vez por dia remonta bolsa-familia.html (próximo pagamento, calendário do
+# mês e últimas notícias) a partir de data/bolsa-familia.json e das matérias.
+# Criado em 14/11/2026.
+#
+# MINUTO DO CRON: 57, depois do Noindex agendado (00:41) e livre dos robôs do
+# Instagram (3, 8, 13, 23, 33, 38, 43, 52, 53), do Facebook (6, 21, 36, 51) e
+# do serviço externo (00, 15, 30, 45). Roda também às 12:57, para pegar as
+# matérias publicadas de manhã.
+on:
+  schedule:
+    - cron: "57 3 * * *"     # 00:57 em Brasília
+    - cron: "57 15 * * *"    # 12:57 em Brasília
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: hub-bolsa-familia
+  cancel-in-progress: false
+
+jobs:
+  montar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+
+      - name: Montar a página
+        id: montar
+        run: |
+          saida=$(python scripts/montar_hub_bolsa_familia.py)
+          echo "$saida"
+          if echo "$saida" | grep -q '^MUDOU$'; then
+            echo "mudou=1" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Validar HTML
+        if: steps.montar.outputs.mudou == '1'
+        run: python scripts/validar_home.py
+
+      - name: Gravar
+        if: steps.montar.outputs.mudou == '1'
+        run: |
+          git config user.name "Portal Júnior Arrais"
+          git config user.email "juniorarrais90@gmail.com"
+          git add bolsa-familia.html
+          git commit -m "Página do Bolsa Família: atualização diária"
+          for tentativa in 1 2 3 4 5; do
+            if git push; then
+              echo "Gravado na tentativa $tentativa."
+              exit 0
+            fi
+            git pull --rebase origin main || { git rebase --abort; exit 1; }
+            sleep $((tentativa * 5))
+          done
+          echo "::error::Não consegui gravar após 5 tentativas."
+          exit 1

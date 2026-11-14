@@ -1,0 +1,64 @@
+{
+  "_leia": "Dados da página central do Bolsa Família (bolsa-familia.html). Para atualizar: edite este arquivo e rode  python scripts/montar_hub_bolsa_familia.py . O robô .github/workflows/hub-bolsa-familia.yml roda o script todo dia (atualiza 'próximo pagamento' e 'últimas notícias'). Datas no formato AAAA-MM-DD. Em 'calendario', cada mês tem a lista de datas por final do NIS na ordem 1,2,3,4,5,6,7,8,9,0. 'especial' substitui a data oficial quando o MDS muda o calendário. Só entra aqui o que foi conferido em fonte oficial.",
+  "atualizado_em": "2026-11-14",
+  "publicado_em": "2026-11-14",
+  "valores": {
+    "por_pessoa": 164,
+    "piso": 691,
+    "primeira_infancia": 173,
+    "variavel": 58,
+    "renda_limite": 218,
+    "vigencia": "outubro de 2026",
+    "norma": "Decreto nº 13.120, de 17 de setembro de 2026 (reajuste de 15,04%)"
+  },
+  "calendario": {
+    "2026": {
+      "fonte": "https://www.gov.br/mds/pt-br/noticias-e-conteudos/Noticias/2025/confira-o-calendario-de-pagamentos-do-bolsa-familia-de-2026/calendario_bolsa_familia_cartaz2026.pdf",
+      "meses": {
+        "01": ["2026-01-19","2026-01-20","2026-01-21","2026-01-22","2026-01-23","2026-01-26","2026-01-27","2026-01-28","2026-01-29","2026-01-30"],
+        "02": ["2026-02-12","2026-02-13","2026-02-18","2026-02-19","2026-02-20","2026-02-23","2026-02-24","2026-02-25","2026-02-26","2026-02-27"],
+        "03": ["2026-03-18","2026-03-19","2026-03-20","2026-03-23","2026-03-24","2026-03-25","2026-03-26","2026-03-27","2026-03-30","2026-03-31"],
+        "04": ["2026-04-16","2026-04-17","2026-04-20","2026-04-22","2026-04-23","2026-04-24","2026-04-27","2026-04-28","2026-04-29","2026-04-30"],
+        "05": ["2026-05-18","2026-05-19","2026-05-20","2026-05-21","2026-05-22","2026-05-25","2026-05-26","2026-05-27","2026-05-28","2026-05-29"],
+        "06": ["2026-06-17","2026-06-18","2026-06-19","2026-06-22","2026-06-23","2026-06-24","2026-06-25","2026-06-26","2026-06-29","2026-06-30"],
+        "07": ["2026-07-20","2026-07-21","2026-07-22","2026-07-23","2026-07-24","2026-07-27","2026-07-28","2026-07-29","2026-07-30","2026-07-31"],
+        "08": ["2026-08-18","2026-08-19","2026-08-20","2026-08-21","2026-08-24","2026-08-25","2026-08-26","2026-08-27","2026-08-28","2026-08-31"],
+        "09": ["2026-09-17","2026-09-18","2026-09-21","2026-09-22","2026-09-23","2026-09-24","2026-09-25","2026-09-28","2026-09-29","2026-09-30"],
+        "10": ["2026-10-19","2026-10-20","2026-10-21","2026-10-22","2026-10-23","2026-10-26","2026-10-27","2026-10-28","2026-10-29","2026-10-30"],
+        "11": ["2026-11-16","2026-11-17","2026-11-18","2026-11-19","2026-11-23","2026-11-24","2026-11-25","2026-11-26","2026-11-27","2026-11-30"],
+        "12": ["2026-12-10","2026-12-11","2026-12-14","2026-12-15","2026-12-16","2026-12-17","2026-12-18","2026-12-21","2026-12-22","2026-12-23"]
+      },
+      "especial": {
+        "10": {
+          "datas": ["2026-10-19","2026-10-20","2026-10-21","2026-10-21","2026-10-21","2026-10-21","2026-10-21","2026-10-21","2026-10-21","2026-10-21"],
+          "motivo": "Portaria MDS nº 1.221/2026 (El Niño): finais 3 a 0 juntos no terceiro dia",
+          "fonte": "https://www.gov.br/mds/pt-br/noticias/pagamentos-de-outubro-do-bolsa-familia-comecam-nesta-segunda-feira-19-10-1"
+        },
+        "11": {
+          "datas": ["2026-11-16","2026-11-17","2026-11-18","2026-11-18","2026-11-18","2026-11-18","2026-11-18","2026-11-18","2026-11-18","2026-11-18"],
+          "motivo": "Portaria MDS nº 1.221/2026 (El Niño): finais 3 a 0 juntos no terceiro dia",
+          "fonte": "https://radiogov.ebc.com.br/programas/e-noticia/bolsa-familia-de-novembro-comeca-a-ser-pago-na-proxima-segunda-feira-16"
+        },
+        "12": {
+          "datas": ["2026-12-10","2026-12-11","2026-12-14","2026-12-14","2026-12-14","2026-12-14","2026-12-14","2026-12-14","2026-12-14","2026-12-14"],
+          "motivo": "Portaria MDS nº 1.221/2026 (El Niño): finais 3 a 0 juntos no terceiro dia",
+          "fonte": "https://www.gov.br/mds/pt-br/noticias/pagamentos-de-outubro-do-bolsa-familia-comecam-nesta-segunda-feira-19-10-1"
+        }
+      }
+    }
+  },
+  "unificado": {
+    "2026-10": {
+      "total": 225,
+      "data": "2026-10-19",
+      "por_uf": {"RN": 119, "PB": 31, "AC": 22, "PI": 22, "PR": 10, "SP": 9, "RR": 6, "AM": 3, "SE": 3},
+      "fonte": "https://www.gov.br/mds/pt-br/noticias/pagamentos-de-outubro-do-bolsa-familia-comecam-nesta-segunda-feira-19-10-1"
+    },
+    "2026-11": {
+      "total": 112,
+      "data": "2026-11-16",
+      "por_uf": {"PR": 41, "AM": 23, "PI": 22, "RN": 10, "RR": 6, "SE": 5, "SP": 4, "MG": 1},
+      "fonte": "https://radiogov.ebc.com.br/programas/e-noticia/bolsa-familia-de-novembro-comeca-a-ser-pago-na-proxima-segunda-feira-16"
+    }
+  }
+}

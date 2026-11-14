@@ -6,6 +6,7 @@
     "REGRA: o destino deve ser a materia mais EXPLICATIVA do tema, nunca a de calendario do mes.",
     "Quando existirem paginas-pilar permanentes (item 5 do plano de SEO), trocar o slug de destino aqui e rodar o script.",
     "Campo opcional 'nao_em': lista de slugs de ORIGEM onde aquele destino nao deve ser aplicado. Use quando o termo tem sentido diferente naquela materia (ex.: 'biometria' eleitoral nao e a biometria de beneficios).",
+    "14/11/2026: calendário do Bolsa Família passa a apontar para a página central bolsa-familia.html (raiz do site, por isso o slug \"../bolsa-familia\").",
     "08/09/2026: destinos trocados para as paginas-pilar (guias) — CadUnico, Bolsa Familia, BPC, Tarifa Social, golpes, Gas do Povo, Pe-de-Meia, auxilio-doenca, aposentadoria e Minha Casa Minha Vida."
   ],
   "destinos": [
@@ -64,10 +65,12 @@
       ]
     },
     {
-      "slug": "bolsa-familia-calendario-de-agosto",
+      "slug": "../bolsa-familia",
       "ancoras": [
         "calendário do Bolsa Família",
-        "calendário de pagamento do Bolsa Família"
+        "calendário de pagamento do Bolsa Família",
+        "datas de pagamento do Bolsa Família",
+        "final do NIS"
       ]
     },
     {
