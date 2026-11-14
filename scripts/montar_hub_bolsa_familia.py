@@ -189,10 +189,22 @@ def bloco_unificado(k, un):
         f'<div class="bf-tabela-wrap"><table class="bf-tabela bf-uf"><thead><tr><th>Estado</th>'
         f'<th>Municípios</th></tr></thead><tbody>{linhas}'
         f'<tr class="bf-total"><td>Total</td><td>{un["total"]}</td></tr></tbody></table></div>\n'
+        + lista_cidades(un) +
         f'<p>A lista muda de um mês para o outro: a cidade entra quando o reconhecimento federal '
-        f'é publicado e o município pede a medida, e sai quando a situação acaba. A relação com '
-        f'o nome de cada município é divulgada pelo governo na '
-        f'<a href="{e(un["fonte"])}" target="_blank" rel="noopener">nota oficial do mês</a>.</p>')
+        f'é publicado e o município pede a medida, e sai quando a situação acaba. Fonte: '
+        f'<a href="{e(un["fonte"])}" target="_blank" rel="noopener">comunicado oficial do mês</a>'
+        f'{(" e " + e(un["fonte_lista"][0].lower() + un["fonte_lista"][1:])) if un.get("fonte_lista") else ""}.</p>')
+
+
+def lista_cidades(un):
+    cid = un.get("cidades")
+    if not cid:
+        return ""
+    partes = ['<p>Procure a sua cidade na lista abaixo, organizada por estado:</p>']
+    for uf, nomes in sorted(cid.items(), key=lambda x: (-len(x[1]), UFS.get(x[0], x[0]))):
+        partes.append(f'<h3>{e(UFS.get(uf, uf))} ({len(nomes)})</h3>\n'
+                      f'<p class="bf-cidades">{e(", ".join(nomes))}.</p>')
+    return "\n".join(partes) + "\n"
 
 
 def tabela_ano(ano, folhas):
@@ -245,6 +257,7 @@ CSS = """
   .bf-tabela tr.bf-total td { font-weight: 800; border-top: 2px solid var(--text); }
   .bf-ano th, .bf-ano td { padding: 8px 9px; text-align: center; font-size: .92rem; }
   .bf-ano tbody th { text-align: left; font-weight: 700; }
+  .bf-cidades { font-size: .98rem; line-height: 1.6; }
   .bf-nota { font-size: .95rem; background: #f0f6fd; border-left: 4px solid #2c89e7; border-radius: 8px; padding: 10px 14px; }
   .bf-valores { list-style: none; padding: 0; margin: 0 0 18px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
   .bf-valores li { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px; font-size: .92rem; line-height: 1.35; }
