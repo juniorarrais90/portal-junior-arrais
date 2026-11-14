@@ -222,6 +222,7 @@ var ONESIGNAL_APP_ID = '6c05b9ca-6b3c-4a3b-8dd4-0a4ed7284ab0';
   window.OneSignalDeferred.push(function (OneSignal) {
     return OneSignal.init({
       appId: ONESIGNAL_APP_ID,
+      safari_web_id: 'web.onesignal.auto.50aab334-fdef-4f2b-a12a-95c1e616813d',
       serviceWorkerPath: '/OneSignalSDKWorker.js',
       serviceWorkerParam: { scope: '/' },
       notifyButton: { enable: false },
