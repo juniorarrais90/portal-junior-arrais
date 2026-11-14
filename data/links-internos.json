@@ -373,6 +373,15 @@
         "regras de aposentadoria",
         "aposentadoria do INSS"
       ]
+    },
+    {
+      "slug": "../gas-do-povo",
+      "ancoras": [
+        "vale do Gás do Povo",
+        "lote do Gás do Povo",
+        "novo lote de vales",
+        "vale-recarga"
+      ]
     }
   ]
 }

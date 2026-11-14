@@ -1,0 +1,26 @@
+{
+ "_leia": "Dados da página central do Gás do Povo (gas-do-povo.html). Para atualizar: edite e rode  python scripts/montar_hub_gas.py . O lote sai todo dia 10. Em 'lotes', acrescente o número de vales de cada mês quando o MDS divulgar. Só entra o que foi conferido em fonte oficial.",
+ "atualizado_em": "2026-11-14",
+ "publicado_em": "2026-11-14",
+ "regras": {
+  "dia_do_lote": 10,
+  "renda": "meio salário mínimo por pessoa",
+  "renda_valor": "810,50",
+  "cadastro_meses": 24,
+  "ciclo_pequena": 3,
+  "ciclo_grande": 2,
+  "vigencia_ate": "2031-11-19",
+  "vales_usados": "34 milhões",
+  "investimento": "R$ 5,5 bilhões"
+ },
+ "lotes": {
+  "2026-11": {"data": "2026-11-10", "vales": "3,1 milhões", "novas": "380,5 mil", "antigas": "2,7 milhões",
+   "fonte": "https://www.gov.br/mds/pt-br/noticias-e-conteudos/Noticias/2026/gas-do-povo-novos-vales-serao-liberados-dia-10-de-novembro/"}
+ },
+ "fontes": [
+  ["https://www.gov.br/mds/pt-br/noticias-e-conteudos/Noticias/2026/gas-do-povo-novos-vales-serao-liberados-dia-10-de-novembro/", "MDS: vales de novembro, regras e validade (6/11/2026)"],
+  ["https://www.gov.br/mds/pt-br/noticias-e-conteudos/Noticias/2026/validade-do-gas-do-povo-e-prorrogada-ate-novembro-de-2031-pelo-governo-federal", "MDS: programa prorrogado até novembro de 2031"],
+  ["https://www.gov.br/mds/pt-br/noticias-e-conteudos/colecao-de-noticias/gas-do-povo", "MDS: notícias oficiais do Gás do Povo"],
+  ["https://www.caixa.gov.br/programas-sociais/programa-gas-do-povo/Paginas/default.aspx", "Caixa: página do programa Gás do Povo"]
+ ]
+}
