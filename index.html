@@ -49,6 +49,18 @@
     gtag('config', 'G-LHNP03K7G6');
   </script>
   <!-- fim do Google Analytics -->
+  <style>
+  .cal-home { margin-top: 18px; margin-bottom: 8px; }
+  .cal-home-titulo { font-size: 1.25rem; font-weight: 800; margin: 0 0 12px; color: var(--text, #1e2a38); }
+  .cal-home-titulo span { display: block; font-size: .9rem; font-weight: 600; color: var(--text-muted, #64748b); margin-top: 2px; }
+  .cal-home-grade { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .cal-home-card { display: flex; align-items: center; gap: 12px; padding: 14px; background: #fff; border: 1px solid var(--border, #e2e8f0); border-left: 4px solid #2c89e7; border-radius: 14px; text-decoration: none !important; color: var(--text, #1e2a38) !important; box-shadow: 0 2px 8px rgba(30, 42, 56, .05); transition: transform .12s, box-shadow .12s; }
+  .cal-home-card:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(30, 42, 56, .1); }
+  .cal-home-ico { font-size: 1.9rem; line-height: 1; flex: none; }
+  .cal-home-txt strong { display: block; font-size: 1.02rem; font-weight: 800; }
+  .cal-home-txt small { display: block; font-size: .82rem; line-height: 1.3; color: var(--text-muted, #64748b); margin-top: 2px; }
+  @media (max-width: 760px) { .cal-home-grade { grid-template-columns: 1fr 1fr; gap: 8px; } .cal-home-card { flex-direction: column; align-items: flex-start; gap: 6px; padding: 12px; } .cal-home-ico { font-size: 1.6rem; } }
+  </style>
 </head>
 <body>
 
@@ -81,82 +93,17 @@
     <!-- ADSENSE: banner horizontal do topo -->
     <div class="container ad-topo"><div class="ad-slot ad-slot-topo"><!-- Cole aqui o bloco de anúncio do AdSense --></div></div>
 
-    <!-- DESTAQUE FERRAMENTA: Pagina central do Bolsa Familia -->
-    <section class="container destaque-ferramenta">
-      <a class="destaque-ferramenta-card" href="bolsa-familia.html">
-        <img src="img/calculadora/logo-bolsa-familia-640.png" alt="Programa Bolsa Família" width="150" height="87">
-        <div class="destaque-ferramenta-texto">
-          <span class="destaque-ferramenta-chip">Novo · Calendário</span>
-          <h2>Quando cai o Bolsa Família? Toque no final do NIS e veja a data e as cidades com pagamento antecipado em 2026</h2>
-          <p>Calendário do mês e do ano inteiro, cidades com pagamento unificado, valores de 2026 e as últimas notícias, num lugar só.</p>
-        </div>
-        <span class="destaque-ferramenta-btn">Ver o calendário</span>
-      </a>
-    </section>
-
-    <!-- DESTAQUE FERRAMENTA: Pagina central do INSS -->
-    <section class="container destaque-ferramenta">
-      <a class="destaque-ferramenta-card" href="inss.html">
-        <div style="font-size:64px;line-height:1;width:150px;text-align:center" aria-hidden="true">🗓️</div>
-        <div class="destaque-ferramenta-texto">
-          <span class="destaque-ferramenta-chip">Novo · INSS</span>
-          <h2>Quando cai o pagamento do INSS? Escolha a faixa e o final do benefício e veja a data</h2>
-          <p>Calendário de aposentados e pensionistas do mês e do ano inteiro, para quem ganha até ou acima do mínimo, valores de 2026, 13º e as últimas notícias.</p>
-        </div>
-        <span class="destaque-ferramenta-btn">Ver o calendário</span>
-      </a>
-    </section>
-
-    <!-- DESTAQUE FERRAMENTA: Pagina central do BPC/LOAS -->
-    <section class="container destaque-ferramenta">
-      <a class="destaque-ferramenta-card" href="bpc-loas.html">
-        <div style="font-size:64px;line-height:1;width:150px;text-align:center" aria-hidden="true">🤝</div>
-        <div class="destaque-ferramenta-texto">
-          <span class="destaque-ferramenta-chip">Novo · BPC/LOAS</span>
-          <h2>Quando cai o BPC/LOAS? Toque no final do cartão e veja a data</h2>
-          <p>Calendário do mês e do ano, valor de R$ 1.621, limite de renda, o que acontece na revisão do cadastro e as últimas notícias para idosos e pessoas com deficiência.</p>
-        </div>
-        <span class="destaque-ferramenta-btn">Ver o calendário</span>
-      </a>
-    </section>
-
-    <!-- DESTAQUE FERRAMENTA: Pagina central do Gas do Povo -->
-    <section class="container destaque-ferramenta">
-      <a class="destaque-ferramenta-card" href="gas-do-povo.html">
-        <div style="font-size:64px;line-height:1;width:150px;text-align:center" aria-hidden="true">🔥</div>
-        <div class="destaque-ferramenta-texto">
-          <span class="destaque-ferramenta-chip">Novo · Gás do Povo</span>
-          <h2>Quando sai o seu próximo vale do Gás do Povo? Descubra em dois toques</h2>
-          <p>Data do próximo lote, de quanto em quanto tempo a família recebe, quanto dura o vale, quem tem direito e as últimas notícias do programa.</p>
-        </div>
-        <span class="destaque-ferramenta-btn">Ver meu próximo vale</span>
-      </a>
-    </section>
-
-    <!-- DESTAQUE FERRAMENTA: Pagina central do Pe-de-Meia -->
-    <section class="container destaque-ferramenta">
-      <a class="destaque-ferramenta-card" href="pe-de-meia.html">
-        <div style="font-size:64px;line-height:1;width:150px;text-align:center" aria-hidden="true">🎒</div>
-        <div class="destaque-ferramenta-texto">
-          <span class="destaque-ferramenta-chip">Novo · Pé-de-Meia</span>
-          <h2>Quando cai a parcela do Pé-de-Meia? Toque no mês de aniversário e veja o dia</h2>
-          <p>Calendário de 2026, quanto o estudante recebe, a parcela de R$ 1.000 e o Enem em 2027, por que a conta fica travada e as últimas notícias.</p>
-        </div>
-        <span class="destaque-ferramenta-btn">Ver o calendário</span>
-      </a>
-    </section>
-
-    <!-- DESTAQUE FERRAMENTA: Calculadora do Bolsa Familia -->
-    <section class="container destaque-ferramenta">
-      <a class="destaque-ferramenta-card" href="calculadora-bolsa-familia.html">
-        <img src="img/calculadora/logo-bolsa-familia-640.png" alt="Programa Bolsa Família" width="150" height="87">
-        <div class="destaque-ferramenta-texto">
-          <span class="destaque-ferramenta-chip">Novo · Calculadora</span>
-          <h2>Quanto sua família vai receber do Bolsa Família a partir de outubro?</h2>
-          <p>Informe quem mora na sua casa e veja o valor de hoje e o valor com o reajuste de 15,04%.</p>
-        </div>
-        <span class="destaque-ferramenta-btn">Calcular agora</span>
-      </a>
+    <!-- CALENDARIOS: atalhos para as paginas centrais (14/11/2026) -->
+    <section class="container cal-home" aria-labelledby="cal-home-titulo">
+      <h2 id="cal-home-titulo" class="cal-home-titulo">Quando cai o seu benefício? <span>Consulte em um toque</span></h2>
+      <div class="cal-home-grade">
+        <a class="cal-home-card" href="bolsa-familia.html"><span class="cal-home-ico" aria-hidden="true">💳</span><span class="cal-home-txt"><strong>Bolsa Família</strong><small>Data pelo final do NIS e cidades antecipadas</small></span></a>
+        <a class="cal-home-card" href="inss.html"><span class="cal-home-ico" aria-hidden="true">🗓️</span><span class="cal-home-txt"><strong>INSS</strong><small>Aposentados e pensionistas, até ou acima do mínimo</small></span></a>
+        <a class="cal-home-card" href="bpc-loas.html"><span class="cal-home-ico" aria-hidden="true">🤝</span><span class="cal-home-txt"><strong>BPC/LOAS</strong><small>Data pelo final do cartão, renda e revisão</small></span></a>
+        <a class="cal-home-card" href="gas-do-povo.html"><span class="cal-home-ico" aria-hidden="true">🔥</span><span class="cal-home-txt"><strong>Gás do Povo</strong><small>Quando sai o seu próximo vale</small></span></a>
+        <a class="cal-home-card" href="pe-de-meia.html"><span class="cal-home-ico" aria-hidden="true">🎒</span><span class="cal-home-txt"><strong>Pé-de-Meia</strong><small>Dia da parcela pelo mês de aniversário</small></span></a>
+        <a class="cal-home-card" href="calculadora-bolsa-familia.html"><span class="cal-home-ico" aria-hidden="true">🧮</span><span class="cal-home-txt"><strong>Calculadora</strong><small>Quanto a sua família recebe no Bolsa Família</small></span></a>
+      </div>
     </section>
 
     <section class="container destaque-3col" id="noticias">
