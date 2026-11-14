@@ -179,31 +179,58 @@ def bloco_unificado(k, un):
     linhas = "".join(
         f'<tr><td>{e(UFS.get(uf, uf))}</td><td>{n}</td></tr>'
         for uf, n in sorted(un["por_uf"].items(), key=lambda x: (-x[1], UFS.get(x[0], x[0]))))
+    dia = d(un["data"])
+    aviso = (f'<div class="bf-aviso"><p class="bf-aviso-c"><span class="bf-aviso-i" aria-hidden="true">i</span>'
+             f'<span>Nas {un["total"]} cidades da lista, todos os beneficiários recebem em '
+             f'<strong>{DIAS[dia.weekday()]}, {dia.day:02d}/{dia.month:02d}</strong>, '
+             f'qualquer que seja o final do NIS.</span></p></div>\n')
+    tabela = (f'<div class="bf-tabela-wrap"><table class="bf-tabela bf-uf"><thead><tr><th>Estado</th>'
+              f'<th>Municípios</th></tr></thead><tbody>{linhas}'
+              f'<tr class="bf-total"><td>Total</td><td>{un["total"]}</td></tr></tbody></table></div>\n')
     return (
         f'<h2 id="unificado-{k}">Cidades com pagamento unificado em {mes}</h2>\n'
         f'<p>Quando uma cidade tem situação de emergência ou estado de calamidade pública '
         f'reconhecido pelo governo federal, por seca, enchente ou outro evento climático, o MDS '
         f'costuma liberar o Bolsa Família de todos os moradores no primeiro dia do calendário. '
         f'Em {mes}, isso vale para <strong>{un["total"]} municípios</strong>, que recebem em '
-        f'{data_longa(d(un["data"]))}:</p>\n'
-        f'<div class="bf-tabela-wrap"><table class="bf-tabela bf-uf"><thead><tr><th>Estado</th>'
-        f'<th>Municípios</th></tr></thead><tbody>{linhas}'
-        f'<tr class="bf-total"><td>Total</td><td>{un["total"]}</td></tr></tbody></table></div>\n'
-        + lista_cidades(un) +
+        f'{data_longa(dia)}.</p>\n'
+        + aviso
+        + (lista_cidades(k, un) if un.get("cidades") else tabela) +
         f'<p>A lista muda de um mês para o outro: a cidade entra quando o reconhecimento federal '
         f'é publicado e o município pede a medida, e sai quando a situação acaba. Fonte: '
         f'<a href="{e(un["fonte"])}" target="_blank" rel="noopener">comunicado oficial do mês</a>'
         f'{(" e " + e(un["fonte_lista"][0].lower() + un["fonte_lista"][1:])) if un.get("fonte_lista") else ""}.</p>')
 
 
-def lista_cidades(un):
+PINO = ('<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none" '
+        'stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">'
+        '<path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/>'
+        '<circle cx="12" cy="9.5" r="2.5"/></svg>')
+
+
+def lista_cidades(k, un):
     cid = un.get("cidades")
     if not cid:
         return ""
-    partes = ['<p>Procure a sua cidade na lista abaixo, organizada por estado:</p>']
-    for uf, nomes in sorted(cid.items(), key=lambda x: (-len(x[1]), UFS.get(x[0], x[0]))):
-        partes.append(f'<h3>{e(UFS.get(uf, uf))} ({len(nomes)})</h3>\n'
-                      f'<p class="bf-cidades">{e(", ".join(nomes))}.</p>')
+    ident = f"bf-busca-{k}"
+    dia = d(un["data"])
+    partes = [f'<div class="bf-cid" data-bf-cid data-dia="{DIAS[dia.weekday()]}, {dia.day:02d}/{dia.month:02d}">',
+              f'<label class="bf-busca-rotulo" for="{ident}">Sua cidade está na lista?</label>',
+              f'<div class="bf-busca"><input id="{ident}" type="search" autocomplete="off" '
+              f'placeholder="Digite o nome da cidade" aria-describedby="{ident}-r"></div>',
+              f'<p class="bf-busca-r" id="{ident}-r" aria-live="polite"></p>']
+    primeiro = True
+    for uf, nomes in sorted(cid.items(), key=lambda x: UFS.get(x[0], x[0])):
+        n = len(nomes)
+        chips = "".join(f'<li>{PINO}<span>{e(nome)}</span></li>' for nome in nomes)
+        partes.append(
+            f'<details class="bf-uf-box"{" open" if primeiro else ""}>'
+            f'<summary><span class="bf-uf-nome">{e(UFS.get(uf, uf))} ({uf})</span>'
+            f'<span class="bf-uf-qtd">{n} {"cidade" if n == 1 else "cidades"}</span>'
+            f'<span class="bf-uf-seta" aria-hidden="true"></span></summary>'
+            f'<ul class="bf-chips">{chips}</ul></details>')
+        primeiro = False
+    partes.append('</div>')
     return "\n".join(partes) + "\n"
 
 
@@ -257,7 +284,35 @@ CSS = """
   .bf-tabela tr.bf-total td { font-weight: 800; border-top: 2px solid var(--text); }
   .bf-ano th, .bf-ano td { padding: 8px 9px; text-align: center; font-size: .92rem; }
   .bf-ano tbody th { text-align: left; font-weight: 700; }
-  .bf-cidades { font-size: .98rem; line-height: 1.6; }
+  .bf-aviso { margin: 0 0 20px; padding: 12px; border-radius: 14px; background: #eef3fb; }
+  .bf-aviso-c { display: flex; gap: 12px; align-items: flex-start; background: #fff; border-radius: 10px; padding: 12px 14px; font-size: .96rem; line-height: 1.45; box-shadow: 0 1px 3px rgba(30, 42, 56, .06); }
+  .bf-aviso-i { flex: none; width: 18px; height: 18px; margin-top: 1px; border: 2px solid #1e4f8f; border-radius: 50%; color: #1e4f8f; font: 800 .72rem/18px Georgia, serif; text-align: center; }
+  .bf-cid { margin: 0 0 18px; }
+  .bf-busca-rotulo { display: block; font-weight: 700; font-size: 1.05rem; margin: 0 0 10px; color: var(--text); }
+  .bf-busca { background: #eef3fb; border-radius: 14px; padding: 16px; margin-bottom: 8px; }
+  .bf-busca input { width: 100%; max-width: 420px; box-sizing: border-box; height: 46px; border: 0; border-radius: 10px; padding: 0 14px; font: inherit; font-size: 1rem; background: #fff; color: var(--text); box-shadow: 0 1px 4px rgba(30, 42, 56, .1); -webkit-appearance: none; appearance: none; }
+  .bf-busca input:focus { outline: 2px solid #2c89e7; }
+  .bf-busca-r { margin: 0 0 8px; font-size: .95rem; font-weight: 600; min-height: 0; }
+  .bf-busca-r:empty { display: none; }
+  .bf-busca-r.bf-sim { color: #17803d; }
+  .bf-busca-r.bf-nao { color: #a3361f; }
+  .bf-uf-box { background: #eef3fb; border-radius: 14px; margin-bottom: 8px; }
+  .bf-uf-box summary { display: flex; align-items: center; gap: 10px; padding: 18px 20px; cursor: pointer; list-style: none; }
+  .bf-uf-box summary::-webkit-details-marker { display: none; }
+  .bf-uf-box summary:focus-visible { outline: 2px solid #2c89e7; border-radius: 14px; }
+  .bf-uf-nome { flex: 1; font-weight: 700; color: #1e4f8f; font-size: 1.02rem; }
+  .bf-uf-qtd { background: #fff; color: #1e4f8f; font-weight: 700; font-size: .85rem; padding: 5px 12px; border-radius: 999px; white-space: nowrap; }
+  .bf-uf-seta { width: 9px; height: 9px; border-right: 2px solid #8a97a8; border-bottom: 2px solid #8a97a8; transform: rotate(45deg); margin: -4px 4px 0 6px; transition: transform .15s; flex: none; }
+  .bf-uf-box[open] .bf-uf-seta { transform: rotate(-135deg); margin-top: 4px; }
+  .bf-chips { list-style: none; margin: 0; padding: 0 12px 12px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+  .bf-chips li { display: flex; align-items: center; gap: 8px; background: #fff; border-radius: 10px; padding: 12px 12px; min-height: 60px; box-sizing: border-box; font-weight: 600; font-size: .95rem; line-height: 1.25; color: var(--text); box-shadow: 0 1px 3px rgba(30, 42, 56, .06); }
+  .bf-chips li svg { flex: none; color: #1e4f8f; }
+  .bf-uf-box ul.bf-chips { margin: 0 !important; padding: 0 12px 12px !important; }
+  .bf-uf-box ul.bf-chips li { margin: 0 !important; }
+  .bf-chips li[hidden], .bf-uf-box[hidden] { display: none; }
+  .bf-chips li.bf-achou { outline: 2px solid #17803d; background: #effaf2; }
+  @media (max-width: 860px) { .bf-chips { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 520px) { .bf-chips { grid-template-columns: repeat(2, 1fr); } .bf-chips li { min-height: 52px; font-size: .9rem; padding: 10px; } .bf-uf-box summary { padding: 16px 14px; } }
   .bf-nota { font-size: .95rem; background: #f0f6fd; border-left: 4px solid #2c89e7; border-radius: 8px; padding: 10px 14px; }
   .bf-valores { list-style: none; padding: 0; margin: 0 0 18px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
   .bf-valores li { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px; font-size: .92rem; line-height: 1.35; }
@@ -354,6 +409,44 @@ JS = r"""
   }
   botoes.forEach(function (b) { b.addEventListener("click", function () { escolher(b.getAttribute("data-final")); }); });
   try { var salvo = localStorage.getItem("pja-nis"); if (salvo !== null && salvo !== "") escolher(salvo); } catch (e) {}
+})();
+(function () {
+  function norm(s) { return (s || "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/\s+/g, " ").trim(); }
+  document.querySelectorAll("[data-bf-cid]").forEach(function (box) {
+    var campo = box.querySelector("input");
+    var resp = box.querySelector(".bf-busca-r");
+    var estados = Array.prototype.slice.call(box.querySelectorAll(".bf-uf-box"));
+    var abertos = estados.map(function (d) { return d.open; });
+    estados.forEach(function (d) {
+      d.querySelectorAll("li").forEach(function (li) { li.setAttribute("data-n", norm(li.textContent)); });
+    });
+    campo.addEventListener("input", function () {
+      var q = norm(campo.value);
+      if (q.length < 2) {
+        estados.forEach(function (d, i) {
+          d.hidden = false; d.open = abertos[i];
+          d.querySelectorAll("li").forEach(function (li) { li.hidden = false; li.classList.remove("bf-achou"); });
+        });
+        resp.textContent = ""; resp.className = "bf-busca-r";
+        return;
+      }
+      var total = 0, exata = null;
+      estados.forEach(function (d) {
+        var n = 0;
+        d.querySelectorAll("li").forEach(function (li) {
+          var nome = li.getAttribute("data-n");
+          var ok = nome.indexOf(q) !== -1;
+          li.hidden = !ok;
+          li.classList.toggle("bf-achou", ok && nome === q);
+          if (ok) { n++; if (nome === q) exata = li.textContent; }
+        });
+        d.hidden = n === 0; d.open = n > 0; total += n;
+      });
+      if (exata) { resp.textContent = "Sim! " + exata + " está na lista: todo mundo recebe " + (box.getAttribute("data-dia") || "no primeiro dia") + ", qualquer final do NIS."; resp.className = "bf-busca-r bf-sim"; }
+      else if (total) { resp.textContent = total + (total === 1 ? " cidade encontrada." : " cidades encontradas."); resp.className = "bf-busca-r"; }
+      else { resp.textContent = "Essa cidade não está na lista deste mês. Lá, o pagamento segue o final do NIS."; resp.className = "bf-busca-r bf-nao"; }
+    });
+  });
 })();
 </script>
 """
