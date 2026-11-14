@@ -2,7 +2,7 @@ name: Página do Bolsa Família
 
 # Uma vez por dia remonta bolsa-familia.html (próximo pagamento, calendário do
 # mês e últimas notícias) a partir de data/bolsa-familia.json e das matérias.
-# Criado em 14/11/2026.
+# Criado em 14/11/2026. Desde o mesmo dia, monta também inss.html.
 #
 # MINUTO DO CRON: 57, depois do Noindex agendado (00:41) e livre dos robôs do
 # Instagram (3, 8, 13, 23, 33, 38, 43, 52, 53), do Facebook (6, 21, 36, 51) e
@@ -37,7 +37,7 @@ jobs:
       - name: Montar a página
         id: montar
         run: |
-          saida=$(python scripts/montar_hub_bolsa_familia.py)
+          saida=$(python scripts/montar_hub_bolsa_familia.py; python scripts/montar_hub_inss.py)
           echo "$saida"
           if echo "$saida" | grep -q '^MUDOU$'; then
             echo "mudou=1" >> "$GITHUB_OUTPUT"
@@ -52,8 +52,8 @@ jobs:
         run: |
           git config user.name "Portal Júnior Arrais"
           git config user.email "juniorarrais90@gmail.com"
-          git add bolsa-familia.html
-          git commit -m "Página do Bolsa Família: atualização diária"
+          git add bolsa-familia.html inss.html
+          git commit -m "Páginas do Bolsa Família e do INSS: atualização diária"
           for tentativa in 1 2 3 4 5; do
             if git push; then
               echo "Gravado na tentativa $tentativa."
