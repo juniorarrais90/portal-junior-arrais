@@ -214,7 +214,7 @@ function pjaFacebook(btn){
    Fica desligado enquanto ONESIGNAL_APP_ID estiver vazio.
    O arquivo OneSignalSDKWorker.js precisa estar na raiz do site.
    ============================================ */
-var ONESIGNAL_APP_ID = '';
+var ONESIGNAL_APP_ID = '6c05b9ca-6b3c-4a3b-8dd4-0a4ed7284ab0';
 (function () {
   if (!ONESIGNAL_APP_ID || !('Notification' in window) || !('serviceWorker' in navigator)) return;
   if (location.hostname !== 'portaljuniorarrais.com.br') return;
