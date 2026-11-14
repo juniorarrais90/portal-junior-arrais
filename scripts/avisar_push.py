@@ -24,6 +24,7 @@ import json
 import os
 import re
 import sys
+import urllib.error
 import urllib.request
 from pathlib import Path
 
@@ -81,7 +82,27 @@ def enviar(aid, chave, m, quando):
         return json.loads(r.read().decode() or "{}")
 
 
+def verificar():
+    """Confere se a chave secreta funciona, sem mandar nada (só lê a lista de envios)."""
+    aid, chave = app_id(), os.environ.get("ONESIGNAL_REST_KEY", "")
+    if not chave:
+        print("CHAVE: ausente (segredo ONESIGNAL_REST_KEY não configurado)")
+        return
+    req = urllib.request.Request(
+        "https://api.onesignal.com/notifications?app_id=%s&limit=1" % aid,
+        headers={"Authorization": "Key " + chave})
+    try:
+        with urllib.request.urlopen(req, timeout=30) as r:
+            print("CHAVE: OK (HTTP %s)" % r.status)
+    except urllib.error.HTTPError as erro:
+        print("CHAVE: RECUSADA (HTTP %s) %s" % (erro.code, erro.read().decode()[:200]))
+        sys.exit(1)
+
+
 def main():
+    if "--verificar" in sys.argv:
+        verificar()
+        return
     semear = "--semear" in sys.argv
     teste = "--teste" in sys.argv
     estado = json.loads(ESTADO.read_text(encoding="utf-8")) if ESTADO.exists() else {"enviados": {}}

@@ -19,6 +19,8 @@ on:
     branches: [main]
     paths:
       - "noticias/**.html"
+      - "scripts/avisar_push.py"
+      - ".github/workflows/avisar-push.yml"
   workflow_dispatch:
 
 permissions:
@@ -40,6 +42,11 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: "3.11"
+
+      - name: Conferir a chave do OneSignal
+        env:
+          ONESIGNAL_REST_KEY: ${{ secrets.ONESIGNAL_REST_KEY }}
+        run: python scripts/avisar_push.py --verificar
 
       - name: Avisar matéria nova
         id: avisar
