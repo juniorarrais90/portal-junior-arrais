@@ -271,8 +271,11 @@ CSS = """
   .bf-botoes button:hover { background: rgba(255, 255, 255, .3); }
   .bf-botoes button[aria-pressed="true"] { background: #fff; color: #1e5fb0; }
   .bf-botoes button:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
-  .bf-resposta { margin-top: 14px; min-height: 1.5em; font-size: 1.05rem; font-weight: 600; }
+  .bf-resposta, .cu-pc { margin-top: 14px; min-height: 1.5em; font-size: 1.05rem; font-weight: 600; background: #e23b3b; color: #fff; border-radius: 12px; padding: 12px 14px; box-shadow: 0 6px 18px rgba(226, 59, 59, .35); }
   .bf-resposta strong { font-weight: 800; }
+  .bf-pisca { animation: bf-pisca .45s ease-out; }
+  @keyframes bf-pisca { 0% { transform: scale(.96); box-shadow: 0 0 0 6px rgba(255, 255, 255, .55); } 100% { transform: scale(1); } }
+  @media (prefers-reduced-motion: reduce) { .bf-pisca { animation: none; } }
   .bf-resposta:empty { display: none; }
   .bf-tabela-wrap { overflow-x: auto; margin: 0 0 18px; border: 1px solid var(--border); border-radius: 12px; }
   .bf-tabela { width: 100%; border-collapse: collapse; font-size: .98rem; background: #fff; }
@@ -329,6 +332,17 @@ CSS = """
   .bf-outros a small { display: block; font-weight: 400; color: var(--text-muted); font-size: .85rem; }
   @media (max-width: 480px) { .bf-outros { grid-template-columns: 1fr; } }
   </style>
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".bf-resposta, .cu-res").forEach(function (el) {
+      new MutationObserver(function () {
+        var alvo = el.classList.contains("cu-res") ? el.querySelector(".cu-pc") : el;
+        if (!alvo) return;
+        alvo.classList.remove("bf-pisca"); void alvo.offsetWidth; alvo.classList.add("bf-pisca");
+      }).observe(el, {childList: true, characterData: true, subtree: true});
+    });
+  });
+  </script>
 """
 
 JS = r"""
