@@ -1568,7 +1568,12 @@
       "horario_brasilia": "17/11 15:45",
       "status": "publicado",
       "publicado_em": "2026-11-17T18:47:41Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122125920165442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122125920165442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-11-17T19:02:41Z",
+        "link_post": "https://www.facebook.com/113029587494887_1557078876448460"
+      }
     },
     {
       "slug": "vaga-em-creche-e-dever-do-municipio-e-pode-ser-exigida-na-justica",
