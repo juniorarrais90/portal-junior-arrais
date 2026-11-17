@@ -1552,7 +1552,12 @@
       "horario_brasilia": "17/11 09:45",
       "status": "publicado",
       "publicado_em": "2026-11-17T12:47:11Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122125866219442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122125866219442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-11-17T13:03:21Z",
+        "link_post": "https://www.facebook.com/113029587494887_1556791303143884"
+      }
     },
     {
       "slug": "financiamento-de-carro-atrasado-busca-e-apreensao-prazo-de-5-dias-e-defesa",
