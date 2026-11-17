@@ -1584,7 +1584,12 @@
       "horario_brasilia": "17/11 19:45",
       "status": "publicado",
       "publicado_em": "2026-11-17T22:47:23Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122125953891442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122125953891442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-11-17T23:02:45Z",
+        "link_post": "https://www.facebook.com/113029587494887_1557217529767928"
+      }
     },
     {
       "slug": "equiparacao-salarial-mesma-funcao-mesmo-salario-requisitos-e-prazo-para-cobrar",
