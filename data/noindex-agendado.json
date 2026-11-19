@@ -82,7 +82,8 @@
     {
       "slug": "bolsa-familia-novembro-2026-pagamento-comeca-dia-16",
       "a_partir_de": "2026-11-19",
-      "motivo": "calendário de novembro encerrado em 18/11"
+      "motivo": "calendário de novembro encerrado em 18/11",
+      "aplicado_em": "2026-11-19"
     }
   ]
 }
