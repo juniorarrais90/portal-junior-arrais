@@ -1664,7 +1664,12 @@
       "horario_brasilia": "19/11 15:45",
       "status": "publicado",
       "publicado_em": "2026-11-19T18:47:19Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122126251563442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122126251563442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-11-19T19:02:23Z",
+        "link_post": "https://www.facebook.com/113029587494887_1559058812917133"
+      }
     },
     {
       "slug": "viagem-de-crianca-e-adolescente-quando-precisa-de-autorizacao-no-brasil-e-no-exterior",
