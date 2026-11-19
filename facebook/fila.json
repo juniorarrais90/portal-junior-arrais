@@ -1648,7 +1648,12 @@
       "horario_brasilia": "19/11 09:45",
       "status": "publicado",
       "publicado_em": "2026-11-19T12:47:15Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122126210505442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122126210505442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-11-19T13:02:21Z",
+        "link_post": "https://www.facebook.com/113029587494887_1558753686280979"
+      }
     },
     {
       "slug": "nome-negativado-por-engano-aviso-previo-baixa-em-5-dias-uteis-e-indenizacao",
