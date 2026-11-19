@@ -3176,7 +3176,9 @@
       "publicar_em": "2026-11-19T12:30:00Z",
       "horario_brasilia": "19/11 09:30",
       "alt_text": "Trabalho intermitente: convocação com 3 dias de antecedência, direito de recusa e pagamento",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-11-19T12:31:29Z",
+      "link": "https://www.instagram.com/p/Df7Fgx0EaDU/"
     },
     {
       "slug": "nome-negativado-por-engano-aviso-previo-baixa-em-5-dias-uteis-e-indenizacao",
