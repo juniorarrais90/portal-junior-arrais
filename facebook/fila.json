@@ -1712,7 +1712,12 @@
       "horario_brasilia": "20/11 15:45",
       "status": "publicado",
       "publicado_em": "2026-11-20T18:46:23Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122126413707442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122126413707442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-11-20T19:01:21Z",
+        "link_post": "https://www.facebook.com/113029587494887_1560143466142001"
+      }
     },
     {
       "slug": "erro-medico-copia-do-prontuario-quem-responde-e-prazo-para-pedir-indenizacao",
