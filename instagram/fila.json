@@ -3226,7 +3226,9 @@
       "publicar_em": "2026-11-20T22:30:00Z",
       "horario_brasilia": "20/11 19:30",
       "alt_text": "Erro médico: cópia do prontuário, quem responde e o prazo de 5 anos para pedir indenização",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-11-20T22:31:07Z",
+      "link": "https://www.instagram.com/p/Df-u7hTj9vy/"
     },
     {
       "slug": "terceirizado-sem-pagamento-empresa-tomadora-responde-pelas-verbas-do-periodo",
