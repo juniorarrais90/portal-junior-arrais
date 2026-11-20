@@ -3216,7 +3216,9 @@
       "publicar_em": "2026-11-20T18:30:00Z",
       "horario_brasilia": "20/11 15:30",
       "alt_text": "Conserto de carro ou eletrodoméstico: orçamento por escrito e 90 dias para reclamar",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-11-20T18:30:57Z",
+      "link": "https://www.instagram.com/p/Df-TcrKFlgT/"
     },
     {
       "slug": "erro-medico-copia-do-prontuario-quem-responde-e-prazo-para-pedir-indenizacao",
