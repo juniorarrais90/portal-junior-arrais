@@ -1696,7 +1696,12 @@
       "horario_brasilia": "20/11 09:45",
       "status": "publicado",
       "publicado_em": "2026-11-20T12:46:22Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122126366643442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122126366643442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-11-20T13:01:29Z",
+        "link_post": "https://www.facebook.com/113029587494887_1559835146172833"
+      }
     },
     {
       "slug": "conserto-de-carro-e-eletrodomestico-orcamento-previo-por-escrito-e-90-dias-para-reclamar",
