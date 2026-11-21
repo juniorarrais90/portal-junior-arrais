@@ -3246,7 +3246,9 @@
       "publicar_em": "2026-11-21T18:30:00Z",
       "horario_brasilia": "21/11 15:30",
       "alt_text": "Preço diferente na prateleira e no caixa: o consumidor paga o menor valor",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-11-21T18:30:59Z",
+      "link": "https://www.instagram.com/p/DgA4PX-oCYC/"
     },
     {
       "slug": "infiltracao-vinda-do-vizinho-ou-do-predio-quem-paga-o-conserto-e-como-provar",
