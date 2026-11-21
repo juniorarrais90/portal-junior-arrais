@@ -1760,7 +1760,12 @@
       "horario_brasilia": "21/11 15:45",
       "status": "publicado",
       "publicado_em": "2026-11-21T18:46:09Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122126584617442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122126584617442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-11-21T19:01:35Z",
+        "link_post": "https://www.facebook.com/113029587494887_1561183169371364"
+      }
     },
     {
       "slug": "infiltracao-vinda-do-vizinho-ou-do-predio-quem-paga-o-conserto-e-como-provar",
