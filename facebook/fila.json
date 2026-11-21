@@ -1744,7 +1744,12 @@
       "horario_brasilia": "21/11 09:45",
       "status": "publicado",
       "publicado_em": "2026-11-21T12:46:17Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122126542275442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122126542275442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-11-21T13:01:43Z",
+        "link_post": "https://www.facebook.com/113029587494887_1560885429401138"
+      }
     },
     {
       "slug": "preco-diferente-na-prateleira-e-no-caixa-consumidor-paga-o-menor",
