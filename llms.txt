@@ -1,0 +1,26 @@
+# Portal Júnior Arrais
+
+> Portal de notícias de Ubá (MG) sobre benefícios sociais, INSS, trabalho e economia do dia a dia, em linguagem simples. Publica todos os dias a partir do Diário Oficial da União, de portarias, decretos e de fontes oficiais (Caixa, INSS, Ministério do Desenvolvimento e Assistência Social, gov.br). Cada matéria traz data de publicação e de atualização; as páginas-guia abaixo são revisadas quando a regra ou o calendário muda.
+
+Editor responsável: Júnior Arrais. Contato da redação: contato@portaljuniorarrais.com.br. Linha editorial, forma de apuração e política de correções: https://portaljuniorarrais.com.br/sobre.html
+
+## Páginas-guia (atualizadas a cada mudança de calendário ou de regra)
+
+- [Bolsa Família](https://portaljuniorarrais.com.br/bolsa-familia.html): calendário do mês por final do NIS, cidades com pagamento unificado, valores e perguntas frequentes.
+- [Calculadora do Bolsa Família](https://portaljuniorarrais.com.br/calculadora-bolsa-familia.html): quanto a família recebe conforme quem mora na casa.
+- [INSS](https://portaljuniorarrais.com.br/inss.html): calendário de pagamento de aposentadorias e pensões por final do benefício (até e acima do salário mínimo), valores e 13º.
+- [BPC/LOAS](https://portaljuniorarrais.com.br/bpc-loas.html): calendário, valor, limite de renda e revisão do cadastro para idosos e pessoas com deficiência.
+- [CadÚnico](https://portaljuniorarrais.com.br/cadunico.html): quem pode entrar, calculadora de renda por pessoa, validade e atualização do cadastro, biometria.
+- [Gás do Povo](https://portaljuniorarrais.com.br/gas-do-povo.html): próximo vale, de quanto em quanto tempo a família recebe, validade e regras da revenda.
+- [Pé-de-Meia](https://portaljuniorarrais.com.br/pe-de-meia.html): calendário das parcelas pelo mês de nascimento, valores, conclusão do ensino médio e Enem.
+- [Guias](https://portaljuniorarrais.com.br/guias.html): regras completas de Bolsa Família, BPC/LOAS, CadÚnico, Pé-de-Meia, Gás do Povo, aposentadoria e auxílio-doença do INSS, conta de luz, Minha Casa Minha Vida e golpes.
+
+## Notícias
+
+- [Todas as notícias](https://portaljuniorarrais.com.br/noticias.html): lista das matérias do dia e anteriores (Bolsa Família, INSS, BPC, Gás do Povo, Pé-de-Meia, Minha Casa Minha Vida, FGTS, trabalho e direitos).
+- [Mapa do site](https://portaljuniorarrais.com.br/sitemap.xml): todas as matérias com a data da última atualização.
+
+## Observações para quem cita
+
+- Datas e valores mudam com frequência: use a data de atualização indicada na página e prefira as páginas-guia para calendários.
+- O conteúdo é informativo e não substitui a orientação individual de um profissional sobre o caso concreto.
