@@ -37,6 +37,9 @@ jobs:
       - name: Montar a página
         id: montar
         run: |
+          # Autor (advogado, com as OABs) nas matérias novas, que nascem com o modelo antigo (21/11/2026).
+          python scripts/aplicar_autor.py
+          if [ -n "$(git status --porcelain -- noticias)" ]; then echo "mudou=1" >> "$GITHUB_OUTPUT"; fi
           saida=$(python scripts/montar_hub_bolsa_familia.py; python scripts/montar_hub_inss.py; python scripts/montar_hub_gas.py; python scripts/montar_hub_pe_de_meia.py; python scripts/montar_hub_bpc.py; python scripts/montar_hub_cadunico.py)
           echo "$saida"
           if echo "$saida" | grep -q '^MUDOU$'; then
@@ -52,7 +55,7 @@ jobs:
         run: |
           git config user.name "Portal Júnior Arrais"
           git config user.email "juniorarrais90@gmail.com"
-          git add bolsa-familia.html inss.html gas-do-povo.html pe-de-meia.html bpc-loas.html cadunico.html
+          git add bolsa-familia.html inss.html gas-do-povo.html pe-de-meia.html bpc-loas.html cadunico.html noticias/*.html
           git commit -m "Páginas centrais (Bolsa Família, INSS, Gás do Povo, Pé-de-Meia, BPC, CadÚnico): atualização diária"
           for tentativa in 1 2 3 4 5; do
             if git push; then
