@@ -135,6 +135,27 @@ def buscar_shorts():
     return achados
 
 
+def existe(url):
+    """True se a miniatura existe de verdade (o YouTube devolve 404 com uma
+    imagem cinza de 120x90 quando ela ainda nao foi gerada)."""
+    try:
+        req = urllib.request.Request(url, headers=UA, method="HEAD")
+        with urllib.request.urlopen(req, timeout=20) as r:
+            return r.status == 200
+    except Exception:
+        return False
+
+
+def capa(vid):
+    """Endereco da capa do Short. A vertical (oardefault) nem sempre existe nos
+    envios novos; sem ela usa a maxresdefault, que traz a capa no centro (o card
+    corta as laterais). Sem resposta do YouTube, fica na maxresdefault."""
+    base = "https://i.ytimg.com/vi/%s/" % vid
+    if existe(base + "oardefault.jpg"):
+        return base + "oardefault.jpg"
+    return base + "maxresdefault.jpg"
+
+
 def montar_html(shorts):
     play = ('<span class="short-play"><svg viewBox="0 0 24 24" width="26" height="26" fill="#fff">'
             '<path d="M8 5.5v13l11-6.5z"/></svg></span>')
@@ -143,10 +164,10 @@ def montar_html(shorts):
         t = html.escape(tit, quote=True)
         linhas.append(
             '          <a class="short-card" href="https://www.youtube.com/shorts/%s" target="_blank" rel="noopener">\n'
-            '            <img src="https://i.ytimg.com/vi/%s/oardefault.jpg" onerror="this.src=\'https://i.ytimg.com/vi/%s/hqdefault.jpg\'" alt="%s" loading="lazy">\n'
+            '            <img src="%s" onerror="this.onerror=null;this.src=\'https://i.ytimg.com/vi/%s/hqdefault.jpg\'" onload="if(this.naturalWidth&lt;200&amp;&amp;!this.dataset.t){this.dataset.t=1;this.src=\'https://i.ytimg.com/vi/%s/maxresdefault.jpg\'}" alt="%s" loading="lazy">\n'
             '            %s\n'
             '            <span class="short-titulo">%s</span>\n'
-            '          </a>' % (vid, vid, vid, t, play, t))
+            '          </a>' % (vid, capa(vid), vid, vid, t, play, t))
     return "\n".join(linhas)
 
 
