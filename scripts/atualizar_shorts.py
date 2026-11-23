@@ -166,8 +166,7 @@ def montar_html(shorts):
             '          <a class="short-card" href="https://www.youtube.com/shorts/%s" target="_blank" rel="noopener">\n'
             '            <img src="%s" onerror="this.onerror=null;this.src=\'https://i.ytimg.com/vi/%s/hqdefault.jpg\'" onload="if(this.naturalWidth&lt;200&amp;&amp;!this.dataset.t){this.dataset.t=1;this.src=\'https://i.ytimg.com/vi/%s/maxresdefault.jpg\'}" alt="%s" loading="lazy">\n'
             '            %s\n'
-            '            <span class="short-titulo">%s</span>\n'
-            '          </a>' % (vid, capa(vid), vid, vid, t, play, t))
+            '          </a>' % (vid, capa(vid), vid, vid, t, play))
     return "\n".join(linhas)
 
 
