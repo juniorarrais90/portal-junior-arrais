@@ -1824,7 +1824,12 @@
       "horario_brasilia": "23/11 09:45",
       "status": "publicado",
       "publicado_em": "2026-11-23T12:46:53Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122126866323442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122126866323442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-11-23T13:01:59Z",
+        "link_post": "https://www.facebook.com/113029587494887_1563003419189339"
+      }
     },
     {
       "slug": "emprestimo-ou-conta-aberta-no-seu-nome-por-fraude-banco-responde-e-como-contestar",
