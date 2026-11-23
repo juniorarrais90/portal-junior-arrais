@@ -8,7 +8,7 @@ INI = '      <!-- AUTOR (Portal Junior Arrais) -->'
 # Autor como advogado, com todas as inscrições (Júnior, 21/11/2026, GEO: as IAs e o Google dão mais peso a
 # autor com credencial em direito e dinheiro). Mudou uma OAB? Troque aqui e rode o script (o robô diário
 # da página do Bolsa Família também roda).
-OABS = [("MG", "193.054"), ("SP", "535.563"), ("RJ", "268.781"), ("PE", "71.237"), ("AL", "24.340-A"), ("PA", "41.782-A")]
+OABS = [("MG", "193.054"), ("SP", "535.563"), ("RJ", "268.781"), ("PE", "71.237"), ("AL", "24.340-A"), ("PA", "41.782-A"), ("PR", "138.540")]  # PR: suplementar desde 23/11/2026
 OABS_TEXTO = ", ".join(f"OAB/{uf} {n}" for uf, n in OABS[:-1]) + f" e OAB/{OABS[-1][0]} {OABS[-1][1]}"
 SAME_AS = ["https://www.youtube.com/@juniorarrais.advogado", "https://www.instagram.com/juniorarraisadvogado/",
            "https://www.tiktok.com/@juniorarrais.advogado", "https://www.kwai.com/@juniorarraisadvogado",
