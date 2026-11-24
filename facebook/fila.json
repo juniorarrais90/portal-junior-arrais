@@ -1872,7 +1872,12 @@
       "horario_brasilia": "24/11 09:45",
       "status": "publicado",
       "publicado_em": "2026-11-24T12:46:57Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122127057471442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122127057471442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-11-24T13:00:06Z",
+        "link_post": "https://www.facebook.com/113029587494887_1564102315746116"
+      }
     },
     {
       "slug": "pix-enviado-por-engano-para-a-pessoa-errada-como-pedir-o-dinheiro-de-volta",
