@@ -3356,7 +3356,9 @@
       "publicar_em": "2026-11-25T18:30:00Z",
       "horario_brasilia": "25/11 15:30",
       "alt_text": "Mensalidade escolar atrasada: a escola não pode reter documentos nem barrar a prova do aluno",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-11-25T18:31:20Z",
+      "link": "https://www.instagram.com/p/DgLLdpuCVbs/"
     },
     {
       "slug": "casamento-civil-no-cartorio-documentos-prazos-regime-de-bens-e-isencao-de-custas",
