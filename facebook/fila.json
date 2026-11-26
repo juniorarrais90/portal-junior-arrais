@@ -2000,7 +2000,12 @@
       "horario_brasilia": "26/11 19:45",
       "status": "publicado",
       "publicado_em": "2026-11-26T22:46:50Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122127457911442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122127457911442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-11-26T23:01:57Z",
+        "link_post": "https://www.facebook.com/113029587494887_1566786445477703"
+      }
     },
     {
       "slug": "salario-maternidade-pago-ao-pai-quando-a-mae-morre-regras-do-inss",
