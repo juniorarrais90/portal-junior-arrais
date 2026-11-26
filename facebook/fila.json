@@ -1984,7 +1984,12 @@
       "horario_brasilia": "26/11 15:45",
       "status": "publicado",
       "publicado_em": "2026-11-26T18:46:42Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122127438357442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122127438357442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-11-26T19:02:30Z",
+        "link_post": "https://www.facebook.com/113029587494887_1566621272160887"
+      }
     },
     {
       "slug": "bem-de-familia-casa-onde-a-familia-mora-nao-pode-ser-penhorada-e-as-excecoes",
