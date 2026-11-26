@@ -1968,7 +1968,12 @@
       "horario_brasilia": "26/11 09:45",
       "status": "publicado",
       "publicado_em": "2026-11-26T12:47:08Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122127398103442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122127398103442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-11-26T13:02:01Z",
+        "link_post": "https://www.facebook.com/113029587494887_1566298742193140"
+      }
     },
     {
       "slug": "seguro-de-vida-quem-recebe-sem-beneficiario-indicado-prazo-e-nova-lei-de-seguros",
