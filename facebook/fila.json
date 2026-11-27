@@ -2032,7 +2032,12 @@
       "horario_brasilia": "27/11 15:45",
       "status": "publicado",
       "publicado_em": "2026-11-27T18:46:40Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122127597831442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122127597831442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-11-27T19:02:56Z",
+        "link_post": "https://www.facebook.com/113029587494887_1567709698718711"
+      }
     },
     {
       "slug": "filhos-podem-ter-de-pagar-pensao-aos-pais-idosos-o-que-diz-a-lei",
