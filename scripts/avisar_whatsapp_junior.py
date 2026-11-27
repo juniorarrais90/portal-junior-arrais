@@ -74,8 +74,7 @@ def telefone():
     return d
 
 
-def enviar(token, fone, m):
-    corpo = {"phone": fone, "media_url": arte(m), "media_type": "image", "caption": mensagem(m)}
+def _post(token, corpo):
     req = urllib.request.Request(
         API, data=json.dumps(corpo).encode(), method="POST",
         headers={"Authorization": "Bearer " + token, "Content-Type": "application/json"})
@@ -87,6 +86,19 @@ def enviar(token, fone, m):
         return False, "HTTP %s %s" % (e.code, e.read()[:200])
     except Exception as e:  # noqa: BLE001
         return False, str(e)
+
+
+def enviar(token, fone, m):
+    """Manda a arte e, logo depois, o texto em mensagem à parte.
+
+    A legenda junto da imagem não chegou no teste de 27/11/2026 (veio só a imagem),
+    então o texto vai separado. Devolve (imagem_ok, texto_ok, detalhe).
+    """
+    ok_img, det_img = _post(token, {"phone": fone, "media_url": arte(m), "media_type": "image"})
+    if not ok_img:
+        return False, False, "imagem: " + det_img
+    ok_txt, det_txt = _post(token, {"phone": fone, "text": mensagem(m)})
+    return True, ok_txt, "imagem: %s | texto: %s" % (det_img, det_txt)
 
 
 def main():
@@ -118,13 +130,16 @@ def main():
     if est["por_dia"].get(hoje, 0) >= LIMITE_DIA:
         print("Limite de %d por dia atingido." % LIMITE_DIA)
         return
-    ok, detalhe = enviar(token, fone, m)
-    print("Lero: %s %s" % ("OK" if ok else "FALHOU", detalhe))
-    if not ok:
+    ok_img, ok_txt, detalhe = enviar(token, fone, m)
+    print("Lero: imagem %s, texto %s | %s" % ("OK" if ok_img else "FALHOU", "OK" if ok_txt else "FALHOU", detalhe))
+    if not ok_img:
         sys.exit(1)
+    # A imagem já saiu: marca como enviada para não repetir a arte; se o texto falhou, o log mostra.
     est["enviados"] = sorted(feitos | {m["arquivo"]})
     est["por_dia"] = {hoje: est["por_dia"].get(hoje, 0) + 1}
     salvar(est)
+    if not ok_txt:
+        sys.exit(1)
 
 
 if __name__ == "__main__":
