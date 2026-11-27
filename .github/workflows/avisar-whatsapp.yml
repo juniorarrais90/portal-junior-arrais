@@ -1,0 +1,62 @@
+name: Matéria nova para o WhatsApp do Júnior
+
+# Criado em 27/11/2026. Manda ao WhatsApp pessoal do Júnior a arte e o texto da
+# matéria nova, prontos para encaminhar ao Canal do WhatsApp do portal.
+# Regras no topo de scripts/avisar_whatsapp_junior.py (1 por rodada, até 3 por
+# dia, nada entre 22h e 7h).
+#
+# Segredos (Settings > Secrets and variables > Actions): LERO_CLIENTES_API_TOKEN
+# e JUNIOR_WHATSAPP. Sem eles o script só mostra o que mandaria.
+#
+# MINUTO DO CRON: 12 e 42, livres dos outros robôs.
+on:
+  schedule:
+    - cron: "12,42 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: avisar-whatsapp
+  cancel-in-progress: false
+
+jobs:
+  avisar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+
+      - name: Mandar matéria nova ao WhatsApp do Júnior
+        env:
+          LERO_CLIENTES_API_TOKEN: ${{ secrets.LERO_CLIENTES_API_TOKEN }}
+          JUNIOR_WHATSAPP: ${{ secrets.JUNIOR_WHATSAPP }}
+        run: python scripts/avisar_whatsapp_junior.py
+
+      - name: Gravar lista de matérias enviadas
+        run: |
+          if git diff --quiet -- data/whatsapp-junior-enviados.json; then
+            echo "Nada mudou."
+            exit 0
+          fi
+          git config user.name "Portal Júnior Arrais"
+          git config user.email "juniorarrais90@gmail.com"
+          git add data/whatsapp-junior-enviados.json
+          git commit -m "WhatsApp do Júnior: lista de matérias enviadas [skip ci]"
+          for tentativa in 1 2 3 4 5; do
+            if git push; then
+              echo "Gravado na tentativa $tentativa."
+              exit 0
+            fi
+            git pull --rebase origin main || { git rebase --abort; exit 1; }
+            sleep $((tentativa * 5))
+          done
+          echo "::error::Não consegui gravar após 5 tentativas."
+          exit 1
