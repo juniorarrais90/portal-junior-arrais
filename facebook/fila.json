@@ -2016,7 +2016,12 @@
       "horario_brasilia": "27/11 09:45",
       "status": "publicado",
       "publicado_em": "2026-11-27T12:47:04Z",
-      "link_post": "https://www.facebook.com/1298971973295874_122127558021442468"
+      "link_post": "https://www.facebook.com/1298971973295874_122127558021442468",
+      "advogado": {
+        "status": "publicado",
+        "publicado_em": "2026-11-27T13:02:12Z",
+        "link_post": "https://www.facebook.com/113029587494887_1567395388750142"
+      }
     },
     {
       "slug": "comprou-carro-usado-com-defeito-prazos-de-90-dias-vicio-oculto-e-o-que-pedir",
