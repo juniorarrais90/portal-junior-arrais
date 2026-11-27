@@ -3416,7 +3416,9 @@
       "publicar_em": "2026-11-27T18:30:00Z",
       "horario_brasilia": "27/11 15:30",
       "alt_text": "Comprou carro usado com defeito? Veja os prazos para reclamar e o que dá para pedir",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-11-27T18:31:15Z",
+      "link": "https://www.instagram.com/p/DgQVCk6Iy1y/"
     },
     {
       "slug": "filhos-podem-ter-de-pagar-pensao-aos-pais-idosos-o-que-diz-a-lei",
