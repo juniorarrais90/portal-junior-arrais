@@ -3436,7 +3436,9 @@
       "publicar_em": "2026-11-28T12:30:00Z",
       "horario_brasilia": "28/11 09:30",
       "alt_text": "Gorjeta é do empregado, entra na remuneração e a taxa de serviço não é obrigatória",
-      "status": "pendente"
+      "status": "publicado",
+      "publicado_em": "2026-11-28T12:31:13Z",
+      "link": "https://www.instagram.com/p/DgSQoqJFfpR/"
     },
     {
       "slug": "dividas-de-quem-morreu-herdeiro-nao-paga-com-o-proprio-dinheiro",
