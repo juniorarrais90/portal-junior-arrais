@@ -71,7 +71,7 @@ def e(s):
 
 def card(slug, cat, titulo, data, alt):
     return f'''          <a class="card" href="noticias/{slug}.html">
-            <div class="card-thumb"><img src="img/{slug}.png" alt="{e(alt)}"></div>
+            <div class="card-thumb"><img src="img/{slug}.png" alt="{e(alt)}" loading="lazy"></div>
             <div class="card-corpo">
               <span class="chip">{e(cat)}</span>
               <h3>{e(titulo)}</h3>

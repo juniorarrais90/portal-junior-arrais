@@ -10,10 +10,13 @@
   <meta property="og:title" content="Portal Júnior Arrais — Seu lugar de informação">
   <meta property="og:description" content="Notícias de benefícios sociais, INSS e economia popular, com vídeos e conteúdo atualizado todos os dias.">
   <meta property="og:url" content="https://portaljuniorarrais.com.br/">
+  <meta name="theme-color" content="#ffffff">
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://i.ytimg.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="stylesheet" href="styles.css?v=8">
+  <link rel="stylesheet" href="styles.css?v=9">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -63,6 +66,7 @@
   </style>
 </head>
 <body>
+  <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
 
   <header>
     <div class="container topo-central">
@@ -70,8 +74,8 @@
         <img src="img/logo-header.png" alt="Portal Júnior Arrais" class="logo-img">
       </a>
       <form class="busca" action="noticias.html" method="get">
-        <input type="search" name="q" placeholder="Pesquisar..." aria-label="Pesquisar notícias">
-        <button type="submit" aria-label="Buscar"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4.2-4.2"/></svg></button>
+        <input type="search" name="q" placeholder="Pesquisar…" autocomplete="off" aria-label="Pesquisar notícias">
+        <button type="submit" aria-label="Buscar"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4.2-4.2"/></svg></button>
       </form>
     </div>
     <nav class="faixa-categorias">
@@ -90,7 +94,8 @@
     </nav>
   </header>
 
-  <main>
+  <main id="conteudo" tabindex="-1">
+    <h1 class="sr-only">Portal Júnior Arrais: notícias de benefícios sociais, INSS e direitos</h1>
     <!-- ADSENSE: banner horizontal do topo -->
     <div class="container ad-topo"><div class="ad-slot ad-slot-topo"><!-- Cole aqui o bloco de anúncio do AdSense --></div></div>
 
@@ -243,7 +248,7 @@
         <div class="grid">
           <!-- INÍCIO DOS CARDS DE NOTÍCIA (os mais novos ficam primeiro) -->
           <a class="card" href="noticias/pensao-por-morte-para-filho-invalido-ou-com-deficiencia-maior-de-21-anos.html">
-            <div class="card-thumb"><img src="img/pensao-por-morte-para-filho-invalido-ou-com-deficiencia-maior-de-21-anos.png" alt="Senhora idosa e homem adulto em cadeira de rodas, vistos de costas, na varanda de uma casa bem cuidada, olhando para um quintal com plantas."></div>
+            <div class="card-thumb"><img src="img/pensao-por-morte-para-filho-invalido-ou-com-deficiencia-maior-de-21-anos.png" alt="Senhora idosa e homem adulto em cadeira de rodas, vistos de costas, na varanda de uma casa bem cuidada, olhando para um quintal com plantas." loading="lazy"></div>
             <div class="card-corpo">
               <span class="chip">INSS</span>
               <h3>Pensão por morte para filho inválido ou com deficiência continua depois dos 21 anos</h3>
@@ -251,7 +256,7 @@
             </div>
           </a>
           <a class="card" href="noticias/imovel-herdado-ocupado-por-um-herdeiro-pode-cobrar-aluguel-dos-outros.html">
-            <div class="card-thumb"><img src="img/imovel-herdado-ocupado-por-um-herdeiro-pode-cobrar-aluguel-dos-outros.png" alt="Casa térrea de reboco pintado, bem cuidada, com varanda e plantas, e um molho de chaves pendurado na fechadura do portão."></div>
+            <div class="card-thumb"><img src="img/imovel-herdado-ocupado-por-um-herdeiro-pode-cobrar-aluguel-dos-outros.png" alt="Casa térrea de reboco pintado, bem cuidada, com varanda e plantas, e um molho de chaves pendurado na fechadura do portão." loading="lazy"></div>
             <div class="card-corpo">
               <span class="chip">Moradia</span>
               <h3>Imóvel herdado ocupado por um só herdeiro: os outros podem cobrar aluguel?</h3>
@@ -259,7 +264,7 @@
             </div>
           </a>
           <a class="card" href="noticias/pix-enviado-por-engano-para-a-pessoa-errada-como-pedir-o-dinheiro-de-volta.html">
-            <div class="card-thumb"><img src="img/pix-enviado-por-engano-para-a-pessoa-errada-como-pedir-o-dinheiro-de-volta.png" alt="Mão segurando um celular aceso sobre o balcão de uma mercearia, ao lado de uma placa de acrílico com os dizeres ACEITAMOS PIX."></div>
+            <div class="card-thumb"><img src="img/pix-enviado-por-engano-para-a-pessoa-errada-como-pedir-o-dinheiro-de-volta.png" alt="Mão segurando um celular aceso sobre o balcão de uma mercearia, ao lado de uma placa de acrílico com os dizeres ACEITAMOS PIX." loading="lazy"></div>
             <div class="card-corpo">
               <span class="chip">Economia</span>
               <h3>Pix enviado por engano para a pessoa errada: como pedir o dinheiro de volta</h3>
@@ -267,7 +272,7 @@
             </div>
           </a>
           <a class="card" href="noticias/assedio-moral-no-trabalho-o-que-e-como-provar-rescisao-indireta-e-indenizacao.html">
-            <div class="card-thumb"><img src="img/assedio-moral-no-trabalho-o-que-e-como-provar-rescisao-indireta-e-indenizacao.png" alt="Corredor de escritório limpo e moderno com uma porta de vidro fosco com a placa RECURSOS HUMANOS e uma cadeira vazia encostada na parede."></div>
+            <div class="card-thumb"><img src="img/assedio-moral-no-trabalho-o-que-e-como-provar-rescisao-indireta-e-indenizacao.png" alt="Corredor de escritório limpo e moderno com uma porta de vidro fosco com a placa RECURSOS HUMANOS e uma cadeira vazia encostada na parede." loading="lazy"></div>
             <div class="card-corpo">
               <span class="chip">Trabalho</span>
               <h3>Assédio moral no trabalho: o que é, como provar e o que o trabalhador pode pedir</h3>
@@ -275,7 +280,7 @@
             </div>
           </a>
           <a class="card" href="noticias/pensao-alimenticia-nao-acaba-sozinha-aos-18-anos-filho-estudante-e-sumula-358.html">
-            <div class="card-thumb"><img src="img/pensao-alimenticia-nao-acaba-sozinha-aos-18-anos-filho-estudante-e-sumula-358.png" alt="Jovem vista de costas, de mochila, subindo a escadaria de entrada de um prédio universitário com o letreiro CAMPUS."></div>
+            <div class="card-thumb"><img src="img/pensao-alimenticia-nao-acaba-sozinha-aos-18-anos-filho-estudante-e-sumula-358.png" alt="Jovem vista de costas, de mochila, subindo a escadaria de entrada de um prédio universitário com o letreiro CAMPUS." loading="lazy"></div>
             <div class="card-corpo">
               <span class="chip">Justiça</span>
               <h3>Pensão alimentícia não acaba sozinha aos 18 anos: o que diz a Súmula 358 do STJ</h3>
@@ -283,7 +288,7 @@
             </div>
           </a>
           <a class="card" href="noticias/emprestimo-ou-conta-aberta-no-seu-nome-por-fraude-banco-responde-e-como-contestar.html">
-            <div class="card-thumb"><img src="img/emprestimo-ou-conta-aberta-no-seu-nome-por-fraude-banco-responde-e-como-contestar.png" alt="Mão segurando um celular aceso sobre uma mesa, ao lado de uma folha com a palavra CONTRATO, uma caneta e um cartão bancário genérico."></div>
+            <div class="card-thumb"><img src="img/emprestimo-ou-conta-aberta-no-seu-nome-por-fraude-banco-responde-e-como-contestar.png" alt="Mão segurando um celular aceso sobre uma mesa, ao lado de uma folha com a palavra CONTRATO, uma caneta e um cartão bancário genérico." loading="lazy"></div>
             <div class="card-corpo">
               <span class="chip">Economia</span>
               <h3>Empréstimo ou conta aberta no seu nome por fraude: o banco responde, e veja como contestar</h3>
@@ -314,15 +319,15 @@
           <h2>Me acompanhe nas redes sociais</h2>
           <p>Siga o Portal Júnior Arrais para receber notícias e vídeos novos todos os dias.</p>
           <div class="social">
-          <a href="https://www.youtube.com/@juniorarrais.advogado" target="_blank" rel="noopener" title="YouTube" class="s-yt"><svg viewBox="0 0 24 24" fill="none"><rect x="2" y="5.5" width="20" height="13" rx="3.5" fill="#FF0000"/><path d="M10 9l5.2 3L10 15z" fill="#fff"/></svg></a>
-          <a href="https://www.instagram.com/juniorarraisadvogado/" target="_blank" rel="noopener" title="Instagram" class="s-ig"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="#fff" stroke-width="2"/><circle cx="12" cy="12" r="4.2" stroke="#fff" stroke-width="2"/><circle cx="17.2" cy="6.8" r="1.3" fill="#fff"/></svg></a>
-          <a href="https://www.tiktok.com/@juniorarrais.advogado" target="_blank" rel="noopener" title="TikTok" class="s-tt"><svg viewBox="0 0 24 24" fill="#fff"><path d="M14.5 3h2.6c.2 1.2.8 2.3 1.7 3.1.8.7 1.8 1.2 2.9 1.3v2.8c-1.7-.1-3.3-.7-4.6-1.7v6.6c0 3.3-2.7 6-6 6s-6-2.7-6-6 2.7-6 6-6c.3 0 .6 0 .9.1v2.9c-.3-.1-.6-.2-.9-.2-1.7 0-3.1 1.4-3.1 3.2s1.4 3.2 3.1 3.2 3.4-1.4 3.4-3.2V3z"/></svg></a>
-          <a href="https://www.kwai.com/@juniorarraisadvogado" target="_blank" rel="noopener" title="Kwai" class="s-kw"><svg viewBox="0 0 24 24" fill="#fff"><path d="M6 4h3v7l5.5-7H18l-5.4 6.7L18.4 20h-3.6l-4.3-6.4-1.5 1.8V20H6z"/></svg></a>
-          <a href="https://www.facebook.com/advogadojuniorarrais/" target="_blank" rel="noopener" title="Facebook" class="s-fb"><svg viewBox="0 0 24 24" fill="#fff"><path d="M13.4 20.8v-6.9h2.3l.4-2.7h-2.7V9.4c0-.8.2-1.3 1.3-1.3h1.5V5.7c-.3 0-1.1-.1-2.1-.1-2.1 0-3.5 1.3-3.5 3.6v2h-2.4v2.7h2.4v6.9z"/></svg></a>
-          <a href="https://www.threads.com/@juniorarraisadvogado" target="_blank" rel="noopener" title="Threads" class="s-th"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M12 21c-4.5 0-7.6-3.4-7.6-9S7.5 3 12 3c3.6 0 6.3 2 7.1 5.2M12.1 13.5c-1.9.1-3.3.9-3.3 2.3 0 1.4 1.3 2.2 2.8 2.1 2-.1 3.4-1.5 3.4-4.3 0-.5 0-.9-.1-1.3-.5-2.2-2-3.2-3.6-3.2-1.2 0-2.3.5-3 1.4" fill="none"/><path d="M14.9 12.3c1.9.5 3.2 1.6 3.2 3.4 0 2.3-1.9 4-4.1 4.3" fill="none" stroke-width="1.6"/></svg></a>
+          <a href="https://www.youtube.com/@juniorarrais.advogado" target="_blank" rel="noopener" title="YouTube" aria-label="YouTube" class="s-yt"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none"><rect x="2" y="5.5" width="20" height="13" rx="3.5" fill="#FF0000"/><path d="M10 9l5.2 3L10 15z" fill="#fff"/></svg></a>
+          <a href="https://www.instagram.com/juniorarraisadvogado/" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram" class="s-ig"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="#fff" stroke-width="2"/><circle cx="12" cy="12" r="4.2" stroke="#fff" stroke-width="2"/><circle cx="17.2" cy="6.8" r="1.3" fill="#fff"/></svg></a>
+          <a href="https://www.tiktok.com/@juniorarrais.advogado" target="_blank" rel="noopener" title="TikTok" aria-label="TikTok" class="s-tt"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="#fff"><path d="M14.5 3h2.6c.2 1.2.8 2.3 1.7 3.1.8.7 1.8 1.2 2.9 1.3v2.8c-1.7-.1-3.3-.7-4.6-1.7v6.6c0 3.3-2.7 6-6 6s-6-2.7-6-6 2.7-6 6-6c.3 0 .6 0 .9.1v2.9c-.3-.1-.6-.2-.9-.2-1.7 0-3.1 1.4-3.1 3.2s1.4 3.2 3.1 3.2 3.4-1.4 3.4-3.2V3z"/></svg></a>
+          <a href="https://www.kwai.com/@juniorarraisadvogado" target="_blank" rel="noopener" title="Kwai" aria-label="Kwai" class="s-kw"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="#fff"><path d="M6 4h3v7l5.5-7H18l-5.4 6.7L18.4 20h-3.6l-4.3-6.4-1.5 1.8V20H6z"/></svg></a>
+          <a href="https://www.facebook.com/advogadojuniorarrais/" target="_blank" rel="noopener" title="Facebook" aria-label="Facebook" class="s-fb"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="#fff"><path d="M13.4 20.8v-6.9h2.3l.4-2.7h-2.7V9.4c0-.8.2-1.3 1.3-1.3h1.5V5.7c-.3 0-1.1-.1-2.1-.1-2.1 0-3.5 1.3-3.5 3.6v2h-2.4v2.7h2.4v6.9z"/></svg></a>
+          <a href="https://www.threads.com/@juniorarraisadvogado" target="_blank" rel="noopener" title="Threads" aria-label="Threads" class="s-th"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M12 21c-4.5 0-7.6-3.4-7.6-9S7.5 3 12 3c3.6 0 6.3 2 7.1 5.2M12.1 13.5c-1.9.1-3.3.9-3.3 2.3 0 1.4 1.3 2.2 2.8 2.1 2-.1 3.4-1.5 3.4-4.3 0-.5 0-.9-.1-1.3-.5-2.2-2-3.2-3.6-3.2-1.2 0-2.3.5-3 1.4" fill="none"/><path d="M14.9 12.3c1.9.5 3.2 1.6 3.2 3.4 0 2.3-1.9 4-4.1 4.3" fill="none" stroke-width="1.6"/></svg></a>
         </div>
         </div>
-        <img src="img/junior-redes.png" alt="Júnior Arrais" class="banner-foto">
+        <img src="img/junior-redes.png" alt="Júnior Arrais" class="banner-foto" loading="lazy">
       </div>
     </section>
   </main>
@@ -331,10 +336,10 @@
     <div class="container footer-inner">
       <p>&copy; 2026 Portal Júnior Arrais. Todos os direitos reservados. &middot; <a href="sobre.html">Sobre</a> &middot; <a href="contato.html">Contato</a> &middot; <a href="politica-de-privacidade.html">Política de Privacidade</a> &middot; <a href="termos-de-uso.html">Termos de Uso</a></p>
       <div class="social">
-        <a href="https://www.youtube.com/@juniorarrais.advogado" target="_blank" rel="noopener" title="YouTube" class="s-yt"><svg viewBox="0 0 24 24" fill="none"><rect x="2" y="5.5" width="20" height="13" rx="3.5" fill="#FF0000"/><path d="M10 9l5.2 3L10 15z" fill="#fff"/></svg></a>
-        <a href="https://www.instagram.com/juniorarraisadvogado/" target="_blank" rel="noopener" title="Instagram" class="s-ig"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="#fff" stroke-width="2"/><circle cx="12" cy="12" r="4.2" stroke="#fff" stroke-width="2"/><circle cx="17.2" cy="6.8" r="1.3" fill="#fff"/></svg></a>
-        <a href="https://www.tiktok.com/@juniorarrais.advogado" target="_blank" rel="noopener" title="TikTok" class="s-tt"><svg viewBox="0 0 24 24" fill="#fff"><path d="M14.5 3h2.6c.2 1.2.8 2.3 1.7 3.1.8.7 1.8 1.2 2.9 1.3v2.8c-1.7-.1-3.3-.7-4.6-1.7v6.6c0 3.3-2.7 6-6 6s-6-2.7-6-6 2.7-6 6-6c.3 0 .6 0 .9.1v2.9c-.3-.1-.6-.2-.9-.2-1.7 0-3.1 1.4-3.1 3.2s1.4 3.2 3.1 3.2 3.4-1.4 3.4-3.2V3z"/></svg></a>
-        <a href="https://whatsapp.com/channel/0029Va9QIVSDeON3LhewV41Q" target="_blank" rel="noopener" title="Canal do WhatsApp" class="s-wa"><svg viewBox="0 0 24 24" fill="#fff"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35zM12.05 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88zm8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.16-3.48-8.41z"/></svg></a>
+        <a href="https://www.youtube.com/@juniorarrais.advogado" target="_blank" rel="noopener" title="YouTube" aria-label="YouTube" class="s-yt"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none"><rect x="2" y="5.5" width="20" height="13" rx="3.5" fill="#FF0000"/><path d="M10 9l5.2 3L10 15z" fill="#fff"/></svg></a>
+        <a href="https://www.instagram.com/juniorarraisadvogado/" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram" class="s-ig"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="#fff" stroke-width="2"/><circle cx="12" cy="12" r="4.2" stroke="#fff" stroke-width="2"/><circle cx="17.2" cy="6.8" r="1.3" fill="#fff"/></svg></a>
+        <a href="https://www.tiktok.com/@juniorarrais.advogado" target="_blank" rel="noopener" title="TikTok" aria-label="TikTok" class="s-tt"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="#fff"><path d="M14.5 3h2.6c.2 1.2.8 2.3 1.7 3.1.8.7 1.8 1.2 2.9 1.3v2.8c-1.7-.1-3.3-.7-4.6-1.7v6.6c0 3.3-2.7 6-6 6s-6-2.7-6-6 2.7-6 6-6c.3 0 .6 0 .9.1v2.9c-.3-.1-.6-.2-.9-.2-1.7 0-3.1 1.4-3.1 3.2s1.4 3.2 3.1 3.2 3.4-1.4 3.4-3.2V3z"/></svg></a>
+        <a href="https://whatsapp.com/channel/0029Va9QIVSDeON3LhewV41Q" target="_blank" rel="noopener" title="Canal do WhatsApp" aria-label="Canal do WhatsApp" class="s-wa"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="#fff"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35zM12.05 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88zm8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.16-3.48-8.41z"/></svg></a>
       </div>
     </div>
   </footer>
